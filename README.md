@@ -12,7 +12,7 @@
 [![Tests](https://img.shields.io/badge/tests-38×4-4CAF50?style=flat-square)]()
 [![Targets](https://img.shields.io/badge/targets-native%20%7C%20wasm--gc%20%7C%20js%20%7C%20wasm-2196F3?style=flat-square)]()
 [![Deny-warn](https://img.shields.io/badge/0%20warning-den--warn%20gate-4CAF50?style=flat-square)]()
-[![主仓库](https://img.shields.io/badge/主仓库-GitCode-F44336?style=flat-square)](https://gitcode.com/LOOYIABC/motion.mbt)
+[![主仓库](https://img.shields.io/badge/主仓库-AtomGit-F44336?style=flat-square)](https://atomgit.com/LOOYIABC/motion.mbt)
 
 **[亮点](#-亮点)** · **[快速上手](#-快速上手)** · **[架构](#-架构)** · **[安全](#-安全)** · **[文档](#-文档)**
 
@@ -114,7 +114,8 @@ looyiabc/motion.mbt (根模块)
 
 | 仓库 | 角色 |
 |------|------|
-| **gitcode.com/LOOYIABC/motion.mbt** | **主仓库（权威源）** |
+| **atomgit.com/LOOYIABC/motion.mbt** | **主仓库（权威源）** |
+| gitcode.com/LOOYIABC/motion.mbt | 主仓库第二入口（与 AtomGit 同源共享存储） |
 | github.com/walkzzz/motion.mbt | 同步镜像（CI/CD） |
 
 ## 🧰 关联资产

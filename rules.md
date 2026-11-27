@@ -77,8 +77,8 @@ moon check --deny-warn --target wasm
 ### R19 — 命名规范（2026-11-27 定）
 项目名一律 **motion**（`MOT` 缩写在多目标跟踪/软件测试领域有歧义，弃用）；CLI 工具名 **mot**；模块名 `looyiabc/motion`（无 `.mbt` 后缀，mooncakes 惯例：moonbitlang/core、cc06b/mooncry 均无后缀——`.mbt` 后缀会导致黑盒测试 `@别名` 无法推导）。历史文档 01-12 沿用 MOT 术语仅作存档，新文档/新代码/新提交信息一律 motion。
 
-### R20 — 远端仓库布局（2026-11-27 定）
-**GitCode 主仓库**（gitcode.com/LOOYIABC/motion.mbt）为权威源，GitHub（github.com/walkzzz/motion.mbt）为同步镜像。流程：本地提交 → 推 GitCode → 同步 GitHub。禁止反向同步。
+### R20 — 远端仓库布局（2026-11-27 定，当日二次修订）
+**AtomGit 主仓库**（atomgit.com/LOOYIABC/motion.mbt，分支 main）为权威源。GitCode（gitcode.com/LOOYIABC/motion.mbt）与 AtomGit **同账号同源共享存储**（账号 id 66f6a03f…，推送任一端即双端生效），视为主仓库的第二入口；GitHub（github.com/walkzzz/motion.mbt）为 API 同步镜像。流程：本地提交 → `git push atomgit main`（GitCode 同步生效）→ Git Data API 同步 GitHub。禁止反向同步。
 
 ---
 
