@@ -35,6 +35,13 @@ predicate gate_closed_state_spec(s : SafetyState, result : Bool) {
   result == (state_rank(s) != 2)
 }
 
+// I5 (state half): a state allows execution if and only if it is Executing.
+// The String-emptiness half of gate integrity is runtime-tested (the logic
+// side has no string operations).
+predicate state_allows_spec(s : SafetyState, result : Bool) {
+  result == (state_rank(s) == 2)
+}
+
 // I3: escalation delta is exactly 1 when entering Recovering from another
 // state, and 0 otherwise. The delta is therefore always 0 or 1 — never
 // negative — so the accumulated escalation index never regresses.

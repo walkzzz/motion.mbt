@@ -73,16 +73,30 @@ pub fn sm_current(sm : SafetyStateMachine) -> SafetyState {
 // Output gate query (I5). Executor MUST call this before any command.
 // Returns true only in EXECUTING state. Empty action commands are always
 // rejected: a gate must never pass a malformed (empty) instruction.
+// The String-emptiness half is covered by runtime tests (the logic side has
+// no string operations); the state half is provable (state_allows below).
 
 ///|
 pub fn is_action_allowed(sm : SafetyStateMachine, action : String) -> Bool {
   if action == "" {
     false
   } else {
-    match sm.current {
-      Executing => true
-      _ => false
-    }
+    state_allows(sm.current)
+  }
+}
+
+// I5 (provable core): the state half of gate integrity — a state allows
+// execution if and only if it is Executing.
+
+///|
+fn state_allows(
+  s : SafetyState,
+) -> Bool where {
+  proof_ensure: result => state_allows_spec(s, result),
+} {
+  match s {
+    Executing => true
+    _ => false
   }
 }
 
