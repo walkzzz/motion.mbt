@@ -90,26 +90,27 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    def _secret_ok(self) -> bool:
+    def _secret_ok(self, raw: bytes = b"") -> bool:
         token = (self.headers.get("X-Gitcode-Token")
                  or self.headers.get("X-Git-Token")
                  or self.headers.get("X-Hub-Signature-256"))
         if token is None:
             return True  # no token header: allow (secret may be empty)
         if token.startswith("sha256="):
-            digest = hmac.new(SECRET.encode(), digestmod=hashlib.sha256)
-            return hmac.compare_digest("sha256=" + digest.hexdigest(), token)
+            digest = hmac.new(SECRET.encode(), raw, digestmod=hashlib.sha256)
+            expected = f"sha256={digest.hexdigest()}"
+            return hmac.compare_digest(expected, token)
         return hmac.compare_digest(token, SECRET)
 
     def do_POST(self) -> None:  # noqa: N802
         if self.path != "/webhook":
             self._send(404, b"not found")
             return
-        if not self._secret_ok():
-            self._send(403, b"invalid webhook secret")
-            return
         length = int(self.headers.get("Content-Length", "0"))
         raw = self.rfile.read(length) if length else b"{}"
+        if not self._secret_ok(raw):
+            self._send(403, b"invalid webhook secret")
+            return
         try:
             payload = json.loads(raw or b"{}")
         except json.JSONDecodeError:
@@ -160,8 +161,9 @@ def main() -> None:
     with lock:
         state["last_status"] = "ok" if ok else "error"
         state["last_commit"] = commit if ok else "startup build failed"
-    server = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
-    print(f"motion pages serving on :{PORT} (webhook POST /webhook, site /, health /healthz)", flush=True)
+    bind = os.environ.get("MOTION_PAGES_BIND", "")
+    server = ThreadingHTTPServer((bind, PORT), Handler)
+    print(f"motion pages serving on {bind or '*'}:{PORT} (webhook POST /webhook, site /, health /healthz)", flush=True)
     server.serve_forever()
 
 

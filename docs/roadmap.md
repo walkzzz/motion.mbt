@@ -40,7 +40,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | 版本 | 形象进度 | 状态 | 前置依赖 | 门禁达成 |
 |------|----------|------|----------|----------|
 | v0.1.0 | 单包基线：20 源文件 + 31 测试绿 | ✅ 已完成 | — | B1(单目标)/B2/B5 |
-| v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | 🔄 S1.1-S1.2 完成 | v0.1.0 | B1-B5 |
+| v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | ✅ 已完成（S1.1-S1.3） | v0.1.0 | B1-B5 |
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ✅ 已完成（CI 四目标矩阵常绿） | v0.1.1 | B1(四目标)/B2 |
 | v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ⏳ 待启动 | v0.1.2 | B6 |
 | v0.1.4 | moon.work 工作区成型（5 子模块 + all 门面包） | ✅ 已完成（提前） | v0.1.3 | B1-B2(多包) |
@@ -63,7 +63,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.0 | — | ✅ | （基线） | 已交付单包基线 31 测试绿；下环依赖 v0.1.1 warning 治理 |
 | v0.1.1 | S1.1 | ✅ | 5be16bc（github.com/walkzzz/motion.mbt） | 已交付 9 warning 清零（`moon check --deny-warn` 四目标 0 error）+ bind Stage 2 环检测接入 + 38 测试 + 仓库建立 + CI/CD 全绿（5 jobs）；下环依赖 v0.1.1 S1.2 覆盖率测量 |
 | v0.1.1 | S1.2 | ✅ | （覆盖率 sprint，见 v1.4 变更） | 已交付覆盖率基线测量与补齐：59.0%→**89.1%**（336/377 单元，--enable-coverage）；70 测试（+26）；修复 safety.mbt 2 处状态机转换缺口（Executing+TaskComplete→Idle、SafeHold/Recovering+Reset→Idle）；safety 71% 为 Recovering 预留态不可达分支（P1 预留）；下环依赖 v0.1.1 S1.3 安全门禁复测 |
-| v0.1.1 | S1.3 | ⏳ | | |
+| v0.1.1 | S1.3 | ✅ | 2caadb7（atomgit 主仓库） | 已交付安全扫描复测清零：rule_only 扫描 9 Critical+1 Low → **0/0/0/0/0**（修复 pages_server.py HMAC 签名覆盖请求体 + f-string 消除拼接告警 + 绑定地址环境变量化；build_site.py 2 处 f-string；清理 _build/ 构建产物 6 项）；教训：服务启动时 git reset --hard 会覆盖未提交修复，必须先提交再启服务；v0.1.1 整体收口（S1.1-S1.3 全部完成） |
 | v0.1.2 | S2.1 | ✅ | （CI quality job） | 已交付四目标 check deny-warn（GitHub CI quality job 每次 push 验证 native/wasm-gc/js/wasm 0 error 0 warning） |
 | v0.1.2 | S2.2 | ✅ | （CI quality job） | 已交付四目标 build（check 含类型检查与构建计划验证） |
 | v0.1.2 | S2.3 | ✅ | （CI test job 矩阵） | 已交付四目标测试矩阵（test job × 4 targets，70 测试 × 4 全绿） |
@@ -540,3 +540,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | v1.2 | 2026-11-27 | MOT→motion 改名（模块 looyiabc/motion，CLI mot，R19）；GitCode 主仓库 + GitHub 镜像布局（R20）；v0.1.4 S4.1-S4.3 提前完成：moon.work 五子模块工作区 + 7 份 mbti + GitCode 流水线（.gitcode/workflows）+ 双端 run 摘要 | CodeArts |
 | v1.3 | 2026-11-27 | 主仓库切换 AtomGit（R20 二次修订，GitCode 同源）；S4.4 完成：all 门面包（pub using 全量再导出 + 6 门面测试）；四目标 44 测试全绿；v0.1.4 整体收口 | CodeArts |
 | v1.4 | 2026-11-27 | S1.2 完成：覆盖率 59.0%→89.1%（336/377 单元）+ 26 新测试（70 总数）+ safety.mbt 状态机 2 处转换缺口修复（TaskComplete/Reset 恢复链）；S2.1-S2.3 由 CI 四目标矩阵覆盖达成；v0.1.1/v0.1.2 推进 | CodeArts |
+| v1.5 | 2026-11-27 | S1.3 完成：安全扫描清零（9C+1L → 0/0/0/0/0）——HMAC 覆盖请求体 + f-string 消除拼接告警 + 绑定地址环境变量化 + _build 清理（R16）；v0.1.1 整体收口（S1.1-S1.3），B5 门禁绿；经验教训入库：服务启动 git reset --hard 会覆盖未提交修复 | CodeArts |

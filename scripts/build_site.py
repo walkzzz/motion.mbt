@@ -545,7 +545,7 @@ def render_docs_links() -> str:
     ]
     for d in sorted(glob.glob(os.path.join(ROOT, "docs", "*.md"))):
         name = os.path.basename(d)
-        items.append(("docs/" + name[:-3] + ".html", name[:-3]))
+        items.append((f"docs/{name[:-3]}.html", name[:-3]))
     return "\n".join(
         f'      <a class="doc-item" href="{href}"><span>{label}</span><span class="arrow">→</span></a>'
         for href, label in items
@@ -565,9 +565,9 @@ def build_doc_page(md_path: str, out_path: str, title: str) -> None:
     body_md = markdown.markdown(txt, extensions=["tables", "fenced_code"])
     breadcrumb = (
         '<div class="docpage wrap"><nav class="breadcrumb" style="font-size:.88rem;color:var(--fg-faint);margin-bottom:1.2rem">'
-        '<a href="index.html#docs">← 返回文档门户</a></nav><article>' + body_md + "</article></div>"
+        f'<a href="index.html#docs">← 返回文档门户</a></nav><article>{body_md}</article></div>'
     )
-    html = shell(title + " · motion", breadcrumb)
+    html = shell(f"{title} · motion", breadcrumb)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 
