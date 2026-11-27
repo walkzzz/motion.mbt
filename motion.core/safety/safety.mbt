@@ -88,6 +88,8 @@ pub fn is_action_allowed(sm : SafetyStateMachine, action : String) -> Bool {
 
 // The single transition entry point (no back door). Preemptive safety events
 // bypass the normal reaction chain and force a transition out of EXECUTING (I1).
+// I3: the escalation index only ever moves forward — escalation_delta is
+// provably non-negative (0 or 1), so the accumulated index never regresses.
 
 ///|
 pub fn transition(
@@ -99,23 +101,51 @@ pub fn transition(
   let allowed = is_valid_transition(from, to, event)
   if allowed {
     sm.current = to
-    match (from, to) {
-      (Recovering, _) => ()
-      (_, Recovering) => sm.escalation_index = sm.escalation_index + 1
-      _ => ()
-    }
+    sm.escalation_index = sm.escalation_index + escalation_delta(from, to)
   }
   let reason = if allowed { None } else { Some("transition not allowed") }
   { from, to, allowed, reason, }
 }
 
 // I4/I5: output gate closed check. True when gate is closed (non-EXECUTING).
+// Delegates to the provable pure function below (SafeHold => closed is I4).
 
 ///|
 pub fn gate_closed(sm : SafetyStateMachine) -> Bool {
-  match sm.current {
+  gate_closed_state(sm.current)
+}
+
+// I4 (provable core): the gate is closed in EVERY state except Executing.
+// SafeHold (rank 4) and FaultLocked (rank 5) are the safety-critical cases.
+
+///|
+fn gate_closed_state(
+  s : SafetyState,
+) -> Bool where {
+  proof_ensure: result => gate_closed_state_spec(s, result),
+} {
+  match s {
     Executing => false
     _ => true
+  }
+}
+
+// I3 (provable core): escalation index delta per transition.
+// Entering Recovering from any other state bumps the index by exactly 1;
+// every other transition keeps it unchanged. Non-negativity is the
+// no-regression invariant of the accumulated index.
+
+///|
+fn escalation_delta(
+  from : SafetyState,
+  to_state : SafetyState,
+) -> Int32 where {
+  proof_ensure: result => escalation_delta_spec(from, to_state, result),
+} {
+  match (from, to_state) {
+    (Recovering, _) => 0
+    (_, Recovering) => 1
+    _ => 0
   }
 }
 

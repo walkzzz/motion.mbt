@@ -28,3 +28,19 @@ predicate next_state_spec(from : SafetyState, event : StateEvent, result : Safet
 predicate valid_transition_i2(from : SafetyState, event : StateEvent, result : Bool) {
   !(state_rank(from) == 5) || (result == is_reset_event(event))
 }
+
+// I4: the output gate is closed in EVERY state except Executing.
+// SafeHold (rank 4) and FaultLocked (rank 5) are the safety-critical corollaries.
+predicate gate_closed_state_spec(s : SafetyState, result : Bool) {
+  result == (state_rank(s) != 2)
+}
+
+// I3: escalation delta is exactly 1 when entering Recovering from another
+// state, and 0 otherwise. The delta is therefore always 0 or 1 — never
+// negative — so the accumulated escalation index never regresses.
+// DNF form: logic-side conjunctions must stay at the top level.
+predicate escalation_delta_spec(from : SafetyState, to_state : SafetyState, result : Int32) {
+  result == 1 && state_rank(to_state) == 3 && state_rank(from) != 3 ||
+  result == 0 && state_rank(to_state) != 3 ||
+  result == 0 && state_rank(from) == 3
+}
