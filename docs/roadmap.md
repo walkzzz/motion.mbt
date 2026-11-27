@@ -40,7 +40,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | 版本 | 形象进度 | 状态 | 前置依赖 | 门禁达成 |
 |------|----------|------|----------|----------|
 | v0.1.0 | 单包基线：20 源文件 + 31 测试绿 | ✅ 已完成 | — | B1(单目标)/B2/B5 |
-| v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | ⏳ 待启动 | v0.1.0 | B1-B5 |
+| v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | 🔄 S1.1 完成 | v0.1.0 | B1-B5 |
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ⏳ 待启动 | v0.1.1 | B1(四目标)/B2 |
 | v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ⏳ 待启动 | v0.1.2 | B6 |
 | v0.1.4 | 7 子模块 moon.work 工作区成型 | ⏳ 待启动 | v0.1.3 | B1-B2(多包) |
@@ -61,7 +61,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | 版本 | Sprint | 状态 | commit hash | 回写（已交付 x / 下环依赖 Y） |
 |------|--------|------|-------------|------------------------------|
 | v0.1.0 | — | ✅ | （基线） | 已交付单包基线 31 测试绿；下环依赖 v0.1.1 warning 治理 |
-| v0.1.1 | S1.1 | ⏳ | | |
+| v0.1.1 | S1.1 | ✅ | 5be16bc（github.com/walkzzz/motion.mbt） | 已交付 9 warning 清零（`moon check --deny-warn` 四目标 0 error）+ bind Stage 2 环检测接入 + 38 测试 + 仓库建立 + CI/CD 全绿（5 jobs）；下环依赖 v0.1.1 S1.2 覆盖率测量 |
 | v0.1.1 | S1.2 | ⏳ | | |
 | v0.1.1 | S1.3 | ⏳ | | |
 | v0.1.2 | S2.1 | ⏳ | | |
@@ -458,14 +458,14 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 |------|------|------|----------|
 | B1 | moon check --deny-warn 0 error（四目标） | ✅ 单目标 | v0.1.2 |
 | B2 | moon test 全通过 | ✅ | v0.1.0 |
-| B3 | warning 0（--deny-warn 强制） | ⚠️ 9 warning | v0.1.1 |
+| B3 | warning 0（--deny-warn 强制） | ✅ 0 warning（CI 已绿） | v0.1.1 |
 | B4 | 覆盖率达标 | ⚠️ 未测 | v0.1.1 |
 | B5 | security_scan 0 Critical/0 High | ✅ | v0.1.1 |
 | B6 | moon prove 证明 | P1+ | v0.1.3 |
 | B7 | 变异测试 | P1+ | v0.1.3 |
-| B8 | API 索引生成（moon info） | P1+ | v0.1.5 |
+| B8 | API 索引生成（moon info） | ✅ pkg.generated.mbti 入库（CI 漂移门禁绿） | v0.1.5 |
 | B9 | 能力矩阵生成 | P1+ | v0.1.5 |
-| B10 | 格式门禁（moon fmt） | P1+ | v0.1.1 |
+| B10 | 格式门禁（moon fmt） | ✅ CI fmt --check 绿 | v0.1.1 |
 | B11 | 弃用清单防漂移 | P1+ | v0.1.8 |
 | B12 | 发布 verify | P1+ | v0.1.7 |
 | B13 | 基准样本封签 | P1+ | v0.1.7 |
@@ -536,3 +536,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | 版本 | 日期 | 变更 | 作者 |
 |------|------|------|------|
 | v1.0 | 2026-11-27 | 初始 roadmap 创建：长远期规划 + 0.1.x 九版本 + 25 Sprint | CodeArts |
+| v1.1 | 2026-11-27 | S1.1 完成：warning 清零 + 仓库建立（github.com/walkzzz/motion.mbt）+ CI/CD 5 jobs 全绿；回写 B3/B8/B10 门禁状态 | CodeArts |
