@@ -45,3 +45,41 @@ test "gbz185 integration: security_error_to_mot message includes surface tag" {
     _ => assert_true(false)
   }
 }
+
+///|
+test "gbz185 integration: MotError all variants map to ProtocolError codes" {
+  let cases : Array[(@bridge.MotError, String)] = [
+    (@bridge.MotError::Syntax_error("s"), "MOT-1000"),
+    (@bridge.MotError::Resolve_error("r"), "MOT-1100"),
+    (@bridge.MotError::Mapping_error("m"), "MOT-1200"),
+    (@bridge.MotError::Conflict_error("c"), "MOT-1300"),
+    (@bridge.MotError::Sac_error("sa"), "MOT-1400"),
+    (@bridge.MotError::Reaction_error("re"), "MOT-1500"),
+    (@bridge.MotError::Safety_error("sf"), "MOT-1600"),
+    (@bridge.MotError::Nli_error("n"), "MOT-1800"),
+    (@bridge.MotError::Security_error("se"), "MOT-1700"),
+  ]
+  for (err, expected) in cases {
+    assert_eq(@wire.ProtocolError::part(err), "gbz185.6")
+    assert_eq(@wire.ProtocolError::code(err), expected)
+  }
+}
+
+///|
+test "gbz185 integration: MotError Show output includes prefix" {
+  let cases : Array[(@bridge.MotError, String)] = [
+    (@bridge.MotError::Syntax_error("x1"), "mot/syntax"),
+    (@bridge.MotError::Resolve_error("x2"), "mot/resolve"),
+    (@bridge.MotError::Mapping_error("x3"), "mot/mapping"),
+    (@bridge.MotError::Conflict_error("x4"), "mot/conflict"),
+    (@bridge.MotError::Sac_error("x5"), "mot/sac"),
+    (@bridge.MotError::Reaction_error("x6"), "mot/reaction"),
+    (@bridge.MotError::Safety_error("x7"), "mot/safety"),
+    (@bridge.MotError::Nli_error("x8"), "mot/nli"),
+    (@bridge.MotError::Security_error("x9"), "mot/security"),
+  ]
+  for (err, prefix) in cases {
+    let s = Show::to_string(err)
+    assert_true(s.contains(prefix))
+  }
+}

@@ -137,9 +137,11 @@ fn is_valid_transition(
         (Executing, Recovering) => true
         (Executing, SafeHold) => true
         (Executing, FaultLocked) => true
+        (Executing, Idle) => true
         (Recovering, Executing) => true
         (Recovering, SafeHold) => true
         (Recovering, FaultLocked) => true
+        (Recovering, Idle) => true
         (SafeHold, Recovering) => true
         (SafeHold, Idle) => true
         (SafeHold, FaultLocked) => true
@@ -160,6 +162,8 @@ fn next_state(from : SafetyState, event : StateEvent) -> SafetyState {
       match from {
         FaultLocked => Idle
         Selftest => Idle
+        SafeHold => Idle
+        Recovering => Idle
         _ => from
       }
     TaskStart =>
