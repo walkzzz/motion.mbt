@@ -9,10 +9,12 @@
 [![Version](https://img.shields.io/badge/version-0.1.0-orange)]()
 [![CI](https://github.com/walkzzz/motion.mbt/actions/workflows/ci.yml/badge.svg)](https://github.com/walkzzz/motion.mbt/actions/workflows/ci.yml)
 
-[![Tests](https://img.shields.io/badge/tests-38×4-4CAF50?style=flat-square)]()
+[![Tests](https://img.shields.io/badge/tests-70×4-4CAF50?style=flat-square)]()
+[![Coverage](https://img.shields.io/badge/coverage-89.1%25-4CAF50?style=flat-square)]()
 [![Targets](https://img.shields.io/badge/targets-native%20%7C%20wasm--gc%20%7C%20js%20%7C%20wasm-2196F3?style=flat-square)]()
 [![Deny-warn](https://img.shields.io/badge/0%20warning-den--warn%20gate-4CAF50?style=flat-square)]()
 [![主仓库](https://img.shields.io/badge/主仓库-AtomGit-F44336?style=flat-square)](https://atomgit.com/LOOYIABC/motion.mbt)
+[![Pages](https://img.shields.io/badge/Pages-walkzzz.github.io-6E40C9?style=flat-square)](https://walkzzz.github.io/motion.mbt/)
 
 **[亮点](#-亮点)** · **[快速上手](#-快速上手)** · **[架构](#-架构)** · **[安全](#-安全)** · **[文档](#-文档)**
 
