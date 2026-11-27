@@ -43,7 +43,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | 🔄 S1.1 完成 | v0.1.0 | B1-B5 |
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ⏳ 待启动 | v0.1.1 | B1(四目标)/B2 |
 | v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ⏳ 待启动 | v0.1.2 | B6 |
-| v0.1.4 | 7 子模块 moon.work 工作区成型 | ⏳ 待启动 | v0.1.3 | B1-B2(多包) |
+| v0.1.4 | 7 子模块 moon.work 工作区成型 | 🔄 S4.1-S4.3 提前完成 | v0.1.3 | B1-B2(多包) |
 | v0.1.5 | all 门面包 + pkg.generated.mbti | ⏳ 待启动 | v0.1.4 | B8/B9 |
 | v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
 | v0.1.7 | 发布门禁 B12-B14 全绿 | ⏳ 待启动 | v0.1.6 | B12/B13/B14 |
@@ -71,9 +71,9 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.3 | S3.2 | ⏳ | | |
 | v0.1.3 | S3.3 | ⏳ | | |
 | v0.1.3 | S3.4 | ⏳ | | |
-| v0.1.4 | S4.1 | ⏳ | | |
-| v0.1.4 | S4.2 | ⏳ | | |
-| v0.1.4 | S4.3 | ⏳ | | |
+| v0.1.4 | S4.1 | ✅ | be58e41（gitcode 主仓库） | 已交付 motion.core 拆分（types/bodymap/primitive/mapping/sac/env/reaction/safety/nli/targetseq/diag/threat 全部入 motion.core/types，根包门面 motion.mbt 仅 version）；下环 S4.2 |
+| v0.1.4 | S4.2 | ✅ | be58e41 | 已交付 motion.gbz185/bridge + motion.bind/lib 拆分（bind 四阶段含 Stage 2 环检测，@types/@bridge/@lib 包别名全局唯一）；下环 S4.3 |
+| v0.1.4 | S4.3 | ✅ | be58e41 | 已交付 motion.reaction/engine + motion.security/guard 拆分（supply/nli_guard/feedback_auth/output_gate；safety 类型留在 core，SecurityError 在 core/threat）；下环 S4.4（all 门面包） |
 | v0.1.4 | S4.4 | ⏳ | | |
 | v0.1.5 | S5.1 | ⏳ | | |
 | v0.1.5 | S5.2 | ⏳ | | |
@@ -537,3 +537,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 |------|------|------|------|
 | v1.0 | 2026-11-27 | 初始 roadmap 创建：长远期规划 + 0.1.x 九版本 + 25 Sprint | CodeArts |
 | v1.1 | 2026-11-27 | S1.1 完成：warning 清零 + 仓库建立（github.com/walkzzz/motion.mbt）+ CI/CD 5 jobs 全绿；回写 B3/B8/B10 门禁状态 | CodeArts |
+| v1.2 | 2026-11-27 | MOT→motion 改名（模块 looyiabc/motion，CLI mot，R19）；GitCode 主仓库 + GitHub 镜像布局（R20）；v0.1.4 S4.1-S4.3 提前完成：moon.work 五子模块工作区 + 7 份 mbti + GitCode 流水线（.gitcode/workflows）+ 双端 run 摘要 | CodeArts |
