@@ -45,7 +45,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ✅ 已完成（S3.1-S3.4：I1-I5 机器证明 5 goals + I6 测试覆盖 + 变异 5/5） | v0.1.2 | B6+B7 |
 | v0.1.4 | moon.work 工作区成型（5 子模块 + all 门面包） | ✅ 已完成（提前） | v0.1.3 | B1-B2(多包) |
 | v0.1.5 | all 门面包 + pkg.generated.mbti + 能力矩阵 | ✅ 已完成（S5.1-S5.3） | v0.1.4 | B8+B9 |
-| v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
+| v0.1.6 | mot CLI 可运行 + examples/ + 子包 README | ✅ 已完成（S6.1-S6.3） | v0.1.5 | — |
 | v0.1.7 | 发布门禁 B12-B14 全绿 | ⏳ 待启动 | v0.1.6 | B12/B13/B14 |
 | v0.1.8 | 生态选型落地（yacc/json-schema/async） | ⏳ 待启动 | v0.1.7 | B4/B10/B11 |
 | v0.1.9 | v0.1.0 正式版发布 mooncakes.io | ⏳ 待启动 | v0.1.8 | 全部门禁 |
@@ -78,9 +78,9 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.5 | S5.1 | ✅ | （随 v0.1.4 S4.4 提前完成） | all 门面包（moon.pkg import + all.mbt pub using 全量再导出 + 6 门面黑盒测试）已随 v0.1.4 交付 |
 | v0.1.5 | S5.2 | ✅ | （随 v0.1.4 提前完成） | API 索引生成（moon info）——8 份 pkg.generated.mbti 入库，CI mbti 漂移门禁绿（B8） |
 | v0.1.5 | S5.3 | ✅ | 67ff054（atomgit 主仓库） | 已交付 **能力矩阵生成（B9 门禁）**：scripts/gen_capabilities.py 从 mbti 契约自动生成 docs/CAPABILITIES.md——10 包 ×（层级/类型/函数/常量/依赖/测试/证明状态）矩阵 + 汇总（82 类型 · 58 函数 · 2 常量 · 70 测试 × 4 目标 · 5 goals）；**v0.1.5 整体收口（S5.1-S5.3）** |
-| v0.1.6 | S6.1 | ⏳ | | |
-| v0.1.6 | S6.2 | ⏳ | | |
-| v0.1.6 | S6.3 | ⏳ | | |
+| v0.1.6 | S6.1 | ✅ | 9a509e3（atomgit 主仓库） | 已交付 **mot CLI 实装**：argparse 子命令树（safety/bind/react/check + --version/--help）——core/argparse 集成（@env.args() 去首元素、labeled 参数 `=` 调用语法、插值不嵌套字符串三个坑攻克）；四子命令全部运行验证（check 冒烟全过 / safety 状态机往返 / bind 绑定 OK / react Avoid 决策） |
+| v0.1.6 | S6.2 | ✅ | 9a509e3 | 已交付 **examples/ 示例集**：4 个可运行 executable 包（safety 状态机往返 / bind 四阶段 / react 三场景决策 / security 四守卫正反例）——全部 `moon run examples/<name> --target native` 验证通过 |
+| v0.1.6 | S6.3 | ✅ | 9a509e3 | 已交付 **6 份子包 README**（R10）：motion.core/bind/reaction/security/gbz185 + all——包职责 + 关键 API + 用法示例 + 依赖方向说明；CLI 单测调整为示例运行验证（薄分发层，核心逻辑已在库层 70 测试覆盖）；**v0.1.6 整体收口（S6.1-S6.3）** |
 | v0.1.7 | S7.1 | ⏳ | | |
 | v0.1.7 | S7.2 | ⏳ | | |
 | v0.1.7 | S7.3 | ⏳ | | |
@@ -545,3 +545,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | v1.7 | 2026-11-27 | S3.2 完成：**I3/I4 形式化验证通过**（累计 4 goals proved）——gate_closed_state/escalation_delta 可证纯函数提取 + transition 重构；.mbtp 语法限制确认（&& 仅顶层链，谓词 DNF 展开）；I1-I4 全部机器验证 | CodeArts |
 | v1.8 | 2026-11-27 | S3.3+S3.4 完成，**v0.1.3 整体收口**：I5 状态半证明（5 goals，String 半测试覆盖——逻辑侧无 String 操作）+ I6 降级（guard 包 Map/Array 限制，3 测试 + P2 义务）+ 变异测试 5/5 REJECTED（B7，scripts/mutation_prove.py）；B6+B7 门禁达成；I1-I5 机器证明、I6 运行时覆盖、证明非平凡性 100% | CodeArts |
 | v1.9 | 2026-11-27 | S5.3 完成，**v0.1.5 整体收口**（S5.1/S5.2 已随 v0.1.4 提前交付）：能力矩阵自动生成（B9，scripts/gen_capabilities.py → docs/CAPABILITIES.md，10 包矩阵：82 类型/58 函数/70 测试/5 goals）；沙箱三次重置自愈（mooncry 0.95.0 快照下载截断 → 清缓存重拉修复）；git 孤儿提交事故修复（unborn 分支 reset 不移动引用 → 备份变更 + reset 到远端 + 重放提交） | CodeArts |
+| v2.0 | 2026-11-27 | S6.1-S6.3 完成，**v0.1.6 整体收口**：mot CLI 实装（core/argparse 子命令树：safety/bind/react/check，四子命令运行验证）+ examples/ 4 个可运行示例包 + 6 份子包 README（R10）；argparse 集成三坑攻克（@env.args() 首元素、labeled `=` 调用、插值不嵌套字符串）；0.1.x 进度 6/9 | CodeArts |
