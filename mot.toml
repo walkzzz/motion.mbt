@@ -1,21 +1,22 @@
-# MOT project manifest
-# This is the MOT project list, language-agnostic in semantics but expressed in TOML
+# motion project manifest
+# This is the motion project list, language-agnostic in semantics but expressed in TOML
 # for tooling. The reference implementation is MoonBit (same stack as gbz185.mbt).
+# Naming rule: project = motion (MOT abbreviation is ambiguous and deprecated); CLI = mot.
 
 [project]
-name = "mot"
+name = "motion"
 version = "0.1.0"
 edition = "1.0"
 
 [dependencies]
-# Reference other MOT packages (exact version only, no ranges -- security policy AS1)
-"@mot/human-bodymap" = "1.0"
-"@mot/core-prims" = "1.0"
+# Reference other motion packages (exact version only, no ranges -- security policy AS1)
+"@motion/human-bodymap" = "1.0"
+"@motion/core-prims" = "1.0"
 
 [dependencies.lock]
 # Pinned SHA-256 integrity hashes for every dependency (AS1: supply chain integrity).
-"@mot/human-bodymap" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
-"@mot/core-prims" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+"@motion/human-bodymap" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+"@motion/core-prims" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
 "walkzzz/gbz185.mbt" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
 
 [target]
@@ -23,7 +24,7 @@ bodymap = "human"
 
 [gbz185]
 enabled = true
-bridge_package = "@mot/gbz185-bridge"
+bridge_package = "@motion/gbz185-bridge"
 
 [security]
 # Intrusion prevention policy (see docs/00-生态选型与入侵防护梳理.md §4)

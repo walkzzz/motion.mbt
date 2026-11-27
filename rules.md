@@ -1,6 +1,6 @@
-# MOT 开发规则全集 / Development Rules
+# motion 开发规则全集 / Development Rules
 
-> **用途**：本文件是 MOT（Motion Operation Type）通用动作语义规范 MoonBit 参考实现所有开发规则的权威汇总，供 agent 与人类协作者复用。
+> **用途**：本文件是 motion（通用动作语义规范，GB/Z 185-2026 具身执行层）MoonBit 参考实现所有开发规则的权威汇总，供 agent 与人类协作者复用。
 > **维护**：每次新增规则时回写本文件。
 > **优先级**：防跑偏规则 > 项目规则 > 个人偏好。
 > **模式来源**：对齐 walkzzz/image.mbt rules.md（同作者 MoonBit 标杆）。
@@ -71,8 +71,14 @@ moon check --deny-warn --target wasm
 ### R17 — gbz185 直接复用（MOT 特有）
 **gbz185 本身就是 MoonBit 库**（`walkzzz/gbz185.mbt@0.2.2`）。MOT 直接 import 其子包（wire/aip/tooling/identity/capability/discovery），**不自己写桥接层**。这是本版核心决策。
 
-### R18 — 安全优先（MOT 特有）
+### R18 — 安全优先（motion 特有）
 安全优先于功能；安全状态机是唯一权威门控；任何入侵不得绕过输出门控。三条不可违背原则：门控不可绕过、来源必须认证、安全事件抢占。
+
+### R19 — 命名规范（2026-11-27 定）
+项目名一律 **motion**（`MOT` 缩写在多目标跟踪/软件测试领域有歧义，弃用）；CLI 工具名 **mot**；模块名 `looyiabc/motion`（无 `.mbt` 后缀，mooncakes 惯例：moonbitlang/core、cc06b/mooncry 均无后缀——`.mbt` 后缀会导致黑盒测试 `@别名` 无法推导）。历史文档 01-12 沿用 MOT 术语仅作存档，新文档/新代码/新提交信息一律 motion。
+
+### R20 — 远端仓库布局（2026-11-27 定）
+**GitCode 主仓库**（gitcode.com/LOOYIABC/motion.mbt）为权威源，GitHub（github.com/walkzzz/motion.mbt）为同步镜像。流程：本地提交 → 推 GitCode → 同步 GitHub。禁止反向同步。
 
 ---
 
