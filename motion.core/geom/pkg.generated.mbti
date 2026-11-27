@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.core/geom"
+
+// Values
+
+// Errors
+
+// Types and methods
+pub(all) struct SpatialDisplacement {
+  translation : Vec3
+  rotation : Vec3
+}
+
+#derive(Eq)
+pub(all) struct Vec3 {
+  x : Double
+  y : Double
+  z : Double
+}
+
+// Type aliases
+
+// Traits

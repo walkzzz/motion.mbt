@@ -4,11 +4,11 @@
 
 ///|
 pub struct OutputGate {
-  sm : @types.SafetyStateMachine
+  sm : @safety.SafetyStateMachine
 }
 
 ///|
-pub fn new_gate(sm : @types.SafetyStateMachine) -> OutputGate {
+pub fn new_gate(sm : @safety.SafetyStateMachine) -> OutputGate {
   { sm, }
 }
 
@@ -16,12 +16,12 @@ pub fn new_gate(sm : @types.SafetyStateMachine) -> OutputGate {
 
 ///|
 pub fn do_exec(gate : OutputGate, action : String) -> Bool {
-  @types.is_action_allowed(gate.sm, action)
+  @safety.is_action_allowed(gate.sm, action)
 }
 
 // I4/I5: gate closed check.
 
 ///|
 pub fn gate_is_closed(gate : OutputGate) -> Bool {
-  @types.gate_closed(gate.sm)
+  @safety.gate_closed(gate.sm)
 }

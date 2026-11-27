@@ -30,4 +30,5 @@ import {
   "looyiabc/motion.reaction@0.1.0",
   "looyiabc/motion.security@0.1.0",
   "walkzzz/gbz185.mbt@0.2.2",
+  "moonbitlang/async@0.22.11",
 }

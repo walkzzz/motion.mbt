@@ -1,0 +1,9 @@
+// Safety state machine package (L0): the provable core of motion.
+// No Array-typed definitions here — this keeps the Why3 lowering clean so
+// the I1/I2 invariants can be discharged by moon prove (roadmap v0.1.3).
+// Depends only on the Array-free geometry package.
+proof_enabled = true
+
+import {
+  "looyiabc/motion.core/geom",
+}

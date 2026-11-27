@@ -40,13 +40,13 @@ pub(all) struct EnvFeedback {
 
 ///|
 pub(all) enum FeedbackPayload {
-  Obstacle(Double, Vec3, Double, String?)
+  Obstacle(Double, @geom.Vec3, Double, String?)
   ContactLoss(Double, Double)
-  Collision(String, Vec3)
-  VisualDrift(SpatialDisplacement)
+  Collision(String, @geom.Vec3)
+  VisualDrift(@geom.SpatialDisplacement)
   LocalQuality(Double)
   JointAnomaly(String, Double)
-  HumanProximity(Double, Array[Vec3])
+  HumanProximity(Double, Array[@geom.Vec3])
   DoorState(Double)
   Battery(Double)
   Heartbeat(Int64, Int64)

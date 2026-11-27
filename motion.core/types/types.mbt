@@ -25,7 +25,7 @@ pub(all) enum ParamValue {
   PFloat(Double)
   PBool(Bool)
   PString(String)
-  PDirection(Vec3)
+  PDirection(@geom.Vec3)
   PEnum(String, Array[String])
   PRange(Double, Double, String)
 }
@@ -45,21 +45,6 @@ pub(all) enum ParamType {
   PDirectionType
   PEnumType
   PRangeType
-}
-
-// Spatial types
-
-///|
-pub(all) struct Vec3 {
-  x : Double
-  y : Double
-  z : Double
-}
-
-///|
-pub(all) struct SpatialDisplacement {
-  translation : Vec3
-  rotation : Vec3
 }
 
 ///|

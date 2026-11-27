@@ -1,0 +1,68 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.core/safety"
+
+import {
+  "looyiabc/motion.core/geom",
+}
+
+// Values
+pub fn gate_closed(SafetyStateMachine) -> Bool
+
+pub fn is_action_allowed(SafetyStateMachine, String) -> Bool
+
+pub fn new_statemachine() -> SafetyStateMachine
+
+pub fn sm_current(SafetyStateMachine) -> SafetyState
+
+pub fn transition(SafetyStateMachine, StateEvent) -> TransitionResult
+
+// Errors
+
+// Types and methods
+#derive(Eq)
+pub(all) enum SafetyEvent {
+  EStopPressed
+  CliffDetected(@geom.Vec3)
+  WheelDrop(String)
+  PickedUp
+  HeartbeatTimeout(Int64, Int64)
+  SensorStale(String, Int64)
+  LocalizationDiverged(Double)
+  JointAnomaly(String, Double)
+  SoftLimitExceeded(String, Double)
+  LowBattery(Double)
+}
+
+#derive(Eq)
+pub(all) enum SafetyState {
+  Selftest
+  Idle
+  Executing
+  Recovering
+  SafeHold
+  FaultLocked
+}
+
+pub struct SafetyStateMachine {
+  mut current : SafetyState
+  mut escalation_index : Int32
+}
+
+#derive(Eq)
+pub(all) enum StateEvent {
+  Safety(SafetyEvent)
+  Reset
+  TaskStart
+  TaskComplete
+}
+
+pub(all) struct TransitionResult {
+  from : SafetyState
+  to : SafetyState
+  allowed : Bool
+  reason : String?
+}
+
+// Type aliases
+
+// Traits

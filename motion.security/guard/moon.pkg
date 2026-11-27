@@ -1,4 +1,5 @@
-// Security guards (L2): depends on core types.
+// Security guards (L2): depends on core types + the provable safety core.
 import {
   "looyiabc/motion.core/types",
+  "looyiabc/motion.core/safety",
 }

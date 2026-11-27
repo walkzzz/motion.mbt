@@ -1,0 +1,3 @@
+// Geometry primitives package (L0): zero cross-module imports, no Array types.
+import {
+}

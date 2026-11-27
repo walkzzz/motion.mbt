@@ -12,6 +12,7 @@
 // I6 feedback source authentication (handled in feedback_auth.mbt)
 
 ///|
+#derive(Eq)
 pub(all) enum SafetyState {
   Selftest
   Idle
@@ -22,9 +23,10 @@ pub(all) enum SafetyState {
 }
 
 ///|
+#derive(Eq)
 pub(all) enum SafetyEvent {
   EStopPressed
-  CliffDetected(Vec3)
+  CliffDetected(@geom.Vec3)
   WheelDrop(String)
   PickedUp
   HeartbeatTimeout(Int64, Int64)
@@ -36,6 +38,7 @@ pub(all) enum SafetyEvent {
 }
 
 ///|
+#derive(Eq)
 pub(all) enum StateEvent {
   Safety(SafetyEvent)
   Reset
@@ -116,12 +119,41 @@ pub fn gate_closed(sm : SafetyStateMachine) -> Bool {
   }
 }
 
+// Proof-facing rank of each state (shared by program side and logic side).
+// Selftest=0 Idle=1 Executing=2 Recovering=3 SafeHold=4 FaultLocked=5
+
+///|
+#proof_pure
+fn state_rank(s : SafetyState) -> Int32 {
+  match s {
+    Selftest => 0
+    Idle => 1
+    Executing => 2
+    Recovering => 3
+    SafeHold => 4
+    FaultLocked => 5
+  }
+}
+
+// Proof-facing predicate: is this event a Reset?
+
+///|
+#proof_pure
+fn is_reset_event(e : StateEvent) -> Bool {
+  match e {
+    Reset => true
+    _ => false
+  }
+}
+
 ///|
 fn is_valid_transition(
   from : SafetyState,
-  to : SafetyState,
+  to_state : SafetyState,
   event : StateEvent,
-) -> Bool {
+) -> Bool where {
+  proof_ensure: result => valid_transition_i2(from, event, result),
+} {
   match from {
     FaultLocked =>
       match event {
@@ -129,7 +161,7 @@ fn is_valid_transition(
         _ => false
       }
     _ =>
-      match (from, to) {
+      match (from, to_state) {
         (Selftest, Idle) => true
         (Selftest, FaultLocked) => true
         (Idle, Executing) => true
@@ -151,7 +183,12 @@ fn is_valid_transition(
 }
 
 ///|
-fn next_state(from : SafetyState, event : StateEvent) -> SafetyState {
+fn next_state(
+  from : SafetyState,
+  event : StateEvent,
+) -> SafetyState where {
+  proof_ensure: result => next_state_spec(from, event, result),
+} {
   match event {
     Safety(_) =>
       match from {

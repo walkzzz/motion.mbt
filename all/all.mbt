@@ -8,12 +8,15 @@
 ///|
 pub using @motion {version}
 
+// ---- motion.core/geom (Array-free geometry) ----
+
+///|
+pub using @geom {type Vec3, type SpatialDisplacement}
+
 // ---- motion.core/types ----
 
 ///|
 pub using @types {
-  type Vec3,
-  type SpatialDisplacement,
   type ParamValue,
   type ParamType,
   type ParamSpec,
@@ -48,11 +51,6 @@ pub using @types {
   type ReactionScope,
   type AvoidStrategy,
   type ConditionExpr,
-  type SafetyStateMachine,
-  type SafetyState,
-  type StateEvent,
-  type SafetyEvent,
-  type TransitionResult,
   type TargetActionSeq,
   type BoundAction,
   type NLI_Result,
@@ -74,17 +72,28 @@ pub using @types {
   type MappingRef,
   type BodyPartRef,
   type SupportPattern,
-  new_statemachine,
-  transition,
-  sm_current,
-  is_action_allowed,
-  gate_closed,
   make_error,
   make_warning,
   exit_code_of,
   exit_code_to_int,
   internal_error_code,
   sec_error,
+}
+
+// ---- motion.core/safety (provable core, I1/I2 formally verified) ----
+
+///|
+pub using @safety {
+  type SafetyStateMachine,
+  type SafetyState,
+  type StateEvent,
+  type SafetyEvent,
+  type TransitionResult,
+  new_statemachine,
+  transition,
+  sm_current,
+  is_action_allowed,
+  gate_closed,
 }
 
 // ---- motion.bind/lib ----

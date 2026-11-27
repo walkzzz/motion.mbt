@@ -1,3 +1,6 @@
-// Core types package (L0): zero cross-module imports.
+// Core types package (L0): geometry comes from motion.core/geom.
+// (SafetyStateMachine moved to motion.core/safety — that package carries
+// proof_enabled; this package stays Array-heavy and is not lowered to Why3.)
 import {
+  "looyiabc/motion.core/geom",
 }

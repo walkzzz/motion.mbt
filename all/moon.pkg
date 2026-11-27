@@ -5,7 +5,9 @@
 // package only reexports; deep packages still require their own moon add.
 import {
   "looyiabc/motion",
+  "looyiabc/motion.core/geom",
   "looyiabc/motion.core/types",
+  "looyiabc/motion.core/safety",
   "looyiabc/motion.bind/lib",
   "looyiabc/motion.reaction/engine",
   "looyiabc/motion.security/guard",

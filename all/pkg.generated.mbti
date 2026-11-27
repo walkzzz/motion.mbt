@@ -3,6 +3,8 @@ package "looyiabc/motion/all"
 
 import {
   "looyiabc/motion.bind/lib",
+  "looyiabc/motion.core/geom",
+  "looyiabc/motion.core/safety",
   "looyiabc/motion.core/types",
   "looyiabc/motion.gbz185/bridge",
   "looyiabc/motion.reaction/engine",
@@ -25,7 +27,7 @@ pub fn exit_code_of(Array[@types.Diagnostic]) -> Int32
 
 pub fn exit_code_to_int(@types.ExitCode) -> Int32
 
-pub fn gate_closed(@types.SafetyStateMachine) -> Bool
+pub fn gate_closed(@safety.SafetyStateMachine) -> Bool
 
 pub fn gate_is_closed(@guard.OutputGate) -> Bool
 
@@ -33,7 +35,7 @@ pub fn guard_nli_result(@types.NLI_Result) -> Result[@types.TargetActionSeq, @ty
 
 pub fn internal_error_code() -> Int32
 
-pub fn is_action_allowed(@types.SafetyStateMachine, String) -> Bool
+pub fn is_action_allowed(@safety.SafetyStateMachine, String) -> Bool
 
 pub fn make_error(@types.DiagnosticCategory, Int32, Array[String], String) -> @types.Diagnostic
 
@@ -43,13 +45,13 @@ pub fn mot_envelope(String, String, Int64, @aip.MessageKind, @json.Json) -> @aip
 
 pub fn mot_tool_descriptor(String, String, @json.Json, @tooling.ToolBinding) -> @tooling.ToolDescriptor
 
-pub fn new_gate(@types.SafetyStateMachine) -> @guard.OutputGate
+pub fn new_gate(@safety.SafetyStateMachine) -> @guard.OutputGate
 
 pub fn new_registry() -> @lib.PrimitiveRegistry
 
 pub fn new_sensor_registry() -> @guard.SensorRegistry
 
-pub fn new_statemachine() -> @types.SafetyStateMachine
+pub fn new_statemachine() -> @safety.SafetyStateMachine
 
 pub fn react(Array[@types.ReactionPolicy], @types.EnvFeedback) -> @engine.ReactionDecision
 
@@ -61,9 +63,9 @@ pub fn sec_error(@types.AttackSurface, Int32, String) -> @types.SecurityError
 
 pub fn security_error_to_mot(@types.SecurityError) -> @bridge.MotError
 
-pub fn sm_current(@types.SafetyStateMachine) -> @types.SafetyState
+pub fn sm_current(@safety.SafetyStateMachine) -> @safety.SafetyState
 
-pub fn transition(@types.SafetyStateMachine, @types.StateEvent) -> @types.TransitionResult
+pub fn transition(@safety.SafetyStateMachine, @safety.StateEvent) -> @safety.TransitionResult
 
 pub fn verify_lock_hash(String, String) -> Result[Unit, @types.SecurityError]
 
@@ -200,11 +202,11 @@ pub using @types {type SacSpec}
 
 pub using @lib {type SacVerificationReport}
 
-pub using @types {type SafetyEvent}
+pub using @safety {type SafetyEvent}
 
-pub using @types {type SafetyState}
+pub using @safety {type SafetyState}
 
-pub using @types {type SafetyStateMachine}
+pub using @safety {type SafetyStateMachine}
 
 pub using @types {type SecurityError}
 
@@ -214,18 +216,18 @@ pub using @guard {type SensorRegistry}
 
 pub using @types {type Severity}
 
-pub using @types {type SpatialDisplacement}
+pub using @geom {type SpatialDisplacement}
 
-pub using @types {type StateEvent}
+pub using @safety {type StateEvent}
 
 pub type SupportPattern = Array[String]
 
 pub using @types {type TargetActionSeq}
 
-pub using @types {type TransitionResult}
+pub using @safety {type TransitionResult}
 
 pub type URN = String
 
-pub using @types {type Vec3}
+pub using @geom {type Vec3}
 
 // Traits

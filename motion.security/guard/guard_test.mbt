@@ -202,7 +202,7 @@ test "feedback auth: stale feedback (stale_after_ms<=0) -> Err (I6)" {
 
 ///|
 test "output gate: non-Executing -> do_exec false (I5)" {
-  let sm = @types.new_statemachine()
+  let sm = @safety.new_statemachine()
   let gate = @guard.new_gate(sm)
   assert_false(@guard.do_exec(gate, "walk"))
   assert_true(@guard.gate_is_closed(gate))
@@ -210,9 +210,9 @@ test "output gate: non-Executing -> do_exec false (I5)" {
 
 ///|
 test "output gate: Executing -> do_exec true (I5)" {
-  let sm = @types.new_statemachine()
-  let _ = @types.transition(sm, @types.StateEvent::Reset)
-  let _ = @types.transition(sm, @types.StateEvent::TaskStart)
+  let sm = @safety.new_statemachine()
+  let _ = @safety.transition(sm, @safety.StateEvent::Reset)
+  let _ = @safety.transition(sm, @safety.StateEvent::TaskStart)
   let gate = @guard.new_gate(sm)
   assert_true(@guard.do_exec(gate, "walk"))
   assert_false(@guard.gate_is_closed(gate))

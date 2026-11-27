@@ -2,6 +2,7 @@
 package "looyiabc/motion.core/types"
 
 import {
+  "looyiabc/motion.core/geom",
   "moonbitlang/core/debug",
   "moonbitlang/core/json",
 }
@@ -11,23 +12,13 @@ pub fn exit_code_of(Array[Diagnostic]) -> Int32
 
 pub fn exit_code_to_int(ExitCode) -> Int32
 
-pub fn gate_closed(SafetyStateMachine) -> Bool
-
 pub fn internal_error_code() -> Int32
-
-pub fn is_action_allowed(SafetyStateMachine, String) -> Bool
 
 pub fn make_error(DiagnosticCategory, Int32, Array[String], String) -> Diagnostic
 
 pub fn make_warning(DiagnosticCategory, Int32, Array[String], String) -> Diagnostic
 
-pub fn new_statemachine() -> SafetyStateMachine
-
 pub fn sec_error(AttackSurface, Int32, String) -> SecurityError
-
-pub fn sm_current(SafetyStateMachine) -> SafetyState
-
-pub fn transition(SafetyStateMachine, StateEvent) -> TransitionResult
 
 // Errors
 
@@ -199,13 +190,13 @@ pub(all) enum FeedbackKind {
 }
 
 pub(all) enum FeedbackPayload {
-  Obstacle(Double, Vec3, Double, String?)
+  Obstacle(Double, @geom.Vec3, Double, String?)
   ContactLoss(Double, Double)
-  Collision(String, Vec3)
-  VisualDrift(SpatialDisplacement)
+  Collision(String, @geom.Vec3)
+  VisualDrift(@geom.SpatialDisplacement)
   LocalQuality(Double)
   JointAnomaly(String, Double)
-  HumanProximity(Double, Array[Vec3])
+  HumanProximity(Double, Array[@geom.Vec3])
   DoorState(Double)
   Battery(Double)
   Heartbeat(Int64, Int64)
@@ -303,7 +294,7 @@ pub(all) enum ParamValue {
   PFloat(Double)
   PBool(Bool)
   PString(String)
-  PDirection(Vec3)
+  PDirection(@geom.Vec3)
   PEnum(String, Array[String])
   PRange(Double, Double, String)
 }
@@ -367,33 +358,6 @@ pub(all) struct SacSpec {
   completeness : CompletenessLevel
 }
 
-pub(all) enum SafetyEvent {
-  EStopPressed
-  CliffDetected(Vec3)
-  WheelDrop(String)
-  PickedUp
-  HeartbeatTimeout(Int64, Int64)
-  SensorStale(String, Int64)
-  LocalizationDiverged(Double)
-  JointAnomaly(String, Double)
-  SoftLimitExceeded(String, Double)
-  LowBattery(Double)
-}
-
-pub(all) enum SafetyState {
-  Selftest
-  Idle
-  Executing
-  Recovering
-  SafeHold
-  FaultLocked
-}
-
-pub struct SafetyStateMachine {
-  mut current : SafetyState
-  mut escalation_index : Int32
-}
-
 pub(all) struct SecurityError {
   surface : AttackSurface
   code : Int32
@@ -415,36 +379,11 @@ pub(all) enum Severity {
   Critical
 }
 
-pub(all) struct SpatialDisplacement {
-  translation : Vec3
-  rotation : Vec3
-}
-
-pub(all) enum StateEvent {
-  Safety(SafetyEvent)
-  Reset
-  TaskStart
-  TaskComplete
-}
-
 #alias(BoundActionSeq)
 pub(all) struct TargetActionSeq {
   actions : Array[BoundAction]
   bodymap : String
   metadata : Map[String, String]
-}
-
-pub(all) struct TransitionResult {
-  from : SafetyState
-  to : SafetyState
-  allowed : Bool
-  reason : String?
-}
-
-pub(all) struct Vec3 {
-  x : Double
-  y : Double
-  z : Double
 }
 
 // Type aliases
