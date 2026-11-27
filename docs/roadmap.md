@@ -42,7 +42,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.0 | 单包基线：20 源文件 + 31 测试绿 | ✅ 已完成 | — | B1(单目标)/B2/B5 |
 | v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | ✅ 已完成（S1.1-S1.3） | v0.1.0 | B1-B5 |
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ✅ 已完成（CI 四目标矩阵常绿） | v0.1.1 | B1(四目标)/B2 |
-| v0.1.3 | I1-I6 六条不变式 moon prove 全证 | 🔄 S3.1-S3.2 完成（I1-I4 已证，4 goals） | v0.1.2 | B6 |
+| v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ✅ 已完成（S3.1-S3.4：I1-I5 机器证明 5 goals + I6 测试覆盖 + 变异 5/5） | v0.1.2 | B6+B7 |
 | v0.1.4 | moon.work 工作区成型（5 子模块 + all 门面包） | ✅ 已完成（提前） | v0.1.3 | B1-B2(多包) |
 | v0.1.5 | all 门面包 + pkg.generated.mbti | ⏳ 待启动 | v0.1.4 | B8/B9 |
 | v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
@@ -69,8 +69,8 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.2 | S2.3 | ✅ | （CI test job 矩阵） | 已交付四目标测试矩阵（test job × 4 targets，70 测试 × 4 全绿） |
 | v0.1.3 | S3.1 | ✅ | 5adab44（atomgit 主仓库） | 已交付 **I1/I2 形式化验证**：moon prove + cvc5 静态二进制（aarch64，GitHub release 资产 8 段并行下载）；架构重构——safety 独立成 motion.core/safety 包（proof_enabled，无 Array 类型）+ geom 独立包（Vec3/SpatialDisplacement，切断 safety→types 依赖链，绕过 Why3 array lowering 缺陷）；safety.mbtp 谓词 + state_rank(#proof_pure) 桥接（.mbtp 逻辑侧不支持枚举 == 比较）；参数名 `to` 撞 Why3 关键字改名 to_state；**2 goals proved**（next_state I1 抢占 + is_valid_transition I2 锁死）；四目标 70 测试全绿；下环 v0.1.3 S3.2（I3/I4） |
 | v0.1.3 | S3.2 | ✅ | 4e2d92e（atomgit 主仓库） | 已交付 **I3/I4 形式化验证**（累计 4 goals proved）：提取可证纯函数 gate_closed_state（I4：非 Executing 恒关门，SafeHold/FaultLocked 为安全推论）+ escalation_delta（I3：入 Recovering 恰 +1 否则 0，非负性=无回归）；transition 重构到 delta 之上（可变状态机分解为纯函数+契约，对齐文档 functional-style 推荐）；.mbtp 语法坑：&& 仅限顶层链（括号子表达式内禁用），谓词 DNF 展开；四目标 70 测试全绿；下环 v0.1.3 S3.3（I5/I6） |
-| v0.1.3 | S3.3 | ⏳ | | |
-| v0.1.3 | S3.4 | ⏳ | | |
+| v0.1.3 | S3.3 | ✅ | fb650b8（atomgit 主仓库） | 已交付 **I5 形式化验证 + I6 降级决策**（累计 5 goals proved）：I5 拆两域——状态半 state_allows 证明（放行当且仅当 Executing），String 空指令半由运行时测试覆盖（.mbtp 逻辑侧不支持 String 字面量/length——is_empty_str 桥接失败后按风险表降级）；I6（反馈来源认证）因 guard 包 Map/Array lowering 限制降级为运行时测试（3 个 I6 测试已有）+ P2 证明义务文档；四目标 70 测试全绿；下环 v0.1.3 S3.4（变异测试） |
+| v0.1.3 | S3.4 | ✅ | fb650b8 | 已交付 **变异测试（B7 门禁）**：scripts/mutation_prove.py——5 个行为钉死变异体（I1 抢占失效/I2 锁死放水/I3 索引不增/I4 门控反转/I5 状态放水）逐一注入 safety.mbt，moon prove 全部拒绝；**变异得分 5/5 = 100%**（证明非平凡性：每个证明都真实钉住行为而非形状）；源码 finally 还原 + 锚点唯一性预检；**v0.1.3 整体收口（S3.1-S3.4 全部完成，I1-I5 机器证明 + I6 测试覆盖 + 变异 100%）** |
 | v0.1.4 | S4.1 | ✅ | be58e41（gitcode 主仓库） | 已交付 motion.core 拆分（types/bodymap/primitive/mapping/sac/env/reaction/safety/nli/targetseq/diag/threat 全部入 motion.core/types，根包门面 motion.mbt 仅 version）；下环 S4.2 |
 | v0.1.4 | S4.2 | ✅ | be58e41 | 已交付 motion.gbz185/bridge + motion.bind/lib 拆分（bind 四阶段含 Stage 2 环检测，@types/@bridge/@lib 包别名全局唯一）；下环 S4.3 |
 | v0.1.4 | S4.3 | ✅ | be58e41 | 已交付 motion.reaction/engine + motion.security/guard 拆分（supply/nli_guard/feedback_auth/output_gate；safety 类型留在 core，SecurityError 在 core/threat）；下环 S4.4（all 门面包） |
@@ -543,3 +543,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | v1.5 | 2026-11-27 | S1.3 完成：安全扫描清零（9C+1L → 0/0/0/0/0）——HMAC 覆盖请求体 + f-string 消除拼接告警 + 绑定地址环境变量化 + _build 清理（R16）；v0.1.1 整体收口（S1.1-S1.3），B5 门禁绿；经验教训入库：服务启动 git reset --hard 会覆盖未提交修复 | CodeArts |
 | v1.6 | 2026-11-27 | S3.1 完成：**I1/I2 形式化验证通过**（moon prove + cvc5，2 goals proved）——证明架构成型：safety/geom 独立包切断 Array 依赖链、state_rank(#proof_pure) 桥接枚举比较、参数名 to 撞 Why3 关键字改名；cvc5 静态二进制经 GitHub release 资产 API 8 段并行下载（绕过 GLIBCXX 限制）；沙箱二次重置自愈 + async@0.22.11 依赖漂移修复 | CodeArts |
 | v1.7 | 2026-11-27 | S3.2 完成：**I3/I4 形式化验证通过**（累计 4 goals proved）——gate_closed_state/escalation_delta 可证纯函数提取 + transition 重构；.mbtp 语法限制确认（&& 仅顶层链，谓词 DNF 展开）；I1-I4 全部机器验证 | CodeArts |
+| v1.8 | 2026-11-27 | S3.3+S3.4 完成，**v0.1.3 整体收口**：I5 状态半证明（5 goals，String 半测试覆盖——逻辑侧无 String 操作）+ I6 降级（guard 包 Map/Array 限制，3 测试 + P2 义务）+ 变异测试 5/5 REJECTED（B7，scripts/mutation_prove.py）；B6+B7 门禁达成；I1-I5 机器证明、I6 运行时覆盖、证明非平凡性 100% | CodeArts |
