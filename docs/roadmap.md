@@ -42,7 +42,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.0 | 单包基线：20 源文件 + 31 测试绿 | ✅ 已完成 | — | B1(单目标)/B2/B5 |
 | v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | ✅ 已完成（S1.1-S1.3） | v0.1.0 | B1-B5 |
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ✅ 已完成（CI 四目标矩阵常绿） | v0.1.1 | B1(四目标)/B2 |
-| v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ⏳ 待启动 | v0.1.2 | B6 |
+| v0.1.3 | I1-I6 六条不变式 moon prove 全证 | 🔄 S3.1 完成（I1/I2 已证） | v0.1.2 | B6 |
 | v0.1.4 | moon.work 工作区成型（5 子模块 + all 门面包） | ✅ 已完成（提前） | v0.1.3 | B1-B2(多包) |
 | v0.1.5 | all 门面包 + pkg.generated.mbti | ⏳ 待启动 | v0.1.4 | B8/B9 |
 | v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
@@ -67,7 +67,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.2 | S2.1 | ✅ | （CI quality job） | 已交付四目标 check deny-warn（GitHub CI quality job 每次 push 验证 native/wasm-gc/js/wasm 0 error 0 warning） |
 | v0.1.2 | S2.2 | ✅ | （CI quality job） | 已交付四目标 build（check 含类型检查与构建计划验证） |
 | v0.1.2 | S2.3 | ✅ | （CI test job 矩阵） | 已交付四目标测试矩阵（test job × 4 targets，70 测试 × 4 全绿） |
-| v0.1.3 | S3.1 | ⏳ | | |
+| v0.1.3 | S3.1 | ✅ | 5adab44（atomgit 主仓库） | 已交付 **I1/I2 形式化验证**：moon prove + cvc5 静态二进制（aarch64，GitHub release 资产 8 段并行下载）；架构重构——safety 独立成 motion.core/safety 包（proof_enabled，无 Array 类型）+ geom 独立包（Vec3/SpatialDisplacement，切断 safety→types 依赖链，绕过 Why3 array lowering 缺陷）；safety.mbtp 谓词 + state_rank(#proof_pure) 桥接（.mbtp 逻辑侧不支持枚举 == 比较）；参数名 `to` 撞 Why3 关键字改名 to_state；**2 goals proved**（next_state I1 抢占 + is_valid_transition I2 锁死）；四目标 70 测试全绿；下环 v0.1.3 S3.2（I3/I4） |
 | v0.1.3 | S3.2 | ⏳ | | |
 | v0.1.3 | S3.3 | ⏳ | | |
 | v0.1.3 | S3.4 | ⏳ | | |
@@ -541,3 +541,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | v1.3 | 2026-11-27 | 主仓库切换 AtomGit（R20 二次修订，GitCode 同源）；S4.4 完成：all 门面包（pub using 全量再导出 + 6 门面测试）；四目标 44 测试全绿；v0.1.4 整体收口 | CodeArts |
 | v1.4 | 2026-11-27 | S1.2 完成：覆盖率 59.0%→89.1%（336/377 单元）+ 26 新测试（70 总数）+ safety.mbt 状态机 2 处转换缺口修复（TaskComplete/Reset 恢复链）；S2.1-S2.3 由 CI 四目标矩阵覆盖达成；v0.1.1/v0.1.2 推进 | CodeArts |
 | v1.5 | 2026-11-27 | S1.3 完成：安全扫描清零（9C+1L → 0/0/0/0/0）——HMAC 覆盖请求体 + f-string 消除拼接告警 + 绑定地址环境变量化 + _build 清理（R16）；v0.1.1 整体收口（S1.1-S1.3），B5 门禁绿；经验教训入库：服务启动 git reset --hard 会覆盖未提交修复 | CodeArts |
+| v1.6 | 2026-11-27 | S3.1 完成：**I1/I2 形式化验证通过**（moon prove + cvc5，2 goals proved）——证明架构成型：safety/geom 独立包切断 Array 依赖链、state_rank(#proof_pure) 桥接枚举比较、参数名 to 撞 Why3 关键字改名；cvc5 静态二进制经 GitHub release 资产 API 8 段并行下载（绕过 GLIBCXX 限制）；沙箱二次重置自愈 + async@0.22.11 依赖漂移修复 | CodeArts |
