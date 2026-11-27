@@ -44,7 +44,7 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ✅ 已完成（CI 四目标矩阵常绿） | v0.1.1 | B1(四目标)/B2 |
 | v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ✅ 已完成（S3.1-S3.4：I1-I5 机器证明 5 goals + I6 测试覆盖 + 变异 5/5） | v0.1.2 | B6+B7 |
 | v0.1.4 | moon.work 工作区成型（5 子模块 + all 门面包） | ✅ 已完成（提前） | v0.1.3 | B1-B2(多包) |
-| v0.1.5 | all 门面包 + pkg.generated.mbti | ⏳ 待启动 | v0.1.4 | B8/B9 |
+| v0.1.5 | all 门面包 + pkg.generated.mbti + 能力矩阵 | ✅ 已完成（S5.1-S5.3） | v0.1.4 | B8+B9 |
 | v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
 | v0.1.7 | 发布门禁 B12-B14 全绿 | ⏳ 待启动 | v0.1.6 | B12/B13/B14 |
 | v0.1.8 | 生态选型落地（yacc/json-schema/async） | ⏳ 待启动 | v0.1.7 | B4/B10/B11 |
@@ -75,9 +75,9 @@ MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit �
 | v0.1.4 | S4.2 | ✅ | be58e41 | 已交付 motion.gbz185/bridge + motion.bind/lib 拆分（bind 四阶段含 Stage 2 环检测，@types/@bridge/@lib 包别名全局唯一）；下环 S4.3 |
 | v0.1.4 | S4.3 | ✅ | be58e41 | 已交付 motion.reaction/engine + motion.security/guard 拆分（supply/nli_guard/feedback_auth/output_gate；safety 类型留在 core，SecurityError 在 core/threat）；下环 S4.4（all 门面包） |
 | v0.1.4 | S4.4 | ✅ | （all 门面包，见 v1.3 变更） | 已交付 all/ 门面包（moon.pkg import 6 包 + all.mbt pub using 再导出全量符号 + 6 门面黑盒测试）；四目标 44 测试全绿；v0.1.4 整体收口（计划 7 子模块，实际演进为 5 子模块 + all 门面：diag/threat/safety 并入 core）；下环 v0.1.1 S1.2 覆盖率 |
-| v0.1.5 | S5.1 | ⏳ | | |
-| v0.1.5 | S5.2 | ⏳ | | |
-| v0.1.5 | S5.3 | ⏳ | | |
+| v0.1.5 | S5.1 | ✅ | （随 v0.1.4 S4.4 提前完成） | all 门面包（moon.pkg import + all.mbt pub using 全量再导出 + 6 门面黑盒测试）已随 v0.1.4 交付 |
+| v0.1.5 | S5.2 | ✅ | （随 v0.1.4 提前完成） | API 索引生成（moon info）——8 份 pkg.generated.mbti 入库，CI mbti 漂移门禁绿（B8） |
+| v0.1.5 | S5.3 | ✅ | 67ff054（atomgit 主仓库） | 已交付 **能力矩阵生成（B9 门禁）**：scripts/gen_capabilities.py 从 mbti 契约自动生成 docs/CAPABILITIES.md——10 包 ×（层级/类型/函数/常量/依赖/测试/证明状态）矩阵 + 汇总（82 类型 · 58 函数 · 2 常量 · 70 测试 × 4 目标 · 5 goals）；**v0.1.5 整体收口（S5.1-S5.3）** |
 | v0.1.6 | S6.1 | ⏳ | | |
 | v0.1.6 | S6.2 | ⏳ | | |
 | v0.1.6 | S6.3 | ⏳ | | |
@@ -544,3 +544,4 @@ v0.1.9  ⏳ 正式发布 mooncakes.io
 | v1.6 | 2026-11-27 | S3.1 完成：**I1/I2 形式化验证通过**（moon prove + cvc5，2 goals proved）——证明架构成型：safety/geom 独立包切断 Array 依赖链、state_rank(#proof_pure) 桥接枚举比较、参数名 to 撞 Why3 关键字改名；cvc5 静态二进制经 GitHub release 资产 API 8 段并行下载（绕过 GLIBCXX 限制）；沙箱二次重置自愈 + async@0.22.11 依赖漂移修复 | CodeArts |
 | v1.7 | 2026-11-27 | S3.2 完成：**I3/I4 形式化验证通过**（累计 4 goals proved）——gate_closed_state/escalation_delta 可证纯函数提取 + transition 重构；.mbtp 语法限制确认（&& 仅顶层链，谓词 DNF 展开）；I1-I4 全部机器验证 | CodeArts |
 | v1.8 | 2026-11-27 | S3.3+S3.4 完成，**v0.1.3 整体收口**：I5 状态半证明（5 goals，String 半测试覆盖——逻辑侧无 String 操作）+ I6 降级（guard 包 Map/Array 限制，3 测试 + P2 义务）+ 变异测试 5/5 REJECTED（B7，scripts/mutation_prove.py）；B6+B7 门禁达成；I1-I5 机器证明、I6 运行时覆盖、证明非平凡性 100% | CodeArts |
+| v1.9 | 2026-11-27 | S5.3 完成，**v0.1.5 整体收口**（S5.1/S5.2 已随 v0.1.4 提前交付）：能力矩阵自动生成（B9，scripts/gen_capabilities.py → docs/CAPABILITIES.md，10 包矩阵：82 类型/58 函数/70 测试/5 goals）；沙箱三次重置自愈（mooncry 0.95.0 快照下载截断 → 清缓存重拉修复）；git 孤儿提交事故修复（unborn 分支 reset 不移动引用 → 备份变更 + reset 到远端 + 重放提交） | CodeArts |
