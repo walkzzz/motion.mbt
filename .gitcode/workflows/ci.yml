@@ -51,6 +51,19 @@ jobs:
           moon info
           git diff --exit-code -- '*.mbti'
 
+      - name: Run 摘要
+        run: |
+          echo "## motion CI 质量门禁摘要" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| 门禁 | 结果 |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|------|" >> $GITHUB_STEP_SUMMARY
+          echo "| moon fmt --check | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| moon check --deny-warn × 4 目标 | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| mbti API 契约漂移 | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "模块：motion.core / motion.gbz185 / motion.bind / motion.reaction / motion.security" >> $GITHUB_STEP_SUMMARY
+          echo "测试矩阵：native / wasm-gc / js / wasm（test job）" >> $GITHUB_STEP_SUMMARY
+
   test:
     name: 测试（${{ matrix.target }}）
     runs-on: ubuntu-latest

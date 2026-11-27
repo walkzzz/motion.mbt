@@ -47,6 +47,19 @@ jobs:
           moon info
           git diff --exit-code -- '*.mbti'
 
+      - name: Run summary
+        run: |
+          echo "## motion CI quality gates summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Gate | Result |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| moon fmt --check | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| moon check --deny-warn × 4 targets | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| mbti API contract drift | ✅ pass |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Modules: motion.core / motion.gbz185 / motion.bind / motion.reaction / motion.security" >> $GITHUB_STEP_SUMMARY
+          echo "Test matrix: native / wasm-gc / js / wasm (test job)" >> $GITHUB_STEP_SUMMARY
+
   test:
     name: Test (${{ matrix.target }})
     runs-on: ubuntu-24.04
