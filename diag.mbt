@@ -1,1 +1,102 @@
-Ly8gRGlhZ25vc3RpYyBzeXN0ZW0g4oCU4oCUIHVuaWZpZWQgZXJyb3JzICYgd2FybmluZ3MgKHNwZWMgc2VjdGlvbiA1KQovLyBFeGl0IGNvZGVzOiAwIHN1Y2Nlc3MgLyAxIGVycm9yIC8gMiB3YXJuaW5nIC8gMyBpbnRlcm5hbCBlcnJvci4KCi8vL3wKcHViKGFsbCkgZW51bSBEaWFnbm9zdGljTGV2ZWwgewogIEVycm9yCiAgV2FybmluZwogIEluZm8KICBIaW50Cn0KCi8vL3wKcHViKGFsbCkgZW51bSBEaWFnbm9zdGljQ2F0ZWdvcnkgewogIFN5bnRheAogIFJlc29sdmUKICBNYXBwaW5nCiAgQ29uZmxpY3QKICBTYWMKICBSZWFjdGlvbgogIFNhZmV0eQogIE5saQogIFNlY3VyaXR5Cn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IERpYWdub3N0aWMgewogIGxldmVsIDogRGlhZ25vc3RpY0xldmVsCiAgY2F0ZWdvcnkgOiBEaWFnbm9zdGljQ2F0ZWdvcnkKICBjb2RlIDogSW50MzIKICBwYXRoIDogQXJyYXlbU3RyaW5nXQogIG1lc3NhZ2UgOiBTdHJpbmcKICBoaW50IDogU3RyaW5nPwogIHJlbGF0ZWQgOiBBcnJheVtEaWFnbm9zdGljXQp9CgovLy98CnB1YiBlbnVtIEV4aXRDb2RlIHsKICBTdWNjZXNzID0gMAogIEVycm9yID0gMQogIFdhcm5pbmcgPSAyCiAgSW50ZXJuYWxFcnJvciA9IDMKfQoKLy8gTWFwIGFuIEV4aXRDb2RlIHRvIHRoZSBwcm9jZXNzIGV4aXQgc3RhdHVzIHVzZWQgYnkgbW90Yy4KCi8vL3wKcHViIGZuIGV4aXRfY29kZV90b19pbnQoY29kZSA6IEV4aXRDb2RlKSAtPiBJbnQzMiB7CiAgbWF0Y2ggY29kZSB7CiAgICBTdWNjZXNzID0+IDAKICAgIEVycm9yID0+IDEKICAgIFdhcm5pbmcgPT4gMgogICAgSW50ZXJuYWxFcnJvciA9PiAzCiAgfQp9CgovLyBFeGl0IGNvZGUgZm9yIHVuZXhwZWN0ZWQgaW50ZXJuYWwgZmFpbHVyZXMgKG1vdGMgY2F0Y2gtYWxsKS4KCi8vL3wKcHViIGZuIGludGVybmFsX2Vycm9yX2NvZGUoKSAtPiBJbnQzMiB7CiAgZXhpdF9jb2RlX3RvX2ludChJbnRlcm5hbEVycm9yKQp9CgovLy98CnB1YiBmbiBleGl0X2NvZGVfb2YoZGlhZ25vc3RpY3MgOiBBcnJheVtEaWFnbm9zdGljXSkgLT4gSW50MzIgewogIGxldCBtdXQgaGFzX2Vycm9yID0gZmFsc2UKICBsZXQgbXV0IGhhc193YXJuaW5nID0gZmFsc2UKICBmb3IgZCBpbiBkaWFnbm9zdGljcyB7CiAgICBtYXRjaCBkLmxldmVsIHsKICAgICAgRXJyb3IgPT4gaGFzX2Vycm9yID0gdHJ1ZQogICAgICBXYXJuaW5nID0+IGhhc193YXJuaW5nID0gdHJ1ZQogICAgICBfID0+ICgpCiAgICB9CiAgfQogIGxldCBjb2RlIDogRXhpdENvZGUgPSBpZiBoYXNfZXJyb3IgewogICAgRXJyb3IKICB9IGVsc2UgaWYgaGFzX3dhcm5pbmcgewogICAgV2FybmluZwogIH0gZWxzZSB7CiAgICBTdWNjZXNzCiAgfQogIGV4aXRfY29kZV90b19pbnQoY29kZSkKfQoKLy8vfApwdWIgZm4gbWFrZV9lcnJvcigKICBjYXRlZ29yeSA6IERpYWdub3N0aWNDYXRlZ29yeSwKICBjb2RlIDogSW50MzIsCiAgcGF0aCA6IEFycmF5W1N0cmluZ10sCiAgbWVzc2FnZSA6IFN0cmluZywKKSAtPiBEaWFnbm9zdGljIHsKICB7IGxldmVsOiBFcnJvciwgY2F0ZWdvcnksIGNvZGUsIHBhdGgsIG1lc3NhZ2UsIGhpbnQ6IE5vbmUsIHJlbGF0ZWQ6IFtdLCB9Cn0KCi8vL3wKcHViIGZuIG1ha2Vfd2FybmluZygKICBjYXRlZ29yeSA6IERpYWdub3N0aWNDYXRlZ29yeSwKICBjb2RlIDogSW50MzIsCiAgcGF0aCA6IEFycmF5W1N0cmluZ10sCiAgbWVzc2FnZSA6IFN0cmluZywKKSAtPiBEaWFnbm9zdGljIHsKICB7IGxldmVsOiBXYXJuaW5nLCBjYXRlZ29yeSwgY29kZSwgcGF0aCwgbWVzc2FnZSwgaGludDogTm9uZSwgcmVsYXRlZDogW10sIH0KfQo=
+// Diagnostic system —— unified errors & warnings (spec section 5)
+// Exit codes: 0 success / 1 error / 2 warning / 3 internal error.
+
+///|
+pub(all) enum DiagnosticLevel {
+  Error
+  Warning
+  Info
+  Hint
+}
+
+///|
+pub(all) enum DiagnosticCategory {
+  Syntax
+  Resolve
+  Mapping
+  Conflict
+  Sac
+  Reaction
+  Safety
+  Nli
+  Security
+}
+
+///|
+pub(all) struct Diagnostic {
+  level : DiagnosticLevel
+  category : DiagnosticCategory
+  code : Int32
+  path : Array[String]
+  message : String
+  hint : String?
+  related : Array[Diagnostic]
+}
+
+///|
+pub enum ExitCode {
+  Success = 0
+  Error = 1
+  Warning = 2
+  InternalError = 3
+}
+
+// Map an ExitCode to the process exit status used by motc.
+
+///|
+pub fn exit_code_to_int(code : ExitCode) -> Int32 {
+  match code {
+    Success => 0
+    Error => 1
+    Warning => 2
+    InternalError => 3
+  }
+}
+
+// Exit code for unexpected internal failures (motc catch-all).
+
+///|
+pub fn internal_error_code() -> Int32 {
+  exit_code_to_int(InternalError)
+}
+
+///|
+pub fn exit_code_of(diagnostics : Array[Diagnostic]) -> Int32 {
+  let mut has_error = false
+  let mut has_warning = false
+  for d in diagnostics {
+    match d.level {
+      Error => has_error = true
+      Warning => has_warning = true
+      _ => ()
+    }
+  }
+  let code : ExitCode = if has_error {
+    Error
+  } else if has_warning {
+    Warning
+  } else {
+    Success
+  }
+  exit_code_to_int(code)
+}
+
+///|
+pub fn make_error(
+  category : DiagnosticCategory,
+  code : Int32,
+  path : Array[String],
+  message : String,
+) -> Diagnostic {
+  { level: Error, category, code, path, message, hint: None, related: [], }
+}
+
+///|
+pub fn make_warning(
+  category : DiagnosticCategory,
+  code : Int32,
+  path : Array[String],
+  message : String,
+) -> Diagnostic {
+  { level: Warning, category, code, path, message, hint: None, related: [], }
+}

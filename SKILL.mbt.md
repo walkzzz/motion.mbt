@@ -1,1 +1,232 @@
-LS0tCm5hbWU6IG1vb25iaXQtbW90CmRlc2NyaXB0aW9uOiBVc2UgdGhpcyBza2lsbCB3aGVuIGRldmVsb3BpbmcgdGhlIE1PVCAoTW90aW9uIE9wZXJhdGlvbiBUeXBlKSB1bml2ZXJzYWwgYWN0aW9uIHNlbWFudGljcyBzcGVjaWZpY2F0aW9uIGluIE1vb25CaXQg4oCUIHRoZSBlbWJvZGllZC1leGVjdXRpb24gc3RhbmRhcmQgaW1wbGVtZW50YXRpb24gb2YgR0IvWiAxODUtMjAyNi4gQ292ZXJzIHRoZSBNT1QgTW9vbkJpdCByZWZlcmVuY2UgaW1wbGVtZW50YXRpb246IGNvcmUgdHlwZSBtb2RlbCAoQm9keU1hcC9QcmltaXRpdmUvTWFwcGluZy9TQUMpLCBmb3VyLXN0YWdlIGJpbmRpbmcgZW5naW5lLCBzaXgtc3RhdGUgc2FmZXR5IG1hY2hpbmUsIHJlYWN0aW9uIGVuZ2luZSwgZml2ZS1sYXllciBpbnRydXNpb24gcHJldmVudGlvbiAoc3VwcGx5IGNoYWluL05MSSBpbmplY3Rpb24vQUlQL2ZlZWRiYWNrL291dHB1dCBnYXRlKSwgYW5kIGRpcmVjdCByZXVzZSBvZiB0aGUgd2Fsa3p6ei9nYnoxODUubWJ0IE1vb25CaXQgbGlicmFyeS4gVXNlIHdoZW4gd29ya2luZyBpbiB0aGUgbW90LyBNb29uQml0IG1vZHVsZSwgZWRpdGluZyAubWJ0IGZpbGVzIHVuZGVyIHRoaXMgcGFja2FnZSwgcnVubmluZyBtb29uIGJ1aWxkL2NoZWNrL3Rlc3Qgb24gTU9ULCBvciBmb2xsb3dpbmcgTU9UJ3Mgc2VjdXJpdHktaW52YXJpYW50IGFuZCBHQi9aIDE4NSBpbnRlZ3JhdGlvbiBjb252ZW50aW9ucy4KLS0tCgojIE1PVCBNb29uQml0IOW8gOWPkSBTa2lsbO+8iOWPr+aJp+ihjOaWh+aho++8iQoK5pys5paH5Lu25pivIGBTS0lMTC5tZGAg55qE5Y+v5omn6KGM54mI5pys77ya5YyF5ZCr5Y+v5rWL6K+V55qEIE1vb25CaXQg5Luj56CB5Z2X44CC55SoIGBtb29uIHRlc3QgLS1kZW55LXdhcm5gIOmqjOivgeOAggoKIyMg5YWz6ZSu6K+t5rOV5LqL5a6e77yI5bey55SoIG1vb24gMC4xLjIwMjYxMTI2IOmqjOivge+8iQoK5Lul5LiL5Luj56CB5Z2X5Z2H6YCa6L+HIGBtb29uIGNoZWNrYC9gbW9vbiB0ZXN0YO+8jOaYr+acrOS7k+W6k+eahOadg+WogeivreazleWPguiAg+OAggoKIyMjIOaooeWdl+a4heWNlSBtb29uLm1vZAoKYGBgbW9vbmJpdCBub2NoZWNrCm5hbWUgPSAibW90L21vdCIKdmVyc2lvbiA9ICIwLjEuMCIKZGVzY3JpcHRpb24gPSAiTU9UIChNb3Rpb24gT3BlcmF0aW9uIFR5cGUpIHVuaXZlcnNhbCBhY3Rpb24gc2VtYW50aWNzLiIKaW1wb3J0IHsKICAid2Fsa3p6ei9nYnoxODUubWJ0QDAuMi4yIiwKfQpgYGAKCiMjIyDljIXmuIXljZUgbW9vbi5wa2fvvIhpbXBvcnQg5b+F6aG75Zyo6L+Z6YeM77yJCgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAppbXBvcnQgewogICJ3YWxrenp6L2diejE4NS5tYnQvd2lyZSIsCiAgIndhbGt6enovZ2J6MTg1Lm1idC9haXAiLAogICJ3YWxrenp6L2diejE4NS5tYnQvdG9vbGluZyIsCn0KYGBgCgojIyMgc3RydWN0IOWtl+aute+8iOaXoCBsZXTvvIkKCmBgYG1vb25iaXQgbm9jaGVjawovLy98CnB1YihhbGwpIHN0cnVjdCBWZWMzIHsKICB4IDogRG91YmxlCiAgeSA6IERvdWJsZQogIHogOiBEb3VibGUKfQpgYGAKCiMjIyDmnprkuL4gKyBkZXJpdmUgRXEKCmBgYG1vb25iaXQgbm9jaGVjawovLy98CiNkZXJpdmUoRXEpCnB1YihhbGwpIGVudW0gRmVlZGJhY2tLaW5kIHsKICBPYnN0YWNsZQogIENvbnRhY3RMb3NzCiAgQ29sbGlzaW9uCn0KYGBgCgojIyMg5a2X56ym5Liy5o+S5YC8IFx7eH0KCmBgYG1vb25iaXQgbm9jaGVjawovLy98CnRlc3QgImludGVycG9sYXRpb24iIHsKICBsZXQgbmFtZSA9ICJNT1QiCiAgYXNzZXJ0X2VxKCJoZWxsbyBce25hbWV9IiwgImhlbGxvIE1PVCIpCn0KYGBgCgojIyMg56m6IE1hcCDnlKggTWFwKFtdKQoKYGBgbW9vbmJpdCBub2NoZWNrCi8vL3wKdGVzdCAiZW1wdHkgbWFwIiB7CiAgbGV0IG0gOiBNYXBbU3RyaW5nLCBJbnQzMl0gPSBNYXAoW10pCiAgYXNzZXJ0X2VxKG0ubGVuZ3RoKCksIDApCn0KYGBgCgojIyMg5pWw57uE5a2X6Z2i6YePID0gQXJyYXlbVF0KCmBgYG1vb25iaXQgbm9jaGVjawovLy98CnRlc3QgImFycmF5IGxpdGVyYWwiIHsKICBsZXQgYSA6IEFycmF5W0ludDMyXSA9IFsxLCAyLCAzXQogIGFzc2VydF9lcShhLmxlbmd0aCgpLCAzKQogIGFzc2VydF9lcShhWzBdLCAxKQp9CmBgYAoKIyMjIFVuaXQg5YC85pivICgpCgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAp0ZXN0ICJ1bml0IHZhbHVlIiB7CiAgbGV0IHIgOiBSZXN1bHRbSW50MzIsIFN0cmluZ10gPSBPaygxKQogIG1hdGNoIHIgewogICAgT2sodikgPT4gYXNzZXJ0X2VxKHYsIDEpCiAgICBFcnIoXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CmBgYAoKIyMjIE1hcCDotYvlgLznlKggW109CgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAp0ZXN0ICJtYXAgYXNzaWduIiB7CiAgbGV0IG0gOiBNYXBbU3RyaW5nLCBJbnQzMl0gPSBNYXAoW10pCiAgbVsieCJdID0gMQogIGFzc2VydF9lcShtLmdldCgieCIpLCBTb21lKDEpKQp9CmBgYAoKIyMjIOebtOaOpeWkjeeUqCBnYnoxODUg5bqT77yI5LiN6YeN5YaZ5qGl5o6l5bGC77yJCgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAp0ZXN0ICJnYnoxODUgcmV1c2UiIHsKICBsZXQgZSA9IE1vdEVycm9yOjpTZWN1cml0eV9lcnJvcigidGVzdCIpCiAgYXNzZXJ0X2VxKEB3aXJlLlByb3RvY29sRXJyb3I6OnBhcnQoZSksICJnYnoxODUuNiIpCiAgYXNzZXJ0X2VxKEB3aXJlLlByb3RvY29sRXJyb3I6OmNvZGUoZSksICJNT1QtMTcwMCIpCn0KYGBgCgojIyMg5a6J5YWo54q25oCB5py6IEk177yI6L6T5Ye66Zeo5o6n77yJCgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAp0ZXN0ICJzYWZldHkgSTUiIHsKICBsZXQgc20gPSBuZXdfc3RhdGVtYWNoaW5lKCkKICBhc3NlcnRfZmFsc2UoaXNfYWN0aW9uX2FsbG93ZWQoc20sICJ3YWxrIikpCiAgbGV0IF8gPSB0cmFuc2l0aW9uKHNtLCBSZXNldCkKICBsZXQgXyA9IHRyYW5zaXRpb24oc20sIFRhc2tTdGFydCkKICBhc3NlcnRfdHJ1ZShpc19hY3Rpb25fYWxsb3dlZChzbSwgIndhbGsiKSkKfQpgYGAKCiMjIyDnu5HlrprlvJXmk47lm5vpmLbmrrUKCmBgYG1vb25iaXQgbm9jaGVjawovLy98CnRlc3QgImJpbmQgc3RhZ2UgMSIgewogIGxldCByZWcgPSBuZXdfcmVnaXN0cnkoKQogIGxldCBwIDogUHJpbWl0aXZlID0gewogICAgdXJuOiAidXJuOm1vdDpwcmltOndhbGs6MS4wIiwKICAgIG5hbWU6ICJ3YWxrIiwKICAgIGNhdGVnb3J5OiBQcmltQ2F0ZWdvcnk6OkxvYywKICAgIHBhcmFtczogW10sCiAgICBvY2N1cGFuY3k6IHsgcGFydGljaXBhbnRzOiBbXSwgZXhjbHVzaXZlOiBmYWxzZSwgfSwKICAgIHNhYzogeyBwcmVkaWNhdGVzOiBbXSwgY29tcGxldGVuZXNzOiBDb21wbGV0ZW5lc3NMZXZlbDo6U3RydWN0dXJhbCwgfSwKICAgIG1ldGFkYXRhOiBNYXAoW10pLAogIH0KICByZWdpc3Rlcl9wcmltaXRpdmUocmVnLCBwKQogIGxldCBzZXEgOiBUYXJnZXRBY3Rpb25TZXEgPSB7CiAgICBhY3Rpb25zOiBbCiAgICAgIHsKICAgICAgICBwcmltaXRpdmU6ICJ1cm46bW90OnByaW06d2FsazoxLjAiLAogICAgICAgIHBhcmFtczogTWFwKFtdKSwKICAgICAgICBzYWNfb3ZlcnJpZGU6IE5vbmUsCiAgICAgICAgcmVhY3Rpb25fcG9saWNpZXM6IFtdLAogICAgICB9LAogICAgXSwKICAgIGJvZHltYXA6ICJ1cm46bW90OmJvZHltYXA6aHVtYW46MS4wIiwKICAgIG1ldGFkYXRhOiBNYXAoW10pLAogIH0KICBsZXQgZ3JhcGggOiBNYXBwaW5nR3JhcGggPSB7IGVkZ2VzOiBbXSwgfQogIG1hdGNoIGJpbmQoc2VxLCBncmFwaCwgcmVnKSB7CiAgICBCaW5kUmVzdWx0OjpPayhiKSA9PiBhc3NlcnRfZXEoYi5hY3Rpb25zLmxlbmd0aCgpLCAxKQogICAgQmluZFJlc3VsdDo6RXJyb3IoXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CmBgYAoKIyMjIOWPjeW6lOW8leaTjiBlc2NhbGF0aW9uIOacieeVjO+8iEkz77yJCgpgYGBtb29uYml0IG5vY2hlY2sKLy8vfAp0ZXN0ICJyZWFjdGlvbiBJMyIgewogIGxldCBmYiA6IEVudkZlZWRiYWNrID0gewogICAgc291cmNlOiAicyIsCiAgICBraW5kOiBGZWVkYmFja0tpbmQ6Ok9ic3RhY2xlLAogICAgdGltZXN0YW1wOiAwTCwKICAgIHN0YWxlX2FmdGVyX21zOiAxMDBMLAogICAgc2V2ZXJpdHk6IFNldmVyaXR5OjpEYW5nZXIsCiAgICBwYXlsb2FkOiBGZWVkYmFja1BheWxvYWQ6Ok9ic3RhY2xlKAogICAgICAxLjAsCiAgICAgIHsgeDogMC4wLCB5OiAwLjAsIHo6IDAuMCwgfSwKICAgICAgMC41LAogICAgICBOb25lLAogICAgKSwKICAgIHNhY19yZWY6IE5vbmUsCiAgICBhY3Rpb25fcmVmOiBOb25lLAogIH0KICBsZXQgbGVhZiA6IFJlYWN0aW9uUG9saWN5ID0gewogICAgaWQ6ICJsZWFmIiwKICAgIHNjb3BlOiBSZWFjdGlvblNjb3BlOjpQcmltaXRpdmUsCiAgICB0cmlnZ2VyOiB7CiAgICAgIGtpbmRzOiBbRmVlZGJhY2tLaW5kOjpPYnN0YWNsZV0sCiAgICAgIHNldmVyaXR5X21pbjogU2V2ZXJpdHk6Oldhcm4sCiAgICAgIHNvdXJjZV9maWx0ZXI6IE5vbmUsCiAgICB9LAogICAgZ3VhcmRfZXhwcjogTm9uZSwKICAgIGFjdGlvbjogUmVhY3Rpb25BY3Rpb246OkNvbnRpbnVlLAogICAgZXNjYWxhdGlvbjogTm9uZSwKICB9CiAgbGV0IHJvb3QgOiBSZWFjdGlvblBvbGljeSA9IHsKICAgIGlkOiAicm9vdCIsCiAgICBzY29wZTogUmVhY3Rpb25TY29wZTo6UHJpbWl0aXZlLAogICAgdHJpZ2dlcjogewogICAgICBraW5kczogW0ZlZWRiYWNrS2luZDo6T2JzdGFjbGVdLAogICAgICBzZXZlcml0eV9taW46IFNldmVyaXR5OjpXYXJuLAogICAgICBzb3VyY2VfZmlsdGVyOiBOb25lLAogICAgfSwKICAgIGd1YXJkX2V4cHI6IE5vbmUsCiAgICBhY3Rpb246IFJlYWN0aW9uQWN0aW9uOjpDb250aW51ZSwKICAgIGVzY2FsYXRpb246IFNvbWUobGVhZiksCiAgfQogIG1hdGNoIHJlYWN0KFtyb290XSwgZmIpIHsKICAgIFJlYWN0aW9uRGVjaXNpb246OkNvbnRpbnVlID0+IGFzc2VydF90cnVlKHRydWUpCiAgICBfID0+IGFzc2VydF90cnVlKGZhbHNlKQogIH0KfQpgYGAKCiMjIOmqjOivgQoKYGBgYmFzaApleHBvcnQgUEFUSD0iJEhPTUUvLm1vb24vYmluOiRQQVRIIgpjZCAvd29ya3NwYWNlL21vdAptb29uIGNoZWNrICAgICMgMCDplJnor68KbW9vbiB0ZXN0ICAgICAjIDMxIHBhc3NlZCwgMCBmYWlsZWQKYGBgCg==
+---
+name: moonbit-mot
+description: Use this skill when developing the MOT (Motion Operation Type) universal action semantics specification in MoonBit — the embodied-execution standard implementation of GB/Z 185-2026. Covers the MOT MoonBit reference implementation: core type model (BodyMap/Primitive/Mapping/SAC), four-stage binding engine, six-state safety machine, reaction engine, five-layer intrusion prevention (supply chain/NLI injection/AIP/feedback/output gate), and direct reuse of the walkzzz/gbz185.mbt MoonBit library. Use when working in the mot/ MoonBit module, editing .mbt files under this package, running moon build/check/test on MOT, or following MOT's security-invariant and GB/Z 185 integration conventions.
+---
+
+# MOT MoonBit 开发 Skill（可执行文档）
+
+本文件是 `SKILL.md` 的可执行版本：包含可测试的 MoonBit 代码块。用 `moon test --deny-warn` 验证。
+
+## 关键语法事实（已用 moon 0.1.20261126 验证）
+
+以下代码块均通过 `moon check`/`moon test`，是本仓库的权威语法参考。
+
+### 模块清单 moon.mod
+
+```moonbit nocheck
+name = "mot/mot"
+version = "0.1.0"
+description = "MOT (Motion Operation Type) universal action semantics."
+import {
+  "walkzzz/gbz185.mbt@0.2.2",
+}
+```
+
+### 包清单 moon.pkg（import 必须在这里）
+
+```moonbit nocheck
+///|
+import {
+  "walkzzz/gbz185.mbt/wire",
+  "walkzzz/gbz185.mbt/aip",
+  "walkzzz/gbz185.mbt/tooling",
+}
+```
+
+### struct 字段（无 let）
+
+```moonbit nocheck
+///|
+pub(all) struct Vec3 {
+  x : Double
+  y : Double
+  z : Double
+}
+```
+
+### 枚举 + derive Eq
+
+```moonbit nocheck
+///|
+#derive(Eq)
+pub(all) enum FeedbackKind {
+  Obstacle
+  ContactLoss
+  Collision
+}
+```
+
+### 字符串插值 \{x}
+
+```moonbit nocheck
+///|
+test "interpolation" {
+  let name = "MOT"
+  assert_eq("hello \{name}", "hello MOT")
+}
+```
+
+### 空 Map 用 Map([])
+
+```moonbit nocheck
+///|
+test "empty map" {
+  let m : Map[String, Int32] = Map([])
+  assert_eq(m.length(), 0)
+}
+```
+
+### 数组字面量 = Array[T]
+
+```moonbit nocheck
+///|
+test "array literal" {
+  let a : Array[Int32] = [1, 2, 3]
+  assert_eq(a.length(), 3)
+  assert_eq(a[0], 1)
+}
+```
+
+### Unit 值是 ()
+
+```moonbit nocheck
+///|
+test "unit value" {
+  let r : Result[Int32, String] = Ok(1)
+  match r {
+    Ok(v) => assert_eq(v, 1)
+    Err(_) => assert_true(false)
+  }
+}
+```
+
+### Map 赋值用 []=
+
+```moonbit nocheck
+///|
+test "map assign" {
+  let m : Map[String, Int32] = Map([])
+  m["x"] = 1
+  assert_eq(m.get("x"), Some(1))
+}
+```
+
+### 直接复用 gbz185 库（不重写桥接层）
+
+```moonbit nocheck
+///|
+test "gbz185 reuse" {
+  let e = MotError::Security_error("test")
+  assert_eq(@wire.ProtocolError::part(e), "gbz185.6")
+  assert_eq(@wire.ProtocolError::code(e), "MOT-1700")
+}
+```
+
+### 安全状态机 I5（输出门控）
+
+```moonbit nocheck
+///|
+test "safety I5" {
+  let sm = new_statemachine()
+  assert_false(is_action_allowed(sm, "walk"))
+  let _ = transition(sm, Reset)
+  let _ = transition(sm, TaskStart)
+  assert_true(is_action_allowed(sm, "walk"))
+}
+```
+
+### 绑定引擎四阶段
+
+```moonbit nocheck
+///|
+test "bind stage 1" {
+  let reg = new_registry()
+  let p : Primitive = {
+    urn: "urn:mot:prim:walk:1.0",
+    name: "walk",
+    category: PrimCategory::Loc,
+    params: [],
+    occupancy: { participants: [], exclusive: false, },
+    sac: { predicates: [], completeness: CompletenessLevel::Structural, },
+    metadata: Map([]),
+  }
+  register_primitive(reg, p)
+  let seq : TargetActionSeq = {
+    actions: [
+      {
+        primitive: "urn:mot:prim:walk:1.0",
+        params: Map([]),
+        sac_override: None,
+        reaction_policies: [],
+      },
+    ],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : MappingGraph = { edges: [], }
+  match bind(seq, graph, reg) {
+    BindResult::Ok(b) => assert_eq(b.actions.length(), 1)
+    BindResult::Error(_) => assert_true(false)
+  }
+}
+```
+
+### 反应引擎 escalation 有界（I3）
+
+```moonbit nocheck
+///|
+test "reaction I3" {
+  let fb : EnvFeedback = {
+    source: "s",
+    kind: FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: Severity::Danger,
+    payload: FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  let leaf : ReactionPolicy = {
+    id: "leaf",
+    scope: ReactionScope::Primitive,
+    trigger: {
+      kinds: [FeedbackKind::Obstacle],
+      severity_min: Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: ReactionAction::Continue,
+    escalation: None,
+  }
+  let root : ReactionPolicy = {
+    id: "root",
+    scope: ReactionScope::Primitive,
+    trigger: {
+      kinds: [FeedbackKind::Obstacle],
+      severity_min: Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: ReactionAction::Continue,
+    escalation: Some(leaf),
+  }
+  match react([root], fb) {
+    ReactionDecision::Continue => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+```
+
+## 验证
+
+```bash
+export PATH="$HOME/.moon/bin:$PATH"
+cd /workspace/mot
+moon check    # 0 错误
+moon test     # 31 passed, 0 failed
+```

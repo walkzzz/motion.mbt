@@ -1,1 +1,134 @@
-Ly8gR0IvWiAxODUtMjAyNiBpbnRlZ3JhdGlvbiBsYXllciDigJTigJQgdGhpbiB3cmFwcGVyIG92ZXIgdGhlIHdhbGt6enovZ2J6MTg1Lm1idCBsaWJyYXJ5LgovLyBNT1QgcmV1c2VzIHRoZSBnYnoxODUgTW9vbkJpdCBsaWJyYXJ5IGRpcmVjdGx5IChOT1QgYSBmcm9tLXNjcmF0Y2ggYnJpZGdlKS4KLy8gVGhpcyBtb2R1bGUgaW1wb3J0cyBnYnoxODUgc3ViLXBhY2thZ2VzIGFuZCBleHBvc2VzIE1PVC1mYWNpbmcgaGVscGVycyB0aGF0Ci8vIG1hcCBNT1QgY29uY2VwdHMgb250byBnYnoxODUgdHlwZXMgKEFpcEVudmVsb3BlLCBUb29sRGVzY3JpcHRvciwgUHJvdG9jb2xFcnJvciwgZXRjLikuCi8vCi8vIEltcG9ydCBwYXRocyAodmVyaWZpZWQgYWdhaW5zdCB3YWxrenp6L2diejE4NS5tYnRAMC4yLjIgc291cmNlKToKLy8gICBAd2Fsa3p6ei9nYnoxODUubWJ0L3dpcmUgICAgICAtPiBQcm90b2NvbEVycm9yIHRyYWl0LCBKc29uV2lyZUVycm9yCi8vICAgQHdhbGt6enovZ2J6MTg1Lm1idC9haXAgICAgICAgLT4gQWlwRW52ZWxvcGUsIE1lc3NhZ2VLaW5kLCBBaXBFcnJvcgovLyAgIEB3YWxrenp6L2diejE4NS5tYnQvdG9vbGluZyAgIC0+IFRvb2xEZXNjcmlwdG9yLCBUb29sSW52b2NhdGlvbiwgVG9vbE91dGNvbWUsIFRvb2xpbmdFcnJvcgovLyAgIEB3YWxrenp6L2diejE4NS5tYnQvaWRlbnRpdHkgIC0+IEFJQyBpZGVudGl0eQovLyAgIEB3YWxrenp6L2diejE4NS5tYnQvY2FwYWJpbGl0eS0+IEFnZW50Q2FwYWJpbGl0eVNldCAoQUNTKQovLyAgIEB3YWxrenp6L2diejE4NS5tYnQvZGlzY292ZXJ5IC0+IEFnZW50Tm9kZSAoQURQKQovLwovLyBJbXBvcnRzIGFyZSBkZWNsYXJlZCBpbiBtb29uLnBrZy4gSW4gdGhpcyBtb2R1bGUgdGhlIGltcG9ydGVkIHBhY2thZ2VzIGFyZQovLyByZWZlcmVuY2VkIGFzIEB3aXJlLCBAYWlwLCBAdG9vbGluZyAodGhlIGxhc3Qgc2VnbWVudCBvZiBlYWNoIGltcG9ydCBwYXRoKS4KCi8vIC0tLS0gUHJvdG9jb2xFcnJvciByZS1leHBvcnQgKE1PVCBlcnJvcnMgaW1wbGVtZW50IHRoaXMgdHJhaXQpIC0tLS0KCi8vIE1PVCdzIE1vdEVycm9yIGltcGxlbWVudHMgZ2J6MTg1J3MgUHJvdG9jb2xFcnJvciB0cmFpdCBzbyBldmVyeSBNT1QgZXJyb3IKLy8gaXMgYSB2YWxpZCBHQi9aIDE4NSB3aXJlIGVycm9yIChzcGVjIMKnNC4yIE1vdEVycm9yIC0+IFByb3RvY29sRXJyb3IpLgovLyBUaGUgdHJhaXQgaXMgZGVmaW5lZCBpbiBAd2Fsa3p6ei9nYnoxODUubWJ0L3dpcmUgYXM6Ci8vICAgcHViKG9wZW4pIHRyYWl0IFByb3RvY29sRXJyb3IgeyBmbiBwYXJ0KFNlbGYpLT5TdHJpbmc7IGZuIGNvZGUoU2VsZiktPlN0cmluZzsgZm4gbWVzc2FnZShTZWxmKS0+U3RyaW5nIH0KLy8gcHViKG9wZW4pIGFsbG93cyBjcm9zcy1wYWNrYWdlIGltcGxlbWVudGF0aW9uLCBzbyBNT1QgY2FuIGltcGxlbWVudCBpdCBoZXJlLgoKLy8vfApwdWIoYWxsKSBzdWJlcnJvciBNb3RFcnJvciB7CiAgU3ludGF4X2Vycm9yKFN0cmluZykKICBSZXNvbHZlX2Vycm9yKFN0cmluZykKICBNYXBwaW5nX2Vycm9yKFN0cmluZykKICBDb25mbGljdF9lcnJvcihTdHJpbmcpCiAgU2FjX2Vycm9yKFN0cmluZykKICBSZWFjdGlvbl9lcnJvcihTdHJpbmcpCiAgU2FmZXR5X2Vycm9yKFN0cmluZykKICBObGlfZXJyb3IoU3RyaW5nKQogIFNlY3VyaXR5X2Vycm9yKFN0cmluZykgLy8gbW90LnNlY3VyaXR5IDE3MDAtMTc5OQp9CgovLy98CnB1YiBpbXBsIFNob3cgZm9yIE1vdEVycm9yIHdpdGggZm4gb3V0cHV0KHNlbGYgOiBNb3RFcnJvciwgbG9nZ2VyKSAtPiBVbml0IHsKICBtYXRjaCBzZWxmIHsKICAgIFN5bnRheF9lcnJvcihtKSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJtb3Qvc3ludGF4OiBce219IikKICAgIFJlc29sdmVfZXJyb3IobSkgPT4gbG9nZ2VyLndyaXRlX3N0cmluZygibW90L3Jlc29sdmU6IFx7bX0iKQogICAgTWFwcGluZ19lcnJvcihtKSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJtb3QvbWFwcGluZzogXHttfSIpCiAgICBDb25mbGljdF9lcnJvcihtKSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJtb3QvY29uZmxpY3Q6IFx7bX0iKQogICAgU2FjX2Vycm9yKG0pID0+IGxvZ2dlci53cml0ZV9zdHJpbmcoIm1vdC9zYWM6IFx7bX0iKQogICAgUmVhY3Rpb25fZXJyb3IobSkgPT4gbG9nZ2VyLndyaXRlX3N0cmluZygibW90L3JlYWN0aW9uOiBce219IikKICAgIFNhZmV0eV9lcnJvcihtKSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJtb3Qvc2FmZXR5OiBce219IikKICAgIE5saV9lcnJvcihtKSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJtb3QvbmxpOiBce219IikKICAgIFNlY3VyaXR5X2Vycm9yKG0pID0+IGxvZ2dlci53cml0ZV9zdHJpbmcoIm1vdC9zZWN1cml0eTogXHttfSIpCiAgfQp9CgovLy98CnB1YiBpbXBsIEB3aXJlLlByb3RvY29sRXJyb3IgZm9yIE1vdEVycm9yIHdpdGggZm4gcGFydChfc2VsZiA6IE1vdEVycm9yKSAtPiBTdHJpbmcgewogICJnYnoxODUuNiIKfQoKLy8vfApwdWIgaW1wbCBAd2lyZS5Qcm90b2NvbEVycm9yIGZvciBNb3RFcnJvciB3aXRoIGZuIGNvZGUoc2VsZiA6IE1vdEVycm9yKSAtPiBTdHJpbmcgewogIG1hdGNoIHNlbGYgewogICAgU3ludGF4X2Vycm9yKF8pID0+ICJNT1QtMTAwMCIKICAgIFJlc29sdmVfZXJyb3IoXykgPT4gIk1PVC0xMTAwIgogICAgTWFwcGluZ19lcnJvcihfKSA9PiAiTU9ULTEyMDAiCiAgICBDb25mbGljdF9lcnJvcihfKSA9PiAiTU9ULTEzMDAiCiAgICBTYWNfZXJyb3IoXykgPT4gIk1PVC0xNDAwIgogICAgUmVhY3Rpb25fZXJyb3IoXykgPT4gIk1PVC0xNTAwIgogICAgU2FmZXR5X2Vycm9yKF8pID0+ICJNT1QtMTYwMCIKICAgIE5saV9lcnJvcihfKSA9PiAiTU9ULTE4MDAiCiAgICBTZWN1cml0eV9lcnJvcihfKSA9PiAiTU9ULTE3MDAiCiAgfQp9CgovLy98CnB1YiBpbXBsIEB3aXJlLlByb3RvY29sRXJyb3IgZm9yIE1vdEVycm9yIHdpdGggZm4gbWVzc2FnZShzZWxmIDogTW90RXJyb3IpIC0+IFN0cmluZyB7CiAgbWF0Y2ggc2VsZiB7CiAgICBTeW50YXhfZXJyb3IobSkgPT4gbQogICAgUmVzb2x2ZV9lcnJvcihtKSA9PiBtCiAgICBNYXBwaW5nX2Vycm9yKG0pID0+IG0KICAgIENvbmZsaWN0X2Vycm9yKG0pID0+IG0KICAgIFNhY19lcnJvcihtKSA9PiBtCiAgICBSZWFjdGlvbl9lcnJvcihtKSA9PiBtCiAgICBTYWZldHlfZXJyb3IobSkgPT4gbQogICAgTmxpX2Vycm9yKG0pID0+IG0KICAgIFNlY3VyaXR5X2Vycm9yKG0pID0+IG0KICB9Cn0KCi8vIC0tLS0gQUlQIGVudmVsb3BlIGhlbHBlcnMgKE1PVCBtZXNzYWdlcyByaWRlIGluIGdiejE4NSBBaXBFbnZlbG9wZSkgLS0tLQoKLy8gQnVpbGQgYW4gQWlwRW52ZWxvcGUgZm9yIGEgTU9UIG1lc3NhZ2UuIE1PVCBtZXNzYWdlIHR5cGVzIG1hcCB0byBNZXNzYWdlS2luZC4KLy8gTU9UIHVzZXMgdGhlIEFJUCBlbnZlbG9wZSdzIHJlcGxheS9zZXNzaW9uL3JvdXRpbmcgZm9yIGZyZWUgKHNwZWMgwqc2IG1vdW50IHBvaW50IDIpLgoKLy8vfApwdWIgZm4gbW90X2VudmVsb3BlKAogIHNlbmRlciA6IFN0cmluZywKICByZWNpcGllbnQgOiBTdHJpbmcsCiAgc2VxIDogSW50NjQsCiAga2luZCA6IEBhaXAuTWVzc2FnZUtpbmQsCiAgcGF5bG9hZCA6IEpzb24sCikgLT4gQGFpcC5BaXBFbnZlbG9wZSB7CiAgewogICAgZW52ZWxvcGVfdmVyc2lvbjogQGFpcC5lbnZlbG9wZV92ZXJzaW9uKCksCiAgICBzZW5kZXJfdXJuOiBzZW5kZXIsCiAgICByZWNpcGllbnRfdXJuOiByZWNpcGllbnQsCiAgICBzZXEsCiAgICB0aW1lc3RhbXA6IHNlcSwKICAgIGtpbmQsCiAgICBwYXlsb2FkLAogIH0KfQoKLy8gLS0tLSBUb29sRGVzY3JpcHRvciBoZWxwZXJzIChFeGVjdXRvcnMvU2Vuc29ycyByZWdpc3RlciBhcyBnYnoxODUgVG9vbERlc2NyaXB0b3IpIC0tLS0KCi8vIFJlZ2lzdGVyIGFuIEV4ZWN1dG9yL1NlbnNvciBhcyBhIGdiejE4NSBUb29sRGVzY3JpcHRvciAoc3BlYyDCpzYgbW91bnQgcG9pbnQgMykuCi8vIEFTNjogVG9vbERlc2NyaXB0b3IgcmVnaXN0cmF0aW9uIGlzIHRoZSBpZGVudGl0eS1hbmNob3JlZCByZWdpc3RyYXRpb24gcG9pbnQuCgovLy98CnB1YiBmbiBtb3RfdG9vbF9kZXNjcmlwdG9yKAogIG5hbWUgOiBTdHJpbmcsCiAgZGVzY3JpcHRpb24gOiBTdHJpbmcsCiAgaW5wdXRfc2NoZW1hIDogSnNvbiwKICBiaW5kaW5nIDogQHRvb2xpbmcuVG9vbEJpbmRpbmcsCikgLT4gQHRvb2xpbmcuVG9vbERlc2NyaXB0b3IgewogIHsgbmFtZSwgZGVzY3JpcHRpb24sIGlucHV0X3NjaGVtYSwgYmluZGluZywgfQp9CgovLyAtLS0tIEVycm9yIG1hcHBpbmc6IE1PVCBTZWN1cml0eUVycm9yIC0+IE1vdEVycm9yIChQcm90b2NvbEVycm9yKSAtLS0tCgovLyBNYXAgYSBNT1QgU2VjdXJpdHlFcnJvciB0byBhIE1vdEVycm9yIHNvIGl0IGZsb3dzIHRocm91Z2ggdGhlIGdiejE4NSB3aXJlIGVycm9yIGNvbnRyYWN0LgoKLy8vfApwdWIgZm4gc2VjdXJpdHlfZXJyb3JfdG9fbW90KGVyciA6IFNlY3VyaXR5RXJyb3IpIC0+IE1vdEVycm9yIHsKICBTZWN1cml0eV9lcnJvcigiXHtlcnIuc3VyZmFjZX0gY29kZT1ce2Vyci5jb2RlfTogXHtlcnIubWVzc2FnZX0iKQp9Cg==
+// GB/Z 185-2026 integration layer —— thin wrapper over the walkzzz/gbz185.mbt library.
+// MOT reuses the gbz185 MoonBit library directly (NOT a from-scratch bridge).
+// This module imports gbz185 sub-packages and exposes MOT-facing helpers that
+// map MOT concepts onto gbz185 types (AipEnvelope, ToolDescriptor, ProtocolError, etc.).
+//
+// Import paths (verified against walkzzz/gbz185.mbt@0.2.2 source):
+//   @walkzzz/gbz185.mbt/wire      -> ProtocolError trait, JsonWireError
+//   @walkzzz/gbz185.mbt/aip       -> AipEnvelope, MessageKind, AipError
+//   @walkzzz/gbz185.mbt/tooling   -> ToolDescriptor, ToolInvocation, ToolOutcome, ToolingError
+//   @walkzzz/gbz185.mbt/identity  -> AIC identity
+//   @walkzzz/gbz185.mbt/capability-> AgentCapabilitySet (ACS)
+//   @walkzzz/gbz185.mbt/discovery -> AgentNode (ADP)
+//
+// Imports are declared in moon.pkg. In this module the imported packages are
+// referenced as @wire, @aip, @tooling (the last segment of each import path).
+
+// ---- ProtocolError re-export (MOT errors implement this trait) ----
+
+// MOT's MotError implements gbz185's ProtocolError trait so every MOT error
+// is a valid GB/Z 185 wire error (spec §4.2 MotError -> ProtocolError).
+// The trait is defined in @walkzzz/gbz185.mbt/wire as:
+//   pub(open) trait ProtocolError { fn part(Self)->String; fn code(Self)->String; fn message(Self)->String }
+// pub(open) allows cross-package implementation, so MOT can implement it here.
+
+///|
+pub(all) suberror MotError {
+  Syntax_error(String)
+  Resolve_error(String)
+  Mapping_error(String)
+  Conflict_error(String)
+  Sac_error(String)
+  Reaction_error(String)
+  Safety_error(String)
+  Nli_error(String)
+  Security_error(String) // mot.security 1700-1799
+}
+
+///|
+pub impl Show for MotError with fn output(self : MotError, logger) -> Unit {
+  match self {
+    Syntax_error(m) => logger.write_string("mot/syntax: \{m}")
+    Resolve_error(m) => logger.write_string("mot/resolve: \{m}")
+    Mapping_error(m) => logger.write_string("mot/mapping: \{m}")
+    Conflict_error(m) => logger.write_string("mot/conflict: \{m}")
+    Sac_error(m) => logger.write_string("mot/sac: \{m}")
+    Reaction_error(m) => logger.write_string("mot/reaction: \{m}")
+    Safety_error(m) => logger.write_string("mot/safety: \{m}")
+    Nli_error(m) => logger.write_string("mot/nli: \{m}")
+    Security_error(m) => logger.write_string("mot/security: \{m}")
+  }
+}
+
+///|
+pub impl @wire.ProtocolError for MotError with fn part(_self : MotError) -> String {
+  "gbz185.6"
+}
+
+///|
+pub impl @wire.ProtocolError for MotError with fn code(self : MotError) -> String {
+  match self {
+    Syntax_error(_) => "MOT-1000"
+    Resolve_error(_) => "MOT-1100"
+    Mapping_error(_) => "MOT-1200"
+    Conflict_error(_) => "MOT-1300"
+    Sac_error(_) => "MOT-1400"
+    Reaction_error(_) => "MOT-1500"
+    Safety_error(_) => "MOT-1600"
+    Nli_error(_) => "MOT-1800"
+    Security_error(_) => "MOT-1700"
+  }
+}
+
+///|
+pub impl @wire.ProtocolError for MotError with fn message(self : MotError) -> String {
+  match self {
+    Syntax_error(m) => m
+    Resolve_error(m) => m
+    Mapping_error(m) => m
+    Conflict_error(m) => m
+    Sac_error(m) => m
+    Reaction_error(m) => m
+    Safety_error(m) => m
+    Nli_error(m) => m
+    Security_error(m) => m
+  }
+}
+
+// ---- AIP envelope helpers (MOT messages ride in gbz185 AipEnvelope) ----
+
+// Build an AipEnvelope for a MOT message. MOT message types map to MessageKind.
+// MOT uses the AIP envelope's replay/session/routing for free (spec §6 mount point 2).
+
+///|
+pub fn mot_envelope(
+  sender : String,
+  recipient : String,
+  seq : Int64,
+  kind : @aip.MessageKind,
+  payload : Json,
+) -> @aip.AipEnvelope {
+  {
+    envelope_version: @aip.envelope_version(),
+    sender_urn: sender,
+    recipient_urn: recipient,
+    seq,
+    timestamp: seq,
+    kind,
+    payload,
+  }
+}
+
+// ---- ToolDescriptor helpers (Executors/Sensors register as gbz185 ToolDescriptor) ----
+
+// Register an Executor/Sensor as a gbz185 ToolDescriptor (spec §6 mount point 3).
+// AS6: ToolDescriptor registration is the identity-anchored registration point.
+
+///|
+pub fn mot_tool_descriptor(
+  name : String,
+  description : String,
+  input_schema : Json,
+  binding : @tooling.ToolBinding,
+) -> @tooling.ToolDescriptor {
+  { name, description, input_schema, binding, }
+}
+
+// ---- Error mapping: MOT SecurityError -> MotError (ProtocolError) ----
+
+// Map a MOT SecurityError to a MotError so it flows through the gbz185 wire error contract.
+
+///|
+pub fn security_error_to_mot(err : SecurityError) -> MotError {
+  Security_error("\{err.surface} code=\{err.code}: \{err.message}")
+}

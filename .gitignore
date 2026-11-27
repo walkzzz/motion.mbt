@@ -1,1 +1,6 @@
-X2J1aWxkLwoubW9vbmNha2VzLwoqLmxvZwoqLnRtcAoqLmJhawp1bmNvdmVyZWQubG9nCg==
+_build/
+.mooncakes/
+*.log
+*.tmp
+*.bak
+uncovered.log

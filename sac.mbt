@@ -1,1 +1,43 @@
-Ly8gU0FDIOKAlOKAlCBzZW1hbnRpYyBhY2hpZXZlbWVudCBjb25kaXRpb24KLy8gVHlwZWQgZGVjbGFyYXRpdmUgZGVzaWduIGNvbnRyYWN0OiBjcml0ZXJpYSBmb3IgInRoZSBhY3Rpb24gd2FzIGRvbmUgY29ycmVjdGx5Ii4KCi8vL3wKcHViKGFsbCkgZW51bSBDb21wbGV0ZW5lc3NMZXZlbCB7CiAgU3RydWN0dXJhbAogIEluZmVyYWJsZQogIEZ1bGwKfQoKLy8vfApwdWIoYWxsKSBlbnVtIEFzcGVjdFR5cGUgewogIFRyYWplY3RvcnkKICBDb250YWN0CiAgUG9zdHVyZQogIFNwYXRpYWwKICBDb3VudAp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBCdWlsdGluUHJlZGljYXRlIHsKICBhc3BlY3QgOiBBc3BlY3RUeXBlCiAgZXhwciA6IFN0cmluZwogIHBhcmFtcyA6IFBhcmFtTWFwCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IEN1c3RvbVByZWRpY2F0ZSB7CiAgYmFja2VuZCA6IFN0cmluZwogIGNvbmZpZyA6IEpzb24KfQoKLy8vfApwdWIoYWxsKSBlbnVtIFByZWRpY2F0ZUV4cHIgewogIEJ1aWx0aW4oQnVpbHRpblByZWRpY2F0ZSkKICBDdXN0b20oQ3VzdG9tUHJlZGljYXRlKQp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBTYWNTcGVjIHsKICBwcmVkaWNhdGVzIDogQXJyYXlbUHJlZGljYXRlRXhwcl0KICBjb21wbGV0ZW5lc3MgOiBDb21wbGV0ZW5lc3NMZXZlbAp9Cg==
+// SAC —— semantic achievement condition
+// Typed declarative design contract: criteria for "the action was done correctly".
+
+///|
+pub(all) enum CompletenessLevel {
+  Structural
+  Inferable
+  Full
+}
+
+///|
+pub(all) enum AspectType {
+  Trajectory
+  Contact
+  Posture
+  Spatial
+  Count
+}
+
+///|
+pub(all) struct BuiltinPredicate {
+  aspect : AspectType
+  expr : String
+  params : ParamMap
+}
+
+///|
+pub(all) struct CustomPredicate {
+  backend : String
+  config : Json
+}
+
+///|
+pub(all) enum PredicateExpr {
+  Builtin(BuiltinPredicate)
+  Custom(CustomPredicate)
+}
+
+///|
+pub(all) struct SacSpec {
+  predicates : Array[PredicateExpr]
+  completeness : CompletenessLevel
+}

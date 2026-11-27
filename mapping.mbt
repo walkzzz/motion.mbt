@@ -1,1 +1,52 @@
-Ly8gTWFwcGluZyDigJTigJQgY3Jvc3MtZm9ybSBtYXBwaW5nCi8vIEEgZGlyZWN0ZWQgZ3JhcGggYmV0d2VlbiBwcmltaXRpdmVzIG9mIGFyYml0cmFyeSBib2R5IHBhaXJzLgoKLy8vfApwdWIoYWxsKSBlbnVtIEZpZGVsaXR5TGV2ZWwgewogIEV4YWN0CiAgQXBwcm94aW1hdGUKICBEZWdyYWRlZAp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBQYXJhbU1hcFJ1bGUgewogIGZyb21fcGFyYW0gOiBTdHJpbmcKICB0b19wYXJhbSA6IFN0cmluZwogIGNvbnZlcnRlciA6IFN0cmluZz8KfQoKLy8vfApwdWIoYWxsKSBlbnVtIE1hcHBpbmdUcmFuc2Zvcm0gewogIERpcmVjdAogIFBhcmFtTWFwKEFycmF5W1BhcmFtTWFwUnVsZV0pCiAgU2VxdWVuY2UoQXJyYXlbUHJpbVJlZl0pCiAgQ3VzdG9tKFN0cmluZywgSnNvbikKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgTWFwcGluZ0VkZ2UgewogIHNvdXJjZSA6IFByaW1SZWYKICB0YXJnZXQgOiBQcmltUmVmCiAgdHJhbnNmb3JtIDogTWFwcGluZ1RyYW5zZm9ybQogIGZpZGVsaXR5IDogRmlkZWxpdHlMZXZlbAogIGZhbGxiYWNrX2NoYWluIDogQXJyYXlbUHJpbVJlZl0KfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgTWFwcGluZ1BhdGggewogIHN0ZXBzIDogQXJyYXlbTWFwcGluZ0VkZ2VdCiAgdG90YWxfZmlkZWxpdHkgOiBGaWRlbGl0eUxldmVsCiAgZXN0aW1hdGVkX2xvc3MgOiBEb3VibGUKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgUm91dGVDb25zdHJhaW50cyB7CiAgbWF4X2ZpZGVsaXR5X2xvc3MgOiBEb3VibGU/CiAgbWF4X2hvcHMgOiBJbnQzMj8KICBwcmVmZXJyZWRfaW50ZXJtZWRpYXRlcyA6IEFycmF5W0JvZHlNYXBSZWZdCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IE1hcHBpbmdHcmFwaCB7CiAgZWRnZXMgOiBBcnJheVtNYXBwaW5nRWRnZV0KfQo=
+// Mapping —— cross-form mapping
+// A directed graph between primitives of arbitrary body pairs.
+
+///|
+pub(all) enum FidelityLevel {
+  Exact
+  Approximate
+  Degraded
+}
+
+///|
+pub(all) struct ParamMapRule {
+  from_param : String
+  to_param : String
+  converter : String?
+}
+
+///|
+pub(all) enum MappingTransform {
+  Direct
+  ParamMap(Array[ParamMapRule])
+  Sequence(Array[PrimRef])
+  Custom(String, Json)
+}
+
+///|
+pub(all) struct MappingEdge {
+  source : PrimRef
+  target : PrimRef
+  transform : MappingTransform
+  fidelity : FidelityLevel
+  fallback_chain : Array[PrimRef]
+}
+
+///|
+pub(all) struct MappingPath {
+  steps : Array[MappingEdge]
+  total_fidelity : FidelityLevel
+  estimated_loss : Double
+}
+
+///|
+pub(all) struct RouteConstraints {
+  max_fidelity_loss : Double?
+  max_hops : Int32?
+  preferred_intermediates : Array[BodyMapRef]
+}
+
+///|
+pub(all) struct MappingGraph {
+  edges : Array[MappingEdge]
+}

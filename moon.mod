@@ -1,1 +1,9 @@
-bmFtZSA9ICJtb3QvbW90IgoKdmVyc2lvbiA9ICIwLjEuMCIKCmRlc2NyaXB0aW9uID0gIk1PVCAoTW90aW9uIE9wZXJhdGlvbiBUeXBlKSB1bml2ZXJzYWwgYWN0aW9uIHNlbWFudGljcyDigJQgdGhlIGVtYm9kaWVkLWV4ZWN1dGlvbiBzdGFuZGFyZCBpbXBsZW1lbnRhdGlvbiBvZiBHQi9aIDE4NS0yMDI2LiIKCmltcG9ydCB7CiAgIndhbGt6enovZ2J6MTg1Lm1idEAwLjIuMiIsCn0K
+name = "mot/mot"
+
+version = "0.1.0"
+
+description = "MOT (Motion Operation Type) universal action semantics — the embodied-execution standard implementation of GB/Z 185-2026."
+
+import {
+  "walkzzz/gbz185.mbt@0.2.2",
+}

@@ -1,1 +1,50 @@
-Ly8gQm9keU1hcCDigJTigJQgYm9keSBzZW1hbnRpYyBtb2RlbAovLyBEZXNjcmliZXMgYW4gYXJiaXRyYXJ5IGJvZHkgdG9wb2xvZ3kgKG5vIGFzc3VtcHRpb24gb24gam9pbnQgY291bnQgLyBET0YgLyBiaW9sb2d5KS4KLy8gTm9kZXMgZm9ybSBhIGRpcmVjdGVkIHRyZWU7IHNlbWFudGljIGFuY2hvcnMgZXN0YWJsaXNoIGNyb3NzLWZvcm0gZXF1aXZhbGVuY2UuCgovLy98CnB1YihhbGwpIGVudW0gQm9keU5vZGVLaW5kIHsKICBKb2ludAogIExpbmsKICBTZW5zb3IKICBFZmZlY3RvcgogIFZpcnR1YWwKfQoKLy8vfApwdWIoYWxsKSBlbnVtIEJvZHlSb2xlIHsKICBMb2NvbW90aW9uQmFzZQogIE1hbmlwdWxhdGlvbkVuZAogIFN1cHBvcnRQb2x5Z29uCiAgU2Vuc29yTW91bnQKICBBY3R1YXRvcgogIFBhc3NpdmUKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgU2VtYW50aWNBbmNob3IgewogIGlkIDogU3RyaW5nCiAgdGFyZ2V0X25vZGVzIDogQXJyYXlbU3RyaW5nXQogIGRlc2NyaXB0aW9uIDogU3RyaW5nCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IEJvZHlOb2RlIHsKICBpZCA6IFN0cmluZwogIGtpbmQgOiBCb2R5Tm9kZUtpbmQKICBwYXJlbnQgOiBTdHJpbmc/CiAgY2hpbGRyZW4gOiBBcnJheVtTdHJpbmddCiAgZG9mIDogSW50MzIKICByb2xlIDogQm9keVJvbGU/CiAgYW5jaG9ycyA6IEFycmF5W1NlbWFudGljQW5jaG9yXQp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBCb2R5TWFwIHsKICB1cm4gOiBCb2R5TWFwUmVmCiAgbmFtZSA6IFN0cmluZwogIHZlcnNpb24gOiBTdHJpbmcKICBub2RlcyA6IEFycmF5W0JvZHlOb2RlXQogIHJvb3QgOiBTdHJpbmcKICBtZXRhZGF0YSA6IE1hcFtTdHJpbmcsIFN0cmluZ10KfQo=
+// BodyMap —— body semantic model
+// Describes an arbitrary body topology (no assumption on joint count / DOF / biology).
+// Nodes form a directed tree; semantic anchors establish cross-form equivalence.
+
+///|
+pub(all) enum BodyNodeKind {
+  Joint
+  Link
+  Sensor
+  Effector
+  Virtual
+}
+
+///|
+pub(all) enum BodyRole {
+  LocomotionBase
+  ManipulationEnd
+  SupportPolygon
+  SensorMount
+  Actuator
+  Passive
+}
+
+///|
+pub(all) struct SemanticAnchor {
+  id : String
+  target_nodes : Array[String]
+  description : String
+}
+
+///|
+pub(all) struct BodyNode {
+  id : String
+  kind : BodyNodeKind
+  parent : String?
+  children : Array[String]
+  dof : Int32
+  role : BodyRole?
+  anchors : Array[SemanticAnchor]
+}
+
+///|
+pub(all) struct BodyMap {
+  urn : BodyMapRef
+  name : String
+  version : String
+  nodes : Array[BodyNode]
+  root : String
+  metadata : Map[String, String]
+}

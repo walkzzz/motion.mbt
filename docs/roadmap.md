@@ -1,1 +1,538 @@
-IyBNT1Qg6YCa55So5Yqo5L2c6K+t5LmJ6KeE6IyDIOKAlOKAlCDot6/nur/lm74gcm9hZG1hcAoKfCDlrZfmrrUgfCDlgLwgfAp8LS0tLS0tfC0tLS0tfAp8IOaWh+aho+e8luWPtyB8IE1PVC1ET0MtUk9BRE1BUCB8Cnwg54mI5pysIHwgdjEuMCB8Cnwg5pel5pyfIHwgMjAyNi0xMS0yNyB8Cnwg54q25oCBIHwg5q2j5byPIHwKfCDlrprkvY0gfCDplb/ov5zmnJ/op4TliJIgKyAwLjEueCDniYjmnKzov63ku6MgKyBTcHJpbnQg6K6h5YiS77yI5p2D5aiB6Lev57q/5paH5Lu277yJIHwKfCDnu7TmiqTop4TliJkgfCBSNe+8iOi/reS7o+i3r+e6v++8iS8gUjbvvIjmj5DkuqTmn6Xor4Hlm57lhpnvvIkvIFI477yI5paH5qGj5rK755CG77yJLyBSMTHvvIjorrDCt+mUgcK35Zue77yJIHwKfCDmqKHlvI/mnaXmupAgfCB3YWxrenp6L2ltYWdlLm1idCBTcHJpbnQg6L+t5Luj6IyD5byPIHwKCi0tLQoKIyMgMC4g6ZW/6L+c5pyf6KeE5YiS77yI5oS/5pmv77yJCgpNT1TvvIhNb3Rpb24gT3BlcmF0aW9uIFR5cGXvvInmmK8gR0IvWiAxODUtMjAyNiDnmoTlhbfouqvmiafooYzmoIflh4YgTW9vbkJpdCDlj4LogIPlrp7njrDjgILplb/ov5zmnJ/mjInlm5vpmLbmrrXmjqjov5vvvJoKCnwg6Zi25q61IHwg54mI5pys5Yy66Ze0IHwg5a6a5L2NIHwg5b2i6LGh55uu5qCHIHwKfC0tLS0tLXwtLS0tLS0tLS0tfC0tLS0tLXwtLS0tLS0tLS0tfAp8IOi/keacnyB8ICoqMC4xLngqKiB8IOWPguiAg+WunueOsOWfuue6vyArIOWuieWFqOe6tea3sSArIFAxIOaLhuWIhiB8IOWNleWMheKGkjcg5a2Q5qih5Z2X5bel5L2c5Yy677yM5Zub55uu5qCH5YWo57u/77yMSTEtSTYg5YWo6K+B77yM5Y+v5Y+R5biDIHwKfCDkuK3mnJ8gfCAwLjIueCB8IOeUn+aAgembhuaIkOa3seWMliArIOaAp+iDveWfuuWHhiArIOWkmuWMheeLrOeri+WPkeW4gyB8IOeUn+aAgemAieWei+WFqOmDqOiQveWcsO+8jOWfuuWHhuWwgeetvu+8jOWtkOaooeWdl+eLrOeri+WPkeW4gyB8Cnwg6L+c5pyfIHwgMC4zLnggfCBHQi9aIDE4NSDlha3mjILovb3ngrnlrozmlbTpm4bmiJAgKyDnpL7ljLrnlJ/mgIEgfCDlha3mjILovb3ngrnlhajmjqXlhaXvvIznrKzkuInmlrnlj6/mianlsZXlt6Xlhbfms6jlhowgfAp8IOato+W8jyB8IDEuMC4wIHwg55Sf5Lqn56iz5a6a54mIIHwgbW9vbmJpdGxhbmcvc2tpbGxzIOS7k+W6kyArIG1vb25jYWtlcy5pbyDmraPlvI/lj5HluIPvvIznlJ/kuqflj6/nlKggfAoKIyMjIDAuMSDpmLbmrrXkvp3otZblhbPns7sKCmBgYAowLjEuMCDln7rnur8g4pSA4pSA4oaSIDAuMS4xIOitpuWRiua4hembtiDilIDilIDihpIgMC4xLjIg5Zub55uu5qCHIOKUgOKUgOKGkiAwLjEuMyDlvaLlvI/ljJbpqozor4EKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIIKMC4xLjkg5q2j5byP5Y+R5biDIOKGkOKUgCAwLjEuOCDnlJ/mgIHpm4bmiJAg4oaQ4pSAIDAuMS43IOWPkeW4g+mXqOemgSDihpDilIAgMC4xLjYgQ0xJK+ekuuS+iyDihpDilIAgMC4xLjUg6Zeo6Z2i5YyFK0FQSSDihpDilIAgMC4xLjQg5a2Q5qih5Z2X5ouG5YiGCmBgYAoKPiAwLjEuMyDlvaLlvI/ljJbpqozor4HmmK/lronlhajnurXmt7HnmoTmlLblj6PvvIzpobvlnKjlrZDmqKHlnZfmi4bliIbliY3lrozmiJDvvIjmi4bliIblkI7kuI3lj5jlvI/ot6jljIXor4HmmI7mm7TlpI3mnYLvvInjgIIwLjEuNCDmi4bliIbkvp3otZYgMC4xLjIvMC4xLjMg55qE5Zub55uu5qCH5LiO5LiN5Y+Y5byP5bey5Zu65YyW55qE5Z+657q/44CCCgotLS0KCiMjIDEuIOeJiOacrOaAu+iniO+8iDAuMS54IOW9ouixoei/m+W6puS4gOiniO+8iQoKfCDniYjmnKwgfCDlvaLosaHov5vluqYgfCDnirbmgIEgfCDliY3nva7kvp3otZYgfCDpl6jnpoHovr7miJAgfAp8LS0tLS0tfC0tLS0tLS0tLS18LS0tLS0tfC0tLS0tLS0tLS18LS0tLS0tLS0tLXwKfCB2MC4xLjAgfCDljZXljIXln7rnur/vvJoyMCDmupDmlofku7YgKyAzMSDmtYvor5Xnu78gfCDinIUg5bey5a6M5oiQIHwg4oCUIHwgQjEo5Y2V55uu5qCHKS9CMi9CNSB8CnwgdjAuMS4xIHwgMCB3YXJuaW5nICsg6Zeo56aBIEIxLUI1IOWFqOe7vyB8IOKPsyDlvoXlkK/liqggfCB2MC4xLjAgfCBCMS1CNSB8CnwgdjAuMS4yIHwgbmF0aXZlL3dhc20tZ2MvanMvd2FzbSDlm5vnm67moIflhajnu78gfCDij7Mg5b6F5ZCv5YqoIHwgdjAuMS4xIHwgQjEo5Zub55uu5qCHKS9CMiB8CnwgdjAuMS4zIHwgSTEtSTYg5YWt5p2h5LiN5Y+Y5byPIG1vb24gcHJvdmUg5YWo6K+BIHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuMiB8IEI2IHwKfCB2MC4xLjQgfCA3IOWtkOaooeWdlyBtb29uLndvcmsg5bel5L2c5Yy65oiQ5Z6LIHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuMyB8IEIxLUIyKOWkmuWMhSkgfAp8IHYwLjEuNSB8IGFsbCDpl6jpnaLljIUgKyBwa2cuZ2VuZXJhdGVkLm1idGkgfCDij7Mg5b6F5ZCv5YqoIHwgdjAuMS40IHwgQjgvQjkgfAp8IHYwLjEuNiB8IG1vdGMg5Y+v6L+Q6KGMICsgZXhhbXBsZXMvIHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuNSB8IOKAlCB8CnwgdjAuMS43IHwg5Y+R5biD6Zeo56aBIEIxMi1CMTQg5YWo57u/IHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuNiB8IEIxMi9CMTMvQjE0IHwKfCB2MC4xLjggfCDnlJ/mgIHpgInlnovokL3lnLDvvIh5YWNjL2pzb24tc2NoZW1hL2FzeW5j77yJIHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuNyB8IEI0L0IxMC9CMTEgfAp8IHYwLjEuOSB8IHYwLjEuMCDmraPlvI/niYjlj5HluIMgbW9vbmNha2VzLmlvIHwg4o+zIOW+heWQr+WKqCB8IHYwLjEuOCB8IOWFqOmDqOmXqOemgSB8Cgo+IOeKtuaAgeWbvuS+i++8muKchSDlt7LlrozmiJAgLyDij7Mg5b6F5ZCv5YqoIC8g8J+UhCDov5vooYzkuK0gLyDim5Qg6Zi75aGeCgotLS0KCiMjIDIuIOW9k+WJjeeKtuaAgeWbnuWGmeWMuu+8iFI2IC8gUjExIOWbnu+8iQoKPiDmr4/kuKogU3ByaW50IOWujOaIkOWbnuWGme+8mueKtuaAgSArIGNvbW1pdCBoYXNoICvjgIzlt7LkuqTku5ggeO+8jOS4i+eOr+S+nei1liBZ44CN44CCCgp8IOeJiOacrCB8IFNwcmludCB8IOeKtuaAgSB8IGNvbW1pdCBoYXNoIHwg5Zue5YaZ77yI5bey5Lqk5LuYIHggLyDkuIvnjq/kvp3otZYgWe+8iSB8CnwtLS0tLS18LS0tLS0tLS18LS0tLS0tfC0tLS0tLS0tLS0tLS18LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tfAp8IHYwLjEuMCB8IOKAlCB8IOKchSB8IO+8iOWfuue6v++8iSB8IOW3suS6pOS7mOWNleWMheWfuue6vyAzMSDmtYvor5Xnu7/vvJvkuIvnjq/kvp3otZYgdjAuMS4xIHdhcm5pbmcg5rK755CGIHwKfCB2MC4xLjEgfCBTMS4xIHwg4o+zIHwgfCB8CnwgdjAuMS4xIHwgUzEuMiB8IOKPsyB8IHwgfAp8IHYwLjEuMSB8IFMxLjMgfCDij7MgfCB8IHwKfCB2MC4xLjIgfCBTMi4xIHwg4o+zIHwgfCB8CnwgdjAuMS4yIHwgUzIuMiB8IOKPsyB8IHwgfAp8IHYwLjEuMiB8IFMyLjMgfCDij7MgfCB8IHwKfCB2MC4xLjMgfCBTMy4xIHwg4o+zIHwgfCB8CnwgdjAuMS4zIHwgUzMuMiB8IOKPsyB8IHwgfAp8IHYwLjEuMyB8IFMzLjMgfCDij7MgfCB8IHwKfCB2MC4xLjMgfCBTMy40IHwg4o+zIHwgfCB8CnwgdjAuMS40IHwgUzQuMSB8IOKPsyB8IHwgfAp8IHYwLjEuNCB8IFM0LjIgfCDij7MgfCB8IHwKfCB2MC4xLjQgfCBTNC4zIHwg4o+zIHwgfCB8CnwgdjAuMS40IHwgUzQuNCB8IOKPsyB8IHwgfAp8IHYwLjEuNSB8IFM1LjEgfCDij7MgfCB8IHwKfCB2MC4xLjUgfCBTNS4yIHwg4o+zIHwgfCB8CnwgdjAuMS41IHwgUzUuMyB8IOKPsyB8IHwgfAp8IHYwLjEuNiB8IFM2LjEgfCDij7MgfCB8IHwKfCB2MC4xLjYgfCBTNi4yIHwg4o+zIHwgfCB8CnwgdjAuMS42IHwgUzYuMyB8IOKPsyB8IHwgfAp8IHYwLjEuNyB8IFM3LjEgfCDij7MgfCB8IHwKfCB2MC4xLjcgfCBTNy4yIHwg4o+zIHwgfCB8CnwgdjAuMS43IHwgUzcuMyB8IOKPsyB8IHwgfAp8IHYwLjEuOCB8IFM4LjEgfCDij7MgfCB8IHwKfCB2MC4xLjggfCBTOC4yIHwg4o+zIHwgfCB8CnwgdjAuMS44IHwgUzguMyB8IOKPsyB8IHwgfAp8IHYwLjEuOSB8IFM5LjEgfCDij7MgfCB8IHwKfCB2MC4xLjkgfCBTOS4yIHwg4o+zIHwgfCB8CnwgdjAuMS45IHwgUzkuMyB8IOKPsyB8IHwgfAoKLS0tCgojIyAzLiDlkITniYjmnKwgU3ByaW50IOiuoeWIkgoKPiDov63ku6PmtYHnqIvkuKXmoLzpgbXlvqogcnVsZXMubWQgwqfkupTvvJrmn6XmnrbmnoQg4oaSIOWunueOsCDihpIg6aqM6K+BIOKGkiBXYXJuaW5nIOayu+eQhihSMTMpIOKGkiDmlofmoaPmsrvnkIYoUjgpIOKGkiDnu4/pqozmsonmt4AoUjkpIOKGkiDljaDkvY3mo4Dmn6UoUjE0KSDihpIg6L+t5Luj5riF55CGKFIxNikg4oaSIOaPkOS6pChSNikg4oaSIOWbnuWGmShSMTEp44CCCj4g6aqM6K+B5ZG95Luk5YmN57yA77yaYGV4cG9ydCBQQVRIPSIvcm9vdC8ubW9vbi9iaW46JFBBVEgiICYmIGNkIC93b3Jrc3BhY2UvbW90YAoKLS0tCgojIyMgMy4wIHYwLjEuMCDln7rnur/lm7rljJYg4oCU4oCUIOKchSDlt7LlrozmiJAKCioq5b2i6LGh6L+b5bqmKirvvJrljZXljIXln7rnur/vvIwyMCDmupDmlofku7YgKyAzMSDmtYvor5Xnu7/jgIIKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOiMg+WbtCB8IFAwIOWNleWMheWFqOmDqOa6kOeggSArIDE0IOS7veaWh+aho+Wll+S7tiArIFNLSUxMIOaWh+S7tiB8Cnwg6aqM6K+BIHwgYG1vb24gY2hlY2tgIDAg6ZSZ6K+vIC8gYG1vb24gYnVpbGRgIOaIkOWKnyAvIGBtb29uIHRlc3RgIDMxIHBhc3NlZCAvIGBzZWN1cml0eV9zY2FuYCAwIENyaXRpY2FsIDAgSGlnaCB8Cnwg5Lqk5LuYIHwgL3dvcmtzcGFjZS9tb3Qg5YWo6YOoIDQ1IOaWh+S7tiB8Cnwg5Zue5YaZIHwg5bey5Lqk5LuY5Y2V5YyF5Z+657q/77yb5LiL546v5L6d6LWWIHYwLjEuMSB3YXJuaW5nIOayu+eQhiB8CgotLS0KCiMjIyAzLjEgdjAuMS4xIOitpuWRiua4hembtiArIOmXqOemgeihpem9kCDigJTigJQg4o+zIOW+heWQr+WKqAoKKirlvaLosaHov5vluqYqKu+8mjAgd2FybmluZyArIOmXqOemgSBCMS1CNSDlhajnu7/jgIIKCioq5YmN572uKirvvJp2MC4xLjAg5a6M5oiQ44CCCgojIyMjIFNwcmludCBTMS4xIOKAlOKAlCBXYXJuaW5nIOagueWboOayu+eQhgoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgYG1vb24gY2hlY2tgIDkg4oaSIDAgd2FybmluZ++8iFIxM++8muS/ruWkjeagueWboO+8jOemgeatouazqOmHii9pZ25vcmUg5Y6L5Yi277yJIHwKfCDku7vliqEgfCDikaAgYGJpbmQubWJ0Ojg1YCBgZmluZF9wYXRoX3JlY2Ag5pyq5L2/55SoIOKGkiDliKDpmaTmiJbmjqXlhaXosIPnlKjot6/lvoTvvJvikaEgYGJpbmQubWJ0OjIyOGAgYGdyYXBoYCDmnKrkvb/nlKgg4oaSIOaOpeWFpeaIluenu+mZpOWPguaVsO+8m+KRoiBgZGlhZy5tYnQ6MzQtMzdgIGBTdWNjZXNzL0Vycm9yL1dhcm5pbmcvSW50ZXJuYWxFcnJvcmAg5p6E6YCg5a2Q5pyq5L2/55SoIOKGkiBgI2Rlcml2ZShTaG93KWAg5o6l5YWl6K+K5pat6L6T5Ye65oiW56e76Zmk5YaX5L2Z5Y+Y5L2T77yb4pGjIGBzYWZldHkubWJ0OjY1YCBgYWN0aW9uYCDmnKrkvb/nlKgg4oaSIOaOpeWFpSBgaXNfYWN0aW9uX2FsbG93ZWRgIOWIpOWumumAu+i+ke+8m+KRpCBgc3VwcGx5Lm1idDoxOGAgYHBrZ2Ag5pyq5L2/55SoIOKGkiDmjqXlhaXnrb7lkI3moKHpqozpgLvovpHvvJvikaUgYHRocmVhdC5tYnQ6NGAgYCNkZXJpdmUoU2hvdylgIOW6n+W8gyDihpIg5pS5IGAjZGVyaXZlKERlYnVnKWAgfAp8IOmqjOivgSB8IGBtb29uIGNoZWNrIC0tZGVueS13YXJuYCAwIGVycm9y77yId2FybmluZyDljbMgZXJyb3LvvIzlr7npvZAgaW1hZ2UubWJ0IENJ77yJIHwKfCBEb0QgfCAwIHdhcm5pbmfvvIzkuJTml6AgYEBsaW50Omlnbm9yZWAg5Y6L5Yi2IHwKCiMjIyMgU3ByaW50IFMxLjIg4oCU4oCUIOimhueblueOh+a1i+mHjyArIOmXqOemgSBCNAoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwg6KaG55uW546H5Y+v5rWL6YeP77yM6Zeo56aBIEI0IOi+vuagh+e6v+WumuS5iSB8Cnwg5Lu75YqhIHwg4pGgIOi/kOihjCBgbW9vbiB0ZXN0IC0tY292ZXJhZ2Vg77yI5oiW562J5Lu377yJ6I635Y+W6KGML+WIhuaUr+imhuebluWfuue6v++8m+KRoSDlrprkuYkgTU9UIOimhueblueOh+i+vuagh+e6v++8iOWvuem9kCBpbWFnZS5tYnQgOTAuMDUl77yMTU9UIOmmluacnyDiiaUgODAl77yJ77yb4pGiIOihpSBgbW90X3Rlc3QubWJ0YCDnvLrlpLHliIbmlK/nlKjkvovvvIh3YXJuaW5nIOayu+eQhuWQjuaatOmcsueahOacquimhueblui3r+W+hO+8iSB8Cnwg6aqM6K+BIHwgYG1vb24gdGVzdGAg5YWo6YCa6L+HICsg6KaG55uW546H5oql5ZGK55Sf5oiQIHwKfCBEb0QgfCDopobnm5bnjofmiqXlkYrlrZjlnKjkuJQg4omlIOi+vuagh+e6vyB8CgojIyMjIFNwcmludCBTMS4zIOKAlOKAlCDlronlhajpl6jnpoEgQjUg5aSN5rWLICsg5qC85byP6Zeo56aBIEIxMAoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgQjUg5L+d5oyBIDAgQ3JpdGljYWwvMCBIaWdo77yMQjEwIOagvOW8j+mXqOemgeiQveWcsCB8Cnwg5Lu75YqhIHwg4pGgIGBzZWN1cml0eV9zY2FuYCDlpI3mtYvnoa7orqQgMCBDcml0aWNhbC8wIEhpZ2jvvJvikaEgYG1vb24gZm10YCDlhajph4/moLzlvI/ljJbvvJvikaIg5bCGIGBtb29uIGZtdGAg5qOA5p+l5YaZ5YWlIHJ1bGVzLm1kIOmqjOivgea1geeoiyB8Cnwg6aqM6K+BIHwgYHNlY3VyaXR5X3NjYW5gIDAvMCAvIGBtb29uIGZtdCAtLWNoZWNrYCDml6Dlt67lvIIgfAp8IERvRCB8IEI1ICsgQjEwIOWFqOe7vyB8CgotLS0KCiMjIyAzLjIgdjAuMS4yIOWbm+ebruagh+e8luivkSDigJTigJQg4o+zIOW+heWQr+WKqAoKKirlvaLosaHov5vluqYqKu+8mm5hdGl2ZS93YXNtLWdjL2pzL3dhc20g5Zub55uu5qCH5YWo57u/44CCCgoqKuWJjee9rioq77yadjAuMS4xIOWujOaIkO+8iDAgd2FybmluZyDln7rnur/vvInjgIIKCiMjIyMgU3ByaW50IFMyLjEg4oCU4oCUIOWbm+ebruaghyBtb29uIGNoZWNrCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCB0YXJnZXQgfCBuYXRpdmUgLyB3YXNtLWdjIC8ganMgLyB3YXNtIHwKfCDku7vliqEgfCBgbW9vbiBjaGVjayAtLXRhcmdldCBuYXRpdmVgIC8gYC0tdGFyZ2V0IHdhc20tZ2NgIC8gYC0tdGFyZ2V0IGpzYCAvIGAtLXRhcmdldCB3YXNtYCDpgJDkuIDpgJrov4fvvJvkv67lpI3nm67moIfnibnlrprlkYrorabvvIjml6DmnaHku7bnvJbor5HvvIznpoHmraIgYHRhcmdldCA9PWAg5YiG5pSv77yJIHwKfCDpqozor4EgfCBgbW9vbiBjaGVjayAtLWRlbnktd2FybiAtLXRhcmdldCA8dD5gIDAgZXJyb3Igw5cgNCB8CnwgRG9EIHwg5Zub55uu5qCHIGNoZWNrIOWFqCAwIGVycm9yIHwKCiMjIyMgU3ByaW50IFMyLjIg4oCU4oCUIOWbm+ebruaghyBtb29uIGJ1aWxkCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDku7vliqEgfCBgbW9vbiBidWlsZCAtLXRhcmdldCA8dD5gIMOXIDTvvJvnoa7orqQgYF9idWlsZC9gIOWbm+ebruagh+S6p+eJqem9kOWFqCB8Cnwg6aqM6K+BIHwgYG1vb24gYnVpbGRgIOaIkOWKnyDDlyA0IHwKfCBEb0QgfCDlm5vnm67moIfmnoTlu7rkuqfniannlJ/miJAgfAoKIyMjIyBTcHJpbnQgUzIuMyDigJTigJQg5Zub55uu5qCHIG1vb24gdGVzdAoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg5Lu75YqhIHwgYG1vb24gdGVzdCAtLXRhcmdldCA8dD5gIMOXIDTvvJvnoa7orqQgMzEg5rWL6K+V5Zub55uu5qCH5YWo6YCa6L+HIHwKfCDpqozor4EgfCBgbW9vbiB0ZXN0YCAzMSBwYXNzZWQgw5cgNCB8CnwgRG9EIHwg5Zub55uu5qCH5rWL6K+V5YWo57u/IHwKCi0tLQoKIyMjIDMuMyB2MC4xLjMg5b2i5byP5YyW6aqM6K+BIEkxLUk2IOKAlOKAlCDij7Mg5b6F5ZCv5YqoCgoqKuW9ouixoei/m+W6pioq77yaSTEtSTYg5YWt5p2h5LiN5Y+Y5byPIG1vb24gcHJvdmUg5YWo6K+B44CCCgoqKuWJjee9rioq77yadjAuMS4yIOWujOaIkO+8iOWbm+ebruagh+Wfuue6v++8ieOAggoKPiDlronlhajkuI3lj5jlvI/vvIhkb2NzLzAwIMKnM++8ie+8mkkxIOWuieWFqOS6i+S7tuaKouWNoCAvIEkyIEZBVUxUX0xPQ0tFRCDku4UgUmVzZXQgLyBJMyBlc2NhbGF0aW9uIOWNleiwgyAvIEk0IFNBRkVfSE9MRCDpl6jmjqflhbPpl60gLyBJNSDovpPlh7rpl6jmjqflrozmlbTmgKcgLyBJNiDlj43ppojmnaXmupDorqTor4HjgIIKCiMjIyMgU3ByaW50IFMzLjEg4oCU4oCUIEkxIC8gSTIg6K+B5piOCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBJMe+8iOWuieWFqOS6i+S7tuaKouWNoO+8iSsgSTLvvIhGQVVMVF9MT0NLRUQg5LuFIFJlc2V077yJYG1vb24gcHJvdmVgIOmAmui/hyB8Cnwg5Lu75YqhIHwg4pGgIOWcqCBgc2FmZXR5Lm1idGAg5qCH5rOo6K+B5piO5LmJ5Yqh77yb4pGhIGBtb29uIHByb3ZlIG1vdC9tb3Quc2FmZXR5YCDot5HpgJrvvJvikaIg5L+u5aSN6K+B5piO5aSx6LSl55qE5Luj56CB6Lev5b6EIHwKfCDpqozor4EgfCBgbW9vbiBwcm92ZWAg6L6T5Ye6IEkxL0kyIOW3suivgSB8CnwgRG9EIHwgSTEvSTIg6K+B5piO6YCa6L+HIHwKCiMjIyMgU3ByaW50IFMzLjIg4oCU4oCUIEkzIC8gSTQg6K+B5piOCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBJM++8iGVzY2FsYXRpb24g5Y2V6LCD77yJKyBJNO+8iFNBRkVfSE9MRCDpl6jmjqflhbPpl63vvIlgbW9vbiBwcm92ZWAg6YCa6L+HIHwKfCDku7vliqEgfCDikaAgYHJlYWN0aW9uX2VuZ2luZS5tYnRgIC8gYHNhZmV0eS5tYnRgIOagh+azqO+8m+KRoSBgbW9vbiBwcm92ZWAg6LeR6YCa77yb4pGiIOS/ruWkjei3r+W+hCB8Cnwg6aqM6K+BIHwgYG1vb24gcHJvdmVgIOi+k+WHuiBJMy9JNCDlt7Lor4EgfAp8IERvRCB8IEkzL0k0IOivgeaYjumAmui/hyB8CgojIyMjIFNwcmludCBTMy4zIOKAlOKAlCBJNSAvIEk2IOivgeaYjgoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgSTXvvIjovpPlh7rpl6jmjqflrozmlbTmgKfvvIkrIEk277yI5Y+N6aaI5p2l5rqQ6K6k6K+B77yJYG1vb24gcHJvdmVgIOmAmui/hyB8Cnwg5Lu75YqhIHwg4pGgIGBvdXRwdXRfZ2F0ZS5tYnRgIC8gYGZlZWRiYWNrX2F1dGgubWJ0YCDmoIfms6jvvJvikaEgYG1vb24gcHJvdmVgIOi3kemAmu+8m+KRoiDkv67lpI3ot6/lvoQgfAp8IOmqjOivgSB8IGBtb29uIHByb3ZlYCDovpPlh7ogSTUvSTYg5bey6K+BIHwKfCBEb0QgfCBJNS9JNiDor4HmmI7pgJrov4cgfAoKIyMjIyBTcHJpbnQgUzMuNCDigJTigJQg5Y+Y5byC5rWL6K+V77yI6Zeo56aBIEI377yJCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCDlj5jlvILmtYvor5Xpqozor4Hor4HmmI7lvLrluqbvvIhCN++8iSB8Cnwg5Lu75YqhIHwg4pGgIOWvuSBJMS1JNiBwcm9vZiDlvJXlhaXlj5jlvILkvZPvvJvikaEgYG1vb24gcHJvdmVgIOajgOa1i+WPmOW8guS9k+Wksei0pe+8iOivgeaYjumdnuW5s+WHoe+8ie+8m+KRoiDorrDlvZXlj5jlvILlvpfliIYgfAp8IOmqjOivgSB8IOWPmOW8guS9k+iiq+ivgeaYjuaLkue7nSB8CnwgRG9EIHwg5Y+Y5byC5rWL6K+V5oql5ZGK5a2Y5Zyo77yM6K+B5piO5by65bqm5Y+v6YeP5YyWIHwKCi0tLQoKIyMjIDMuNCB2MC4xLjQg5a2Q5qih5Z2X5ouG5YiGIOKAlOKAlCDij7Mg5b6F5ZCv5YqoCgoqKuW9ouixoei/m+W6pioq77yaNyDlrZDmqKHlnZcgbW9vbi53b3JrIOW3peS9nOWMuuaIkOWei+OAggoKKirliY3nva4qKu+8mnYwLjEuMyDlrozmiJDvvIjkuI3lj5jlvI/lt7Lor4Hln7rnur/vvInjgIIKCj4g5ouG5YiG55uu5qCH57uT5p6E5LiO5L6d6LWW5pa55ZCR6KeBIGRvY3MvMTAgwqc044CC5Y2V5ZCR5L6d6LWW77ya5LiL5bGC5LiN5Y+v5L6d6LWW5LiK5bGC77yM5ZCM5bGC5LiN5Y+v5LqS55u45L6d6LWW44CCCgojIyMjIFNwcmludCBTNC4xIOKAlOKAlCBtb3QuY29yZSDmi4bliIYKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOebruaghyB8IG1vdC5jb3Jl77yITDDvvInni6znq4vlrZDmqKHlnZcgfAp8IOS7u+WKoSB8IGBtb29uLndvcmtgIOWKoCBgIm1vdC5jb3JlImDvvJvlu7ogYG1vdC5jb3JlL21vb24ubW9kYCtgbW9vbi5wa2dgK2B0eXBlcy9tb29uLnBrZ2ArYHR5cGVzLm1idGArYGJvZHltYXAubWJ0YCtgcHJpbWl0aXZlLm1idGArYG1hcHBpbmcubWJ0YCtgc2FjLm1idGArYGVudi5tYnRgK2ByZWFjdGlvbi5tYnRgK2BzYWZldHkubWJ0YCtgbmxpLm1idGArYHRhcmdldHNlcS5tYnRg77yb5qC55YyF5L+d55WZ6Zeo6Z2i77ybYG1vb24gY2hlY2tgL2Btb29uIHRlc3RgIOWFqOe7vyB8Cnwg6aqM6K+BIHwgYG1vb24gY2hlY2tgIDAgZXJyb3IgLyBgbW9vbiB0ZXN0YCAzMSBwYXNzZWQgfAp8IERvRCB8IG1vdC5jb3JlIOeLrOeri+e8luivkemAmui/h++8jOagueWMhemXqOmdoumbtiBpbXBvcnQgfAoKIyMjIyBTcHJpbnQgUzQuMiDigJTigJQgbW90LmdiejE4NSArIG1vdC5iaW5kIOaLhuWIhgoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgbW90LmdiejE4Ne+8iEwx77yJKyBtb3QuYmluZO+8iEwy77yJ54us56uLIHwKfCDku7vliqEgfCDmi4YgYGdiejE4NS5tYnRg4oaSYG1vdC5nYnoxODUvYO+8m+aLhiBgYmluZC5tYnRg4oaSYG1vdC5iaW5kL2DvvJvkvp3otZbmlrnlkJEgbW90LmJpbmTihpJjb3JlK2diejE4Ne+8m+i3qOWMhei3r+W+hCBgbW90L21vdC5jb3JlL3R5cGVzYO+8m2Btb29uIGNoZWNrYC9gbW9vbiB0ZXN0YCDlhajnu78gfAp8IOmqjOivgSB8IGBtb29uIGNoZWNrYCAwIGVycm9yIC8gYG1vb24gdGVzdGAgMzEgcGFzc2VkIHwKfCBEb0QgfCDkuKTlrZDmqKHlnZfni6znq4vnvJbor5HvvIzkvp3otZbmlrnlkJHml6DpgIYgfAoKIyMjIyBTcHJpbnQgUzQuMyDigJTigJQgbW90LnJlYWN0aW9uICsgbW90LnNhZmV0eSArIG1vdC5zZWN1cml0eSDmi4bliIYKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOebruaghyB8IG1vdC5yZWFjdGlvbiAvIG1vdC5zYWZldHkgLyBtb3Quc2VjdXJpdHnvvIhMMu+8ieeLrOeriyB8Cnwg5Lu75YqhIHwg5ouGIGByZWFjdGlvbl9lbmdpbmUubWJ0YOKGkmBtb3QucmVhY3Rpb24vYO+8m+aLhiBgc2FmZXR5Lm1idGDihpJgbW90LnNhZmV0eS9g77yb5ouGIGB0aHJlYXQvc3VwcGx5L25saV9ndWFyZC9mZWVkYmFja19hdXRoL291dHB1dF9nYXRlYOKGkmBtb3Quc2VjdXJpdHkvYO+8m+S+nei1liBtb3Quc2VjdXJpdHnihpJjb3JlK3NhZmV0ee+8m2Btb29uIGNoZWNrYC9gbW9vbiB0ZXN0YCDlhajnu78gfAp8IOmqjOivgSB8IGBtb29uIGNoZWNrYCAwIGVycm9yIC8gYG1vb24gdGVzdGAgMzEgcGFzc2VkIHwKfCBEb0QgfCDkuInlrZDmqKHlnZfni6znq4vnvJbor5HvvIzkvp3otZbmlrnlkJHml6DpgIYgfAoKIyMjIyBTcHJpbnQgUzQuNCDigJTigJQgbW90LmRpYWcgKyBhbGwg6Zeo6Z2i5YyF5ouG5YiGCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBtb3QuZGlhZ++8iEwz77yJ54us56uLICsgYWxsIOmXqOmdouWMhemqqOaetiB8Cnwg5Lu75YqhIHwg5ouGIGBkaWFnLm1idGDihpJgbW90LmRpYWcvYO+8m+W7uiBgYWxsL21vb24ucGtnYCtgYWxsL2FsbC5tYnRg77yI6aqo5p6277yMcHViIHVzaW5nIOW+hSB2MC4xLjUg5aGr5YWF77yJ77ybYG1vb24gY2hlY2tgL2Btb29uIHRlc3RgIOWFqOe7vyB8Cnwg6aqM6K+BIHwgYG1vb24gY2hlY2tgIDAgZXJyb3IgLyBgbW9vbiB0ZXN0YCAzMSBwYXNzZWQgfAp8IERvRCB8IDcg5a2Q5qih5Z2XICsgYWxsIOW3peS9nOWMuuaIkOWei++8jGBtb29uLndvcmtgIG1lbWJlcnMg5a6M5pW0IHwKCi0tLQoKIyMjIDMuNSB2MC4xLjUg6Zeo6Z2i5YyFICsgQVBJIOe0ouW8lSDigJTigJQg4o+zIOW+heWQr+WKqAoKKirlvaLosaHov5vluqYqKu+8mmFsbCDpl6jpnaLljIUgKyBwa2cuZ2VuZXJhdGVkLm1idGnjgIIKCioq5YmN572uKirvvJp2MC4xLjQg5a6M5oiQ77yI5bel5L2c5Yy65oiQ5Z6L77yJ44CCCgojIyMjIFNwcmludCBTNS4xIOKAlOKAlCBhbGwvYWxsLm1idCBwdWIgdXNpbmcg5YaN5a+85Ye6Cgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBhbGwg6Zeo6Z2i5YyF6auY6aKRIEFQSSDlho3lr7zlh7rvvIjlr7npvZAgaW1hZ2UubWJ0IGFsbC9hbGwubWJ077yJIHwKfCDku7vliqEgfCBgcHViIHVzaW5nIEB0eXBlcyB7IHR5cGUgVmVjMywgdHlwZSBQYXJhbVZhbHVlLCB0eXBlIEJvZHlNYXAsIHR5cGUgUHJpbWl0aXZlLCB0eXBlIFNhY1NwZWMsIHR5cGUgRW52RmVlZGJhY2ssIHR5cGUgUmVhY3Rpb25Qb2xpY3ksIHR5cGUgU2FmZXR5U3RhdGVNYWNoaW5lLCB0eXBlIFRhcmdldEFjdGlvblNlcSwgLi4uIH1g77ybYHB1YiB1c2luZyBAYmluZCB7IGJpbmQgfWDvvJtgcHViIHVzaW5nIEBnYnoxODUgeyBNb3RFcnJvciwgbW90X2VudmVsb3BlLCBtb3RfdG9vbF9kZXNjcmlwdG9yIH1g77yb5pa55rOV6JaE5Ye95pWw5YaN5a+85Ye6IHwKfCDpqozor4EgfCBgbW9vbiBjaGVja2AgMCBlcnJvciAvIOeUqOaItyBgaW1wb3J0ICJtb3QvbW90L2FsbCJgIOWPr+eUqCB8CnwgRG9EIHwg6Zeo6Z2i5YyF5YaN5a+85Ye65a6M5pW077yM6buR55uS5rWL6K+V6YCa6L+HIHwKCiMjIyMgU3ByaW50IFM1LjIg4oCU4oCUIEFQSSDntKLlvJXnlJ/miJDvvIjpl6jnpoEgQjjvvIkKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOebruaghyB8IGBtb29uIGluZm9gIOeUn+aIkCBwa2cuZ2VuZXJhdGVkLm1idGnvvIhCOO+8iSB8Cnwg5Lu75YqhIHwgYG1vb24gaW5mb2Ag5YWo5bel5L2c5Yy66L+Q6KGM77yb56Gu6K6k5ZCE5a2Q5qih5Z2XIHBrZy5nZW5lcmF0ZWQubWJ0aSDnlJ/miJDvvJtET04nVCBFRElUIOagh+iusOS/neeVmSB8Cnwg6aqM6K+BIHwg5ZCE5a2Q5qih5Z2XIHBrZy5nZW5lcmF0ZWQubWJ0aSDlrZjlnKggfAp8IERvRCB8IEI4IOWFqOe7vyB8CgojIyMjIFNwcmludCBTNS4zIOKAlOKAlCDog73lipvnn6npmLXnlJ/miJDvvIjpl6jnpoEgQjnvvIkKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOebruaghyB8IOiDveWKm+efqemYteeUn+aIkO+8iEI577yJIHwKfCDku7vliqEgfCDnlJ/miJDlrZDmqKHlnZfog73lipvnn6npmLXvvIjlr7zlh7rnrKblj7cv55uu5qCHL+S+nei1lu+8ie+8m+Wvuem9kCBpbWFnZS5tYnQg6IO95Yqb55+p6Zi1IHwKfCDpqozor4EgfCDog73lipvnn6npmLXmlofmoaPlrZjlnKggfAp8IERvRCB8IEI5IOWFqOe7vyB8CgotLS0KCiMjIyAzLjYgdjAuMS42IENMSSArIOekuuS+iyDigJTigJQg4o+zIOW+heWQr+WKqAoKKirlvaLosaHov5vluqYqKu+8mm1vdGMg5Y+v6L+Q6KGMICsgZXhhbXBsZXMv44CCCgoqKuWJjee9rioq77yadjAuMS41IOWujOaIkOOAggoKIyMjIyBTcHJpbnQgUzYuMSDigJTigJQgbW90YyDlrZDlkb3ku6TlrozlloQKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IOebruaghyB8IG1vdGMgQ0xJIOWtkOWRveS7pOWPr+i/kOihjCB8Cnwg5Lu75YqhIHwgYGNtZC9tYWluL21haW4ubWJ0YCDlrZDlkb3ku6TvvJpgbW90YyBjaGVja2AvYG1vdGMgYmluZGAvYG1vdGMgcHJvdmVgL2Btb3RjIGluc3RhbGxg77yI5o6l5YWlIG1vb25fZ3VhcmQg562+5ZCN6aqM6K+B77yJ77ybYG1vb24gcnVuIGNtZC9tYWluIC0tdGFyZ2V0IG5hdGl2ZWAg6aqM6K+BIHwKfCDpqozor4EgfCBgbW9vbiBydW4gY21kL21haW4gLS10YXJnZXQgbmF0aXZlYCDpgIDlh7rnoIEgMCB8CnwgRG9EIHwgbW90YyDlm5vlrZDlkb3ku6Tlj6/ov5DooYwgfAoKIyMjIyBTcHJpbnQgUzYuMiDigJTigJQgZXhhbXBsZXMvIOekuuS+i+mbhgoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgZXhhbXBsZXMvIOekuuS+i+mbhiB8Cnwg5Lu75YqhIHwg5bu6IGBleGFtcGxlcy9g77yaYm9keW1hcCDnpLrkvosgLyBiaW5kIOekuuS+iyAvIHJlYWN0aW9uIOekuuS+iyAvIHNlY3VyaXR5IOekuuS+i++8m+avj+S4qiBgbW9vbiBydW5gIOWPr+i/kOihjCB8Cnwg6aqM6K+BIHwg5q+P5Liq56S65L6LIGBtb29uIHJ1bmAg6YCA5Ye656CBIDAgfAp8IERvRCB8IOKJpSA0IOekuuS+i+WPr+i/kOihjCB8CgojIyMjIFNwcmludCBTNi4zIOKAlOKAlCBDTEkg5rWL6K+VICsg5paH5qGjCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBDTEkg5rWL6K+VICsg5a2Q5YyFIFJFQURNRe+8iFIxMO+8iSB8Cnwg5Lu75YqhIHwgYGNtZC9tYWluYCDpu5Hnm5LmtYvor5XvvJvlkITkuIDnuqflrZDmqKHlnZcgUkVBRE1FLm1k77yIUjEw77yJ77ybbW90YyDnlKjms5XlhpnlhaUgUkVBRE1FIHwKfCDpqozor4EgfCBgbW9vbiB0ZXN0YCDlkKsgQ0xJIOeUqOS+iyAvIOWQhOWtkOaooeWdlyBSRUFETUUubWQg5a2Y5ZyoIHwKfCBEb0QgfCBDTEkg5rWL6K+V6YCa6L+HICsg5a2Q5YyFIFJFQURNRSDpvZDlhaggfAoKLS0tCgojIyMgMy43IHYwLjEuNyDlj5HluIPpl6jnpoEg4oCU4oCUIOKPsyDlvoXlkK/liqgKCioq5b2i6LGh6L+b5bqmKirvvJrlj5HluIPpl6jnpoEgQjEyLUIxNCDlhajnu7/jgIIKCioq5YmN572uKirvvJp2MC4xLjYg5a6M5oiQ44CCCgojIyMjIFNwcmludCBTNy4xIOKAlOKAlCDlj5HluIMgdmVyaWZ577yI6Zeo56aBIEIxMu+8iQoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgQjEyIOWPkeW4gyB2ZXJpZnkg5YWo57u/IHwKfCDku7vliqEgfCBgbW9vbiBwdWJsaXNoIC0tZHJ5LXJ1bmAg5YWo5bel5L2c5Yy677yb5qCh6aqMIG1vb24ubW9kIOWtl+auteWujOaVtO+8iG5hbWUvdmVyc2lvbi9kZXNjcmlwdGlvbi9pbXBvcnQvcmVwb3NpdG9yeS9saWNlbnNlL2tleXdvcmRzL3ByZWZlcnJlZF90YXJnZXTvvInvvJvkv67lpI3nvLrlpLHlrZfmrrUgfAp8IOmqjOivgSB8IGBtb29uIHB1Ymxpc2ggLS1kcnktcnVuYCDml6DplJnor68gfAp8IERvRCB8IEIxMiDlhajnu78gfAoKIyMjIyBTcHJpbnQgUzcuMiDigJTigJQg5Z+65YeG5qC35pys5bCB562+77yI6Zeo56aBIEIxM++8iQoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgQjEzIOWfuuWHhuagt+acrOWwgeetviB8Cnwg5Lu75YqhIHwgYG1vb24gYmVuY2ggLS1yZWxlYXNlIC0tdGFyZ2V0IG5hdGl2ZWAg5Z+657q/6YeH5qC377yb5bCB562+5Z+65YeG5qC35pys5YaZ5YWlIG1vdC50b21s77ybQ0kg5Z+65YeG5q+U5a+56ZiI5YC85a6a5LmJIHwKfCDpqozor4EgfCDln7rlh4bmiqXlkYrnlJ/miJDlubblsIHnrb4gfAp8IERvRCB8IEIxMyDlhajnu78gfAoKIyMjIyBTcHJpbnQgUzcuMyDigJTigJQg5Y+R5biD6ZO+77yI6Zeo56aBIEIxNO+8iQoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgQjE0IOWPkeW4g+mTvuWFqOe7vyB8Cnwg5Lu75YqhIHwg5Y+R5biD6ZO+6ISa5pys77yaY2hlY2vihpJ0ZXN04oaScHJvdmXihpJpbmZv4oaSZm104oaScHVibGlzaO+8m+S+nei1luetvuWQjemqjOivge+8iG1vb25fZ3VhcmQgRWQyNTUxOe+8ieaOpeWFpe+8m+adpea6kOeZveWQjeWNlSBgaHR0cHM6Ly9tb29uY2FrZXMuaW9gIHwKfCDpqozor4EgfCDlj5HluIPpk74gZHJ5LXJ1biDlhajpgJrov4cgfAp8IERvRCB8IEIxNCDlhajnu78gfAoKLS0tCgojIyMgMy44IHYwLjEuOCDnlJ/mgIHpm4bmiJAg4oCU4oCUIOKPsyDlvoXlkK/liqgKCioq5b2i6LGh6L+b5bqmKirvvJrnlJ/mgIHpgInlnovokL3lnLDvvIh5YWNjL2pzb24tc2NoZW1hL2FzeW5j77yJ44CCCgoqKuWJjee9rioq77yadjAuMS43IOWujOaIkOOAggoKPiDnlJ/mgIHpgInlnovooajop4EgZG9jcy8wMCDCpzLjgIJQMCDmoLjlv4Pku4Xkvp3otZYgbW9vbmJpdGxhbmcvY29yZSArIGdiejE4Ne+8m1AxIOaOpeWFpeeUn+aAgeW6k+OAggoKIyMjIyBTcHJpbnQgUzguMSDigJTigJQgLm1vdCDop6PmnpDlmajov4EgeWFjYwoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgLm1vdCDop6PmnpDku47miYvlhpnov4EgbW9vbmJpdGxhbmcveWFjYyB8Cnwg5Lu75YqhIHwgYG1vb24gYWRkIG1vb25iaXRsYW5nL3lhY2Ng77yb5bu6IGBtb3QuY29yZWAg5YaFIHlhY2Mg6K+t5rOV5a6a5LmJ77yb5omL5YaZ6Kej5p6Q5Zmo5pu/5o2i77ybYG1vb24gdGVzdGAg5YWo57u/IHwKfCDpqozor4EgfCBgbW9vbiB0ZXN0YCDlhajpgJrov4cgKyB5YWNjIOino+aekOWZqOm7keebkua1i+ivlSB8CnwgRG9EIHwgLm1vdCDop6PmnpDlmaggeWFjYyDljJYgfAoKIyMjIyBTcHJpbnQgUzguMiDigJTigJQgSlNPTiBTY2hlbWEg5qCh6aqMICsg5byC5q2l5o6l5YWlCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCDnm67moIcgfCBjb2xtdWd4L2pzb24tc2NoZW1hICsgbW9vbmJpdGxhbmcvYXN5bmMg5o6l5YWlIHwKfCDku7vliqEgfCBgbW9vbiBhZGQgY29sbXVneC9qc29uLXNjaGVtYWAgQm91bmRBY3Rpb24g5qCh6aqM77ybYG1vb24gYWRkIG1vb25iaXRsYW5nL2FzeW5jYCBSZWFjdGlvbkVuZ2luZSDlvILmraXljJbvvJtgbW9vbiB0ZXN0YCDlhajnu78gfAp8IOmqjOivgSB8IGBtb29uIHRlc3RgIOWFqOmAmui/hyArIOWbm+ebruaghyBjaGVjayB8CnwgRG9EIHwgSlNPTiBTY2hlbWEg5qCh6aqMICsg5byC5q2l5Y+N5bqU5byV5pOO6JC95ZywIHwKCiMjIyMgU3ByaW50IFM4LjMg4oCU4oCUIOaWh+aho+ayu+eQhiArIOW8g+eUqOa4heWNle+8iEIxMe+8iQoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18Cnwg55uu5qCHIHwgQjExIOW8g+eUqOa4heWNlemYsua8guenuyArIFI4IOaWh+aho+ayu+eQhiB8Cnwg5Lu75YqhIHwgYG1vb24gaW5mb2Ag5byD55So5riF5Y2V55Sf5oiQ77yb5ryC56e75qOA5rWL6ISa5pys77yb5pu05paw5qC5IFJFQURNRSArIHJvYWRtYXAgKyBDSEFOR0VMT0cgKyDlrZDljIUgUkVBRE1F77yIUjgvUjEw77yJ77yb57uP6aqM5rKJ5reAIG1lbW9yee+8iFI577yJIHwKfCDpqozor4EgfCDlvIPnlKjmuIXljZXml6DmvILnp7sgLyDmlofmoaPlhajpm4bkuIDoh7QgfAp8IERvRCB8IEIxMSArIFI4ICsgUjkgKyBSMTAg5YWo57u/IHwKCi0tLQoKIyMjIDMuOSB2MC4xLjkg5q2j5byP5Y+R5biDIOKAlOKAlCDij7Mg5b6F5ZCv5YqoCgoqKuW9ouixoei/m+W6pioq77yadjAuMS4wIOato+W8j+eJiOWPkeW4gyBtb29uY2FrZXMuaW/jgIIKCioq5YmN572uKirvvJp2MC4xLjgg5a6M5oiQ44CCCgojIyMjIFNwcmludCBTOS4xIOKAlOKAlCDmnIDnu4jlhajpl6jnpoHpqozor4EKCnwg6aG5IHwg5YaF5a65IHwKfC0tLS18LS0tLS0tfAp8IHRhcmdldCB8IEIxLUIxNCDlhajpg6jpl6jnpoEgfAp8IOS7u+WKoSB8IOWFqOmXqOemgeefqemYteWkjea1i++8mkIxKOWbm+ebruaghykvQjIvQjMoMCB3YXJuaW5nKS9CNC9CNS9CNi9CNy9COC9COS9CMTAvQjExL0IxMi9CMTMvQjE0IHwKfCDpqozor4EgfCDlhajpg6jpl6jnpoHnu78gfAp8IERvRCB8IEIxLUIxNCDlhajnu78gfAoKIyMjIyBTcHJpbnQgUzkuMiDigJTigJQgQ0hBTkdFTE9HICsg54mI5pys5Ya757uTCgp8IOmhuSB8IOWGheWuuSB8CnwtLS0tfC0tLS0tLXwKfCB0YXJnZXQgfCDniYjmnKzlhrvnu5MgfAp8IOS7u+WKoSB8IOeUn+aIkCBDSEFOR0VMT0cubWTvvIh2MC4xLjDihpJ2MC4xLjkg5YWo5Y+Y5pu077yJ77ybbW9vbi5tb2QgdmVyc2lvbiDlhrvnu5MgYDAuMS4wYO+8m21vdC50b21sIOeJiOacrOmUgeWumu+8m2dpdCB0YWcgYHYwLjEuMGAgfAp8IOmqjOivgSB8IENIQU5HRUxPRyDlrozmlbQgLyB0YWcg5a2Y5ZyoIHwKfCBEb0QgfCDniYjmnKzlhrvnu5PlrozmiJAgfAoKIyMjIyBTcHJpbnQgUzkuMyDigJTigJQg5Y+R5biD5YiwIG1vb25jYWtlcy5pbwoKfCDpobkgfCDlhoXlrrkgfAp8LS0tLXwtLS0tLS18CnwgdGFyZ2V0IHwgbW9vbmJpdGxhbmcvc2tpbGxzIOS7k+W6kyArIG1vb25jYWtlcy5pbyB8Cnwg5Lu75YqhIHwgYG1vb24gcHVibGlzaGAg5YWo5bel5L2c5Yy677yb56Gu6K6kIG1vb25jYWtlcy5pbyDljIXpobXvvJtTS0lMTC5tZCDluILlnLrop4TojIPmoKHpqozvvJvku5PlupMgUkVBRE1FIOacgOe7iOeJiCB8Cnwg6aqM6K+BIHwgbW9vbmNha2VzLmlvIOWMhemhteWPr+iuv+mXriAvIGBtb29uIGFkZCBtb3QvbW90YCDlj6/lronoo4UgfAp8IERvRCB8IOato+W8j+WPkeW4g+WujOaIkCB8CgotLS0KCiMjIDQuIOmXqOemgeWvueeFp+ihqO+8iEIxLUIxNO+8iQoKPiDmnaXmupAgZG9jcy8xMCDCpzbjgIJNT1Qg546w54q25LiO55uu5qCH54mI5pys5pig5bCE44CCCgp8IOmXqOemgSB8IOajgOafpSB8IOeOsOeKtiB8IOebruagh+eJiOacrCB8CnwtLS0tLS18LS0tLS0tfC0tLS0tLXwtLS0tLS0tLS0tfAp8IEIxIHwgbW9vbiBjaGVjayAtLWRlbnktd2FybiAwIGVycm9y77yI5Zub55uu5qCH77yJIHwg4pyFIOWNleebruaghyB8IHYwLjEuMiB8CnwgQjIgfCBtb29uIHRlc3Qg5YWo6YCa6L+HIHwg4pyFIHwgdjAuMS4wIHwKfCBCMyB8IHdhcm5pbmcgMO+8iC0tZGVueS13YXJuIOW8uuWItu+8iSB8IOKaoO+4jyA5IHdhcm5pbmcgfCB2MC4xLjEgfAp8IEI0IHwg6KaG55uW546H6L6+5qCHIHwg4pqg77iPIOacqua1iyB8IHYwLjEuMSB8CnwgQjUgfCBzZWN1cml0eV9zY2FuIDAgQ3JpdGljYWwvMCBIaWdoIHwg4pyFIHwgdjAuMS4xIHwKfCBCNiB8IG1vb24gcHJvdmUg6K+B5piOIHwgUDErIHwgdjAuMS4zIHwKfCBCNyB8IOWPmOW8gua1i+ivlSB8IFAxKyB8IHYwLjEuMyB8CnwgQjggfCBBUEkg57Si5byV55Sf5oiQ77yIbW9vbiBpbmZv77yJIHwgUDErIHwgdjAuMS41IHwKfCBCOSB8IOiDveWKm+efqemYteeUn+aIkCB8IFAxKyB8IHYwLjEuNSB8CnwgQjEwIHwg5qC85byP6Zeo56aB77yIbW9vbiBmbXTvvIkgfCBQMSsgfCB2MC4xLjEgfAp8IEIxMSB8IOW8g+eUqOa4heWNlemYsua8guenuyB8IFAxKyB8IHYwLjEuOCB8CnwgQjEyIHwg5Y+R5biDIHZlcmlmeSB8IFAxKyB8IHYwLjEuNyB8CnwgQjEzIHwg5Z+65YeG5qC35pys5bCB562+IHwgUDErIHwgdjAuMS43IHwKfCBCMTQgfCDlj5HluIPpk74gfCBQMSsgfCB2MC4xLjcgfAoKLS0tCgojIyA1LiDpo47pmankuI7kvp3otZYKCnwg6aOO6ZmpIHwg5b2x5ZONIHwg57yT6KejIHwKfC0tLS0tLXwtLS0tLS18LS0tLS0tfAp8IGBtb29uIHByb3ZlYCDlt6Xlhbflj6/nlKjmgKcgfCB2MC4xLjMg6Zi75aGeIHwg5o+Q5YmN6aqM6K+BIGBtb29uIHByb3ZlYCDlkb3ku6TvvJvoi6XkuI3lj6/nlKjliJnpmY3nuqfkuLrmiYvlhpnor4HmmI7kuYnliqHmlofmoaMgfAp8IOWtkOaooeWdl+aLhuWIhuWQjui3qOWMhSBpbXBvcnQg6Lev5b6E5Y+Y5pu0IHwgdjAuMS40IOeUqOaItyBicmVha2FnZSB8IOagueWMhemXqOmdouS/neeVmei/h+a4oeacn++8m2FsbCDpl6jpnaLljIXlhbzlrrnlsYIgfAp8IOeUn+aAgeW6k++8iHlhY2MvanNvbi1zY2hlbWEvYXN5bmPvvInniYjmnKzmvILnp7sgfCB2MC4xLjgg5L6d6LWW5Yay56qBIHwgbW90LnRvbWwgYFtkZXBlbmRlbmNpZXMubG9ja11gIFNIQS0yNTYg6ZSB5a6aICsg57K+56Gu54mI5pys77yIQVMx77yJIHwKfCDlm5vnm67moIfnibnlrprlkYroraYgfCB2MC4xLjIg5bu25pyfIHwg5peg5p2h5Lu257yW6K+R77yM56aB5q2iIGB0YXJnZXQgPT1gIOWIhuaUr++8m+eUqCBgQHBrZ2Ag5oq96LGhIHwKfCDlvaLlvI/ljJbor4HmmI7kuI3lj6/liKTlrpogfCB2MC4xLjMg6Zi75aGeIHwg6ZmN57qn5Li65LiN5Y+Y5byP5rWL6K+VICsg5paH5qGj6K+B5piO5LmJ5Yqh77yM5qCH5rOoIFAyIOihpeWFqCB8CgojIyMgNS4xIOWklumDqOS+nei1lumUgeWumgoKfCDkvp3otZYgfCDniYjmnKwgfCDnlKjpgJQgfCDplIHlrpogfAp8LS0tLS0tfC0tLS0tLXwtLS0tLS18LS0tLS0tfAp8IHdhbGt6enovZ2J6MTg1Lm1idCB8IDAuMi4yIHwgR0IvWiAxODUg5Y2P6K6u5qCIIHwgU0hBLTI1NiB8CnwgY2MwNmIvbW9vbmNyeSB8IDAuOTUuMCB8IO+8iGdiejE4NSDkvKDpgJLvvIkgfCDnsr7noa4gfAp8IG1vb25iaXRsYW5nL2FzeW5jIHwgMC4yMi45IHwg77yIZ2J6MTg1IOS8oOmAku+8iSB8IOeyvuehriB8CnwgbW9vbmJpdGxhbmcveWFjYyB8IFtQMStdIHwgLm1vdCDop6PmnpAgfCDnsr7noa4gfAp8IGNvbG11Z3gvanNvbi1zY2hlbWEgfCBbUDErXSB8IEJvdW5kQWN0aW9uIOagoemqjCB8IOeyvuehriB8CnwgY2hlbnplaGFvby9tb29uX2d1YXJkIHwgW1AxK10gfCBFZDI1NTE5IOetvuWQjSB8IOeyvuehriB8Cnwgemhhbmdib3dlbjIwMDYvbW9vbmdhdGUgfCBbUDErXSB8IOW3peWFt+etlueVpSB8IOeyvuehriB8CgotLS0KCiMjIDYuIOi/reS7o+a1geeoi++8iOW8leeUqCBydWxlcy5tZCDCp+S6lO+8iQoK5q+P5LiqIFNwcmludCDkuKXmoLzmjInku6XkuIsgMTAg5q2l5omn6KGM77yaCgoxLiAqKuafpeaetuaehCoq77ya6K+7IGBkb2NzLzAyLeamguimgeiuvuiuoeaWh+ahoy5tZGAg5a+55bqU56ug6IqC77yM5piO56Gu6IyD5Zu044CCCjIuICoq5a6e546wKirvvJrlhpnmupDnoIEgKyDmtYvor5XvvIhgKl90ZXN0Lm1idGDvvInjgIIKMy4gKirpqozor4EqKu+8mmBtb29uIGNoZWNrIC0tZGVueS13YXJuYCAwIGVycm9y77yId2FybmluZyDljbMgZXJyb3LvvIzlr7npvZAgaW1hZ2UubWJ0IENJ77yJKyBgbW9vbiB0ZXN0YCDlhajpgJrov4fjgIIKNC4gKipXYXJuaW5nIOayu+eQhioq77yIUjEz77yJ77ya6YCQ5LiA5aSE55CGIHdhcm5pbmfvvIznm67moIcgMCB3YXJuaW5n44CCCjUuICoq5paH5qGj5rK755CGKirvvIhSOO+8ie+8muabtOaWsCBSRUFETUUgLyByb2FkbWFwIC8gQ0hBTkdFTE9HIC8g5a2Q5YyFIFJFQURNReOAggo2LiAqKue7j+mqjOayiea3gCoq77yIUjnvvInvvJrmm7TmlrAgbWVtb3J544CCCjcuICoq5Y2g5L2N5qOA5p+lKirvvIhSMTTvvInvvJrmo4Dmn6XljaDkvY0gdG9kbyDmmK/lkKblj6/mjqjov5vjgIIKOC4gKirov63ku6PmuIXnkIYqKu+8iFIxNu+8ie+8mmBtb29uIGNsZWFuYCArIOWIoCAudG1wLy5iYWsvKi5sb2fjgIIKOS4gKirmj5DkuqQqKu+8iFI277yJ77yaZ2l0IGNvbW1pdCArIOWbnuWGmSByb2FkbWFwIGNvbW1pdCBoYXNo44CCCjEwLiAqKuWbnuWGmSoq77yIUjEx77yJ77ya5Zue5YaZ44CM5bey5Lqk5LuYIHjvvIzkuIvnjq/kvp3otZYgWeOAjeOAggoKLS0tCgojIyA3LiDniYjmnKwt5b2i6LGh6L+b5bqm6YCf5p+lCgpgYGAKdjAuMS4wICDinIUg5Y2V5YyF5Z+657q/IDMx5rWL6K+V57u/CnYwLjEuMSAg4o+zIDAgd2FybmluZyArIEIxLUI1CnYwLjEuMiAg4o+zIOWbm+ebruagh+WFqOe7vwp2MC4xLjMgIOKPsyBJMS1JNiDlhajor4EKdjAuMS40ICDij7MgN+WtkOaooeWdl+W3peS9nOWMugp2MC4xLjUgIOKPsyBhbGzpl6jpnaLljIUgKyBBUEnntKLlvJUKdjAuMS42ICDij7MgbW90YyArIGV4YW1wbGVzCnYwLjEuNyAg4o+zIOWPkeW4g+mXqOemgSBCMTItMTQKdjAuMS44ICDij7Mg55Sf5oCB6ZuG5oiQCnYwLjEuOSAg4o+zIOato+W8j+WPkeW4gyBtb29uY2FrZXMuaW8KYGBgCgotLS0KCiMjIDguIOWPmOabtOiusOW9lQoKfCDniYjmnKwgfCDml6XmnJ8gfCDlj5jmm7QgfCDkvZzogIUgfAp8LS0tLS0tfC0tLS0tLXwtLS0tLS18LS0tLS0tfAp8IHYxLjAgfCAyMDI2LTExLTI3IHwg5Yid5aeLIHJvYWRtYXAg5Yib5bu677ya6ZW/6L+c5pyf6KeE5YiSICsgMC4xLngg5Lmd54mI5pysICsgMjUgU3ByaW50IHwgQ29kZUFydHMgfAo=
+# MOT 通用动作语义规范 —— 路线图 roadmap
+
+| 字段 | 值 |
+|------|-----|
+| 文档编号 | MOT-DOC-ROADMAP |
+| 版本 | v1.0 |
+| 日期 | 2026-11-27 |
+| 状态 | 正式 |
+| 定位 | 长远期规划 + 0.1.x 版本迭代 + Sprint 计划（权威路线文件） |
+| 维护规则 | R5（迭代路线）/ R6（提交查证回写）/ R8（文档治理）/ R11（记·锁·回） |
+| 模式来源 | walkzzz/image.mbt Sprint 迭代范式 |
+
+---
+
+## 0. 长远期规划（愿景）
+
+MOT（Motion Operation Type）是 GB/Z 185-2026 的具身执行标准 MoonBit 参考实现。长远期按四阶段推进：
+
+| 阶段 | 版本区间 | 定位 | 形象目标 |
+|------|----------|------|----------|
+| 近期 | **0.1.x** | 参考实现基线 + 安全纵深 + P1 拆分 | 单包→7 子模块工作区，四目标全绿，I1-I6 全证，可发布 |
+| 中期 | 0.2.x | 生态集成深化 + 性能基准 + 多包独立发布 | 生态选型全部落地，基准封签，子模块独立发布 |
+| 远期 | 0.3.x | GB/Z 185 六挂载点完整集成 + 社区生态 | 六挂载点全接入，第三方可扩展工具注册 |
+| 正式 | 1.0.0 | 生产稳定版 | moonbitlang/skills 仓库 + mooncakes.io 正式发布，生产可用 |
+
+### 0.1 阶段依赖关系
+
+```
+0.1.0 基线 ──→ 0.1.1 警告清零 ──→ 0.1.2 四目标 ──→ 0.1.3 形式化验证
+                                                        │
+0.1.9 正式发布 ←─ 0.1.8 生态集成 ←─ 0.1.7 发布门禁 ←─ 0.1.6 CLI+示例 ←─ 0.1.5 门面包+API ←─ 0.1.4 子模块拆分
+```
+
+> 0.1.3 形式化验证是安全纵深的收口，须在子模块拆分前完成（拆分后不变式跨包证明更复杂）。0.1.4 拆分依赖 0.1.2/0.1.3 的四目标与不变式已固化的基线。
+
+---
+
+## 1. 版本总览（0.1.x 形象进度一览）
+
+| 版本 | 形象进度 | 状态 | 前置依赖 | 门禁达成 |
+|------|----------|------|----------|----------|
+| v0.1.0 | 单包基线：20 源文件 + 31 测试绿 | ✅ 已完成 | — | B1(单目标)/B2/B5 |
+| v0.1.1 | 0 warning + 门禁 B1-B5 全绿 | ⏳ 待启动 | v0.1.0 | B1-B5 |
+| v0.1.2 | native/wasm-gc/js/wasm 四目标全绿 | ⏳ 待启动 | v0.1.1 | B1(四目标)/B2 |
+| v0.1.3 | I1-I6 六条不变式 moon prove 全证 | ⏳ 待启动 | v0.1.2 | B6 |
+| v0.1.4 | 7 子模块 moon.work 工作区成型 | ⏳ 待启动 | v0.1.3 | B1-B2(多包) |
+| v0.1.5 | all 门面包 + pkg.generated.mbti | ⏳ 待启动 | v0.1.4 | B8/B9 |
+| v0.1.6 | motc 可运行 + examples/ | ⏳ 待启动 | v0.1.5 | — |
+| v0.1.7 | 发布门禁 B12-B14 全绿 | ⏳ 待启动 | v0.1.6 | B12/B13/B14 |
+| v0.1.8 | 生态选型落地（yacc/json-schema/async） | ⏳ 待启动 | v0.1.7 | B4/B10/B11 |
+| v0.1.9 | v0.1.0 正式版发布 mooncakes.io | ⏳ 待启动 | v0.1.8 | 全部门禁 |
+
+> 状态图例：✅ 已完成 / ⏳ 待启动 / 🔄 进行中 / ⛔ 阻塞
+
+---
+
+## 2. 当前状态回写区（R6 / R11 回）
+
+> 每个 Sprint 完成回写：状态 + commit hash +「已交付 x，下环依赖 Y」。
+
+| 版本 | Sprint | 状态 | commit hash | 回写（已交付 x / 下环依赖 Y） |
+|------|--------|------|-------------|------------------------------|
+| v0.1.0 | — | ✅ | （基线） | 已交付单包基线 31 测试绿；下环依赖 v0.1.1 warning 治理 |
+| v0.1.1 | S1.1 | ⏳ | | |
+| v0.1.1 | S1.2 | ⏳ | | |
+| v0.1.1 | S1.3 | ⏳ | | |
+| v0.1.2 | S2.1 | ⏳ | | |
+| v0.1.2 | S2.2 | ⏳ | | |
+| v0.1.2 | S2.3 | ⏳ | | |
+| v0.1.3 | S3.1 | ⏳ | | |
+| v0.1.3 | S3.2 | ⏳ | | |
+| v0.1.3 | S3.3 | ⏳ | | |
+| v0.1.3 | S3.4 | ⏳ | | |
+| v0.1.4 | S4.1 | ⏳ | | |
+| v0.1.4 | S4.2 | ⏳ | | |
+| v0.1.4 | S4.3 | ⏳ | | |
+| v0.1.4 | S4.4 | ⏳ | | |
+| v0.1.5 | S5.1 | ⏳ | | |
+| v0.1.5 | S5.2 | ⏳ | | |
+| v0.1.5 | S5.3 | ⏳ | | |
+| v0.1.6 | S6.1 | ⏳ | | |
+| v0.1.6 | S6.2 | ⏳ | | |
+| v0.1.6 | S6.3 | ⏳ | | |
+| v0.1.7 | S7.1 | ⏳ | | |
+| v0.1.7 | S7.2 | ⏳ | | |
+| v0.1.7 | S7.3 | ⏳ | | |
+| v0.1.8 | S8.1 | ⏳ | | |
+| v0.1.8 | S8.2 | ⏳ | | |
+| v0.1.8 | S8.3 | ⏳ | | |
+| v0.1.9 | S9.1 | ⏳ | | |
+| v0.1.9 | S9.2 | ⏳ | | |
+| v0.1.9 | S9.3 | ⏳ | | |
+
+---
+
+## 3. 各版本 Sprint 计划
+
+> 迭代流程严格遵循 rules.md §五：查架构 → 实现 → 验证 → Warning 治理(R13) → 文档治理(R8) → 经验沉淀(R9) → 占位检查(R14) → 迭代清理(R16) → 提交(R6) → 回写(R11)。
+> 验证命令前缀：`export PATH="/root/.moon/bin:$PATH" && cd /workspace/mot`
+
+---
+
+### 3.0 v0.1.0 基线固化 —— ✅ 已完成
+
+**形象进度**：单包基线，20 源文件 + 31 测试绿。
+
+| 项 | 内容 |
+|----|------|
+| 范围 | P0 单包全部源码 + 14 份文档套件 + SKILL 文件 |
+| 验证 | `moon check` 0 错误 / `moon build` 成功 / `moon test` 31 passed / `security_scan` 0 Critical 0 High |
+| 交付 | /workspace/mot 全部 45 文件 |
+| 回写 | 已交付单包基线；下环依赖 v0.1.1 warning 治理 |
+
+---
+
+### 3.1 v0.1.1 警告清零 + 门禁补齐 —— ⏳ 待启动
+
+**形象进度**：0 warning + 门禁 B1-B5 全绿。
+
+**前置**：v0.1.0 完成。
+
+#### Sprint S1.1 —— Warning 根因治理
+
+| 项 | 内容 |
+|----|------|
+| 目标 | `moon check` 9 → 0 warning（R13：修复根因，禁止注释/ignore 压制） |
+| 任务 | ① `bind.mbt:85` `find_path_rec` 未使用 → 删除或接入调用路径；② `bind.mbt:228` `graph` 未使用 → 接入或移除参数；③ `diag.mbt:34-37` `Success/Error/Warning/InternalError` 构造子未使用 → `#derive(Show)` 接入诊断输出或移除冗余变体；④ `safety.mbt:65` `action` 未使用 → 接入 `is_action_allowed` 判定逻辑；⑤ `supply.mbt:18` `pkg` 未使用 → 接入签名校验逻辑；⑥ `threat.mbt:4` `#derive(Show)` 废弃 → 改 `#derive(Debug)` |
+| 验证 | `moon check --deny-warn` 0 error（warning 即 error，对齐 image.mbt CI） |
+| DoD | 0 warning，且无 `@lint:ignore` 压制 |
+
+#### Sprint S1.2 —— 覆盖率测量 + 门禁 B4
+
+| 项 | 内容 |
+|----|------|
+| 目标 | 覆盖率可测量，门禁 B4 达标线定义 |
+| 任务 | ① 运行 `moon test --coverage`（或等价）获取行/分支覆盖基线；② 定义 MOT 覆盖率达标线（对齐 image.mbt 90.05%，MOT 首期 ≥ 80%）；③ 补 `mot_test.mbt` 缺失分支用例（warning 治理后暴露的未覆盖路径） |
+| 验证 | `moon test` 全通过 + 覆盖率报告生成 |
+| DoD | 覆盖率报告存在且 ≥ 达标线 |
+
+#### Sprint S1.3 —— 安全门禁 B5 复测 + 格式门禁 B10
+
+| 项 | 内容 |
+|----|------|
+| 目标 | B5 保持 0 Critical/0 High，B10 格式门禁落地 |
+| 任务 | ① `security_scan` 复测确认 0 Critical/0 High；② `moon fmt` 全量格式化；③ 将 `moon fmt` 检查写入 rules.md 验证流程 |
+| 验证 | `security_scan` 0/0 / `moon fmt --check` 无差异 |
+| DoD | B5 + B10 全绿 |
+
+---
+
+### 3.2 v0.1.2 四目标编译 —— ⏳ 待启动
+
+**形象进度**：native/wasm-gc/js/wasm 四目标全绿。
+
+**前置**：v0.1.1 完成（0 warning 基线）。
+
+#### Sprint S2.1 —— 四目标 moon check
+
+| 项 | 内容 |
+|----|------|
+| target | native / wasm-gc / js / wasm |
+| 任务 | `moon check --target native` / `--target wasm-gc` / `--target js` / `--target wasm` 逐一通过；修复目标特定告警（无条件编译，禁止 `target ==` 分支） |
+| 验证 | `moon check --deny-warn --target <t>` 0 error × 4 |
+| DoD | 四目标 check 全 0 error |
+
+#### Sprint S2.2 —— 四目标 moon build
+
+| 项 | 内容 |
+|----|------|
+| 任务 | `moon build --target <t>` × 4；确认 `_build/` 四目标产物齐全 |
+| 验证 | `moon build` 成功 × 4 |
+| DoD | 四目标构建产物生成 |
+
+#### Sprint S2.3 —— 四目标 moon test
+
+| 项 | 内容 |
+|----|------|
+| 任务 | `moon test --target <t>` × 4；确认 31 测试四目标全通过 |
+| 验证 | `moon test` 31 passed × 4 |
+| DoD | 四目标测试全绿 |
+
+---
+
+### 3.3 v0.1.3 形式化验证 I1-I6 —— ⏳ 待启动
+
+**形象进度**：I1-I6 六条不变式 moon prove 全证。
+
+**前置**：v0.1.2 完成（四目标基线）。
+
+> 安全不变式（docs/00 §3）：I1 安全事件抢占 / I2 FAULT_LOCKED 仅 Reset / I3 escalation 单调 / I4 SAFE_HOLD 门控关闭 / I5 输出门控完整性 / I6 反馈来源认证。
+
+#### Sprint S3.1 —— I1 / I2 证明
+
+| 项 | 内容 |
+|----|------|
+| 目标 | I1（安全事件抢占）+ I2（FAULT_LOCKED 仅 Reset）`moon prove` 通过 |
+| 任务 | ① 在 `safety.mbt` 标注证明义务；② `moon prove mot/mot.safety` 跑通；③ 修复证明失败的代码路径 |
+| 验证 | `moon prove` 输出 I1/I2 已证 |
+| DoD | I1/I2 证明通过 |
+
+#### Sprint S3.2 —— I3 / I4 证明
+
+| 项 | 内容 |
+|----|------|
+| 目标 | I3（escalation 单调）+ I4（SAFE_HOLD 门控关闭）`moon prove` 通过 |
+| 任务 | ① `reaction_engine.mbt` / `safety.mbt` 标注；② `moon prove` 跑通；③ 修复路径 |
+| 验证 | `moon prove` 输出 I3/I4 已证 |
+| DoD | I3/I4 证明通过 |
+
+#### Sprint S3.3 —— I5 / I6 证明
+
+| 项 | 内容 |
+|----|------|
+| 目标 | I5（输出门控完整性）+ I6（反馈来源认证）`moon prove` 通过 |
+| 任务 | ① `output_gate.mbt` / `feedback_auth.mbt` 标注；② `moon prove` 跑通；③ 修复路径 |
+| 验证 | `moon prove` 输出 I5/I6 已证 |
+| DoD | I5/I6 证明通过 |
+
+#### Sprint S3.4 —— 变异测试（门禁 B7）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | 变异测试验证证明强度（B7） |
+| 任务 | ① 对 I1-I6 proof 引入变异体；② `moon prove` 检测变异体失败（证明非平凡）；③ 记录变异得分 |
+| 验证 | 变异体被证明拒绝 |
+| DoD | 变异测试报告存在，证明强度可量化 |
+
+---
+
+### 3.4 v0.1.4 子模块拆分 —— ⏳ 待启动
+
+**形象进度**：7 子模块 moon.work 工作区成型。
+
+**前置**：v0.1.3 完成（不变式已证基线）。
+
+> 拆分目标结构与依赖方向见 docs/10 §4。单向依赖：下层不可依赖上层，同层不可互相依赖。
+
+#### Sprint S4.1 —— mot.core 拆分
+
+| 项 | 内容 |
+|----|------|
+| 目标 | mot.core（L0）独立子模块 |
+| 任务 | `moon.work` 加 `"mot.core"`；建 `mot.core/moon.mod`+`moon.pkg`+`types/moon.pkg`+`types.mbt`+`bodymap.mbt`+`primitive.mbt`+`mapping.mbt`+`sac.mbt`+`env.mbt`+`reaction.mbt`+`safety.mbt`+`nli.mbt`+`targetseq.mbt`；根包保留门面；`moon check`/`moon test` 全绿 |
+| 验证 | `moon check` 0 error / `moon test` 31 passed |
+| DoD | mot.core 独立编译通过，根包门面零 import |
+
+#### Sprint S4.2 —— mot.gbz185 + mot.bind 拆分
+
+| 项 | 内容 |
+|----|------|
+| 目标 | mot.gbz185（L1）+ mot.bind（L2）独立 |
+| 任务 | 拆 `gbz185.mbt`→`mot.gbz185/`；拆 `bind.mbt`→`mot.bind/`；依赖方向 mot.bind→core+gbz185；跨包路径 `mot/mot.core/types`；`moon check`/`moon test` 全绿 |
+| 验证 | `moon check` 0 error / `moon test` 31 passed |
+| DoD | 两子模块独立编译，依赖方向无逆 |
+
+#### Sprint S4.3 —— mot.reaction + mot.safety + mot.security 拆分
+
+| 项 | 内容 |
+|----|------|
+| 目标 | mot.reaction / mot.safety / mot.security（L2）独立 |
+| 任务 | 拆 `reaction_engine.mbt`→`mot.reaction/`；拆 `safety.mbt`→`mot.safety/`；拆 `threat/supply/nli_guard/feedback_auth/output_gate`→`mot.security/`；依赖 mot.security→core+safety；`moon check`/`moon test` 全绿 |
+| 验证 | `moon check` 0 error / `moon test` 31 passed |
+| DoD | 三子模块独立编译，依赖方向无逆 |
+
+#### Sprint S4.4 —— mot.diag + all 门面包拆分
+
+| 项 | 内容 |
+|----|------|
+| 目标 | mot.diag（L3）独立 + all 门面包骨架 |
+| 任务 | 拆 `diag.mbt`→`mot.diag/`；建 `all/moon.pkg`+`all/all.mbt`（骨架，pub using 待 v0.1.5 填充）；`moon check`/`moon test` 全绿 |
+| 验证 | `moon check` 0 error / `moon test` 31 passed |
+| DoD | 7 子模块 + all 工作区成型，`moon.work` members 完整 |
+
+---
+
+### 3.5 v0.1.5 门面包 + API 索引 —— ⏳ 待启动
+
+**形象进度**：all 门面包 + pkg.generated.mbti。
+
+**前置**：v0.1.4 完成（工作区成型）。
+
+#### Sprint S5.1 —— all/all.mbt pub using 再导出
+
+| 项 | 内容 |
+|----|------|
+| 目标 | all 门面包高频 API 再导出（对齐 image.mbt all/all.mbt） |
+| 任务 | `pub using @types { type Vec3, type ParamValue, type BodyMap, type Primitive, type SacSpec, type EnvFeedback, type ReactionPolicy, type SafetyStateMachine, type TargetActionSeq, ... }`；`pub using @bind { bind }`；`pub using @gbz185 { MotError, mot_envelope, mot_tool_descriptor }`；方法薄函数再导出 |
+| 验证 | `moon check` 0 error / 用户 `import "mot/mot/all"` 可用 |
+| DoD | 门面包再导出完整，黑盒测试通过 |
+
+#### Sprint S5.2 —— API 索引生成（门禁 B8）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | `moon info` 生成 pkg.generated.mbti（B8） |
+| 任务 | `moon info` 全工作区运行；确认各子模块 pkg.generated.mbti 生成；DON'T EDIT 标记保留 |
+| 验证 | 各子模块 pkg.generated.mbti 存在 |
+| DoD | B8 全绿 |
+
+#### Sprint S5.3 —— 能力矩阵生成（门禁 B9）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | 能力矩阵生成（B9） |
+| 任务 | 生成子模块能力矩阵（导出符号/目标/依赖）；对齐 image.mbt 能力矩阵 |
+| 验证 | 能力矩阵文档存在 |
+| DoD | B9 全绿 |
+
+---
+
+### 3.6 v0.1.6 CLI + 示例 —— ⏳ 待启动
+
+**形象进度**：motc 可运行 + examples/。
+
+**前置**：v0.1.5 完成。
+
+#### Sprint S6.1 —— motc 子命令完善
+
+| 项 | 内容 |
+|----|------|
+| 目标 | motc CLI 子命令可运行 |
+| 任务 | `cmd/main/main.mbt` 子命令：`motc check`/`motc bind`/`motc prove`/`motc install`（接入 moon_guard 签名验证）；`moon run cmd/main --target native` 验证 |
+| 验证 | `moon run cmd/main --target native` 退出码 0 |
+| DoD | motc 四子命令可运行 |
+
+#### Sprint S6.2 —— examples/ 示例集
+
+| 项 | 内容 |
+|----|------|
+| 目标 | examples/ 示例集 |
+| 任务 | 建 `examples/`：bodymap 示例 / bind 示例 / reaction 示例 / security 示例；每个 `moon run` 可运行 |
+| 验证 | 每个示例 `moon run` 退出码 0 |
+| DoD | ≥ 4 示例可运行 |
+
+#### Sprint S6.3 —— CLI 测试 + 文档
+
+| 项 | 内容 |
+|----|------|
+| 目标 | CLI 测试 + 子包 README（R10） |
+| 任务 | `cmd/main` 黑盒测试；各一级子模块 README.md（R10）；motc 用法写入 README |
+| 验证 | `moon test` 含 CLI 用例 / 各子模块 README.md 存在 |
+| DoD | CLI 测试通过 + 子包 README 齐全 |
+
+---
+
+### 3.7 v0.1.7 发布门禁 —— ⏳ 待启动
+
+**形象进度**：发布门禁 B12-B14 全绿。
+
+**前置**：v0.1.6 完成。
+
+#### Sprint S7.1 —— 发布 verify（门禁 B12）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | B12 发布 verify 全绿 |
+| 任务 | `moon publish --dry-run` 全工作区；校验 moon.mod 字段完整（name/version/description/import/repository/license/keywords/preferred_target）；修复缺失字段 |
+| 验证 | `moon publish --dry-run` 无错误 |
+| DoD | B12 全绿 |
+
+#### Sprint S7.2 —— 基准样本封签（门禁 B13）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | B13 基准样本封签 |
+| 任务 | `moon bench --release --target native` 基线采样；封签基准样本写入 mot.toml；CI 基准比对阈值定义 |
+| 验证 | 基准报告生成并封签 |
+| DoD | B13 全绿 |
+
+#### Sprint S7.3 —— 发布链（门禁 B14）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | B14 发布链全绿 |
+| 任务 | 发布链脚本：check→test→prove→info→fmt→publish；依赖签名验证（moon_guard Ed25519）接入；来源白名单 `https://mooncakes.io` |
+| 验证 | 发布链 dry-run 全通过 |
+| DoD | B14 全绿 |
+
+---
+
+### 3.8 v0.1.8 生态集成 —— ⏳ 待启动
+
+**形象进度**：生态选型落地（yacc/json-schema/async）。
+
+**前置**：v0.1.7 完成。
+
+> 生态选型表见 docs/00 §2。P0 核心仅依赖 moonbitlang/core + gbz185；P1 接入生态库。
+
+#### Sprint S8.1 —— .mot 解析器迁 yacc
+
+| 项 | 内容 |
+|----|------|
+| 目标 | .mot 解析从手写迁 moonbitlang/yacc |
+| 任务 | `moon add moonbitlang/yacc`；建 `mot.core` 内 yacc 语法定义；手写解析器替换；`moon test` 全绿 |
+| 验证 | `moon test` 全通过 + yacc 解析器黑盒测试 |
+| DoD | .mot 解析器 yacc 化 |
+
+#### Sprint S8.2 —— JSON Schema 校验 + 异步接入
+
+| 项 | 内容 |
+|----|------|
+| 目标 | colmugx/json-schema + moonbitlang/async 接入 |
+| 任务 | `moon add colmugx/json-schema` BoundAction 校验；`moon add moonbitlang/async` ReactionEngine 异步化；`moon test` 全绿 |
+| 验证 | `moon test` 全通过 + 四目标 check |
+| DoD | JSON Schema 校验 + 异步反应引擎落地 |
+
+#### Sprint S8.3 —— 文档治理 + 弃用清单（B11）
+
+| 项 | 内容 |
+|----|------|
+| 目标 | B11 弃用清单防漂移 + R8 文档治理 |
+| 任务 | `moon info` 弃用清单生成；漂移检测脚本；更新根 README + roadmap + CHANGELOG + 子包 README（R8/R10）；经验沉淀 memory（R9） |
+| 验证 | 弃用清单无漂移 / 文档全集一致 |
+| DoD | B11 + R8 + R9 + R10 全绿 |
+
+---
+
+### 3.9 v0.1.9 正式发布 —— ⏳ 待启动
+
+**形象进度**：v0.1.0 正式版发布 mooncakes.io。
+
+**前置**：v0.1.8 完成。
+
+#### Sprint S9.1 —— 最终全门禁验证
+
+| 项 | 内容 |
+|----|------|
+| target | B1-B14 全部门禁 |
+| 任务 | 全门禁矩阵复测：B1(四目标)/B2/B3(0 warning)/B4/B5/B6/B7/B8/B9/B10/B11/B12/B13/B14 |
+| 验证 | 全部门禁绿 |
+| DoD | B1-B14 全绿 |
+
+#### Sprint S9.2 —— CHANGELOG + 版本冻结
+
+| 项 | 内容 |
+|----|------|
+| target | 版本冻结 |
+| 任务 | 生成 CHANGELOG.md（v0.1.0→v0.1.9 全变更）；moon.mod version 冻结 `0.1.0`；mot.toml 版本锁定；git tag `v0.1.0` |
+| 验证 | CHANGELOG 完整 / tag 存在 |
+| DoD | 版本冻结完成 |
+
+#### Sprint S9.3 —— 发布到 mooncakes.io
+
+| 项 | 内容 |
+|----|------|
+| target | moonbitlang/skills 仓库 + mooncakes.io |
+| 任务 | `moon publish` 全工作区；确认 mooncakes.io 包页；SKILL.md 市场规范校验；仓库 README 最终版 |
+| 验证 | mooncakes.io 包页可访问 / `moon add mot/mot` 可安装 |
+| DoD | 正式发布完成 |
+
+---
+
+## 4. 门禁对照表（B1-B14）
+
+> 来源 docs/10 §6。MOT 现状与目标版本映射。
+
+| 门禁 | 检查 | 现状 | 目标版本 |
+|------|------|------|----------|
+| B1 | moon check --deny-warn 0 error（四目标） | ✅ 单目标 | v0.1.2 |
+| B2 | moon test 全通过 | ✅ | v0.1.0 |
+| B3 | warning 0（--deny-warn 强制） | ⚠️ 9 warning | v0.1.1 |
+| B4 | 覆盖率达标 | ⚠️ 未测 | v0.1.1 |
+| B5 | security_scan 0 Critical/0 High | ✅ | v0.1.1 |
+| B6 | moon prove 证明 | P1+ | v0.1.3 |
+| B7 | 变异测试 | P1+ | v0.1.3 |
+| B8 | API 索引生成（moon info） | P1+ | v0.1.5 |
+| B9 | 能力矩阵生成 | P1+ | v0.1.5 |
+| B10 | 格式门禁（moon fmt） | P1+ | v0.1.1 |
+| B11 | 弃用清单防漂移 | P1+ | v0.1.8 |
+| B12 | 发布 verify | P1+ | v0.1.7 |
+| B13 | 基准样本封签 | P1+ | v0.1.7 |
+| B14 | 发布链 | P1+ | v0.1.7 |
+
+---
+
+## 5. 风险与依赖
+
+| 风险 | 影响 | 缓解 |
+|------|------|------|
+| `moon prove` 工具可用性 | v0.1.3 阻塞 | 提前验证 `moon prove` 命令；若不可用则降级为手写证明义务文档 |
+| 子模块拆分后跨包 import 路径变更 | v0.1.4 用户 breakage | 根包门面保留过渡期；all 门面包兼容层 |
+| 生态库（yacc/json-schema/async）版本漂移 | v0.1.8 依赖冲突 | mot.toml `[dependencies.lock]` SHA-256 锁定 + 精确版本（AS1） |
+| 四目标特定告警 | v0.1.2 延期 | 无条件编译，禁止 `target ==` 分支；用 `@pkg` 抽象 |
+| 形式化证明不可判定 | v0.1.3 阻塞 | 降级为不变式测试 + 文档证明义务，标注 P2 补全 |
+
+### 5.1 外部依赖锁定
+
+| 依赖 | 版本 | 用途 | 锁定 |
+|------|------|------|------|
+| walkzzz/gbz185.mbt | 0.2.2 | GB/Z 185 协议栈 | SHA-256 |
+| cc06b/mooncry | 0.95.0 | （gbz185 传递） | 精确 |
+| moonbitlang/async | 0.22.9 | （gbz185 传递） | 精确 |
+| moonbitlang/yacc | [P1+] | .mot 解析 | 精确 |
+| colmugx/json-schema | [P1+] | BoundAction 校验 | 精确 |
+| chenzehaoo/moon_guard | [P1+] | Ed25519 签名 | 精确 |
+| zhangbowen2006/moongate | [P1+] | 工具策略 | 精确 |
+
+---
+
+## 6. 迭代流程（引用 rules.md §五）
+
+每个 Sprint 严格按以下 10 步执行：
+
+1. **查架构**：读 `docs/02-概要设计文档.md` 对应章节，明确范围。
+2. **实现**：写源码 + 测试（`*_test.mbt`）。
+3. **验证**：`moon check --deny-warn` 0 error（warning 即 error，对齐 image.mbt CI）+ `moon test` 全通过。
+4. **Warning 治理**（R13）：逐一处理 warning，目标 0 warning。
+5. **文档治理**（R8）：更新 README / roadmap / CHANGELOG / 子包 README。
+6. **经验沉淀**（R9）：更新 memory。
+7. **占位检查**（R14）：检查占位 todo 是否可推进。
+8. **迭代清理**（R16）：`moon clean` + 删 .tmp/.bak/*.log。
+9. **提交**（R6）：git commit + 回写 roadmap commit hash。
+10. **回写**（R11）：回写「已交付 x，下环依赖 Y」。
+
+---
+
+## 7. 版本-形象进度速查
+
+```
+v0.1.0  ✅ 单包基线 31测试绿
+v0.1.1  ⏳ 0 warning + B1-B5
+v0.1.2  ⏳ 四目标全绿
+v0.1.3  ⏳ I1-I6 全证
+v0.1.4  ⏳ 7子模块工作区
+v0.1.5  ⏳ all门面包 + API索引
+v0.1.6  ⏳ motc + examples
+v0.1.7  ⏳ 发布门禁 B12-14
+v0.1.8  ⏳ 生态集成
+v0.1.9  ⏳ 正式发布 mooncakes.io
+```
+
+---
+
+## 8. 变更记录
+
+| 版本 | 日期 | 变更 | 作者 |
+|------|------|------|------|
+| v1.0 | 2026-11-27 | 初始 roadmap 创建：长远期规划 + 0.1.x 九版本 + 25 Sprint | CodeArts |

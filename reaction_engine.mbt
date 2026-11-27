@@ -1,1 +1,123 @@
-Ly8gUmVhY3Rpb25FbmdpbmUg4oCU4oCUIGVudmlyb25tZW50IGZlZWRiYWNrIC0+IGNvbnRyb2wgZGVjaXNpb24gKHNwZWMgMy4yKQovLyBMMyBydW50aW1lIGF1dGhlbnRpY2F0aW9uIGxheWVyLiBGZWVkYmFjayBzb3VyY2UgYXV0aGVudGljYXRpb24gKEk2KSBpcyBlbmZvcmNlZAovLyBpbiBmZWVkYmFja19hdXRoLm1idCBCRUZPUkUgdGhpcyBlbmdpbmUgcnVucy4KLy8KLy8gTG9vcDogcmVjZWl2ZSBFbnZGZWVkYmFjayAtPiBtYXRjaCBwb2xpY3kgKHNjb3BlICsgdHJpZ2dlciArIGd1YXJkKSAtPiBleGVjdXRlIGFjdGlvbgovLyAgICAgICAtPiBpZiBlc2NhbGF0aW9uLCByZWN1cnNlIChib3VuZGVkLCBJMyBtb25vdG9uaWMpIC0+IGNoYWluIGV4aGF1c3RlZCA9PiBGQVVMVF9MT0NLRUQKLy8KLy8gTk9URTogc2FmZXR5IGV2ZW50cyAoU2FmZXR5RXZlbnQpIGFyZSBwcmVlbXB0aXZlIGFuZCBieXBhc3MgdGhpcyBlbmdpbmUgZW50aXJlbHk7Ci8vIHRoZXkgZ28gZGlyZWN0bHkgdG8gU2FmZXR5U3RhdGVNYWNoaW5lLnRyYW5zaXRpb24gKHNlZSBzYWZldHkubWJ0KS4KCi8vL3wKcHViKGFsbCkgZW51bSBSZWFjdGlvbkRlY2lzaW9uIHsKICBDb250aW51ZQogIEFkanVzdChQYXJhbU1hcCkKICBBdm9pZChBdm9pZFN0cmF0ZWd5KQogIFdhaXQoQ29uZGl0aW9uRXhwciwgSW50NjQsIFJlYWN0aW9uQWN0aW9uKQogIFNhZmVIb2xkCiAgQWJvcnQoU3RyaW5nKQogIFJlcGxhbgogIEZhdWx0TG9ja2VkKFN0cmluZykKfQoKLy8vfApjb25zdCBNQVhfRVNDQUxBVElPTiA6IEludDMyID0gNQoKLy8vfApmbiBzZXZlcml0eV9yYW5rKHMgOiBTZXZlcml0eSkgLT4gSW50MzIgewogIG1hdGNoIHMgewogICAgSW5mbyA9PiAwCiAgICBXYXJuID0+IDEKICAgIERhbmdlciA9PiAyCiAgICBDcml0aWNhbCA9PiAzCiAgfQp9CgovLy98CmZuIHNldmVyaXR5X2dlKGEgOiBTZXZlcml0eSwgYiA6IFNldmVyaXR5KSAtPiBCb29sIHsKICBzZXZlcml0eV9yYW5rKGEpID49IHNldmVyaXR5X3JhbmsoYikKfQoKLy8vfApmbiBraW5kX2luX2xpc3Qoa2luZHMgOiBBcnJheVtGZWVkYmFja0tpbmRdLCBrIDogRmVlZGJhY2tLaW5kKSAtPiBCb29sIHsKICBsZXQgbXV0IGkgPSAwCiAgd2hpbGUgaSA8IGtpbmRzLmxlbmd0aCgpIHsKICAgIGlmIGtpbmRzW2ldID09IGsgewogICAgICByZXR1cm4gdHJ1ZQogICAgfQogICAgaSA9IGkgKyAxCiAgfQogIGZhbHNlCn0KCi8vIE1hdGNoIGEgcG9saWN5IGFnYWluc3QgZmVlZGJhY2s6IHRyaWdnZXIgKGtpbmQgKyBzZXZlcml0eV9taW4gKyBzb3VyY2VfZmlsdGVyKS4KCi8vL3wKZm4gbWF0Y2hlcyhwb2xpY3kgOiBSZWFjdGlvblBvbGljeSwgZmVlZGJhY2sgOiBFbnZGZWVkYmFjaykgLT4gQm9vbCB7CiAgbGV0IGtpbmRfb2sgPSBraW5kX2luX2xpc3QocG9saWN5LnRyaWdnZXIua2luZHMsIGZlZWRiYWNrLmtpbmQpCiAgbGV0IHNldl9vayA9IHNldmVyaXR5X2dlKGZlZWRiYWNrLnNldmVyaXR5LCBwb2xpY3kudHJpZ2dlci5zZXZlcml0eV9taW4pCiAgbGV0IHNyY19vayA9IG1hdGNoIHBvbGljeS50cmlnZ2VyLnNvdXJjZV9maWx0ZXIgewogICAgTm9uZSA9PiB0cnVlCiAgICBTb21lKGYpID0+IGZlZWRiYWNrLnNvdXJjZSA9PSBmCiAgfQogIGtpbmRfb2sgJiYgc2V2X29rICYmIHNyY19vawp9CgovLy98CmZuIGZpbmRfcG9saWN5KAogIHBvbGljaWVzIDogQXJyYXlbUmVhY3Rpb25Qb2xpY3ldLAogIGZlZWRiYWNrIDogRW52RmVlZGJhY2ssCikgLT4gUmVhY3Rpb25Qb2xpY3k/IHsKICBsZXQgbXV0IGkgPSAwCiAgd2hpbGUgaSA8IHBvbGljaWVzLmxlbmd0aCgpIHsKICAgIGlmIG1hdGNoZXMocG9saWNpZXNbaV0sIGZlZWRiYWNrKSB7CiAgICAgIHJldHVybiBTb21lKHBvbGljaWVzW2ldKQogICAgfQogICAgaSA9IGkgKyAxCiAgfQogIE5vbmUKfQoKLy8vfApmbiBkZWNpZGUoYWN0aW9uIDogUmVhY3Rpb25BY3Rpb24pIC0+IFJlYWN0aW9uRGVjaXNpb24gewogIG1hdGNoIGFjdGlvbiB7CiAgICBDb250aW51ZSA9PiBDb250aW51ZQogICAgQWRqdXN0KHApID0+IEFkanVzdChwKQogICAgQXZvaWQocykgPT4gQXZvaWQocykKICAgIFdhaXQoYywgdCwgbykgPT4gV2FpdChjLCB0LCBvKQogICAgU2FmZUhvbGQgPT4gU2FmZUhvbGQKICAgIEFib3J0KHIpID0+IEFib3J0KHIpCiAgICBSZXBsYW4gPT4gUmVwbGFuCiAgfQp9CgovLyBXYWxrIHRoZSBlc2NhbGF0aW9uIGNoYWluIChib3VuZGVkLCBJMyBtb25vdG9uaWMgaW5kZXgpLiBDaGFpbiBleGhhdXN0ZWQgLT4gRmF1bHRMb2NrZWQuCgovLy98CmZuIHJlYWN0X3JlYygKICBwb2xpY3kgOiBSZWFjdGlvblBvbGljeSwKICBmZWVkYmFjayA6IEVudkZlZWRiYWNrLAogIGRlcHRoIDogSW50MzIsCikgLT4gUmVhY3Rpb25EZWNpc2lvbiB7CiAgaWYgZGVwdGggPiBNQVhfRVNDQUxBVElPTiB7CiAgICBGYXVsdExvY2tlZCgiZXNjYWxhdGlvbiBjaGFpbiBleGhhdXN0ZWQgKEkzKSIpCiAgfSBlbHNlIHsKICAgIG1hdGNoIHBvbGljeS5lc2NhbGF0aW9uIHsKICAgICAgTm9uZSA9PiBkZWNpZGUocG9saWN5LmFjdGlvbikKICAgICAgU29tZShlc2MpID0+IHJlYWN0X3JlYyhlc2MsIGZlZWRiYWNrLCBkZXB0aCArIDEpCiAgICB9CiAgfQp9CgovLyBUb3AtbGV2ZWwgZW50cnk6IG1hdGNoIHBvbGljeSwgdGhlbiB3YWxrIHRoZSBlc2NhbGF0aW9uIGNoYWluLgoKLy8vfApwdWIgZm4gcmVhY3QoCiAgcG9saWNpZXMgOiBBcnJheVtSZWFjdGlvblBvbGljeV0sCiAgZmVlZGJhY2sgOiBFbnZGZWVkYmFjaywKKSAtPiBSZWFjdGlvbkRlY2lzaW9uIHsKICBtYXRjaCBmaW5kX3BvbGljeShwb2xpY2llcywgZmVlZGJhY2spIHsKICAgIE5vbmUgPT4gQ29udGludWUKICAgIFNvbWUocCkgPT4gcmVhY3RfcmVjKHAsIGZlZWRiYWNrLCAwKQogIH0KfQo=
+// ReactionEngine —— environment feedback -> control decision (spec 3.2)
+// L3 runtime authentication layer. Feedback source authentication (I6) is enforced
+// in feedback_auth.mbt BEFORE this engine runs.
+//
+// Loop: receive EnvFeedback -> match policy (scope + trigger + guard) -> execute action
+//       -> if escalation, recurse (bounded, I3 monotonic) -> chain exhausted => FAULT_LOCKED
+//
+// NOTE: safety events (SafetyEvent) are preemptive and bypass this engine entirely;
+// they go directly to SafetyStateMachine.transition (see safety.mbt).
+
+///|
+pub(all) enum ReactionDecision {
+  Continue
+  Adjust(ParamMap)
+  Avoid(AvoidStrategy)
+  Wait(ConditionExpr, Int64, ReactionAction)
+  SafeHold
+  Abort(String)
+  Replan
+  FaultLocked(String)
+}
+
+///|
+const MAX_ESCALATION : Int32 = 5
+
+///|
+fn severity_rank(s : Severity) -> Int32 {
+  match s {
+    Info => 0
+    Warn => 1
+    Danger => 2
+    Critical => 3
+  }
+}
+
+///|
+fn severity_ge(a : Severity, b : Severity) -> Bool {
+  severity_rank(a) >= severity_rank(b)
+}
+
+///|
+fn kind_in_list(kinds : Array[FeedbackKind], k : FeedbackKind) -> Bool {
+  let mut i = 0
+  while i < kinds.length() {
+    if kinds[i] == k {
+      return true
+    }
+    i = i + 1
+  }
+  false
+}
+
+// Match a policy against feedback: trigger (kind + severity_min + source_filter).
+
+///|
+fn matches(policy : ReactionPolicy, feedback : EnvFeedback) -> Bool {
+  let kind_ok = kind_in_list(policy.trigger.kinds, feedback.kind)
+  let sev_ok = severity_ge(feedback.severity, policy.trigger.severity_min)
+  let src_ok = match policy.trigger.source_filter {
+    None => true
+    Some(f) => feedback.source == f
+  }
+  kind_ok && sev_ok && src_ok
+}
+
+///|
+fn find_policy(
+  policies : Array[ReactionPolicy],
+  feedback : EnvFeedback,
+) -> ReactionPolicy? {
+  let mut i = 0
+  while i < policies.length() {
+    if matches(policies[i], feedback) {
+      return Some(policies[i])
+    }
+    i = i + 1
+  }
+  None
+}
+
+///|
+fn decide(action : ReactionAction) -> ReactionDecision {
+  match action {
+    Continue => Continue
+    Adjust(p) => Adjust(p)
+    Avoid(s) => Avoid(s)
+    Wait(c, t, o) => Wait(c, t, o)
+    SafeHold => SafeHold
+    Abort(r) => Abort(r)
+    Replan => Replan
+  }
+}
+
+// Walk the escalation chain (bounded, I3 monotonic index). Chain exhausted -> FaultLocked.
+
+///|
+fn react_rec(
+  policy : ReactionPolicy,
+  feedback : EnvFeedback,
+  depth : Int32,
+) -> ReactionDecision {
+  if depth > MAX_ESCALATION {
+    FaultLocked("escalation chain exhausted (I3)")
+  } else {
+    match policy.escalation {
+      None => decide(policy.action)
+      Some(esc) => react_rec(esc, feedback, depth + 1)
+    }
+  }
+}
+
+// Top-level entry: match policy, then walk the escalation chain.
+
+///|
+pub fn react(
+  policies : Array[ReactionPolicy],
+  feedback : EnvFeedback,
+) -> ReactionDecision {
+  match find_policy(policies, feedback) {
+    None => Continue
+    Some(p) => react_rec(p, feedback, 0)
+  }
+}

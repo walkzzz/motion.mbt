@@ -1,1 +1,43 @@
-Ly8gQVM0IGZlZWRiYWNrIHNvdXJjZSBhdXRoZW50aWNhdGlvbiAoaW52YXJpYW50IEk2KQovLyBUaGUgUmVhY3Rpb25FbmdpbmUgb25seSBwcm9jZXNzZXMgRW52RmVlZGJhY2sgd2hvc2Ugc291cmNlIGlzIGEgcmVnaXN0ZXJlZCBzZW5zb3IgVVJOLgovLyBTdGFsZSBmZWVkYmFjayAoc3RhbGVfYWZ0ZXJfbXMgPD0gMCkgaXMgcmVqZWN0ZWQgKGRvd25ncmFkZWQgdG8gU3RhbGUgLT4gU2FmZUhvbGQpLgoKLy8vfApwdWIgc3RydWN0IFNlbnNvclJlZ2lzdHJ5IHsKICBzZW5zb3JzIDogTWFwW1N0cmluZywgQm9vbF0KfQoKLy8vfApwdWIgZm4gbmV3X3NlbnNvcl9yZWdpc3RyeSgpIC0+IFNlbnNvclJlZ2lzdHJ5IHsKICB7IHNlbnNvcnM6IE1hcChbXSksIH0KfQoKLy8vfApwdWIgZm4gcmVnaXN0ZXJfc2Vuc29yKHJlZyA6IFNlbnNvclJlZ2lzdHJ5LCB1cm4gOiBTdHJpbmcpIC0+IFVuaXQgewogIHJlZy5zZW5zb3JzW3Vybl0gPSB0cnVlCn0KCi8vIEF1dGhlbnRpY2F0ZSBmZWVkYmFjayBzb3VyY2UuIFJlamVjdHMgdW5yZWdpc3RlcmVkIHNvdXJjZXMgKEk2KS4KCi8vL3wKcHViIGZuIGF1dGhlbnRpY2F0ZV9mZWVkYmFjaygKICByZWcgOiBTZW5zb3JSZWdpc3RyeSwKICBmZWVkYmFjayA6IEVudkZlZWRiYWNrLAopIC0+IFJlc3VsdFtFbnZGZWVkYmFjaywgU2VjdXJpdHlFcnJvcl0gewogIG1hdGNoIHJlZy5zZW5zb3JzLmdldChmZWVkYmFjay5zb3VyY2UpIHsKICAgIE5vbmUgPT4KICAgICAgRXJyKAogICAgICAgIHNlY19lcnJvcigKICAgICAgICAgIEFTNF9GZWVkYmFja0luamVjdGlvbiwKICAgICAgICAgIDE3MzAsCiAgICAgICAgICAidW5yZWdpc3RlcmVkIGZlZWRiYWNrIHNvdXJjZTogXHtmZWVkYmFjay5zb3VyY2V9IiwKICAgICAgICApLAogICAgICApCiAgICBTb21lKF8pID0+CiAgICAgIGlmIGZlZWRiYWNrLnN0YWxlX2FmdGVyX21zIDw9IDAgewogICAgICAgIEVycihzZWNfZXJyb3IoQVM0X0ZlZWRiYWNrSW5qZWN0aW9uLCAxNzMxLCAiaW52YWxpZCBzdGFsZV9hZnRlcl9tcyIpKQogICAgICB9IGVsc2UgewogICAgICAgIE9rKGZlZWRiYWNrKQogICAgICB9CiAgfQp9Cg==
+// AS4 feedback source authentication (invariant I6)
+// The ReactionEngine only processes EnvFeedback whose source is a registered sensor URN.
+// Stale feedback (stale_after_ms <= 0) is rejected (downgraded to Stale -> SafeHold).
+
+///|
+pub struct SensorRegistry {
+  sensors : Map[String, Bool]
+}
+
+///|
+pub fn new_sensor_registry() -> SensorRegistry {
+  { sensors: Map([]), }
+}
+
+///|
+pub fn register_sensor(reg : SensorRegistry, urn : String) -> Unit {
+  reg.sensors[urn] = true
+}
+
+// Authenticate feedback source. Rejects unregistered sources (I6).
+
+///|
+pub fn authenticate_feedback(
+  reg : SensorRegistry,
+  feedback : EnvFeedback,
+) -> Result[EnvFeedback, SecurityError] {
+  match reg.sensors.get(feedback.source) {
+    None =>
+      Err(
+        sec_error(
+          AS4_FeedbackInjection,
+          1730,
+          "unregistered feedback source: \{feedback.source}",
+        ),
+      )
+    Some(_) =>
+      if feedback.stale_after_ms <= 0 {
+        Err(sec_error(AS4_FeedbackInjection, 1731, "invalid stale_after_ms"))
+      } else {
+        Ok(feedback)
+      }
+  }
+}

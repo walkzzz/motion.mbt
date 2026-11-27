@@ -1,1 +1,79 @@
-Ly8gQVMyIE5MSSBpbmplY3Rpb24gZ3VhcmQg4oCU4oCUIHByZXZlbnQgcHJvbXB0IGluamVjdGlvbiAvIGRhbmdlcm91cyBhY3Rpb24gc2VxdWVuY2VzLgovLyBOTEkgb3V0cHV0IE1VU1QgcGFzcyB0aGlzIGd1YXJkIGJlZm9yZSBiaW5kaW5nLiBTZXBhcmF0aW9uIG9mIGR1dGllczogTkxJIG9ubHkKLy8gcHJvZHVjZXMgVGFyZ2V0QWN0aW9uU2VxLCBuZXZlciBkaXJlY3QgZXhlY3V0aW9uIGNvbW1hbmRzLgoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgRGFuZ2Vyb3VzUHJpbWl0aXZlIHsKICB1cm4gOiBQcmltUmVmCiAgcmVhc29uIDogU3RyaW5nCn0KCi8vIFNhZmV0eS1jcml0aWNhbCBwcmltaXRpdmVzIHJlcXVpcmluZyBzZWNvbmRhcnkgYXV0aG9yaXphdGlvbi4KCi8vL3wKZm4gZGFuZ2Vyb3VzX3ByaW1pdGl2ZXMoKSAtPiBBcnJheVtEYW5nZXJvdXNQcmltaXRpdmVdIHsKICBbCiAgICB7CiAgICAgIHVybjogInVybjptb3Q6cHJpbTpzYWZlX2hvbGQ6MS4wIiwKICAgICAgcmVhc29uOiAic2FmZXR5LWNyaXRpY2FsOiBmb3JjZXMgc2FmZSBob2xkIiwKICAgIH0sCiAgICB7CiAgICAgIHVybjogInVybjptb3Q6cHJpbTphYm9ydDoxLjAiLAogICAgICByZWFzb246ICJzYWZldHktY3JpdGljYWw6IGFib3J0cyBleGVjdXRpb24iLAogICAgfSwKICBdCn0KCi8vL3wKZm4gbGlzdF9jb250YWluc19wcmltaXRpdmUoCiAgbCA6IEFycmF5W0Rhbmdlcm91c1ByaW1pdGl2ZV0sCiAgdXJuIDogUHJpbVJlZiwKKSAtPiBCb29sIHsKICBsZXQgbXV0IGkgPSAwCiAgd2hpbGUgaSA8IGwubGVuZ3RoKCkgewogICAgaWYgbFtpXS51cm4gPT0gdXJuIHsKICAgICAgcmV0dXJuIHRydWUKICAgIH0KICAgIGkgPSBpICsgMQogIH0KICBmYWxzZQp9CgovLyBHdWFyZCBhbiBOTEkgcmVzdWx0LiBSZWplY3QgZGFuZ2Vyb3VzIHByaW1pdGl2ZXMgLyBhbWJpZ3VvdXMgLyB1bmludGVycHJldGFibGUuCgovLy98CnB1YiBmbiBndWFyZF9ubGlfcmVzdWx0KAogIHJlc3VsdCA6IE5MSV9SZXN1bHQsCikgLT4gUmVzdWx0W1RhcmdldEFjdGlvblNlcSwgU2VjdXJpdHlFcnJvcl0gewogIG1hdGNoIHJlc3VsdCB7CiAgICBVbmludGVycHJldGFibGUocikgPT4KICAgICAgRXJyKHNlY19lcnJvcihBUzJfTkxJSW5qZWN0aW9uLCAxNzEwLCAidW5pbnRlcnByZXRhYmxlOiBce3J9IikpCiAgICBBbWJpZ3VvdXMoXywgXykgPT4KICAgICAgRXJyKAogICAgICAgIHNlY19lcnJvcigKICAgICAgICAgIEFTMl9OTElJbmplY3Rpb24sCiAgICAgICAgICAxNzExLAogICAgICAgICAgImFtYmlndW91cyBOTEkgcmVzdWx0IHJlcXVpcmVzIGRpc2FtYmlndWF0aW9uIiwKICAgICAgICApLAogICAgICApCiAgICBTdWNjZXNzKHNlcSkgPT4gewogICAgICBsZXQgbXV0IGkgPSAwCiAgICAgIHdoaWxlIGkgPCBzZXEuYWN0aW9ucy5sZW5ndGgoKSB7CiAgICAgICAgaWYgbGlzdF9jb250YWluc19wcmltaXRpdmUoCiAgICAgICAgICAgIGRhbmdlcm91c19wcmltaXRpdmVzKCksCiAgICAgICAgICAgIHNlcS5hY3Rpb25zW2ldLnByaW1pdGl2ZSwKICAgICAgICAgICkgewogICAgICAgICAgcmV0dXJuIEVycigKICAgICAgICAgICAgc2VjX2Vycm9yKAogICAgICAgICAgICAgIEFTMl9OTElJbmplY3Rpb24sCiAgICAgICAgICAgICAgMTcxMiwKICAgICAgICAgICAgICAiZGFuZ2Vyb3VzIHByaW1pdGl2ZSBhdCBpbmRleCBce2l9OiBce3NlcS5hY3Rpb25zW2ldLnByaW1pdGl2ZX0iLAogICAgICAgICAgICApLAogICAgICAgICAgKQogICAgICAgIH0KICAgICAgICBpID0gaSArIDEKICAgICAgfQogICAgICBPayhzZXEpCiAgICB9CiAgfQp9Cg==
+// AS2 NLI injection guard —— prevent prompt injection / dangerous action sequences.
+// NLI output MUST pass this guard before binding. Separation of duties: NLI only
+// produces TargetActionSeq, never direct execution commands.
+
+///|
+pub(all) struct DangerousPrimitive {
+  urn : PrimRef
+  reason : String
+}
+
+// Safety-critical primitives requiring secondary authorization.
+
+///|
+fn dangerous_primitives() -> Array[DangerousPrimitive] {
+  [
+    {
+      urn: "urn:mot:prim:safe_hold:1.0",
+      reason: "safety-critical: forces safe hold",
+    },
+    {
+      urn: "urn:mot:prim:abort:1.0",
+      reason: "safety-critical: aborts execution",
+    },
+  ]
+}
+
+///|
+fn list_contains_primitive(
+  l : Array[DangerousPrimitive],
+  urn : PrimRef,
+) -> Bool {
+  let mut i = 0
+  while i < l.length() {
+    if l[i].urn == urn {
+      return true
+    }
+    i = i + 1
+  }
+  false
+}
+
+// Guard an NLI result. Reject dangerous primitives / ambiguous / uninterpretable.
+
+///|
+pub fn guard_nli_result(
+  result : NLI_Result,
+) -> Result[TargetActionSeq, SecurityError] {
+  match result {
+    Uninterpretable(r) =>
+      Err(sec_error(AS2_NLIInjection, 1710, "uninterpretable: \{r}"))
+    Ambiguous(_, _) =>
+      Err(
+        sec_error(
+          AS2_NLIInjection,
+          1711,
+          "ambiguous NLI result requires disambiguation",
+        ),
+      )
+    Success(seq) => {
+      let mut i = 0
+      while i < seq.actions.length() {
+        if list_contains_primitive(
+            dangerous_primitives(),
+            seq.actions[i].primitive,
+          ) {
+          return Err(
+            sec_error(
+              AS2_NLIInjection,
+              1712,
+              "dangerous primitive at index \{i}: \{seq.actions[i].primitive}",
+            ),
+          )
+        }
+        i = i + 1
+      }
+      Ok(seq)
+    }
+  }
+}

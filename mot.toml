@@ -1,1 +1,34 @@
-IyBNT1QgcHJvamVjdCBtYW5pZmVzdAojIFRoaXMgaXMgdGhlIE1PVCBwcm9qZWN0IGxpc3QsIGxhbmd1YWdlLWFnbm9zdGljIGluIHNlbWFudGljcyBidXQgZXhwcmVzc2VkIGluIFRPTUwKIyBmb3IgdG9vbGluZy4gVGhlIHJlZmVyZW5jZSBpbXBsZW1lbnRhdGlvbiBpcyBNb29uQml0IChzYW1lIHN0YWNrIGFzIGdiejE4NS5tYnQpLgoKW3Byb2plY3RdCm5hbWUgPSAibW90Igp2ZXJzaW9uID0gIjAuMS4wIgplZGl0aW9uID0gIjEuMCIKCltkZXBlbmRlbmNpZXNdCiMgUmVmZXJlbmNlIG90aGVyIE1PVCBwYWNrYWdlcyAoZXhhY3QgdmVyc2lvbiBvbmx5LCBubyByYW5nZXMgLS0gc2VjdXJpdHkgcG9saWN5IEFTMSkKIkBtb3QvaHVtYW4tYm9keW1hcCIgPSAiMS4wIgoiQG1vdC9jb3JlLXByaW1zIiA9ICIxLjAiCgpbZGVwZW5kZW5jaWVzLmxvY2tdCiMgUGlubmVkIFNIQS0yNTYgaW50ZWdyaXR5IGhhc2hlcyBmb3IgZXZlcnkgZGVwZW5kZW5jeSAoQVMxOiBzdXBwbHkgY2hhaW4gaW50ZWdyaXR5KS4KIkBtb3QvaHVtYW4tYm9keW1hcCIgPSAic2hhMjU2OjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiCiJAbW90L2NvcmUtcHJpbXMiID0gInNoYTI1NjowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIgoid2Fsa3p6ei9nYnoxODUubWJ0IiA9ICJzaGEyNTY6MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIKClt0YXJnZXRdCmJvZHltYXAgPSAiaHVtYW4iCgpbZ2J6MTg1XQplbmFibGVkID0gdHJ1ZQpicmlkZ2VfcGFja2FnZSA9ICJAbW90L2diejE4NS1icmlkZ2UiCgpbc2VjdXJpdHldCiMgSW50cnVzaW9uIHByZXZlbnRpb24gcG9saWN5IChzZWUgZG9jcy8wMC3nlJ/mgIHpgInlnovkuI7lhaXkvrXpmLLmiqTmorPnkIYubWQgwqc0KQp2ZXJpZnlfcGFja2FnZV9zaWduYXR1cmUgPSB0cnVlCnJlZ2lzdHJ5X3doaXRlbGlzdCA9IFsiaHR0cHM6Ly9tb29uY2FrZXMuaW8iXQphdXRoZW50aWNhdGVfZmVlZGJhY2tfc291cmNlID0gdHJ1ZQpvdXRwdXRfZ2F0ZV9tYW5kYXRvcnkgPSB0cnVlCnByb3ZlX2ludmFyaWFudHMgPSBbIkkxIiwgIkkyIiwgIkkzIiwgIkk0IiwgIkk1IiwgIkk2Il0K
+# MOT project manifest
+# This is the MOT project list, language-agnostic in semantics but expressed in TOML
+# for tooling. The reference implementation is MoonBit (same stack as gbz185.mbt).
+
+[project]
+name = "mot"
+version = "0.1.0"
+edition = "1.0"
+
+[dependencies]
+# Reference other MOT packages (exact version only, no ranges -- security policy AS1)
+"@mot/human-bodymap" = "1.0"
+"@mot/core-prims" = "1.0"
+
+[dependencies.lock]
+# Pinned SHA-256 integrity hashes for every dependency (AS1: supply chain integrity).
+"@mot/human-bodymap" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+"@mot/core-prims" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+"walkzzz/gbz185.mbt" = "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+
+[target]
+bodymap = "human"
+
+[gbz185]
+enabled = true
+bridge_package = "@mot/gbz185-bridge"
+
+[security]
+# Intrusion prevention policy (see docs/00-生态选型与入侵防护梳理.md §4)
+verify_package_signature = true
+registry_whitelist = ["https://mooncakes.io"]
+authenticate_feedback_source = true
+output_gate_mandatory = true
+prove_invariants = ["I1", "I2", "I3", "I4", "I5", "I6"]

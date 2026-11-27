@@ -1,1 +1,27 @@
-Ly8gQVM1IG91dHB1dCBnYXRlIChpbnZhcmlhbnQgSTUpIOKAlOKAlCBtYW5kYXRvcnkgcHJlY29uZGl0aW9uIG9mIHRoZSBFeGVjdXRvci4KLy8gQW55IG5vbi1FWEVDVVRJTkcgc3RhdGUgPT4gZG9fZXhlYyByZXR1cm5zIGZhbHNlICh0b3JxdWUvdmVsb2NpdHkgemVyb2VkLCBJNCkuCi8vIEF1dGhvcml0YXRpdmUgZ2F0ZTsgbm8gaW50cnVkZXIgbWF5IGJ5cGFzcyBpdC4KCi8vL3wKcHViIHN0cnVjdCBPdXRwdXRHYXRlIHsKICBzbSA6IFNhZmV0eVN0YXRlTWFjaGluZQp9CgovLy98CnB1YiBmbiBuZXdfZ2F0ZShzbSA6IFNhZmV0eVN0YXRlTWFjaGluZSkgLT4gT3V0cHV0R2F0ZSB7CiAgeyBzbSwgfQp9CgovLyBJNTogZ2F0ZSBpbnRlZ3JpdHkuIFJldHVybnMgdHJ1ZSBPTkxZIGluIEVYRUNVVElORyBzdGF0ZS4KCi8vL3wKcHViIGZuIGRvX2V4ZWMoZ2F0ZSA6IE91dHB1dEdhdGUsIGFjdGlvbiA6IFN0cmluZykgLT4gQm9vbCB7CiAgaXNfYWN0aW9uX2FsbG93ZWQoZ2F0ZS5zbSwgYWN0aW9uKQp9CgovLyBJNC9JNTogZ2F0ZSBjbG9zZWQgY2hlY2suCgovLy98CnB1YiBmbiBnYXRlX2lzX2Nsb3NlZChnYXRlIDogT3V0cHV0R2F0ZSkgLT4gQm9vbCB7CiAgZ2F0ZV9jbG9zZWQoZ2F0ZS5zbSkKfQo=
+// AS5 output gate (invariant I5) —— mandatory precondition of the Executor.
+// Any non-EXECUTING state => do_exec returns false (torque/velocity zeroed, I4).
+// Authoritative gate; no intruder may bypass it.
+
+///|
+pub struct OutputGate {
+  sm : SafetyStateMachine
+}
+
+///|
+pub fn new_gate(sm : SafetyStateMachine) -> OutputGate {
+  { sm, }
+}
+
+// I5: gate integrity. Returns true ONLY in EXECUTING state.
+
+///|
+pub fn do_exec(gate : OutputGate, action : String) -> Bool {
+  is_action_allowed(gate.sm, action)
+}
+
+// I4/I5: gate closed check.
+
+///|
+pub fn gate_is_closed(gate : OutputGate) -> Bool {
+  gate_closed(gate.sm)
+}

@@ -1,1 +1,189 @@
-IyBNT1Qg6YCa55So5Yqo5L2c6K+t5LmJ6KeE6IyDIOKAlOKAlCDmlbDmja7mqKHlnovkuI4gU2NoZW1hIOWPguiAgwoKfCDlrZfmrrUgfCDlgLwgfAp8LS0tLS0tfC0tLS0tfAp8IOaWh+aho+e8luWPtyB8IE1PVC1ET0MtMDUgfAp8IOeJiOacrCB8IHYxLjAgfAp8IOaXpeacnyB8IDIwMjYtMTEtMjcgfAp8IOeKtuaAgSB8IOato+W8jyB8CgotLS0KCiMjIDEuIOexu+Wei+WFqOmbhgoKIyMjIDEuMSDln7rnoYDnsbvlnovvvIh0eXBlcy5tYnTvvIkKCnwg57G75Z6LIHwg5Z+657G75Z6LIHwg6K+05piOIHwKfC0tLS0tLXwtLS0tLS0tLXwtLS0tLS18CnwgVVJOIHwgU3RyaW5nIHwgYHVybjptb3Q6e2NhdGVnb3J5fTp7bmFtZX06e3ZlcnNpb259YCB8CnwgQm9keU1hcFJlZiB8IFVSTiB8IEJvZHlNYXAg5byV55SoIHwKfCBQcmltUmVmIHwgVVJOIHwgUHJpbWl0aXZlIOW8leeUqCB8CnwgTWFwcGluZ1JlZiB8IFVSTiB8IE1hcHBpbmcg5byV55SoIHwKfCBCb2R5UGFydFJlZiB8IFN0cmluZyB8IOi6q+S9k+mDqOS9jeW8leeUqCB8CnwgUGFyYW1NYXAgfCBNYXBbU3RyaW5nLCBQYXJhbVZhbHVlXSB8IOWPguaVsOaYoOWwhCB8CnwgU3VwcG9ydFBhdHRlcm4gfCBBcnJheVtCb2R5UGFydFJlZl0gfCDmlK/mkpHmqKHlvI8gfAoKIyMjIDEuMiBQYXJhbVZhbHVlIOWkmuaAgQoKfCDmnoTpgKDlrZAgfCDlrZfmrrUgfAp8LS0tLS0tLS18LS0tLS0tfAp8IFBJbnQgfCBJbnQzMiB8CnwgUEZsb2F0IHwgRG91YmxlIHwKfCBQQm9vbCB8IEJvb2wgfAp8IFBTdHJpbmcgfCBTdHJpbmcgfAp8IFBEaXJlY3Rpb24gfCBWZWMzIHwKfCBQRW51bSB8IFN0cmluZywgQXJyYXlbU3RyaW5nXSB8CnwgUFJhbmdlIHwgRG91YmxlLCBEb3VibGUsIFN0cmluZyB8CgojIyMgMS4zIOepuumXtOexu+WeiwoKfCDnsbvlnosgfCDlrZfmrrUgfAp8LS0tLS0tfC0tLS0tLXwKfCBWZWMzIHwgeDpEb3VibGUsIHk6RG91YmxlLCB6OkRvdWJsZSB8CnwgU3BhdGlhbERpc3BsYWNlbWVudCB8IHRyYW5zbGF0aW9uOlZlYzMsIHJvdGF0aW9uOlZlYzMgfAoKLS0tCgojIyAyLiDpoobln5/nsbvlnosKCiMjIyAyLjEgQm9keU1hcO+8iGJvZHltYXAubWJ077yJCgp8IOexu+WeiyB8IOWtl+autSB8CnwtLS0tLS18LS0tLS0tfAp8IEJvZHlOb2RlIHwgaWQsIGtpbmQsIHBhcmVudD8sIGNoaWxkcmVuLCBkb2YsIHJvbGU/LCBhbmNob3JzIHwKfCBTZW1hbnRpY0FuY2hvciB8IGlkLCB0YXJnZXRfbm9kZXMsIGRlc2NyaXB0aW9uIHwKfCBCb2R5TWFwIHwgdXJuLCBuYW1lLCB2ZXJzaW9uLCBub2Rlcywgcm9vdCwgbWV0YWRhdGEgfAoKQm9keU5vZGVLaW5kOiBKb2ludHxMaW5rfFNlbnNvcnxFZmZlY3RvcnxWaXJ0dWFsCkJvZHlSb2xlOiBMb2NvbW90aW9uQmFzZXxNYW5pcHVsYXRpb25FbmR8U3VwcG9ydFBvbHlnb258U2Vuc29yTW91bnR8QWN0dWF0b3J8UGFzc2l2ZQoKIyMjIDIuMiBQcmltaXRpdmXvvIhwcmltaXRpdmUubWJ077yJCgp8IOexu+WeiyB8IOWtl+autSB8CnwtLS0tLS18LS0tLS0tfAp8IFBhcmFtU3BlYyB8IG5hbWUsIHB0eXBlLCByZXF1aXJlZCwgZGVmYXVsdD8sIGNvbnN0cmFpbnRzIHwKfCBPY2N1cGFuY3lEZWNsIHwgcGFydGljaXBhbnRzLCBleGNsdXNpdmUgfAp8IFByaW1pdGl2ZSB8IHVybiwgbmFtZSwgY2F0ZWdvcnksIHBhcmFtcywgb2NjdXBhbmN5LCBzYWMsIG1ldGFkYXRhIHwKClByaW1DYXRlZ29yeTogTG9jfE1hbnxFeHB8UG9zfENvbgoqKuazqOaEjyoq77yaUGFyYW1TcGVjIOWtl+auteWQjeaYryBgcHR5cGVg77yI6Z2eIGB0eXBlYO+8jGB0eXBlYCDmmK/lhbPplK7lrZfvvIkKCiMjIyAyLjMgTWFwcGluZ++8iG1hcHBpbmcubWJ077yJCgp8IOexu+WeiyB8IOWtl+autSB8CnwtLS0tLS18LS0tLS0tfAp8IFBhcmFtTWFwUnVsZSB8IGZyb21fcGFyYW0sIHRvX3BhcmFtLCBjb252ZXJ0ZXI/IHwKfCBNYXBwaW5nRWRnZSB8IHNvdXJjZSwgdGFyZ2V0LCB0cmFuc2Zvcm0sIGZpZGVsaXR5LCBmYWxsYmFja19jaGFpbiB8CnwgTWFwcGluZ1BhdGggfCBzdGVwcywgdG90YWxfZmlkZWxpdHksIGVzdGltYXRlZF9sb3NzIHwKfCBNYXBwaW5nR3JhcGggfCBlZGdlcyB8CnwgUm91dGVDb25zdHJhaW50cyB8IG1heF9maWRlbGl0eV9sb3NzPywgbWF4X2hvcHM/LCBwcmVmZXJyZWRfaW50ZXJtZWRpYXRlcyB8CgpGaWRlbGl0eUxldmVsOiBFeGFjdHxBcHByb3hpbWF0ZXxEZWdyYWRlZApNYXBwaW5nVHJhbnNmb3JtOiBEaXJlY3R8UGFyYW1NYXAoQXJyYXkpfFNlcXVlbmNlKEFycmF5KXxDdXN0b20oU3RyaW5nLEpzb24pCgojIyMgMi40IFNBQ++8iHNhYy5tYnTvvIkKCnwg57G75Z6LIHwg5a2X5q61IHwKfC0tLS0tLXwtLS0tLS18CnwgQnVpbHRpblByZWRpY2F0ZSB8IGFzcGVjdCwgZXhwciwgcGFyYW1zIHwKfCBDdXN0b21QcmVkaWNhdGUgfCBiYWNrZW5kLCBjb25maWcgfAp8IFByZWRpY2F0ZUV4cHIgfCBCdWlsdGluXHxDdXN0b20gfAp8IFNhY1NwZWMgfCBwcmVkaWNhdGVzLCBjb21wbGV0ZW5lc3MgfAoKQXNwZWN0VHlwZTogVHJhamVjdG9yeXxDb250YWN0fFBvc3R1cmV8U3BhdGlhbHxDb3VudApDb21wbGV0ZW5lc3NMZXZlbDogU3RydWN0dXJhbHxJbmZlcmFibGV8RnVsbAoKIyMjIDIuNSBFbnZGZWVkYmFja++8iGVudi5tYnTvvIkKCnwg57G75Z6LIHwg5a2X5q61IHwKfC0tLS0tLXwtLS0tLS18CnwgRW52RmVlZGJhY2sgfCBzb3VyY2UsIGtpbmQsIHRpbWVzdGFtcCwgc3RhbGVfYWZ0ZXJfbXMsIHNldmVyaXR5LCBwYXlsb2FkLCBzYWNfcmVmPywgYWN0aW9uX3JlZj8gfAp8IEZlZWRiYWNrUGF5bG9hZCB8IDExIOenjeaehOmAoOWtkCB8CgpTZXZlcml0eTogSW5mb3xXYXJufERhbmdlcnxDcml0aWNhbO+8iCNkZXJpdmUoRXEp77yJCkZlZWRiYWNrS2luZDogT2JzdGFjbGV8Q29udGFjdExvc3N8Q29sbGlzaW9ufFZpc3VhbERyaWZ0fExvY2FsUXVhbGl0eXxKb2ludEFub21hbHl8SHVtYW5Qcm94aW1pdHl8RG9vclN0YXRlfEJhdHRlcnl8SGVhcnRiZWF0fFN0YWxl77yII2Rlcml2ZShFcSnvvIkKCiMjIyAyLjYgUmVhY3Rpb25Qb2xpY3nvvIhyZWFjdGlvbi5tYnTvvIkKCnwg57G75Z6LIHwg5a2X5q61IHwKfC0tLS0tLXwtLS0tLS18CnwgRW52RXZlbnRQYXR0ZXJuIHwga2luZHMsIHNldmVyaXR5X21pbiwgc291cmNlX2ZpbHRlcj8gfAp8IFJlYWN0aW9uUG9saWN5IHwgaWQsIHNjb3BlLCB0cmlnZ2VyLCBndWFyZF9leHByPywgYWN0aW9uLCBlc2NhbGF0aW9uPyB8CnwgUmVhY3Rpb25BY3Rpb24gfCA3IOenjeaehOmAoOWtkCB8CnwgQXZvaWRTdHJhdGVneSB8IDQg56eN5p6E6YCg5a2QIHwKClJlYWN0aW9uU2NvcGU6IFByaW1pdGl2ZXxTZXF1ZW5jZXxHbG9iYWwKQ29uZGl0aW9uRXhwciA9IFN0cmluZwoqKuazqOaEjyoq77ya5a2X5q615ZCN5pivIGBndWFyZF9leHByYO+8iOmdniBgZ3VhcmRg77yMYGd1YXJkYCDmmK/lhbPplK7lrZfvvIkKClJlYWN0aW9uQWN0aW9uOiBDb250aW51ZXxBZGp1c3QoUGFyYW1NYXApfEF2b2lkKEF2b2lkU3RyYXRlZ3kpfFdhaXQoQ29uZGl0aW9uRXhwcixJbnQ2NCxSZWFjdGlvbkFjdGlvbil8U2FmZUhvbGR8QWJvcnQoU3RyaW5nKXxSZXBsYW4KQXZvaWRTdHJhdGVneTogTGF0ZXJhbE9mZnNldChEb3VibGUpfFNwZWVkUmVkdWNlKERvdWJsZSl8U3RvcEFuZFdhaXQoSW50NjQpfEN1c3RvbShTdHJpbmcpCgojIyMgMi43IFNhZmV0eVN0YXRlTWFjaGluZe+8iHNhZmV0eS5tYnTvvIkKClNhZmV0eVN0YXRlOiBTZWxmdGVzdHxJZGxlfEV4ZWN1dGluZ3xSZWNvdmVyaW5nfFNhZmVIb2xkfEZhdWx0TG9ja2VkClN0YXRlRXZlbnQ6IFNhZmV0eVx8UmVzZXRcfFRhc2tTdGFydFx8VGFza0NvbXBsZXRlClRyYW5zaXRpb25SZXN1bHQ6IGZyb20sIHRvLCBhbGxvd2VkLCByZWFzb24/CgojIyMgMi44IE5MSe+8iG5saS5tYnTvvIkKCk5MUmVxdWVzdDogdGV4dD8sIGF1ZGlvPywgaW1hZ2U/LCBjb250ZXh0Ck5MSV9SZXN1bHQ6IFN1Y2Nlc3NcfEFtYmlndW91c1x8VW5pbnRlcnByZXRhYmxlCk1PVF9GdW5jdGlvblNjaGVtYTogbmFtZSwgZGVzY3JpcHRpb24sIHBhcmFtZXRlcnMsIHJldHVybnMKCiMjIyAyLjkgVGFyZ2V0QWN0aW9uU2Vx77yIdGFyZ2V0c2VxLm1idO+8iQoKQm91bmRBY3Rpb246IHByaW1pdGl2ZSwgcGFyYW1zLCBzYWNfb3ZlcnJpZGU/LCByZWFjdGlvbl9wb2xpY2llcwpUYXJnZXRBY3Rpb25TZXE6IGFjdGlvbnMsIGJvZHltYXAsIG1ldGFkYXRhCkJvdW5kQWN0aW9uU2VxID0gVGFyZ2V0QWN0aW9uU2Vx77yI57G75Z6L5Yir5ZCN77yJCgotLS0KCiMjIDMuIOiviuaWreexu+Wei++8iGRpYWcubWJ077yJCgpEaWFnbm9zdGljTGV2ZWw6IEVycm9yfFdhcm5pbmd8SW5mb3xIaW50CkRpYWdub3N0aWNDYXRlZ29yeTogU3ludGF4fFJlc29sdmV8TWFwcGluZ3xDb25mbGljdHxTYWN8UmVhY3Rpb258U2FmZXR5fE5saXxTZWN1cml0eQpEaWFnbm9zdGljOiBsZXZlbCwgY2F0ZWdvcnksIGNvZGUsIHBhdGgsIG1lc3NhZ2UsIGhpbnQ/LCByZWxhdGVkCkV4aXRDb2RlOiBTdWNjZXNzPTB8RXJyb3I9MXxXYXJuaW5nPTJ8SW50ZXJuYWxFcnJvcj0zCgotLS0KCiMjIDQuIOWuieWFqOexu+WeiwoKfCDnsbvlnosgfCDmlofku7YgfCDor7TmmI4gfAp8LS0tLS0tfC0tLS0tLXwtLS0tLS18CnwgQXR0YWNrU3VyZmFjZSB8IHRocmVhdCB8IEFTMS1BUzgg5p6a5Li+IHwKfCBTZWN1cml0eUVycm9yIHwgdGhyZWF0IHwgc3VyZmFjZSwgY29kZSwgbWVzc2FnZSwgZGV0YWlsPyB8CnwgUGFja2FnZVNpZyB8IHN1cHBseSB8IGFsZ29yaXRobSwgc2lnbmF0dXJlLCBwdWJsaWNfa2V5IHwKfCBQYWNrYWdlUmVmIHwgc3VwcGx5IHwgdXJuLCB2ZXJzaW9uLCBzaGEyNTYgfAp8IERhbmdlcm91c1ByaW1pdGl2ZSB8IG5saV9ndWFyZCB8IHVybiwgcmVhc29uIHwKfCBTZW5zb3JSZWdpc3RyeSB8IGZlZWRiYWNrX2F1dGggfCBzZW5zb3JzOiBNYXBbU3RyaW5nLCBCb29sXSB8CnwgT3V0cHV0R2F0ZSB8IG91dHB1dF9nYXRlIHwgc206IFNhZmV0eVN0YXRlTWFjaGluZSB8CgotLS0KCiMjIDUuIEdCL1ogMTg1IOmbhuaIkOexu+Wei++8iGdiejE4NS5tYnTvvIkKCnwg57G75Z6LIHwg5p2l5rqQIHwKfC0tLS0tLXwtLS0tLS18CnwgTW90RXJyb3IgfCDmnKzlupPlrp7njrAgQHdpcmUuUHJvdG9jb2xFcnJvciB8CnwgQGFpcC5BaXBFbnZlbG9wZSB8IGdiejE4NSDlupMgfAp8IEBhaXAuTWVzc2FnZUtpbmQgfCBnYnoxODUg5bqT77yIVGFza1JlcXVlc3RcfFRhc2tSZXN1bHRcfEV2ZW50XHxIZWFydGJlYXTvvIkgfAp8IEB0b29saW5nLlRvb2xEZXNjcmlwdG9yIHwgZ2J6MTg1IOW6kyB8CnwgQHRvb2xpbmcuVG9vbEJpbmRpbmcgfCBnYnoxODUg5bqT77yITWNwQmluZGluZ1x8TmF0aXZlQmluZGluZ++8iSB8CnwgQHdpcmUuUHJvdG9jb2xFcnJvciB8IGdiejE4NSDlupMgdHJhaXQgfAoKLS0tCgojIyA2LiDluo/liJfljJbmoLzlvI8KCiMjIyA2LjEgSlNPTiDovpPlh7rvvIhCb3VuZEFjdGlvblNlce+8iQpgYGBqc29uCnsiYWN0aW9ucyI6W3sicHJpbWl0aXZlIjoidXJuOm1vdDpwcmltOndhbGs6MS4wIiwicGFyYW1zIjp7IlBGbG9hdCI6MS4wfSwic2FjX292ZXJyaWRlIjpudWxsLCJyZWFjdGlvbl9wb2xpY2llcyI6W119XSwiYm9keW1hcCI6InVybjptb3Q6Ym9keW1hcDpodW1hbjoxLjAiLCJtZXRhZGF0YSI6e319CmBgYAoKIyMjIDYuMiBtb3QudG9tbCDphY3nva7moLzlvI8K6KeB5LuT5bqTIGBtb3QudG9tbGDvvJpgW2RlcGVuZGVuY2llc11gICsgYFtkZXBlbmRlbmNpZXMubG9ja11g77yIU0hBLTI1Nu+8iSsgYFtzZWN1cml0eV1g44CCCgojIyMgNi4zIEFJUCBlbnZlbG9wZSDmmKDlsIQKTU9UIOa2iOaBryDihpIgQGFpcC5NZXNzYWdlS2luZO+8mk1vdE5sUmVxdWVzdOKGklRhc2tSZXF1ZXN044CBTW90QWN0aW9uUmVxdWVzdOKGklRhc2tSZXF1ZXN044CBTW90Qm91bmRBY3Rpb27ihpJFdmVudOOAgU1vdEVudkZlZWRiYWNr4oaSRXZlbnTjgIFNb3RSZWFjdGlvbkRlY2lzaW9u4oaSRXZlbnTjgIFNb3RTYWZlU3RhdGXihpJFdmVudOOAgU1vdEFjdGlvblJlc3VsdOKGklRhc2tSZXN1bHTjgIIK
+# MOT 通用动作语义规范 —— 数据模型与 Schema 参考
+
+| 字段 | 值 |
+|------|-----|
+| 文档编号 | MOT-DOC-05 |
+| 版本 | v1.0 |
+| 日期 | 2026-11-27 |
+| 状态 | 正式 |
+
+---
+
+## 1. 类型全集
+
+### 1.1 基础类型（types.mbt）
+
+| 类型 | 基类型 | 说明 |
+|------|--------|------|
+| URN | String | `urn:mot:{category}:{name}:{version}` |
+| BodyMapRef | URN | BodyMap 引用 |
+| PrimRef | URN | Primitive 引用 |
+| MappingRef | URN | Mapping 引用 |
+| BodyPartRef | String | 身体部位引用 |
+| ParamMap | Map[String, ParamValue] | 参数映射 |
+| SupportPattern | Array[BodyPartRef] | 支撑模式 |
+
+### 1.2 ParamValue 多态
+
+| 构造子 | 字段 |
+|--------|------|
+| PInt | Int32 |
+| PFloat | Double |
+| PBool | Bool |
+| PString | String |
+| PDirection | Vec3 |
+| PEnum | String, Array[String] |
+| PRange | Double, Double, String |
+
+### 1.3 空间类型
+
+| 类型 | 字段 |
+|------|------|
+| Vec3 | x:Double, y:Double, z:Double |
+| SpatialDisplacement | translation:Vec3, rotation:Vec3 |
+
+---
+
+## 2. 领域类型
+
+### 2.1 BodyMap（bodymap.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| BodyNode | id, kind, parent?, children, dof, role?, anchors |
+| SemanticAnchor | id, target_nodes, description |
+| BodyMap | urn, name, version, nodes, root, metadata |
+
+BodyNodeKind: Joint|Link|Sensor|Effector|Virtual
+BodyRole: LocomotionBase|ManipulationEnd|SupportPolygon|SensorMount|Actuator|Passive
+
+### 2.2 Primitive（primitive.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| ParamSpec | name, ptype, required, default?, constraints |
+| OccupancyDecl | participants, exclusive |
+| Primitive | urn, name, category, params, occupancy, sac, metadata |
+
+PrimCategory: Loc|Man|Exp|Pos|Con
+**注意**：ParamSpec 字段名是 `ptype`（非 `type`，`type` 是关键字）
+
+### 2.3 Mapping（mapping.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| ParamMapRule | from_param, to_param, converter? |
+| MappingEdge | source, target, transform, fidelity, fallback_chain |
+| MappingPath | steps, total_fidelity, estimated_loss |
+| MappingGraph | edges |
+| RouteConstraints | max_fidelity_loss?, max_hops?, preferred_intermediates |
+
+FidelityLevel: Exact|Approximate|Degraded
+MappingTransform: Direct|ParamMap(Array)|Sequence(Array)|Custom(String,Json)
+
+### 2.4 SAC（sac.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| BuiltinPredicate | aspect, expr, params |
+| CustomPredicate | backend, config |
+| PredicateExpr | Builtin\|Custom |
+| SacSpec | predicates, completeness |
+
+AspectType: Trajectory|Contact|Posture|Spatial|Count
+CompletenessLevel: Structural|Inferable|Full
+
+### 2.5 EnvFeedback（env.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| EnvFeedback | source, kind, timestamp, stale_after_ms, severity, payload, sac_ref?, action_ref? |
+| FeedbackPayload | 11 种构造子 |
+
+Severity: Info|Warn|Danger|Critical（#derive(Eq)）
+FeedbackKind: Obstacle|ContactLoss|Collision|VisualDrift|LocalQuality|JointAnomaly|HumanProximity|DoorState|Battery|Heartbeat|Stale（#derive(Eq)）
+
+### 2.6 ReactionPolicy（reaction.mbt）
+
+| 类型 | 字段 |
+|------|------|
+| EnvEventPattern | kinds, severity_min, source_filter? |
+| ReactionPolicy | id, scope, trigger, guard_expr?, action, escalation? |
+| ReactionAction | 7 种构造子 |
+| AvoidStrategy | 4 种构造子 |
+
+ReactionScope: Primitive|Sequence|Global
+ConditionExpr = String
+**注意**：字段名是 `guard_expr`（非 `guard`，`guard` 是关键字）
+
+ReactionAction: Continue|Adjust(ParamMap)|Avoid(AvoidStrategy)|Wait(ConditionExpr,Int64,ReactionAction)|SafeHold|Abort(String)|Replan
+AvoidStrategy: LateralOffset(Double)|SpeedReduce(Double)|StopAndWait(Int64)|Custom(String)
+
+### 2.7 SafetyStateMachine（safety.mbt）
+
+SafetyState: Selftest|Idle|Executing|Recovering|SafeHold|FaultLocked
+StateEvent: Safety\|Reset\|TaskStart\|TaskComplete
+TransitionResult: from, to, allowed, reason?
+
+### 2.8 NLI（nli.mbt）
+
+NLRequest: text?, audio?, image?, context
+NLI_Result: Success\|Ambiguous\|Uninterpretable
+MOT_FunctionSchema: name, description, parameters, returns
+
+### 2.9 TargetActionSeq（targetseq.mbt）
+
+BoundAction: primitive, params, sac_override?, reaction_policies
+TargetActionSeq: actions, bodymap, metadata
+BoundActionSeq = TargetActionSeq（类型别名）
+
+---
+
+## 3. 诊断类型（diag.mbt）
+
+DiagnosticLevel: Error|Warning|Info|Hint
+DiagnosticCategory: Syntax|Resolve|Mapping|Conflict|Sac|Reaction|Safety|Nli|Security
+Diagnostic: level, category, code, path, message, hint?, related
+ExitCode: Success=0|Error=1|Warning=2|InternalError=3
+
+---
+
+## 4. 安全类型
+
+| 类型 | 文件 | 说明 |
+|------|------|------|
+| AttackSurface | threat | AS1-AS8 枚举 |
+| SecurityError | threat | surface, code, message, detail? |
+| PackageSig | supply | algorithm, signature, public_key |
+| PackageRef | supply | urn, version, sha256 |
+| DangerousPrimitive | nli_guard | urn, reason |
+| SensorRegistry | feedback_auth | sensors: Map[String, Bool] |
+| OutputGate | output_gate | sm: SafetyStateMachine |
+
+---
+
+## 5. GB/Z 185 集成类型（gbz185.mbt）
+
+| 类型 | 来源 |
+|------|------|
+| MotError | 本库实现 @wire.ProtocolError |
+| @aip.AipEnvelope | gbz185 库 |
+| @aip.MessageKind | gbz185 库（TaskRequest\|TaskResult\|Event\|Heartbeat） |
+| @tooling.ToolDescriptor | gbz185 库 |
+| @tooling.ToolBinding | gbz185 库（McpBinding\|NativeBinding） |
+| @wire.ProtocolError | gbz185 库 trait |
+
+---
+
+## 6. 序列化格式
+
+### 6.1 JSON 输出（BoundActionSeq）
+```json
+{"actions":[{"primitive":"urn:mot:prim:walk:1.0","params":{"PFloat":1.0},"sac_override":null,"reaction_policies":[]}],"bodymap":"urn:mot:bodymap:human:1.0","metadata":{}}
+```
+
+### 6.2 mot.toml 配置格式
+见仓库 `mot.toml`：`[dependencies]` + `[dependencies.lock]`（SHA-256）+ `[security]`。
+
+### 6.3 AIP envelope 映射
+MOT 消息 → @aip.MessageKind：MotNlRequest→TaskRequest、MotActionRequest→TaskRequest、MotBoundAction→Event、MotEnvFeedback→Event、MotReactionDecision→Event、MotSafeState→Event、MotActionResult→TaskResult。

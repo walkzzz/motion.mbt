@@ -1,1 +1,8 @@
-Ly8gbW90YyBDTEkgZW50cnkgcG9pbnQuCi8vIEtlZXAgbWFpbiB0aGluOiBwYXJzZSBhcmd2LCBkaXNwYXRjaCB0byBsaWJyYXJ5IGZ1bmN0aW9ucy4KCi8vL3wKZm4gbWFpbiB7CiAgcHJpbnRsbigibW90YyDigJTigJQgTU9UIE1vdGlvbiBPcGVyYXRpb24gVHlwZSB0b29sY2hhaW4iKQogIHByaW50bG4oInN1YmNvbW1hbmRzOiBiaW5kIHwgY2hlY2sgfCBubGkgfCByZWFjdCB8IHNhZmV0eSB8IGluc3RhbGwgfCBwcm92ZSIpCn0K
+// motc CLI entry point.
+// Keep main thin: parse argv, dispatch to library functions.
+
+///|
+fn main {
+  println("motc —— MOT Motion Operation Type toolchain")
+  println("subcommands: bind | check | nli | react | safety | install | prove")
+}

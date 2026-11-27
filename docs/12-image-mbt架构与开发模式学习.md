@@ -1,1 +1,285 @@
-IyB3YWxrenp6L2ltYWdlLm1idCDmnrbmnoTkuI7lvIDlj5HmqKHlvI/lrabkuaDmiqXlkYrvvIjmupDnoIHnuqfvvIkKCnwg5a2X5q61IHwg5YC8IHwKfC0tLS0tLXwtLS0tLXwKfCDmlofmoaPnvJblj7cgfCBNT1QtRE9DLTEyIHwKfCDniYjmnKwgfCB2Mi4w77yI5rqQ56CB57qn77yJIHwKfCDml6XmnJ8gfCAyMDI2LTExLTI3IHwKfCDnirbmgIEgfCDmraPlvI8gfAp8IOadpea6kCB8IGh0dHBzOi8vZ2l0aHViLmNvbS93YWxrenp6L2ltYWdlLm1idO+8iG1haW4g5YiG5pSv77yMdjAuMS4yNO+8iSB8Cnwg6I635Y+W5pa55byPIHwgR2l0SHViIEFQSSArIHJhdy5naXRodWJ1c2VyY29udGVudC5jb23vvIhnaXQgY2xvbmUg5ZugIHNhbmRib3gg5peg5rOV55u06L+eIGdpdGh1Yi5jb20gNDQzIOaUueeUqCB3ZWJmZXRjaCDku6PnkIbvvIkgfAoKLS0tCgojIyAxLiDku5PlupPnu5PmnoTvvIjmoLnnm67lvZUgY29udGVudHMgQVBJIOehruiupO+8iQoKYGBgCndhbGt6enovaW1hZ2UubWJ0LwrilJzilIDilIAgbW9vbi5tb2QgICAgICAgICAgICAgICAgICAgICMg5qC55qih5Z2X5riF5Y2VCuKUnOKUgOKUgCBtb29uLndvcmsgICAgICAgICAgICAgICAgICAgIyDlt6XkvZzljLrmuIXljZXvvIjmlrDlop7vvIHvvIkK4pSc4pSA4pSAIG1vb24ucGtnICAgICAgICAgICAgICAgICAgICAjIOagueWMhe+8iOepuu+8jOS4jSBpbXBvcnQg5a2Q5YyF77yJCuKUnOKUgOKUgCBpbWFnZS5tYnQgICAgICAgICAgICAgICAgICAgIyDmoLnljIXmupDmlofku7bvvIjku4UgdmVyc2lvbiArIOaWh+aho++8iQrilJzilIDilIAgcGtnLmdlbmVyYXRlZC5tYnRpICAgICAgICAgICMgbW9vbiBpbmZvIOiHquWKqOeUn+aIkCBBUEkg5o6l5Y+jCuKUnOKUgOKUgCBydWxlcy5tZCAgICAgICAgICAgICAgICAgICAgIyDlvIDlj5Hop4TliJnlhajpm4bvvIgxNiDmnaHvvIkK4pSc4pSA4pSAIEFHRU5UUy5tZCAgICAgICAgICAgICAgICAgICAjIEFnZW50IOaMh+S7pO+8iDE5S0LvvIkK4pSc4pSA4pSAIGFsbC8gICAgICAgICAgICAgICAgICAgICAgICAjIOmXqOmdouWMhe+8iHB1YiB1c2luZyDlho3lr7zlh7rvvIkK4pSc4pSA4pSAIGltYWdlLmNvcmUvICAgICAgICAgICAgICAgICAjIOWtkOaooeWdlyBMMO+8iOeLrOeri+aooeWdl++8jG93biBtb29uLm1vZO+8iQrilIIgICDilJzilIDilIAgbW9vbi5tb2QK4pSCICAg4pSc4pSA4pSAIG1vb24ucGtnCuKUgiAgIOKUnOKUgOKUgCB0eXBlcy8gICAgICAgICAgICAgICAgICAjIOWPtuWtkOWMhQrilIIgICDilIIgICDilJzilIDilIAgbW9vbi5wa2cgICAgICAgICAgIyBpbXBvcnQgY29yZS9kZWJ1ZyArIGltYWdlLmNvcmUvc2FmZV9tYXRoCuKUgiAgIOKUgiAgIOKUlOKUgOKUgCB0eXBlcy5tYnQK4pSCICAg4pSU4pSA4pSAIHNhZmVfbWF0aC8gICAgICAgICAgICAjIOW9ouW8j+WMlumqjOivgeebruaghwrilJzilIDilIAgaW1hZ2UuY29kZWMvICAgICAgICAgICAgICAgICMg5a2Q5qih5Z2XIEwxCuKUnOKUgOKUgCBpbWFnZS5wcm9jZXNzLyAgICAgICAgICAgICAgIyDlrZDmqKHlnZcgTDIK4pSc4pSA4pSAIGltYWdlLnBob3RvZ3JhcGh5LyAgICAgICAgICAjIOWtkOaooeWdlyBMM2EK4pSc4pSA4pSAIGltYWdlLnZpc2lvbi8gICAgICAgICAgICAgICAjIOWtkOaooeWdlyBMM2IK4pSc4pSA4pSAIGltYWdlLmRvbWFpbi8gICAgICAgICAgICAgICAjIOWtkOaooeWdlyBMNArilJzilIDilIAgaW1hZ2UuZG9jLyBpbWFnZS5tZWRpYS8gaW1hZ2UuY29tbWVyY2UvIGltYWdlLnByby8gICMgTDUg5omp5bGVCuKUnOKUgOKUgCBtcDQvICAgICAgICAgICAgICAgICAgICAgICAgIyDpop3lpJbmqKHlnZcK4pSc4pSA4pSAIGNtZC8gaW1nY2xpLyBtY3AvIG5wbS8gYmluZGluZ3MvIHdhc20vIHBsYXlncm91bmQvICAjIOWHuuWPowrilJzilIDilIAgc2NyaXB0cy8gc3BlYy8gYmVuY2htYXJrcy8gZXhhbXBsZXMvIGRvY3MvICAgICAgICAgICMg5bel56iLCuKUlOKUgOKUgCBtb29uLndvcmsgICAgICAgICAgICAgICAgICAgIyDlt6XkvZzljLrmiJDlkZjlo7DmmI4KYGBgCgotLS0KCiMjIDIuIOW3peS9nOWMuuaooeW8j++8iG1vb24ud29ya++8ieKAlOKAlCDmoLjlv4Plj5HnjrAKCioqYG1vb24ud29ya2AqKu+8iDE5OSDlrZfoioLvvInvvJoKYGBgbW9vbmJpdAptZW1iZXJzID0gWwogICIuIiwKICAiaW1hZ2UuY29yZSIsCiAgImltYWdlLmNvZGVjIiwKICAiaW1hZ2UucHJvY2VzcyIsCiAgImltYWdlLnBob3RvZ3JhcGh5IiwKICAiaW1hZ2UudmlzaW9uIiwKICAiaW1hZ2UuZG9tYWluIiwKICAiaW1hZ2UuZG9jIiwKICAiaW1hZ2UubWVkaWEiLAogICJpbWFnZS5jb21tZXJjZSIsCiAgImltYWdlLnBybyIsCl0KYGBgCgoqKuWFs+mUrioq77yaaW1hZ2UubWJ0IOS4jeaYr+WNleaooeWdl++8jOaYryoq5bel5L2c5Yy6KirigJTigJQxMSDkuKrmiJDlkZjvvIjmoLkgYC5gICsgMTAg5a2Q5qih5Z2X77yJ44CC5q+P5Liq5a2Q5qih5Z2X5pivKirni6znq4vmqKHlnZcqKu+8iOWQhOiHquaciSBtb29uLm1vZO+8ie+8jCoq54us56uL5Y+R5biDKirliLAgbW9vbmNha2VzLmlv44CCYG1vb24gd29ya2Ag5oqK5a6D5Lus57uR5Zyo5LiA6LW35pys5Zyw5byA5Y+R44CCCgrov5nkuI4gTU9UL2N1cnJlbnQg5Y2V5qih5Z2X5Y2V5YyF5qih5byPKirmoLnmnKzkuI3lkIwqKuOAggoKLS0tCgojIyAzLiDmoLnljIXpl6jpnaLvvIhSMTLvvInigJTigJQg5qC45b+D5Y+R546wCgojIyMgMy4xIGBpbWFnZS5tYnRg77yI5qC55YyF5rqQ5paH5Lu277yMMTU2MCDlrZfoioLvvIkKCmBgYG1vb25iaXQKLy8vfAovLy8gIyB3YWxrenp6L2ltYWdlLm1idCDlm77lg4/lpITnkIblupMKLy8vIC4uLu+8iOaWh+aho+azqOmHiu+8muW/q+mAn+WFpemXqCArIOaooeWdl+e7k+aehOihqO+8iQovLy8KcHViIGxldCB2ZXJzaW9uIDogU3RyaW5nID0gIjAuMS4yNCIKYGBgCgoqKuagueWMheWUr+S4gOa6kOeggSA9IOaWh+aho+azqOmHiiArIGBwdWIgbGV0IHZlcnNpb25gKirjgILml6Dku7vkvZUgaW1wb3J044CB5peg5Lu75L2VIHJlZXhwb3J044CB5peg5Lu75L2V5Luj56CB44CCCgojIyMgMy4yIGBtb29uLnBrZ2DvvIjmoLnljIXmuIXljZXvvIwzMjgg5a2X6IqC77yJCgpgYGBtb29uYml0Ci8vIOagueaooeWdl+WMhe+8muWPquaUvumXqOmdouaWh+aho+S4jueJiOacrOWPt+OAggovLyDpq5jpopEgQVBJIOeahOWGjeWvvOWHuuWcqCBgYWxsL2Ag5YyF77yIYHB1YiB1c2luZ2DvvInvvJvmtYvnrpfln7rlh4blnKggYGJlbmNoL2Ag5YyF44CCCi8vIOi/memHjOWIu+aEj+S4jSBpbXBvcnQg5Lu75L2V5a2Q5YyF4oCU4oCU5raI6LS56ICF5ou/5Yiw55qE5qC55YyF6YeM5rKh5pyJ5Luj56CB6ZyA6KaB5a6D5Lus77yMCi8vIOeVmeedgOWvvOWFpeS8muWcqCBgbW9vbiBwdWJsaXNoYCDnmoQgdmVyaWZ5IOmYtuauteaKpSBgdW51c2VkX3BhY2thZ2UgWzAwMjldYOOAggpgYGAKCioq5qC55YyFIG1vb24ucGtnID0g57qv5rOo6YeK77yM6Zu2IGltcG9ydCoq44CC5rOo6YeK5piO56Gu6Kej6YeK77ya5LiNIGltcG9ydCDlrZDljIXmmK/kuLrkuobpgb/lhY0gYG1vb24gcHVibGlzaGAgdmVyaWZ5IOaKpSBgdW51c2VkX3BhY2thZ2UgWzAwMjldYOOAggoKIyMjIDMuMyDnlKjmiLflr7zlhaXmlrnlvI8KCmBgYG1vb25iaXQKaW1wb3J0ICJ3YWxrenp6L2ltYWdlLmNvcmUvdHlwZXMiICAgICAgLy8g55u05o6lIGltcG9ydCDlrZDmqKHlnZfljIUKaW1wb3J0ICJ3YWxrenp6L2ltYWdlLmNvZGVjL2xpYiIKaW1wb3J0ICJ3YWxrenp6L2ltYWdlLnByb2Nlc3MvZmlsdGVyIgpgYGAKCueUqOaItyoq55u05o6lIGltcG9ydCDlrZDmqKHlnZfljIUqKu+8jOagueWMheS4jeWQq+S7o+eggeOAggoKLS0tCgojIyA0LiDpl6jpnaLljIXvvIhhbGwv77yJ4oCU4oCUIHB1YiB1c2luZyDmqKHlvI8KCiMjIyA0LjEgYGFsbC9tb29uLnBrZ2AKYGBgbW9vbmJpdAppbXBvcnQgewogICJ3YWxrenp6L2ltYWdlLmNvcmUvdHlwZXMiLAogICJ3YWxrenp6L2ltYWdlLmNvZGVjL2xpYiIsCiAgIndhbGt6enovaW1hZ2UucHJvY2Vzcy90cmFuc2Zvcm0iLAp9CmBgYAoKIyMjIDQuMiBgYWxsL2FsbC5tYnRg77yI5qC45b+D77yJCgpgYGBtb29uYml0Ci8vLyDnm67nmoTvvJrkuIvmuLjlj6ogYG1vb24gYWRkIHdhbGt6enovaW1hZ2UubWJ0YCDkuIDmnaHvvIzlsLHog70KLy8vIGBpbXBvcnQgIndhbGt6enovaW1hZ2UubWJ0L2FsbCJgIOaLv+WIsOW4uOeUqOeahOWFqOmDqOS4nOilv+OAggovLy8gTW9vbkJpdCDop4TliJnvvJoi5L6d6LWW5Lya5Lyg6YCS44CBaW1wb3J0IOS4jeS8oOmAkiLigJTigJQKLy8vIGBtb29uIGFkZGAg5oqK5a2Q5qih5Z2X5YWo5LiL6L295aW977yM5L2G5LiL5ri455u05o6lIGBpbXBvcnQgIndhbGt6enovaW1hZ2UuY29kZWMvbGliImAKLy8vIOaKpSBgZXhpc3RzIGluIGdsb2JhbCBlbnZpcm9ubWVudCwgYnV0IGl0cyBjb250YWluaW5nIG1vZHVsZSBpcyBub3QgaW1wb3J0ZWRg44CCCi8vLyDmnKzljIXnlKggYHB1YiB1c2luZ2Ag5oqK6L+Z5Lqb5ZCN5a2X5LuO5a2Q5qih5Z2X5YaN5a+85Ye65LiA5qyh77ya5LiL5ri4IGltcG9ydCDnmoTmmK8KLy8vIOS4gOS4quebtOaOpeS+nei1lu+8iOagueaooeWdl++8iemHjOeahOWMhe+8jOS6juaYr+S4jemcgOimgemineWkliBhZGQg5Lu75L2V5a2Q5qih5Z2X44CCCnB1YiB1c2luZyBAdHlwZXMgewogIHR5cGUgSW1hZ2UsIHR5cGUgSW1hZ2UxNiwgdHlwZSBJbWFnZUYsIHR5cGUgQW55SW1hZ2UsCiAgdHlwZSBMb2FkRXJyb3IsIHR5cGUgSW1hZ2VFcnJvciwgdHlwZSBFcnJvckNvZGUsIHR5cGUgSW1hZ2VGb3JtYXQsCiAgdHlwZSBEZWNvZGVMaW1pdHMsIHR5cGUgUmVnaW9uLCB0eXBlIEltYWdlUmVnaW9uLCB0eXBlIEFsbG9jQnVkZ2V0LAp9CgovLyBwdWIgdXNpbmcg5Y+q6IO95YaN5a+85Ye657G75Z6L77yM5pa55rOV6KaB5YyF6JaE5Ye95pWwCnB1YiBmbiByZWdpb24oaW1nIDogQHR5cGVzLkltYWdlLCB4IDogSW50MzIsIHkgOiBJbnQzMiwgdyA6IEludDMyLCBoIDogSW50MzIpIC0+IEB0eXBlcy5JbWFnZVJlZ2lvbiB7CiAgaW1nLnJlZ2lvbih4LCB5LCB3LCBoKQp9CgpwdWIgdXNpbmcgQGxpYiB7CiAgdHlwZSBFbmNvZGVkSW1hZ2UsIGhhc19hbHBoYSwgYmVzdF9mb3JtYXQsIGVuY29kZV9iZXN0LAogIGxvYWRfZnJvbV9ieXRlc19hdXRvLCBlbmNvZGVfcG5nLCBlbmNvZGVfd2VicF9sb3NzbGVzcywgLi4uCn0KCnB1YiB1c2luZyBAdHJhbnNmb3JtIHsKICByZXNpemVfdG9fY292ZXIsIHJlc2l6ZV90b19jb250YWluLCBjcm9wLCByb3RhdGUsIC4uLgp9CmBgYAoKKirlhbPplK7mqKHlvI8qKu+8mgotIGBwdWIgdXNpbmcgQHBrZyB7IHR5cGUgVCwgZm4gZiwgLi4uIH1gIOWGjeWvvOWHuuWtkOWMheeahOWQjeWtlwotIGBwdWIgdXNpbmdgIOWPquiDveWGjeWvvOWHuioq57G75Z6L5ZKM5Ye95pWwKirvvIwqKuaWueazlSoq6KaB5YyF6JaE5Ye95pWwCi0g6Kej5YazIuS+nei1luS8oOmAkuOAgWltcG9ydCDkuI3kvKDpgJIi6Zeu6aKYCi0g5LiL5ri45LiA5p2hIGBtb29uIGFkZGAgKyBgaW1wb3J0ICIuLi4vYWxsImAg5Y2z5Y+v55So6auY6aKRIEFQSQoKLS0tCgojIyA1LiBsZWFmIOWMhea4heWNle+8iGltYWdlLmNvcmUvdHlwZXMvbW9vbi5wa2fvvIkKCmBgYG1vb25iaXQKaW1wb3J0IHsKICAibW9vbmJpdGxhbmcvY29yZS9kZWJ1ZyIsCiAgIndhbGt6enovaW1hZ2UuY29yZS9zYWZlX21hdGgiLAp9CmBgYAoKKirlkIzmqKHlnZflhoXljIXpl7TlvJXnlKjnlKjlhajot6/lvoQqKu+8mmB3YWxrenp6L2ltYWdlLmNvcmUvc2FmZV9tYXRoYO+8iOaooeWdl+WQjSArIOWMheWQje+8ieOAggoKLS0tCgojIyA2LiDoh6rliqjnlJ/miJAgQVBJIOaOpeWPo++8iHBrZy5nZW5lcmF0ZWQubWJ0ae+8iQoKYGBgbW9vbmJpdAovLyBHZW5lcmF0ZWQgdXNpbmcgYG1vb24gaW5mb2AsIERPTidUIEVESVQgSVQKcGFja2FnZSAid2Fsa3p6ei9pbWFnZS5tYnQiCnB1YiBsZXQgdmVyc2lvbiA6IFN0cmluZwpgYGAKCioqYG1vb24gaW5mb2Ag6Ieq5Yqo55Sf5oiQ77yMRE9OJ1QgRURJVCoq44CC5qC55YyF5Y+q5pyJIGB2ZXJzaW9uYO+8jOaVheaOpeWPo+aWh+S7tuaegeeugOOAggoKLS0tCgojIyA3LiBydWxlcy5tZCDigJTigJQg5byA5Y+R6KeE5YiZ5YWo6ZuG77yI5p2D5aiB77yJCgojIyMgNy4xIOmhueebruinhOWImSBSMS1SMTYKCnwg6KeE5YiZIHwg5YaF5a65IHwKfC0tLS0tLXwtLS0tLS18CnwgUjEgfCDmupDnoIHmlL4gNiDmoLnlrZDmqKHlnZfvvJpjb3JlLyBjb2RlYy8gcHJvY2Vzcy8gcGhvdG9ncmFwaHkvIHZpc2lvbi8gZG9tYWluLyB8CnwgUjIgfCDlpJrmiYvmrrXmtYvor5XvvJrlvaLlvI/ljJbor4HmmI4gKyBBSS9GQUtFL01PQ0svRTJF77yMU3ByaW50IOS6pOS7mOWJjSBtb29uIGNoZWNrIDAgZXJyb3IgKyBtb29uIHRlc3Qg5YWo6YCa6L+HIHwKfCBSMyB8IOS7o+eggeS4iee6p+aWh+aho+azqOmHiuS4reiLseaWh++8iOWMhee6py/nsbvlnovnuqcv5pa55rOV57qn77yJIHwKfCBSNCB8IFJFQURNRSDkuK3oi7HmlofvvIzpu5jorqTkuK3mlofvvJvmr4/kuKrkuIDnuqflrZDljIXkuZ/opoEgUkVBRE1FLm1kIHwKfCBSNSB8IOWFiOWItuWumiBkb2NzL3JvYWRtYXAubWQg6L+t5Luj6Lev57q/77yM5oyJIFNwcmludCDmjqjov5sgfAp8IFI2IHwg5o+Q5Lqk5pyJ6L+55Y+v5b6q77ya5Zue5YaZIHJvYWRtYXAg54q25oCBICsgY29tbWl0IGhhc2ggfAp8IFI3IHwg5peg5Lu75Yqh5pe26Ieq5Yqo6Kem5Y+R5paw6Lev57q/6L+t5LujIHwKfCBSOCB8IOavj+asoei/reS7o+aWh+aho+ayu+eQhu+8mlJFQURNRS9yb2FkbWFwL0NIQU5HRUxPRy/lrZDljIUgUkVBRE1FIHwKfCBSOSB8IOe7j+mqjOayiea3gO+8muabtOaWsCBtZW1vcnkgfAp8IFIxMCB8IOS4gOe6p+WtkOWMheS5n+imgSBSRUFETUUubWQgfAp8IFIxMSB8IOmYsui3keWBj++8muiusC/plIEv5Zue77yI6K6w5b2V6KeE5YiZL+WGsueqgeWBnOS4i+mXruiwgeacieadg+aUuS/lm57lhpnlt7LkuqTku5jvvIkgfAp8IFIxMiB8IOagueWMhemXqOmdou+8muS7hSB2ZXJzaW9uICsg5paH5qGj77yM5LiN5YGaIHJlZXhwb3J0IHwKfCBSMTMgfCBXYXJuaW5nIOayu+eQhu+8mumAkOS4gOWkhOeQhu+8jOemgeatouazqOmHii9pZ25vcmUg5Y6L5Yi277yM55uu5qCHIDAgd2FybmluZyB8CnwgUjE0IHwg5Y2g5L2NIHRvZG8g5qOA5p+lIHwKfCBSMTUgfCDop4TliJnovpPlh7rliLAgcnVsZXMubWTvvIzmr4/mrKHmlrDlop7lm57lhpkgfAp8IFIxNiB8IOi/reS7o+a4heeQhu+8muWIoCBfYnVpbGQv44CBLnRtcC8uYmFrLyoubG9n44CBZ2l0IGNsZWFuIHwKCiMjIyA3LjIg5qC45b+D57qm5p2f77yI5LiN5Y+v6L+d5Y+N77yJCgotICoq56aB5q2iIEMgRkZJIOS+nei1lioq4oCU4oCU57qvIE1vb25CaXTvvIzlm5vnm67moIflj6/nlKgKLSAqKuemgeatouebruagh+adoeS7tue8luivkSoq4oCU4oCU5LiN55SoIGB0YXJnZXQgPT0gIm5hdGl2ZSJg77yM5Zub55uu5qCH5YWx55So5Luj56CBCi0gKirnlKjmiLfnm7TmjqUgaW1wb3J0IOWtkOaooeWdl+WMhSoq4oCU4oCU5qC55qih5Z2X5LuFIHZlcnNpb24gKyDmlofmoaPvvIzkuI3lgZogcmVleHBvcnQKCiMjIyA3LjMg5p625p6E57qm5p2fCgpgYGAKY29yZSAoTDAsIOmbtuS+nei1likKICDihpEKY29kZWMgKEwxLCDihpIgY29yZSkKICDihpEKcHJvY2VzcyAoTDIsIOKGkiBjb3JlICsgY29kZWMpCiAg4oaRICAgICAgICAgIOKGkQpwaG90b2dyYXBoeSAgdmlzaW9uIChMMywg4oaSIGNvcmUgKyBjb2RlYyArIHByb2Nlc3MpCiAgICAgICAgICAgICAgICDihpEKICAgICAgICAgICAgZG9tYWluIChMNCwg4oaSIGNvcmUgKyBjb2RlYyArIHByb2Nlc3MgKyB2aXNpb24pCmBgYAoKLSDkuIvlsYLkuI3lj6/kvp3otZbkuIrlsYIKLSDlkIzlsYLkuI3lj6/kupLnm7jkvp3otZYKLSDot6jmqKHlnZfnlKjlrozmlbTot6/lvoTvvJpgd2Fsa3p6ei9pbWFnZS5jb3JlL3R5cGVzYAoKIyMjIDcuNCBNb29uQml0IOWFs+mUruivreazlee6puadn++8iHJ1bGVzLm1kIMKn5Zub77yJCgp8IOe6puadnyB8IOato+ehruWGmeazlSB8CnwtLS0tLS18LS0tLS0tLS0tLXwKfCBgQG1hdGguYXRhbjIvY29zL3Npbi9wb3cvZXhwL2xvZzIvbG9nMTBgIHwg5o6l5Y+XIERvdWJsZe+8jOmcgCBgLnRvX2RvdWJsZSgpYCDovazlhaXvvIxgRmxvYXQ6OmZyb21fZG91YmxlKClgIOi9rOWHuiB8CnwgYEBtYXRoLmxvZ2AgfCAqKuS4jeWtmOWcqCoq77yM55SoIGBAbWF0aC5sbmYoRmxvYXQpYCB8CnwgYEBtYXRoLnNxcnRgIHwgKirkuI3lrZjlnKgqKu+8jOeUqCBgLnNxcnQoKWAg5pa55rOVIHwKfCBgbm90KGV4cHIpYCB8IOW3suW8g+eUqO+8jOeUqCBgIWV4cHJgIHwKfCBgMWUxMEZgIC8gYDFlLTEwRmAgfCAqKuaXoOaViCoq77yM55SoIGAxMDAwMDAwMDAwMC4wRmAgfAp8IGAoMC4uPG4pLnJldigpYCB8ICoq5LiN5pSv5oyBKirvvIzmiYvliqjlj43lkJHlvqrnjq8gfAp8IGBpc19lbXB0eSgpYCAoT3B0aW9uKSB8IOW3suW8g+eUqO+8jOeUqCBgeCBpcyBOb25lYCB8CnwgYGNsYW1wYCB8IOagh+etvuWPguaVsO+8mmAuY2xhbXAobWluPTAsIG1heD0yNTUpYCB8Cnwg5aSW6YOo5p6E6YCgIHwgYHB1YihhbGwpIGVudW0vc3RydWN0YCB8CnwgYEJ5dGVzYCB8IOS4jeWPr+WPmO+8jOeUqCBgQXJyYXlbQnl0ZV1gIOaehOW7uuWQjiBgQnl0ZXM6OmZyb21fYXJyYXkoKWAgfAp8IEludCDDlyBGbG9hdCB8IOmcgCBgRmxvYXQ6OmZyb21faW50KG4pICogZmxvYXRfdmFsYCB8CgojIyMgNy41IFNwcmludCDov63ku6PmtYHnqIsKCjEuIOafpeaetuaehO+8iGRvY3MvYXJjaGl0ZWN0dXJlLm1k77yJCjIuIOWunueOsCArIOeZveebkua1i+ivle+8iF93YnRlc3QubWJ077yJCjMuIGBtb29uIGNoZWNrYCAwIGVycm9yICsgYG1vb24gdGVzdGAg5YWo6YCa6L+HCjQuIFdhcm5pbmcg5rK755CG77yIUjEz77yJ77yaMCB3YXJuaW5nCjUuIOaWh+aho+ayu+eQhu+8iFI477yJCjYuIOe7j+mqjOayiea3gO+8iFI577yJ77yabWVtb3J5CjcuIOWNoOS9jeajgOafpe+8iFIxNO+8iQo4LiDov63ku6PmuIXnkIbvvIhSMTbvvIkKOS4g5o+Q5Lqk77yIUjbvvInvvJpjb21taXQgKyByb2FkbWFwIGhhc2gKMTAuIOWbnuWGme+8iFIxMSDlm57vvInvvJoi5bey5Lqk5LuYIHjvvIzkuIvnjq/kvp3otZYgWSIKCi0tLQoKIyMgOC4g5a+5IE1PVCDnmoTlupTnlKjmuIXljZUKCnwgaW1hZ2UubWJ0IOaooeW8jyB8IE1PVCDnjrDnirYgfCDlupTnlKjliqjkvZwgfAp8LS0tLS0tLS0tLS0tLS0tLXwtLS0tLS0tLS0tfC0tLS0tLS0tLS18CnwgbW9vbi53b3JrIOW3peS9nOWMuu+8iDExIOaIkOWRmO+8iSB8IOWNleaooeWdlyBtb29uLm1vZCB8ICoq5bu6IG1vb24ud29yayArIOWtkOaooeWdlyoqIHwKfCDmoLnljIXpl6jpnaLvvIjku4UgdmVyc2lvbiArIOaWh+aho++8jOepuiBtb29uLnBrZ++8iSB8IOagueWMheWQq+WFqOmDqOS7o+eggSB8ICoq5qC55YyF5pS56Zeo6Z2i77yM5Luj56CB6L+B5YWl5a2Q5qih5Z2XKiogfAp8IGFsbC8g6Zeo6Z2i5YyF77yIcHViIHVzaW5n77yJIHwg5pegIHwgKirlu7ogYWxsLyDpl6jpnaLljIUqKiB8Cnwg5a2Q5qih5Z2X54us56uL5Y+R5biDIHwg5Y2V5YyFIHwgUDErIOWtkOaooeWdl+eLrOeriyBtb29uLm1vZCB8CnwgcnVsZXMubWTvvIgxNiDop4TliJnvvIkgfCDml6AgfCAqKuW7uiBydWxlcy5tZCoqIHwKfCBwa2cuZ2VuZXJhdGVkLm1idGnvvIhtb29uIGluZm/vvIkgfCDml6AgfCBQMSsgbW9vbiBpbmZvIOeUn+aIkCB8Cnwg5Zub55uu5qCH5peg5p2h5Lu257yW6K+RIHwgbW9vbi5tb2Qg5aOw5piOIHwgbW9vbiBjaGVjayDlm5vnm67moIflhajot5EgfAp8IG1vb24gcHJvdmUg5b2i5byP5YyW6aqM6K+BIHwgSTEtSTYg5LuF6L+Q6KGM5pe25pat6KiAIHwgUDErIG1vb24gcHJvdmUgfAp8IOivreazlee6puadn++8iMKn5Zub77yJIHwg5bey6YOo5YiG5a+56b2QIHwg5YWo6YOo5a+56b2QIHwKfCBTcHJpbnQg6L+t5Luj5rWB56iLIHwg5pegIHwgUDErIOaOpeWFpSB8Cnwg6K6wL+mUgS/lm57pmLLot5HlgY8gfCDml6AgfCDmjqXlhaUgcnVsZXMubWQgfAp8IFdhcm5pbmcg5rK755CGIDAgd2FybmluZyB8IOaciSB3YXJuaW5nIHwg5rK755CG5YiwIDAgfAoKLS0tCgojIyA5LiDnu5PorroKCmltYWdlLm1idCDnmoTmnYPlqIHlvIDlj5HmqKHlvI8gPSAqKuW3peS9nOWMuu+8iG1vb24ud29ya++8iSsg5qC55YyF6Zeo6Z2i77yIUjEy77yJKyBhbGwvIOmXqOmdouWMhe+8iHB1YiB1c2luZ++8iSsg5a2Q5qih5Z2X54us56uL5Y+R5biDICsgcnVsZXMubWQgMTYg6KeE5YiZICsg5Zub55uu5qCH5peg5p2h5Lu257yW6K+RICsgbW9vbiBwcm92ZSDlvaLlvI/ljJYgKyBTcHJpbnQg6L+t5LujKirjgIIKCk1PVC9jdXJyZW50IOaYr+WNleaooeWdl+WNleWMhe+8jOS4jiBpbWFnZS5tYnQg5qih5byP5beu6Led5aSn44CC5pys5a2m5Lmg5oql5ZGK5pivIE1PVCDph43mnoTliLAgaW1hZ2UubWJ0IOaooeW8j+eahOiuvuiuoeS+neaNruOAggo=
+# walkzzz/image.mbt 架构与开发模式学习报告（源码级）
+
+| 字段 | 值 |
+|------|-----|
+| 文档编号 | MOT-DOC-12 |
+| 版本 | v2.0（源码级） |
+| 日期 | 2026-11-27 |
+| 状态 | 正式 |
+| 来源 | https://github.com/walkzzz/image.mbt（main 分支，v0.1.24） |
+| 获取方式 | GitHub API + raw.githubusercontent.com（git clone 因 sandbox 无法直连 github.com 443 改用 webfetch 代理） |
+
+---
+
+## 1. 仓库结构（根目录 contents API 确认）
+
+```
+walkzzz/image.mbt/
+├── moon.mod                    # 根模块清单
+├── moon.work                   # 工作区清单（新增！）
+├── moon.pkg                    # 根包（空，不 import 子包）
+├── image.mbt                   # 根包源文件（仅 version + 文档）
+├── pkg.generated.mbti          # moon info 自动生成 API 接口
+├── rules.md                    # 开发规则全集（16 条）
+├── AGENTS.md                   # Agent 指令（19KB）
+├── all/                        # 门面包（pub using 再导出）
+├── image.core/                 # 子模块 L0（独立模块，own moon.mod）
+│   ├── moon.mod
+│   ├── moon.pkg
+│   ├── types/                  # 叶子包
+│   │   ├── moon.pkg          # import core/debug + image.core/safe_math
+│   │   └── types.mbt
+│   └── safe_math/            # 形式化验证目标
+├── image.codec/                # 子模块 L1
+├── image.process/              # 子模块 L2
+├── image.photography/          # 子模块 L3a
+├── image.vision/               # 子模块 L3b
+├── image.domain/               # 子模块 L4
+├── image.doc/ image.media/ image.commerce/ image.pro/  # L5 扩展
+├── mp4/                        # 额外模块
+├── cmd/ imgcli/ mcp/ npm/ bindings/ wasm/ playground/  # 出口
+├── scripts/ spec/ benchmarks/ examples/ docs/          # 工程
+└── moon.work                   # 工作区成员声明
+```
+
+---
+
+## 2. 工作区模式（moon.work）—— 核心发现
+
+**`moon.work`**（199 字节）：
+```moonbit
+members = [
+  ".",
+  "image.core",
+  "image.codec",
+  "image.process",
+  "image.photography",
+  "image.vision",
+  "image.domain",
+  "image.doc",
+  "image.media",
+  "image.commerce",
+  "image.pro",
+]
+```
+
+**关键**：image.mbt 不是单模块，是**工作区**——11 个成员（根 `.` + 10 子模块）。每个子模块是**独立模块**（各自有 moon.mod），**独立发布**到 mooncakes.io。`moon work` 把它们绑在一起本地开发。
+
+这与 MOT/current 单模块单包模式**根本不同**。
+
+---
+
+## 3. 根包门面（R12）—— 核心发现
+
+### 3.1 `image.mbt`（根包源文件，1560 字节）
+
+```moonbit
+///|
+/// # walkzzz/image.mbt 图像处理库
+/// ...（文档注释：快速入门 + 模块结构表）
+///
+pub let version : String = "0.1.24"
+```
+
+**根包唯一源码 = 文档注释 + `pub let version`**。无任何 import、无任何 reexport、无任何代码。
+
+### 3.2 `moon.pkg`（根包清单，328 字节）
+
+```moonbit
+// 根模块包：只放门面文档与版本号。
+// 高频 API 的再导出在 `all/` 包（`pub using`）；测算基准在 `bench/` 包。
+// 这里刻意不 import 任何子包——消费者拿到的根包里没有代码需要它们，
+// 留着导入会在 `moon publish` 的 verify 阶段报 `unused_package [0029]`。
+```
+
+**根包 moon.pkg = 纯注释，零 import**。注释明确解释：不 import 子包是为了避免 `moon publish` verify 报 `unused_package [0029]`。
+
+### 3.3 用户导入方式
+
+```moonbit
+import "walkzzz/image.core/types"      // 直接 import 子模块包
+import "walkzzz/image.codec/lib"
+import "walkzzz/image.process/filter"
+```
+
+用户**直接 import 子模块包**，根包不含代码。
+
+---
+
+## 4. 门面包（all/）—— pub using 模式
+
+### 4.1 `all/moon.pkg`
+```moonbit
+import {
+  "walkzzz/image.core/types",
+  "walkzzz/image.codec/lib",
+  "walkzzz/image.process/transform",
+}
+```
+
+### 4.2 `all/all.mbt`（核心）
+
+```moonbit
+/// 目的：下游只 `moon add walkzzz/image.mbt` 一条，就能
+/// `import "walkzzz/image.mbt/all"` 拿到常用的全部东西。
+/// MoonBit 规则："依赖会传递、import 不传递"——
+/// `moon add` 把子模块全下载好，但下游直接 `import "walkzzz/image.codec/lib"`
+/// 报 `exists in global environment, but its containing module is not imported`。
+/// 本包用 `pub using` 把这些名字从子模块再导出一次：下游 import 的是
+/// 一个直接依赖（根模块）里的包，于是不需要额外 add 任何子模块。
+pub using @types {
+  type Image, type Image16, type ImageF, type AnyImage,
+  type LoadError, type ImageError, type ErrorCode, type ImageFormat,
+  type DecodeLimits, type Region, type ImageRegion, type AllocBudget,
+}
+
+// pub using 只能再导出类型，方法要包薄函数
+pub fn region(img : @types.Image, x : Int32, y : Int32, w : Int32, h : Int32) -> @types.ImageRegion {
+  img.region(x, y, w, h)
+}
+
+pub using @lib {
+  type EncodedImage, has_alpha, best_format, encode_best,
+  load_from_bytes_auto, encode_png, encode_webp_lossless, ...
+}
+
+pub using @transform {
+  resize_to_cover, resize_to_contain, crop, rotate, ...
+}
+```
+
+**关键模式**：
+- `pub using @pkg { type T, fn f, ... }` 再导出子包的名字
+- `pub using` 只能再导出**类型和函数**，**方法**要包薄函数
+- 解决"依赖传递、import 不传递"问题
+- 下游一条 `moon add` + `import ".../all"` 即可用高频 API
+
+---
+
+## 5. leaf 包清单（image.core/types/moon.pkg）
+
+```moonbit
+import {
+  "moonbitlang/core/debug",
+  "walkzzz/image.core/safe_math",
+}
+```
+
+**同模块内包间引用用全路径**：`walkzzz/image.core/safe_math`（模块名 + 包名）。
+
+---
+
+## 6. 自动生成 API 接口（pkg.generated.mbti）
+
+```moonbit
+// Generated using `moon info`, DON'T EDIT IT
+package "walkzzz/image.mbt"
+pub let version : String
+```
+
+**`moon info` 自动生成，DON'T EDIT**。根包只有 `version`，故接口文件极简。
+
+---
+
+## 7. rules.md —— 开发规则全集（权威）
+
+### 7.1 项目规则 R1-R16
+
+| 规则 | 内容 |
+|------|------|
+| R1 | 源码放 6 根子模块：core/ codec/ process/ photography/ vision/ domain/ |
+| R2 | 多手段测试：形式化证明 + AI/FAKE/MOCK/E2E，Sprint 交付前 moon check 0 error + moon test 全通过 |
+| R3 | 代码三级文档注释中英文（包级/类型级/方法级） |
+| R4 | README 中英文，默认中文；每个一级子包也要 README.md |
+| R5 | 先制定 docs/roadmap.md 迭代路线，按 Sprint 推进 |
+| R6 | 提交有迹可循：回写 roadmap 状态 + commit hash |
+| R7 | 无任务时自动触发新路线迭代 |
+| R8 | 每次迭代文档治理：README/roadmap/CHANGELOG/子包 README |
+| R9 | 经验沉淀：更新 memory |
+| R10 | 一级子包也要 README.md |
+| R11 | 防跑偏：记/锁/回（记录规则/冲突停下问谁有权改/回写已交付） |
+| R12 | 根包门面：仅 version + 文档，不做 reexport |
+| R13 | Warning 治理：逐一处理，禁止注释/ignore 压制，目标 0 warning |
+| R14 | 占位 todo 检查 |
+| R15 | 规则输出到 rules.md，每次新增回写 |
+| R16 | 迭代清理：删 _build/、.tmp/.bak/*.log、git clean |
+
+### 7.2 核心约束（不可违反）
+
+- **禁止 C FFI 依赖**——纯 MoonBit，四目标可用
+- **禁止目标条件编译**——不用 `target == "native"`，四目标共用代码
+- **用户直接 import 子模块包**——根模块仅 version + 文档，不做 reexport
+
+### 7.3 架构约束
+
+```
+core (L0, 零依赖)
+  ↑
+codec (L1, → core)
+  ↑
+process (L2, → core + codec)
+  ↑          ↑
+photography  vision (L3, → core + codec + process)
+                ↑
+            domain (L4, → core + codec + process + vision)
+```
+
+- 下层不可依赖上层
+- 同层不可互相依赖
+- 跨模块用完整路径：`walkzzz/image.core/types`
+
+### 7.4 MoonBit 关键语法约束（rules.md §四）
+
+| 约束 | 正确写法 |
+|------|----------|
+| `@math.atan2/cos/sin/pow/exp/log2/log10` | 接受 Double，需 `.to_double()` 转入，`Float::from_double()` 转出 |
+| `@math.log` | **不存在**，用 `@math.lnf(Float)` |
+| `@math.sqrt` | **不存在**，用 `.sqrt()` 方法 |
+| `not(expr)` | 已弃用，用 `!expr` |
+| `1e10F` / `1e-10F` | **无效**，用 `10000000000.0F` |
+| `(0..<n).rev()` | **不支持**，手动反向循环 |
+| `is_empty()` (Option) | 已弃用，用 `x is None` |
+| `clamp` | 标签参数：`.clamp(min=0, max=255)` |
+| 外部构造 | `pub(all) enum/struct` |
+| `Bytes` | 不可变，用 `Array[Byte]` 构建后 `Bytes::from_array()` |
+| Int × Float | 需 `Float::from_int(n) * float_val` |
+
+### 7.5 Sprint 迭代流程
+
+1. 查架构（docs/architecture.md）
+2. 实现 + 白盒测试（_wbtest.mbt）
+3. `moon check` 0 error + `moon test` 全通过
+4. Warning 治理（R13）：0 warning
+5. 文档治理（R8）
+6. 经验沉淀（R9）：memory
+7. 占位检查（R14）
+8. 迭代清理（R16）
+9. 提交（R6）：commit + roadmap hash
+10. 回写（R11 回）："已交付 x，下环依赖 Y"
+
+---
+
+## 8. 对 MOT 的应用清单
+
+| image.mbt 模式 | MOT 现状 | 应用动作 |
+|----------------|----------|----------|
+| moon.work 工作区（11 成员） | 单模块 moon.mod | **建 moon.work + 子模块** |
+| 根包门面（仅 version + 文档，空 moon.pkg） | 根包含全部代码 | **根包改门面，代码迁入子模块** |
+| all/ 门面包（pub using） | 无 | **建 all/ 门面包** |
+| 子模块独立发布 | 单包 | P1+ 子模块独立 moon.mod |
+| rules.md（16 规则） | 无 | **建 rules.md** |
+| pkg.generated.mbti（moon info） | 无 | P1+ moon info 生成 |
+| 四目标无条件编译 | moon.mod 声明 | moon check 四目标全跑 |
+| moon prove 形式化验证 | I1-I6 仅运行时断言 | P1+ moon prove |
+| 语法约束（§四） | 已部分对齐 | 全部对齐 |
+| Sprint 迭代流程 | 无 | P1+ 接入 |
+| 记/锁/回防跑偏 | 无 | 接入 rules.md |
+| Warning 治理 0 warning | 有 warning | 治理到 0 |
+
+---
+
+## 9. 结论
+
+image.mbt 的权威开发模式 = **工作区（moon.work）+ 根包门面（R12）+ all/ 门面包（pub using）+ 子模块独立发布 + rules.md 16 规则 + 四目标无条件编译 + moon prove 形式化 + Sprint 迭代**。
+
+MOT/current 是单模块单包，与 image.mbt 模式差距大。本学习报告是 MOT 重构到 image.mbt 模式的设计依据。

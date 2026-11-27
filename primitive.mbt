@@ -1,1 +1,37 @@
-Ly8gUHJpbWl0aXZlIOKAlOKAlCBtaW5pbWFsIHNlbWFudGljIGFjdGlvbiB1bml0Ci8vIENvbnRhaW5zOiBwYXJhbWV0ZXIgbW9kZWwsIG9jY3VwYW5jeSBkZWNsYXJhdGlvbiwgc2VtYW50aWMgYWNoaWV2ZW1lbnQgY29uZGl0aW9uIChTQUMpLgoKLy8vfApwdWIoYWxsKSBlbnVtIFByaW1DYXRlZ29yeSB7CiAgTG9jCiAgTWFuCiAgRXhwCiAgUG9zCiAgQ29uCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IFBhcmFtU3BlYyB7CiAgbmFtZSA6IFN0cmluZwogIHB0eXBlIDogUGFyYW1UeXBlCiAgcmVxdWlyZWQgOiBCb29sCiAgZGVmYXVsdCA6IFBhcmFtVmFsdWU/CiAgY29uc3RyYWludHMgOiBTdHJpbmcKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgT2NjdXBhbmN5RGVjbCB7CiAgcGFydGljaXBhbnRzIDogQXJyYXlbQm9keVBhcnRSZWZdCiAgZXhjbHVzaXZlIDogQm9vbAp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBQcmltaXRpdmUgewogIHVybiA6IFByaW1SZWYKICBuYW1lIDogU3RyaW5nCiAgY2F0ZWdvcnkgOiBQcmltQ2F0ZWdvcnkKICBwYXJhbXMgOiBBcnJheVtQYXJhbVNwZWNdCiAgb2NjdXBhbmN5IDogT2NjdXBhbmN5RGVjbAogIHNhYyA6IFNhY1NwZWMKICBtZXRhZGF0YSA6IE1hcFtTdHJpbmcsIFN0cmluZ10KfQo=
+// Primitive —— minimal semantic action unit
+// Contains: parameter model, occupancy declaration, semantic achievement condition (SAC).
+
+///|
+pub(all) enum PrimCategory {
+  Loc
+  Man
+  Exp
+  Pos
+  Con
+}
+
+///|
+pub(all) struct ParamSpec {
+  name : String
+  ptype : ParamType
+  required : Bool
+  default : ParamValue?
+  constraints : String
+}
+
+///|
+pub(all) struct OccupancyDecl {
+  participants : Array[BodyPartRef]
+  exclusive : Bool
+}
+
+///|
+pub(all) struct Primitive {
+  urn : PrimRef
+  name : String
+  category : PrimCategory
+  params : Array[ParamSpec]
+  occupancy : OccupancyDecl
+  sac : SacSpec
+  metadata : Map[String, String]
+}

@@ -1,1 +1,98 @@
-LS0tCm5hbWU6IG1vb25iaXQtbW90CmRlc2NyaXB0aW9uOiBVc2UgdGhpcyBza2lsbCB3aGVuIGRldmVsb3BpbmcgdGhlIE1PVCAoTW90aW9uIE9wZXJhdGlvbiBUeXBlKSB1bml2ZXJzYWwgYWN0aW9uIHNlbWFudGljcyBzcGVjaWZpY2F0aW9uIGluIE1vb25CaXQg4oCUIHRoZSBlbWJvZGllZC1leGVjdXRpb24gc3RhbmRhcmQgaW1wbGVtZW50YXRpb24gb2YgR0IvWiAxODUtMjAyNi4gQ292ZXJzIHRoZSBNT1QgTW9vbkJpdCByZWZlcmVuY2UgaW1wbGVtZW50YXRpb246IGNvcmUgdHlwZSBtb2RlbCAoQm9keU1hcC9QcmltaXRpdmUvTWFwcGluZy9TQUMpLCBmb3VyLXN0YWdlIGJpbmRpbmcgZW5naW5lLCBzaXgtc3RhdGUgc2FmZXR5IG1hY2hpbmUsIHJlYWN0aW9uIGVuZ2luZSwgZml2ZS1sYXllciBpbnRydXNpb24gcHJldmVudGlvbiAoc3VwcGx5IGNoYWluL05MSSBpbmplY3Rpb24vQUlQL2ZlZWRiYWNrL291dHB1dCBnYXRlKSwgYW5kIGRpcmVjdCByZXVzZSBvZiB0aGUgd2Fsa3p6ei9nYnoxODUubWJ0IE1vb25CaXQgbGlicmFyeS4gVXNlIHdoZW4gd29ya2luZyBpbiB0aGUgbW90LyBNb29uQml0IG1vZHVsZSwgZWRpdGluZyAubWJ0IGZpbGVzIHVuZGVyIHRoaXMgcGFja2FnZSwgcnVubmluZyBtb29uIGJ1aWxkL2NoZWNrL3Rlc3Qgb24gTU9ULCBvciBmb2xsb3dpbmcgTU9UJ3Mgc2VjdXJpdHktaW52YXJpYW50IGFuZCBHQi9aIDE4NSBpbnRlZ3JhdGlvbiBjb252ZW50aW9ucy4KLS0tCgojIE1PVCBNb29uQml0IOW8gOWPkSBTa2lsbAoK5pysIFNraWxsIOaYryBNT1TvvIhNb3Rpb24gT3BlcmF0aW9uIFR5cGXvvInpgJrnlKjliqjkvZzor63kuYnop4TojIMgTW9vbkJpdCDlj4LogIPlrp7njrDnmoTlvIDlj5HmjIfljZfjgIJNT1Qg5pivIEdCL1ogMTg1LTIwMjYg5pm66IO95L2T5Zu95qCH5ZyoIuWFt+i6q+aJp+ihjCLnu7TluqbnmoTmoIflh4blrp7njrDjgIIKCiMjIOWFs+mUruS6i+Wunu+8iOW3sumqjOivge+8iQoKLSAqKmdiejE4NSDmnKzouqvlsLHmmK8gTW9vbkJpdCDlupMqKu+8mmB3YWxrenp6L2diejE4NS5tYnRAMC4yLjJg77yIbW9vbmNha2VzLmlv77yJ44CCTU9UICoq55u05o6lIGltcG9ydCoqIOWug+eahOWtkOWMhe+8jCoq5LiN6Ieq5bex5YaZ5qGl5o6l5bGCKirjgIIKICAtIGBAd2Fsa3p6ei9nYnoxODUubWJ0L3dpcmVgIOKGkiBgUHJvdG9jb2xFcnJvcmAgdHJhaXTjgIFgSnNvbldpcmVFcnJvcmAKICAtIGBAd2Fsa3p6ei9nYnoxODUubWJ0L2FpcGAg4oaSIGBBaXBFbnZlbG9wZWDjgIFgTWVzc2FnZUtpbmRg44CBYEFpcEVycm9yYAogIC0gYEB3YWxrenp6L2diejE4NS5tYnQvdG9vbGluZ2Ag4oaSIGBUb29sRGVzY3JpcHRvcmDjgIFgVG9vbEludm9jYXRpb25g44CBYFRvb2xCaW5kaW5nYOOAgWBUb29saW5nRXJyb3JgCiAgLSBgQHdhbGt6enovZ2J6MTg1Lm1idC9pZGVudGl0eWDjgIFgL2NhcGFiaWxpdHlg44CBYC9kaXNjb3Zlcnlg44CBYC9yZWdpc3RyeWAKLSAqKueOsOS7oyBNb29uQml0IOa4heWNleagvOW8jyoq77yaYG1vb24ubW9kYO+8iFRPTUzvvIkrIGBtb29uLnBrZ2DvvIjljIXmuIXljZXvvIzlkKsgYGltcG9ydGDvvInjgIJsZWdhY3kgYG1vb24ubW9kLmpzb25gL2Btb29uLnBrZy5qc29uYCDooqsgaGFyZC1yZWplY3TjgIIKLSAqKmltcG9ydCDlo7DmmI7lv4XpobvlnKggYG1vb24ucGtnYCDph4wqKu+8jOS4jeiDveWcqCBgLm1idGAg5rqQ5paH5Lu26YeM44CCCi0gKipzdHJ1Y3Qg5a2X5q616K+t5rOVKirvvJpgbmFtZSA6IFR5cGVg77yIKirml6AgYGxldGAqKu+8ieOAggotICoq5a2X56ym5Liy5o+S5YC8KirvvJpgXHt4fWDvvIgqKuS4jeaYryBgXCh4KWAqKu+8ieOAggotICoqNjQg5L2N5pW05pWwKirvvJpgSW50NjRg77yIKirkuI3mmK8gYExvbmdgKirvvInjgIIKLSAqKuepuiBNYXAqKu+8mmBNYXAoW10pYO+8iCoq5LiN5pivIGB7fWAqKuKAlOKAlOepuiBge31gIOacieatp+S5ie+8ieOAggotICoq5bqP5YiX57G75Z6LKirvvJrpu5jorqTnlKggYEFycmF5W1RdYO+8iGBbYSxiLGNdYCDlrZfpnaLph4/nm7TmjqXlj6/nlKjvvInvvIzkuI3mmK8gYEBsaXN0Lkxpc3Rg44CCCi0gKirmnprkuL4gYD09YCDmr5TovoMqKu+8mumcgCBgI2Rlcml2ZShFcSlg77yI5Y2VIGAjYO+8jOS4jeaYryBgIyNg77yJ44CCCi0gKipgI2Rlcml2ZShTaG93KWAg5bey5bqf5byDKiog4oaSIOeUqCBgI2Rlcml2ZShEZWJ1ZylgIOaIluaJi+WGmSBgU2hvd2AgaW1wbOOAggotICoq5qCH562+5Y+C5pWwKirvvJrlo7DmmI4gYGxhYmVsfiA6IFR5cGVg77yM6LCD55SoIGBsYWJlbH5gIOaIliBgbGFiZWw9dmFsdWVg77yIKirkuI3mmK8gYH5sYWJlbGAqKu+8ieOAggotICoqYFVuaXRgIOWAvOaYryBgKClgKirvvIjkuI3mmK8gYFVuaXRg77yJ44CCCi0gKipNYXAg6LWL5YC8KirvvJpgbWFwW2tleV0gPSB2YWx1ZWDvvIgqKuayoeaciSBgaW5zZXJ0YCDmlrnms5UqKu+8ieOAggotICoqYGd1YXJkYC9gdHlwZWAg5piv5YWz6ZSu5a2XKirvvJrkuI3og73kvZwgc3RydWN0IOWtl+auteWQje+8iOeUqCBgZ3VhcmRfZXhwcmAvYHB0eXBlYO+8ieOAggotICoq5rWL6K+V5paH5Lu2KirvvJrpu5Hnm5LmtYvor5XnlKggYEBwa2cuc3ltYm9sYCDliY3nvIDlvJXnlKjvvJtgdGVzdCAibmFtZSIgeyAuLi4gfWAg5Z2X44CCCgojIyDmqKHlnZfnu5PmnoTvvIjljZXljIXvvIzmoLnljIXvvIkKCmBgYAptb3QvCuKUnOKUgOKUgCBtb29uLm1vZCAgICAgICAgICAgICAgIyDmqKHlnZfmuIXljZXvvIhuYW1lPSBtb3QvbW90LCBpbXBvcnQgZ2J6MTg177yJCuKUnOKUgOKUgCBtb29uLnBrZyAgICAgICAgICAgICMg5YyF5riF5Y2V77yIaW1wb3J0IHdpcmUvYWlwL3Rvb2xpbmfvvIkK4pSc4pSA4pSAIG1vdC50b21sICAgICAgICAgICAgIyBNT1Qg6aG555uu5riF5Y2VICsg5a6J5YWo562W55WlCuKUnOKUgOKUgCB0eXBlcy5tYnQgICAgICAgICAgICMgVVJOL1BhcmFtVmFsdWUvVmVjMyDln7rnoYDnsbvlnosK4pSc4pSA4pSAIGJvZHltYXAubWJ0ICAgICAgICAgIyBCb2R5TWFwIOi6q+S9k+ivreS5ieaooeWeiwrilJzilIDilIAgcHJpbWl0aXZlLm1idCAgICAgICAjIFByaW1pdGl2ZSDliqjkvZzln7rlhYMK4pSc4pSA4pSAIG1hcHBpbmcubWJ0ICAgICAgICAgIyBNYXBwaW5nR3JhcGgg6Leo5b2i5oCB5pig5bCE5Zu+CuKUnOKUgOKUgCBzYWMubWJ0ICAgICAgICAgICAgICMgU0FDIOivreS5iei+vuaIkOadoeS7tgrilJzilIDilIAgZW52Lm1idCAgICAgICAgICAgICAjIEVudkZlZWRiYWNrIOeOr+Wig+WPjemmiArilJzilIDilIAgcmVhY3Rpb24ubWJ0ICAgICAgICAjIFJlYWN0aW9uUG9saWN5IOWPjeW6lOetlueVpQrilJzilIDilIAgc2FmZXR5Lm1idCAgICAgICAgICAjIFNhZmV0eVN0YXRlTWFjaGluZSDlronlhajnirbmgIHmnLrvvIhJMS1JNu+8iQrilJzilIDilIAgbmxpLm1idCAgICAgICAgICAgICAjIE5MSSDoh6rnhLbor63oqIDmjqXlj6MK4pSc4pSA4pSAIHRhcmdldHNlcS5tYnQgICAgICAgIyBUYXJnZXRBY3Rpb25TZXEvQm91bmRBY3Rpb25TZXEK4pSc4pSA4pSAIGRpYWcubWJ0ICAgICAgICAgICAgIyDor4rmlq3ns7vnu58gKyDpgIDlh7rnoIEK4pSc4pSA4pSAIGJpbmQubWJ0ICAgICAgICAgICAgIyDnu5HlrprlvJXmk47lm5vpmLbmrrUK4pSc4pSA4pSAIHJlYWN0aW9uX2VuZ2luZS5tYnQgIyDlj43lupTlvJXmk47lvqrnjq8K4pSc4pSA4pSAIHRocmVhdC5tYnQgICAgICAgICAgIyDmlLvlh7vpnaIgQVMxLUFTOCArIFNlY3VyaXR5RXJyb3IK4pSc4pSA4pSAIHN1cHBseS5tYnQgICAgICAgICAgIyBBUzEg5L6b5bqU6ZO+562+5ZCN6aqM6K+BCuKUnOKUgOKUgCBubGlfZ3VhcmQubWJ0ICAgICAgICMgQVMyIE5MSSDms6jlhaXpmLLmiqQK4pSc4pSA4pSAIGZlZWRiYWNrX2F1dGgubWJ0ICAgIyBBUzQg5Y+N6aaI5p2l5rqQ6K6k6K+B77yISTbvvIkK4pSc4pSA4pSAIG91dHB1dF9nYXRlLm1idCAgICAgIyBBUzUg6L6T5Ye66Zeo5o6n77yISTXvvIkK4pSc4pSA4pSAIGdiejE4NS5tYnQgICAgICAgICAgIyBHQi9aIDE4NSDoloTlsIHoo4XvvIhpbXBvcnQgZ2J6MTg1IOW6k++8iQrilJzilIDilIAgbW90X3Rlc3QubWJ0ICAgICAgICAjIDMxIOS4qua1i+ivlQrilJTilIDilIAgY21kL21haW4vbWFpbi5tYnQgICAjIG1vdGMgQ0xJIOWFpeWPowpgYGAKCiMjIOWuieWFqOaetuaehO+8iOS6lOWxgue6tea3semYsuW+oe+8iQoKfCDlsYIgfCDogYzotKMgfCDopobnm5YgfAp8LS0tLXwtLS0tLS18LS0tLS0tfAp8IEwxIOadpea6kOS/oeS7uyB8IOWMheetvuWQjemqjOivgeOAgVVSTiDouqvku73jgIHkvp3otZbplIHlrpogfCBBUzEgfAp8IEwyIOivreS5ieagoemqjCB8IOe7keWumuW8leaTjuWbm+mYtuautSArIFNBQyDmoKHpqowgfCBBUzLjgIFBUzcgfAp8IEwzIOi/kOihjOaXtuiupOivgSB8IOWPjemmiOadpea6kOiupOivgeOAgUFJUCDmtojmga/orqTor4EgfCBBUzPjgIFBUzTjgIFJNiB8CnwgTDQg6L6T5Ye66Zeo5o6nIHwgT3V0cHV0R2F0ZSDmiafooYzpl6jmjqcgfCBBUzXjgIFJNSB8CnwgTDUg5b2i5byP5YyW6aqM6K+BIHwgWjMg5LiN5Y+Y5byP6K+B5piOICsg5rWL6K+VIHwgQVM4IHwKCuWuieWFqOS4jeWPmOW8jyBJMS1JNiDlnKggYHNhZmV0eS5tYnRgIOaWreiogO+8jGBnYnoxODUubWJ0YCDorqkgYE1vdEVycm9yYCDlrp7njrAgZ2J6MTg1IOeahCBgUHJvdG9jb2xFcnJvcmAgdHJhaXTjgIIKCiMjIOmqjOivgeWRveS7pAoKYGBgYmFzaApleHBvcnQgUEFUSD0iJEhPTUUvLm1vb24vYmluOiRQQVRIIgpjZCAvd29ya3NwYWNlL21vdAptb29uIGNoZWNrICAgICAgIyDnsbvlnovmo4Dmn6XvvIgwIOmUmeivr++8iQptb29uIGJ1aWxkICAgICAgIyDmnoTlu7rvvIh3YXNtL25hdGl2ZS9qcy93YXNtLWdj77yJCm1vb24gdGVzdCAgICAgICAjIOi/kOihjOa1i+ivle+8iDMxIOS4qu+8iQptb29uIGZtdCAgICAgICAgIyDmoLzlvI/ljJYKbW9vbiBpZGUgZG9jICAgICMg5p+lIEFQSQpgYGAKCiMjIOS+nei1lgoKLSBgd2Fsa3p6ei9nYnoxODUubWJ0QDAuMi4yYCDigJTigJQgR0IvWiAxODUtMjAyNiDljY/orq7moIjvvIjnm7TmjqUgaW1wb3J077yM5LiN6YeN5YaZ77yJCi0gYG1vb25iaXRsYW5nL2FzeW5jQDAuMjIuOWAg4oCU4oCUIOW8guatpe+8iGdiejE4NSDkvKDpgJLkvp3otZbvvIkKLSBgY2MwNmIvbW9vbmNyeUAwLjk1LjBgIOKAlOKAlCBnYnoxODUg5Lyg6YCS5L6d6LWWCi0gUDAg5qC45b+D5LuF5L6d6LWWIGBtb29uYml0bGFuZy9jb3JlYCArIGdiejE4NSDlupMKCiMjIOW8gOWPkee6puadnwoKMS4gKirkuI3ph43lhpkgZ2J6MTg1KirvvJrmiYDmnIkgR0IvWiAxODUg6IO95Yqb77yIQUlQIGVudmVsb3Bl44CBUHJvdG9jb2xFcnJvcuOAgVRvb2xEZXNjcmlwdG9y44CBQUlD44CBQUNT44CBQURQ77yJ55u05o6lIGltcG9ydCBgQHdhbGt6enovZ2J6MTg1Lm1idC8qYCDlpI3nlKjjgIIKMi4gKirlronlhajkvJjlhYgqKu+8muWuieWFqOeKtuaAgeacuuaYr+WUr+S4gOadg+WogemXqOaOp++8m091dHB1dEdhdGUg5pivIEV4ZWN1dG9yIOW8uuWItuWJjee9ruOAggozLiAqKuWFvOWuueaJv+ivuioq77yaQ29yZVByaW1zIOWPquWinuS4jeWIoO+8m0JvZHlNYXAgY29yZSDoioLngrkgaWQg5LiN5Y+Y77ybU2NoZW1hIOaOpeWPo+WQkeWQjuWFvOWuueOAggo0LiAqKlAwIOWNleWMhSoq77ya5omA5pyJIGAubWJ0YCDlnKjmoLnljIXvvIjmtojpmaTot6jljIUgaW1wb3J0IOmjjumZqe+8ie+8m+eUn+S6p+eJiOaMieaooeWdl+aLhuWMheOAggo=
+---
+name: moonbit-mot
+description: Use this skill when developing the MOT (Motion Operation Type) universal action semantics specification in MoonBit — the embodied-execution standard implementation of GB/Z 185-2026. Covers the MOT MoonBit reference implementation: core type model (BodyMap/Primitive/Mapping/SAC), four-stage binding engine, six-state safety machine, reaction engine, five-layer intrusion prevention (supply chain/NLI injection/AIP/feedback/output gate), and direct reuse of the walkzzz/gbz185.mbt MoonBit library. Use when working in the mot/ MoonBit module, editing .mbt files under this package, running moon build/check/test on MOT, or following MOT's security-invariant and GB/Z 185 integration conventions.
+---
+
+# MOT MoonBit 开发 Skill
+
+本 Skill 是 MOT（Motion Operation Type）通用动作语义规范 MoonBit 参考实现的开发指南。MOT 是 GB/Z 185-2026 智能体国标在"具身执行"维度的标准实现。
+
+## 关键事实（已验证）
+
+- **gbz185 本身就是 MoonBit 库**：`walkzzz/gbz185.mbt@0.2.2`（mooncakes.io）。MOT **直接 import** 它的子包，**不自己写桥接层**。
+  - `@walkzzz/gbz185.mbt/wire` → `ProtocolError` trait、`JsonWireError`
+  - `@walkzzz/gbz185.mbt/aip` → `AipEnvelope`、`MessageKind`、`AipError`
+  - `@walkzzz/gbz185.mbt/tooling` → `ToolDescriptor`、`ToolInvocation`、`ToolBinding`、`ToolingError`
+  - `@walkzzz/gbz185.mbt/identity`、`/capability`、`/discovery`、`/registry`
+- **现代 MoonBit 清单格式**：`moon.mod`（TOML）+ `moon.pkg`（包清单，含 `import`）。legacy `moon.mod.json`/`moon.pkg.json` 被 hard-reject。
+- **import 声明必须在 `moon.pkg` 里**，不能在 `.mbt` 源文件里。
+- **struct 字段语法**：`name : Type`（**无 `let`**）。
+- **字符串插值**：`\{x}`（**不是 `\(x)`**）。
+- **64 位整数**：`Int64`（**不是 `Long`**）。
+- **空 Map**：`Map([])`（**不是 `{}`**——空 `{}` 有歧义）。
+- **序列类型**：默认用 `Array[T]`（`[a,b,c]` 字面量直接可用），不是 `@list.List`。
+- **枚举 `==` 比较**：需 `#derive(Eq)`（单 `#`，不是 `##`）。
+- **`#derive(Show)` 已废弃** → 用 `#derive(Debug)` 或手写 `Show` impl。
+- **标签参数**：声明 `label~ : Type`，调用 `label~` 或 `label=value`（**不是 `~label`**）。
+- **`Unit` 值是 `()`**（不是 `Unit`）。
+- **Map 赋值**：`map[key] = value`（**没有 `insert` 方法**）。
+- **`guard`/`type` 是关键字**：不能作 struct 字段名（用 `guard_expr`/`ptype`）。
+- **测试文件**：黑盒测试用 `@pkg.symbol` 前缀引用；`test "name" { ... }` 块。
+
+## 模块结构（单包，根包）
+
+```
+mot/
+├── moon.mod              # 模块清单（name= mot/mot, import gbz185）
+├── moon.pkg            # 包清单（import wire/aip/tooling）
+├── mot.toml            # MOT 项目清单 + 安全策略
+├── types.mbt           # URN/ParamValue/Vec3 基础类型
+├── bodymap.mbt         # BodyMap 身体语义模型
+├── primitive.mbt       # Primitive 动作基元
+├── mapping.mbt         # MappingGraph 跨形态映射图
+├── sac.mbt             # SAC 语义达成条件
+├── env.mbt             # EnvFeedback 环境反馈
+├── reaction.mbt        # ReactionPolicy 反应策略
+├── safety.mbt          # SafetyStateMachine 安全状态机（I1-I6）
+├── nli.mbt             # NLI 自然语言接口
+├── targetseq.mbt       # TargetActionSeq/BoundActionSeq
+├── diag.mbt            # 诊断系统 + 退出码
+├── bind.mbt            # 绑定引擎四阶段
+├── reaction_engine.mbt # 反应引擎循环
+├── threat.mbt          # 攻击面 AS1-AS8 + SecurityError
+├── supply.mbt          # AS1 供应链签名验证
+├── nli_guard.mbt       # AS2 NLI 注入防护
+├── feedback_auth.mbt   # AS4 反馈来源认证（I6）
+├── output_gate.mbt     # AS5 输出门控（I5）
+├── gbz185.mbt          # GB/Z 185 薄封装（import gbz185 库）
+├── mot_test.mbt        # 31 个测试
+└── cmd/main/main.mbt   # motc CLI 入口
+```
+
+## 安全架构（五层纵深防御）
+
+| 层 | 职责 | 覆盖 |
+|----|------|------|
+| L1 来源信任 | 包签名验证、URN 身份、依赖锁定 | AS1 |
+| L2 语义校验 | 绑定引擎四阶段 + SAC 校验 | AS2、AS7 |
+| L3 运行时认证 | 反馈来源认证、AIP 消息认证 | AS3、AS4、I6 |
+| L4 输出门控 | OutputGate 执行门控 | AS5、I5 |
+| L5 形式化验证 | Z3 不变式证明 + 测试 | AS8 |
+
+安全不变式 I1-I6 在 `safety.mbt` 断言，`gbz185.mbt` 让 `MotError` 实现 gbz185 的 `ProtocolError` trait。
+
+## 验证命令
+
+```bash
+export PATH="$HOME/.moon/bin:$PATH"
+cd /workspace/mot
+moon check      # 类型检查（0 错误）
+moon build      # 构建（wasm/native/js/wasm-gc）
+moon test       # 运行测试（31 个）
+moon fmt        # 格式化
+moon ide doc    # 查 API
+```
+
+## 依赖
+
+- `walkzzz/gbz185.mbt@0.2.2` —— GB/Z 185-2026 协议栈（直接 import，不重写）
+- `moonbitlang/async@0.22.9` —— 异步（gbz185 传递依赖）
+- `cc06b/mooncry@0.95.0` —— gbz185 传递依赖
+- P0 核心仅依赖 `moonbitlang/core` + gbz185 库
+
+## 开发约束
+
+1. **不重写 gbz185**：所有 GB/Z 185 能力（AIP envelope、ProtocolError、ToolDescriptor、AIC、ACS、ADP）直接 import `@walkzzz/gbz185.mbt/*` 复用。
+2. **安全优先**：安全状态机是唯一权威门控；OutputGate 是 Executor 强制前置。
+3. **兼容承诺**：CorePrims 只增不删；BodyMap core 节点 id 不变；Schema 接口向后兼容。
+4. **P0 单包**：所有 `.mbt` 在根包（消除跨包 import 风险）；生产版按模块拆包。

@@ -1,1 +1,54 @@
-Ly8gRW52RmVlZGJhY2sg4oCU4oCUIGVudmlyb25tZW50IGZlZWRiYWNrIG1lc3NhZ2UKLy8gU3RhbmRhcmRpemVkIHNlbnNvci9lbnZpcm9ubWVudCBmZWVkYmFjay4gc3RhbGVfYWZ0ZXJfbXMgaXMgbWFuZGF0b3J5IChzYWZldHkgY29uc3RyYWludCkuCgovLy98CiNkZXJpdmUoRXEpCnB1YihhbGwpIGVudW0gU2V2ZXJpdHkgewogIEluZm8KICBXYXJuCiAgRGFuZ2VyCiAgQ3JpdGljYWwKfQoKLy8vfAojZGVyaXZlKEVxKQpwdWIoYWxsKSBlbnVtIEZlZWRiYWNrS2luZCB7CiAgT2JzdGFjbGUKICBDb250YWN0TG9zcwogIENvbGxpc2lvbgogIFZpc3VhbERyaWZ0CiAgTG9jYWxRdWFsaXR5CiAgSm9pbnRBbm9tYWx5CiAgSHVtYW5Qcm94aW1pdHkKICBEb29yU3RhdGUKICBCYXR0ZXJ5CiAgSGVhcnRiZWF0CiAgU3RhbGUKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgRW52RmVlZGJhY2sgewogIHNvdXJjZSA6IFN0cmluZwogIGtpbmQgOiBGZWVkYmFja0tpbmQKICB0aW1lc3RhbXAgOiBJbnQ2NAogIHN0YWxlX2FmdGVyX21zIDogSW50NjQKICBzZXZlcml0eSA6IFNldmVyaXR5CiAgcGF5bG9hZCA6IEZlZWRiYWNrUGF5bG9hZAogIHNhY19yZWYgOiBTdHJpbmc/CiAgYWN0aW9uX3JlZiA6IFN0cmluZz8KfQoKLy8vfApwdWIoYWxsKSBlbnVtIEZlZWRiYWNrUGF5bG9hZCB7CiAgT2JzdGFjbGUoRG91YmxlLCBWZWMzLCBEb3VibGUsIFN0cmluZz8pCiAgQ29udGFjdExvc3MoRG91YmxlLCBEb3VibGUpCiAgQ29sbGlzaW9uKFN0cmluZywgVmVjMykKICBWaXN1YWxEcmlmdChTcGF0aWFsRGlzcGxhY2VtZW50KQogIExvY2FsUXVhbGl0eShEb3VibGUpCiAgSm9pbnRBbm9tYWx5KFN0cmluZywgRG91YmxlKQogIEh1bWFuUHJveGltaXR5KERvdWJsZSwgQXJyYXlbVmVjM10pCiAgRG9vclN0YXRlKERvdWJsZSkKICBCYXR0ZXJ5KERvdWJsZSkKICBIZWFydGJlYXQoSW50NjQsIEludDY0KQogIFN0YWxlKEludDY0KQp9Cg==
+// EnvFeedback —— environment feedback message
+// Standardized sensor/environment feedback. stale_after_ms is mandatory (safety constraint).
+
+///|
+#derive(Eq)
+pub(all) enum Severity {
+  Info
+  Warn
+  Danger
+  Critical
+}
+
+///|
+#derive(Eq)
+pub(all) enum FeedbackKind {
+  Obstacle
+  ContactLoss
+  Collision
+  VisualDrift
+  LocalQuality
+  JointAnomaly
+  HumanProximity
+  DoorState
+  Battery
+  Heartbeat
+  Stale
+}
+
+///|
+pub(all) struct EnvFeedback {
+  source : String
+  kind : FeedbackKind
+  timestamp : Int64
+  stale_after_ms : Int64
+  severity : Severity
+  payload : FeedbackPayload
+  sac_ref : String?
+  action_ref : String?
+}
+
+///|
+pub(all) enum FeedbackPayload {
+  Obstacle(Double, Vec3, Double, String?)
+  ContactLoss(Double, Double)
+  Collision(String, Vec3)
+  VisualDrift(SpatialDisplacement)
+  LocalQuality(Double)
+  JointAnomaly(String, Double)
+  HumanProximity(Double, Array[Vec3])
+  DoorState(Double)
+  Battery(Double)
+  Heartbeat(Int64, Int64)
+  Stale(Int64)
+}

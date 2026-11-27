@@ -1,1 +1,22 @@
-Ly8gVGFyZ2V0QWN0aW9uU2VxIOKAlOKAlCB0YXJnZXQgYWN0aW9uIHNlcXVlbmNlIChib3VuZCwgZXhlY3V0YWJsZSkKLy8gQm91bmRBY3Rpb24gY2FycmllcyBhbiBvcHRpb25hbCBTQUMgb3ZlcnJpZGUgYW5kIG9wdGlvbmFsIHJlYWN0aW9uIHBvbGljaWVzLgoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgQm91bmRBY3Rpb24gewogIHByaW1pdGl2ZSA6IFByaW1SZWYKICBwYXJhbXMgOiBQYXJhbU1hcAogIHNhY19vdmVycmlkZSA6IFNhY1NwZWM/CiAgcmVhY3Rpb25fcG9saWNpZXMgOiBBcnJheVtSZWFjdGlvblBvbGljeV0KfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgVGFyZ2V0QWN0aW9uU2VxIHsKICBhY3Rpb25zIDogQXJyYXlbQm91bmRBY3Rpb25dCiAgYm9keW1hcCA6IEJvZHlNYXBSZWYKICBtZXRhZGF0YSA6IE1hcFtTdHJpbmcsIFN0cmluZ10KfQoKLy8gQm91bmRBY3Rpb25TZXEg4oCU4oCUIHRoZSBleGVjdXRhYmxlIHJlc3VsdCBhZnRlciBiaW5kaW5nIChhbGlhcyBvZiBUYXJnZXRBY3Rpb25TZXEpLgoKLy8vfApwdWIgdHlwZSBCb3VuZEFjdGlvblNlcSA9IFRhcmdldEFjdGlvblNlcQo=
+// TargetActionSeq —— target action sequence (bound, executable)
+// BoundAction carries an optional SAC override and optional reaction policies.
+
+///|
+pub(all) struct BoundAction {
+  primitive : PrimRef
+  params : ParamMap
+  sac_override : SacSpec?
+  reaction_policies : Array[ReactionPolicy]
+}
+
+///|
+pub(all) struct TargetActionSeq {
+  actions : Array[BoundAction]
+  bodymap : BodyMapRef
+  metadata : Map[String, String]
+}
+
+// BoundActionSeq —— the executable result after binding (alias of TargetActionSeq).
+
+///|
+pub type BoundActionSeq = TargetActionSeq

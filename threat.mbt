@@ -1,1 +1,47 @@
-Ly8gU2VjdXJpdHkgdGhyZWF0IG1vZGVsICsgU2VjdXJpdHlFcnJvciAoc3BlYyDCpzQsIGF0dGFjayBzdXJmYWNlcyBBUzEtQVM4KQovLyBFcnJvciBjb2RlIHJhbmdlOiAxNzAwLTE3OTkgKG1vdC5zZWN1cml0eSAtPiBHQi9aIDE4NSBQcm90b2NvbEVycm9yKQoKLy8vfAojZGVyaXZlKERlYnVnKQpwdWIoYWxsKSBlbnVtIEF0dGFja1N1cmZhY2UgewogIEFTMV9TdXBwbHlDaGFpbgogIEFTMl9OTElJbmplY3Rpb24KICBBUzNfQUlQTWVzc2FnZQogIEFTNF9GZWVkYmFja0luamVjdGlvbgogIEFTNV9TYWZldHlCeXBhc3MKICBBUzZfVG9vbFJlZ2lzdHJhdGlvbgogIEFTN19UeXBlSW5qZWN0aW9uCiAgQVM4X0Zvcm1hbENvdmVyYWdlCn0KCi8vL3wKLy8vIFJlbmRlciB0aGUgYXR0YWNrLXN1cmZhY2UgdGFnIChBUzEuLkFTOCkgZm9yIGRpYWdub3N0aWNzIGFuZCBlcnJvciBtZXNzYWdlcy4KcHViIGltcGwgU2hvdyBmb3IgQXR0YWNrU3VyZmFjZSB3aXRoIGZuIG91dHB1dChzZWxmLCBsb2dnZXIpIHsKICBtYXRjaCBzZWxmIHsKICAgIEFTMV9TdXBwbHlDaGFpbiA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJBUzFfU3VwcGx5Q2hhaW4iKQogICAgQVMyX05MSUluamVjdGlvbiA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJBUzJfTkxJSW5qZWN0aW9uIikKICAgIEFTM19BSVBNZXNzYWdlID0+IGxvZ2dlci53cml0ZV9zdHJpbmcoIkFTM19BSVBNZXNzYWdlIikKICAgIEFTNF9GZWVkYmFja0luamVjdGlvbiA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJBUzRfRmVlZGJhY2tJbmplY3Rpb24iKQogICAgQVM1X1NhZmV0eUJ5cGFzcyA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJBUzVfU2FmZXR5QnlwYXNzIikKICAgIEFTNl9Ub29sUmVnaXN0cmF0aW9uID0+IGxvZ2dlci53cml0ZV9zdHJpbmcoIkFTNl9Ub29sUmVnaXN0cmF0aW9uIikKICAgIEFTN19UeXBlSW5qZWN0aW9uID0+IGxvZ2dlci53cml0ZV9zdHJpbmcoIkFTN19UeXBlSW5qZWN0aW9uIikKICAgIEFTOF9Gb3JtYWxDb3ZlcmFnZSA9PiBsb2dnZXIud3JpdGVfc3RyaW5nKCJBUzhfRm9ybWFsQ292ZXJhZ2UiKQogIH0KfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgU2VjdXJpdHlFcnJvciB7CiAgc3VyZmFjZSA6IEF0dGFja1N1cmZhY2UKICBjb2RlIDogSW50MzIKICBtZXNzYWdlIDogU3RyaW5nCiAgZGV0YWlsIDogU3RyaW5nPwp9CgovLy98CnB1YiBmbiBzZWNfZXJyb3IoCiAgc3VyZmFjZSA6IEF0dGFja1N1cmZhY2UsCiAgY29kZSA6IEludDMyLAogIG1lc3NhZ2UgOiBTdHJpbmcsCikgLT4gU2VjdXJpdHlFcnJvciB7CiAgeyBzdXJmYWNlLCBjb2RlLCBtZXNzYWdlLCBkZXRhaWw6IE5vbmUsIH0KfQo=
+// Security threat model + SecurityError (spec §4, attack surfaces AS1-AS8)
+// Error code range: 1700-1799 (mot.security -> GB/Z 185 ProtocolError)
+
+///|
+#derive(Debug)
+pub(all) enum AttackSurface {
+  AS1_SupplyChain
+  AS2_NLIInjection
+  AS3_AIPMessage
+  AS4_FeedbackInjection
+  AS5_SafetyBypass
+  AS6_ToolRegistration
+  AS7_TypeInjection
+  AS8_FormalCoverage
+}
+
+///|
+/// Render the attack-surface tag (AS1..AS8) for diagnostics and error messages.
+pub impl Show for AttackSurface with fn output(self, logger) {
+  match self {
+    AS1_SupplyChain => logger.write_string("AS1_SupplyChain")
+    AS2_NLIInjection => logger.write_string("AS2_NLIInjection")
+    AS3_AIPMessage => logger.write_string("AS3_AIPMessage")
+    AS4_FeedbackInjection => logger.write_string("AS4_FeedbackInjection")
+    AS5_SafetyBypass => logger.write_string("AS5_SafetyBypass")
+    AS6_ToolRegistration => logger.write_string("AS6_ToolRegistration")
+    AS7_TypeInjection => logger.write_string("AS7_TypeInjection")
+    AS8_FormalCoverage => logger.write_string("AS8_FormalCoverage")
+  }
+}
+
+///|
+pub(all) struct SecurityError {
+  surface : AttackSurface
+  code : Int32
+  message : String
+  detail : String?
+}
+
+///|
+pub fn sec_error(
+  surface : AttackSurface,
+  code : Int32,
+  message : String,
+) -> SecurityError {
+  { surface, code, message, detail: None, }
+}

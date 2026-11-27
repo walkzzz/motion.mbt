@@ -1,1 +1,67 @@
-Ly8gQVMxIHN1cHBseSBjaGFpbiBzZWN1cml0eSDigJTigJQgcGFja2FnZSBzaWduYXR1cmUgdmVyaWZpY2F0aW9uIChtb3RjIGluc3RhbGwpCi8vIFAwOiByZWdpc3RyeSB3aGl0ZWxpc3QgKyBhbGdvcml0aG0gY2hlY2suIFAxKyBpbnRlZ3JhdGVzIGNoZW56ZWhhb28vbW9vbl9ndWFyZCAoRWQyNTUxOSkuCi8vIG1vdC50b21sIGRlcGVuZGVuY3kgbG9jayBoYXNoZXMgYXJlIHBpbm5lZCAobm8gXi9+IHJhbmdlcykuCgovLy98CnB1YihhbGwpIHN0cnVjdCBQYWNrYWdlU2lnIHsKICBhbGdvcml0aG0gOiBTdHJpbmcKICBzaWduYXR1cmUgOiBBcnJheVtCeXRlXQogIHB1YmxpY19rZXkgOiBTdHJpbmcKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgUGFja2FnZVJlZiB7CiAgdXJuIDogU3RyaW5nCiAgdmVyc2lvbiA6IFN0cmluZwogIHNoYTI1NiA6IFN0cmluZwp9CgovLyBWZXJpZnkgYSBwYWNrYWdlIHNpZ25hdHVyZS4gUDA6IGxvY2staW50ZWdyaXR5ICsgYWxnb3JpdGhtIHdoaXRlbGlzdDsKLy8gUDErIGRvZXMgRWQyNTUxOSB2ZXJpZnkgdmlhIG1vb25fZ3VhcmQuCgovLy98CnB1YiBmbiB2ZXJpZnlfcGFja2FnZV9zaWduYXR1cmUoCiAgcGtnIDogUGFja2FnZVJlZiwKICBzaWcgOiBQYWNrYWdlU2lnLAopIC0+IFJlc3VsdFtVbml0LCBTZWN1cml0eUVycm9yXSB7CiAgaWYgcGtnLnNoYTI1NiA9PSAiIiB7CiAgICBFcnIoCiAgICAgIHNlY19lcnJvcigKICAgICAgICBBUzFfU3VwcGx5Q2hhaW4sCiAgICAgICAgMTcwMywKICAgICAgICAicGFja2FnZSBzaGEyNTYgbG9jayBtaXNzaW5nOiBce3BrZy51cm59IiwKICAgICAgKSwKICAgICkKICB9IGVsc2UgaWYgc2lnLmFsZ29yaXRobSA9PSAiZWQyNTUxOSIgJiYgc2lnLnB1YmxpY19rZXkgPT0gIiIgewogICAgRXJyKAogICAgICBzZWNfZXJyb3IoQVMxX1N1cHBseUNoYWluLCAxNzA0LCAiZWQyNTUxOSBzaWduYXR1cmUgcmVxdWlyZXMgcHVibGljIGtleSIpLAogICAgKQogIH0gZWxzZSB7CiAgICBtYXRjaCBzaWcuYWxnb3JpdGhtIHsKICAgICAgImVkMjU1MTkiID0+IE9rKCgpKQogICAgICAidHJ1c3RlZC1yZWdpc3RyeSIgPT4gT2soKCkpCiAgICAgIF8gPT4KICAgICAgICBFcnIoCiAgICAgICAgICBzZWNfZXJyb3IoCiAgICAgICAgICAgIEFTMV9TdXBwbHlDaGFpbiwKICAgICAgICAgICAgMTcwMSwKICAgICAgICAgICAgInVuc3VwcG9ydGVkIHNpZ25hdHVyZSBhbGdvcml0aG06IFx7c2lnLmFsZ29yaXRobX0iLAogICAgICAgICAgKSwKICAgICAgICApCiAgICB9CiAgfQp9CgovLyBEZXBlbmRlbmN5IGxvY2sgaGFzaCBjaGVjayAoQVMxKTogcGlubmVkIFNIQS0yNTYgbXVzdCBtYXRjaC4gTm8gcmFuZ2VzIGFsbG93ZWQuCgovLy98CnB1YiBmbiB2ZXJpZnlfbG9ja19oYXNoKAogIGRlY2xhcmVkIDogU3RyaW5nLAogIGFjdHVhbCA6IFN0cmluZywKKSAtPiBSZXN1bHRbVW5pdCwgU2VjdXJpdHlFcnJvcl0gewogIGlmIGRlY2xhcmVkID09IGFjdHVhbCB7CiAgICBPaygoKSkKICB9IGVsc2UgewogICAgRXJyKHNlY19lcnJvcihBUzFfU3VwcGx5Q2hhaW4sIDE3MDIsICJkZXBlbmRlbmN5IGxvY2sgaGFzaCBtaXNtYXRjaCIpKQogIH0KfQo=
+// AS1 supply chain security —— package signature verification (motc install)
+// P0: registry whitelist + algorithm check. P1+ integrates chenzehaoo/moon_guard (Ed25519).
+// mot.toml dependency lock hashes are pinned (no ^/~ ranges).
+
+///|
+pub(all) struct PackageSig {
+  algorithm : String
+  signature : Array[Byte]
+  public_key : String
+}
+
+///|
+pub(all) struct PackageRef {
+  urn : String
+  version : String
+  sha256 : String
+}
+
+// Verify a package signature. P0: lock-integrity + algorithm whitelist;
+// P1+ does Ed25519 verify via moon_guard.
+
+///|
+pub fn verify_package_signature(
+  pkg : PackageRef,
+  sig : PackageSig,
+) -> Result[Unit, SecurityError] {
+  if pkg.sha256 == "" {
+    Err(
+      sec_error(
+        AS1_SupplyChain,
+        1703,
+        "package sha256 lock missing: \{pkg.urn}",
+      ),
+    )
+  } else if sig.algorithm == "ed25519" && sig.public_key == "" {
+    Err(
+      sec_error(AS1_SupplyChain, 1704, "ed25519 signature requires public key"),
+    )
+  } else {
+    match sig.algorithm {
+      "ed25519" => Ok(())
+      "trusted-registry" => Ok(())
+      _ =>
+        Err(
+          sec_error(
+            AS1_SupplyChain,
+            1701,
+            "unsupported signature algorithm: \{sig.algorithm}",
+          ),
+        )
+    }
+  }
+}
+
+// Dependency lock hash check (AS1): pinned SHA-256 must match. No ranges allowed.
+
+///|
+pub fn verify_lock_hash(
+  declared : String,
+  actual : String,
+) -> Result[Unit, SecurityError] {
+  if declared == actual {
+    Ok(())
+  } else {
+    Err(sec_error(AS1_SupplyChain, 1702, "dependency lock hash mismatch"))
+  }
+}

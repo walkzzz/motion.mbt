@@ -1,1 +1,66 @@
-Ly8gTU9UIGNvcmUgcHJpbWl0aXZlIHR5cGVzCi8vIExhbmd1YWdlLWFnbm9zdGljIHR5cGVzIGV4cHJlc3NlZCBpbiBNb29uQml0LiBQMCBjb3JlIGRlcGVuZHMgb25seSBvbiBtb29uYml0bGFuZy9jb3JlLgovLyBVUk4gZm9ybWF0OiAidXJuOm1vdDp7Y2F0ZWdvcnl9OntuYW1lfTp7dmVyc2lvbn0iCgovLy98CnB1YiB0eXBlIFVSTiA9IFN0cmluZwoKLy8vfApwdWIgdHlwZSBCb2R5TWFwUmVmID0gVVJOCgovLy98CnB1YiB0eXBlIFByaW1SZWYgPSBVUk4KCi8vL3wKcHViIHR5cGUgTWFwcGluZ1JlZiA9IFVSTgoKLy8vfApwdWIgdHlwZSBCb2R5UGFydFJlZiA9IFN0cmluZwoKLy8gUGFyYW1ldGVyIHZhbHVlIChwb2x5bW9ycGhpYykuIE1pcnJvcnMgdGhlIFRTLXN0eWxlIFBhcmFtVmFsdWUgaW4gdGhlIHNwZWMuCgovLy98CnB1YihhbGwpIGVudW0gUGFyYW1WYWx1ZSB7CiAgUEludChJbnQzMikKICBQRmxvYXQoRG91YmxlKQogIFBCb29sKEJvb2wpCiAgUFN0cmluZyhTdHJpbmcpCiAgUERpcmVjdGlvbihWZWMzKQogIFBFbnVtKFN0cmluZywgQXJyYXlbU3RyaW5nXSkKICBQUmFuZ2UoRG91YmxlLCBEb3VibGUsIFN0cmluZykKfQoKLy8vfApwdWIgdHlwZSBQYXJhbU1hcCA9IE1hcFtTdHJpbmcsIFBhcmFtVmFsdWVdCgovLyBQYXJhbWV0ZXIgdHlwZSBkaXNjcmltaW5hdG9yIChtaXJyb3JzIFBhcmFtVmFsdWUgdmFyaWFudHMpIGZvciBQYXJhbVNwZWMudHlwZS4KCi8vL3wKI2Rlcml2ZShFcSkKcHViKGFsbCkgZW51bSBQYXJhbVR5cGUgewogIFBJbnRUeXBlCiAgUEZsb2F0VHlwZQogIFBCb29sVHlwZQogIFBTdHJpbmdUeXBlCiAgUERpcmVjdGlvblR5cGUKICBQRW51bVR5cGUKICBQUmFuZ2VUeXBlCn0KCi8vIFNwYXRpYWwgdHlwZXMKCi8vL3wKcHViKGFsbCkgc3RydWN0IFZlYzMgewogIHggOiBEb3VibGUKICB5IDogRG91YmxlCiAgeiA6IERvdWJsZQp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBTcGF0aWFsRGlzcGxhY2VtZW50IHsKICB0cmFuc2xhdGlvbiA6IFZlYzMKICByb3RhdGlvbiA6IFZlYzMKfQoKLy8vfApwdWIgdHlwZSBTdXBwb3J0UGF0dGVybiA9IEFycmF5W0JvZHlQYXJ0UmVmXQo=
+// MOT core primitive types
+// Language-agnostic types expressed in MoonBit. P0 core depends only on moonbitlang/core.
+// URN format: "urn:mot:{category}:{name}:{version}"
+
+///|
+pub type URN = String
+
+///|
+pub type BodyMapRef = URN
+
+///|
+pub type PrimRef = URN
+
+///|
+pub type MappingRef = URN
+
+///|
+pub type BodyPartRef = String
+
+// Parameter value (polymorphic). Mirrors the TS-style ParamValue in the spec.
+
+///|
+pub(all) enum ParamValue {
+  PInt(Int32)
+  PFloat(Double)
+  PBool(Bool)
+  PString(String)
+  PDirection(Vec3)
+  PEnum(String, Array[String])
+  PRange(Double, Double, String)
+}
+
+///|
+pub type ParamMap = Map[String, ParamValue]
+
+// Parameter type discriminator (mirrors ParamValue variants) for ParamSpec.type.
+
+///|
+#derive(Eq)
+pub(all) enum ParamType {
+  PIntType
+  PFloatType
+  PBoolType
+  PStringType
+  PDirectionType
+  PEnumType
+  PRangeType
+}
+
+// Spatial types
+
+///|
+pub(all) struct Vec3 {
+  x : Double
+  y : Double
+  z : Double
+}
+
+///|
+pub(all) struct SpatialDisplacement {
+  translation : Vec3
+  rotation : Vec3
+}
+
+///|
+pub type SupportPattern = Array[BodyPartRef]

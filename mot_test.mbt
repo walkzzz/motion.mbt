@@ -1,1 +1,695 @@
-Ly8gTU9UIHRlc3Qgc3VpdGUg4oCU4oCUIGNvdmVycyBjb3JlIG1vZHVsZXM6IHNhZmV0eSBzdGF0ZSBtYWNoaW5lLCBiaW5kaW5nIGVuZ2luZSwKLy8gcmVhY3Rpb24gZW5naW5lLCBzZWN1cml0eSBsYXllciwgZGlhZ25vc3RpYyBzeXN0ZW0sIGdiejE4NSBpbnRlZ3JhdGlvbi4KLy8gUnVuIHdpdGg6IG1vb24gdGVzdAovLwovLyBJbiBibGFjay1ib3ggdGVzdCBmaWxlcywgcGFja2FnZSBzeW1ib2xzIGFyZSByZWZlcmVuY2VkIHZpYSB0aGUgQG1vdCBwcmVmaXguCgovLy98CnRlc3QgInNhZmV0eSBzdGF0ZSBtYWNoaW5lOiBpbml0aWFsIHN0YXRlIGlzIFNlbGZ0ZXN0IiB7CiAgbGV0IHNtID0gQG1vdC5uZXdfc3RhdGVtYWNoaW5lKCkKICBtYXRjaCBAbW90LnNtX2N1cnJlbnQoc20pIHsKICAgIEBtb3QuU2FmZXR5U3RhdGU6OlNlbGZ0ZXN0ID0+IGFzc2VydF90cnVlKHRydWUpCiAgICBfID0+IGFzc2VydF90cnVlKGZhbHNlKQogIH0KfQoKLy8vfAp0ZXN0ICJzYWZldHkgc3RhdGUgbWFjaGluZTogUmVzZXQgZnJvbSBTZWxmdGVzdCAtPiBJZGxlIChJMikiIHsKICBsZXQgc20gPSBAbW90Lm5ld19zdGF0ZW1hY2hpbmUoKQogIGxldCByID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlJlc2V0KQogIGFzc2VydF90cnVlKHIuYWxsb3dlZCkKICBtYXRjaCByLnRvIHsKICAgIEBtb3QuU2FmZXR5U3RhdGU6OklkbGUgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIF8gPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgInNhZmV0eSBzdGF0ZSBtYWNoaW5lOiBUYXNrU3RhcnQgZnJvbSBJZGxlIC0+IEV4ZWN1dGluZyIgewogIGxldCBzbSA9IEBtb3QubmV3X3N0YXRlbWFjaGluZSgpCiAgbGV0IF8gPSBAbW90LnRyYW5zaXRpb24oc20sIEBtb3QuU3RhdGVFdmVudDo6UmVzZXQpCiAgbGV0IHIgPSBAbW90LnRyYW5zaXRpb24oc20sIEBtb3QuU3RhdGVFdmVudDo6VGFza1N0YXJ0KQogIGFzc2VydF90cnVlKHIuYWxsb3dlZCkKICBtYXRjaCByLnRvIHsKICAgIEBtb3QuU2FmZXR5U3RhdGU6OkV4ZWN1dGluZyA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgXyA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAic2FmZXR5IHN0YXRlIG1hY2hpbmU6IGlzX2FjdGlvbl9hbGxvd2VkIHRydWUgb25seSBpbiBFeGVjdXRpbmcgKEk1KSIgewogIGxldCBzbSA9IEBtb3QubmV3X3N0YXRlbWFjaGluZSgpCiAgYXNzZXJ0X2ZhbHNlKEBtb3QuaXNfYWN0aW9uX2FsbG93ZWQoc20sICJ3YWxrIikpCiAgbGV0IF8gPSBAbW90LnRyYW5zaXRpb24oc20sIEBtb3QuU3RhdGVFdmVudDo6UmVzZXQpCiAgYXNzZXJ0X2ZhbHNlKEBtb3QuaXNfYWN0aW9uX2FsbG93ZWQoc20sICJ3YWxrIikpCiAgbGV0IF8gPSBAbW90LnRyYW5zaXRpb24oc20sIEBtb3QuU3RhdGVFdmVudDo6VGFza1N0YXJ0KQogIGFzc2VydF90cnVlKEBtb3QuaXNfYWN0aW9uX2FsbG93ZWQoc20sICJ3YWxrIikpCn0KCi8vL3wKdGVzdCAic2FmZXR5IHN0YXRlIG1hY2hpbmU6IGdhdGVfY2xvc2VkIHRydWUgd2hlbiBub24tRXhlY3V0aW5nIChJNCkiIHsKICBsZXQgc20gPSBAbW90Lm5ld19zdGF0ZW1hY2hpbmUoKQogIGFzc2VydF90cnVlKEBtb3QuZ2F0ZV9jbG9zZWQoc20pKQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlJlc2V0KQogIGFzc2VydF90cnVlKEBtb3QuZ2F0ZV9jbG9zZWQoc20pKQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlRhc2tTdGFydCkKICBhc3NlcnRfZmFsc2UoQG1vdC5nYXRlX2Nsb3NlZChzbSkpCn0KCi8vL3wKdGVzdCAic2FmZXR5IHN0YXRlIG1hY2hpbmU6IFNhZmV0eUV2ZW50IHByZWVtcHRzIHRvIFNhZmVIb2xkIChJMSkiIHsKICBsZXQgc20gPSBAbW90Lm5ld19zdGF0ZW1hY2hpbmUoKQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlJlc2V0KQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlRhc2tTdGFydCkKICBsZXQgciA9IEBtb3QudHJhbnNpdGlvbigKICAgIHNtLAogICAgQG1vdC5TdGF0ZUV2ZW50OjpTYWZldHkoQG1vdC5TYWZldHlFdmVudDo6RVN0b3BQcmVzc2VkKSwKICApCiAgYXNzZXJ0X3RydWUoci5hbGxvd2VkKQogIG1hdGNoIHIudG8gewogICAgQG1vdC5TYWZldHlTdGF0ZTo6U2FmZUhvbGQgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIF8gPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgImRpYWdub3N0aWM6IGV4aXRfY29kZV9vZiBlbXB0eSAtPiAwIChTdWNjZXNzKSIgewogIGFzc2VydF9lcShAbW90LmV4aXRfY29kZV9vZihbXSksIDApCn0KCi8vL3wKdGVzdCAiZGlhZ25vc3RpYzogZXhpdF9jb2RlX29mIHdpdGggZXJyb3IgLT4gMSIgewogIGxldCBkID0gQG1vdC5tYWtlX2Vycm9yKEBtb3QuRGlhZ25vc3RpY0NhdGVnb3J5OjpTeW50YXgsIDEwMDAsIFsieCJdLCAiZXJyIikKICBhc3NlcnRfZXEoQG1vdC5leGl0X2NvZGVfb2YoW2RdKSwgMSkKfQoKLy8vfAp0ZXN0ICJkaWFnbm9zdGljOiBleGl0X2NvZGVfb2Ygd2l0aCB3YXJuaW5nIG9ubHkgLT4gMiIgewogIGxldCBkID0gQG1vdC5tYWtlX3dhcm5pbmcoCiAgICBAbW90LkRpYWdub3N0aWNDYXRlZ29yeTo6U3ludGF4LAogICAgMTAwMCwKICAgIFsieCJdLAogICAgIndhcm4iLAogICkKICBhc3NlcnRfZXEoQG1vdC5leGl0X2NvZGVfb2YoW2RdKSwgMikKfQoKLy8vfAp0ZXN0ICJzdXBwbHk6IHZlcmlmeV9sb2NrX2hhc2ggbWF0Y2hpbmcgLT4gT2siIHsKICBtYXRjaCBAbW90LnZlcmlmeV9sb2NrX2hhc2goImFiYyIsICJhYmMiKSB7CiAgICBPayhfKSA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgRXJyKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogIH0KfQoKLy8vfAp0ZXN0ICJzdXBwbHk6IHZlcmlmeV9sb2NrX2hhc2ggbWlzbWF0Y2ggLT4gRXJyIChBUzEpIiB7CiAgbWF0Y2ggQG1vdC52ZXJpZnlfbG9ja19oYXNoKCJhYmMiLCAieHl6IikgewogICAgT2soXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgICBFcnIoZSkgPT4gYXNzZXJ0X2VxKGUuY29kZSwgMTcwMikKICB9Cn0KCi8vL3wKdGVzdCAic3VwcGx5OiB2ZXJpZnlfcGFja2FnZV9zaWduYXR1cmUgdW5zdXBwb3J0ZWQgYWxnbyAtPiBFcnIiIHsKICBsZXQgcGtnID0gQG1vdC5QYWNrYWdlUmVmOjp7CiAgICB1cm46ICJ1cm46bW90OnA6eDoxLjAiLAogICAgdmVyc2lvbjogIjEuMCIsCiAgICBzaGEyNTY6ICJhYSIsCiAgfQogIGxldCBzaWcgPSBAbW90LlBhY2thZ2VTaWc6OnsKICAgIGFsZ29yaXRobTogImJvZ3VzIiwKICAgIHNpZ25hdHVyZTogW10sCiAgICBwdWJsaWNfa2V5OiAiayIsCiAgfQogIG1hdGNoIEBtb3QudmVyaWZ5X3BhY2thZ2Vfc2lnbmF0dXJlKHBrZywgc2lnKSB7CiAgICBPayhfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICAgIEVycihlKSA9PiBhc3NlcnRfZXEoZS5jb2RlLCAxNzAxKQogIH0KfQoKLy8vfAp0ZXN0ICJzdXBwbHk6IHZlcmlmeV9wYWNrYWdlX3NpZ25hdHVyZSB0cnVzdGVkLXJlZ2lzdHJ5IC0+IE9rIiB7CiAgbGV0IHBrZyA9IEBtb3QuUGFja2FnZVJlZjo6ewogICAgdXJuOiAidXJuOm1vdDpwOng6MS4wIiwKICAgIHZlcnNpb246ICIxLjAiLAogICAgc2hhMjU2OiAiYWEiLAogIH0KICBsZXQgc2lnID0gQG1vdC5QYWNrYWdlU2lnOjp7CiAgICBhbGdvcml0aG06ICJ0cnVzdGVkLXJlZ2lzdHJ5IiwKICAgIHNpZ25hdHVyZTogW10sCiAgICBwdWJsaWNfa2V5OiAiayIsCiAgfQogIG1hdGNoIEBtb3QudmVyaWZ5X3BhY2thZ2Vfc2lnbmF0dXJlKHBrZywgc2lnKSB7CiAgICBPayhfKSA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgRXJyKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogIH0KfQoKLy8vfAp0ZXN0ICJubGkgZ3VhcmQ6IHVuaW50ZXJwcmV0YWJsZSAtPiBFcnIgKEFTMikiIHsKICBtYXRjaCBAbW90Lmd1YXJkX25saV9yZXN1bHQoQG1vdC5OTElfUmVzdWx0OjpVbmludGVycHJldGFibGUoImdhcmJhZ2UiKSkgewogICAgT2soXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgICBFcnIoZSkgPT4gYXNzZXJ0X2VxKGUuY29kZSwgMTcxMCkKICB9Cn0KCi8vL3wKdGVzdCAibmxpIGd1YXJkOiBhbWJpZ3VvdXMgLT4gRXJyIChBUzIpIiB7CiAgbWF0Y2ggQG1vdC5ndWFyZF9ubGlfcmVzdWx0KEBtb3QuTkxJX1Jlc3VsdDo6QW1iaWd1b3VzKFtdLCBbXSkpIHsKICAgIE9rKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogICAgRXJyKGUpID0+IGFzc2VydF9lcShlLmNvZGUsIDE3MTEpCiAgfQp9CgovLy98CnRlc3QgIm5saSBndWFyZDogZGFuZ2Vyb3VzIHByaW1pdGl2ZSAtPiBFcnIgKEFTMikiIHsKICBsZXQgc2VxIDogQG1vdC5UYXJnZXRBY3Rpb25TZXEgPSB7CiAgICBhY3Rpb25zOiBbCiAgICAgIHsKICAgICAgICBwcmltaXRpdmU6ICJ1cm46bW90OnByaW06YWJvcnQ6MS4wIiwKICAgICAgICBwYXJhbXM6IE1hcChbXSksCiAgICAgICAgc2FjX292ZXJyaWRlOiBOb25lLAogICAgICAgIHJlYWN0aW9uX3BvbGljaWVzOiBbXSwKICAgICAgfSwKICAgIF0sCiAgICBib2R5bWFwOiAidXJuOm1vdDpib2R5bWFwOmh1bWFuOjEuMCIsCiAgICBtZXRhZGF0YTogTWFwKFtdKSwKICB9CiAgbWF0Y2ggQG1vdC5ndWFyZF9ubGlfcmVzdWx0KEBtb3QuTkxJX1Jlc3VsdDo6U3VjY2VzcyhzZXEpKSB7CiAgICBPayhfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICAgIEVycihlKSA9PiBhc3NlcnRfZXEoZS5jb2RlLCAxNzEyKQogIH0KfQoKLy8vfAp0ZXN0ICJubGkgZ3VhcmQ6IHNhZmUgcHJpbWl0aXZlIC0+IE9rIChBUzIpIiB7CiAgbGV0IHNlcSA6IEBtb3QuVGFyZ2V0QWN0aW9uU2VxID0gewogICAgYWN0aW9uczogWwogICAgICB7CiAgICAgICAgcHJpbWl0aXZlOiAidXJuOm1vdDpwcmltOndhbGs6MS4wIiwKICAgICAgICBwYXJhbXM6IE1hcChbXSksCiAgICAgICAgc2FjX292ZXJyaWRlOiBOb25lLAogICAgICAgIHJlYWN0aW9uX3BvbGljaWVzOiBbXSwKICAgICAgfSwKICAgIF0sCiAgICBib2R5bWFwOiAidXJuOm1vdDpib2R5bWFwOmh1bWFuOjEuMCIsCiAgICBtZXRhZGF0YTogTWFwKFtdKSwKICB9CiAgbWF0Y2ggQG1vdC5ndWFyZF9ubGlfcmVzdWx0KEBtb3QuTkxJX1Jlc3VsdDo6U3VjY2VzcyhzZXEpKSB7CiAgICBPayhzKSA9PiBhc3NlcnRfZXEocy5hY3Rpb25zLmxlbmd0aCgpLCAxKQogICAgRXJyKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogIH0KfQoKLy8vfAp0ZXN0ICJmZWVkYmFjayBhdXRoOiB1bnJlZ2lzdGVyZWQgc291cmNlIC0+IEVyciAoSTYpIiB7CiAgbGV0IHJlZyA9IEBtb3QubmV3X3NlbnNvcl9yZWdpc3RyeSgpCiAgbGV0IGZiIDogQG1vdC5FbnZGZWVkYmFjayA9IHsKICAgIHNvdXJjZTogInVybjptb3Q6c2Vuc29yOmdob3N0OjEuMCIsCiAgICBraW5kOiBAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGUsCiAgICB0aW1lc3RhbXA6IDBMLAogICAgc3RhbGVfYWZ0ZXJfbXM6IDEwMEwsCiAgICBzZXZlcml0eTogQG1vdC5TZXZlcml0eTo6V2FybiwKICAgIHBheWxvYWQ6IEBtb3QuRmVlZGJhY2tQYXlsb2FkOjpPYnN0YWNsZSgKICAgICAgMS4wLAogICAgICB7IHg6IDAuMCwgeTogMC4wLCB6OiAwLjAsIH0sCiAgICAgIDAuNSwKICAgICAgTm9uZSwKICAgICksCiAgICBzYWNfcmVmOiBOb25lLAogICAgYWN0aW9uX3JlZjogTm9uZSwKICB9CiAgbWF0Y2ggQG1vdC5hdXRoZW50aWNhdGVfZmVlZGJhY2socmVnLCBmYikgewogICAgT2soXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgICBFcnIoZSkgPT4gYXNzZXJ0X2VxKGUuY29kZSwgMTczMCkKICB9Cn0KCi8vL3wKdGVzdCAiZmVlZGJhY2sgYXV0aDogcmVnaXN0ZXJlZCBzb3VyY2UgLT4gT2sgKEk2KSIgewogIGxldCByZWcgPSBAbW90Lm5ld19zZW5zb3JfcmVnaXN0cnkoKQogIEBtb3QucmVnaXN0ZXJfc2Vuc29yKHJlZywgInVybjptb3Q6c2Vuc29yOmxpZGFyOjEuMCIpCiAgbGV0IGZiIDogQG1vdC5FbnZGZWVkYmFjayA9IHsKICAgIHNvdXJjZTogInVybjptb3Q6c2Vuc29yOmxpZGFyOjEuMCIsCiAgICBraW5kOiBAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGUsCiAgICB0aW1lc3RhbXA6IDBMLAogICAgc3RhbGVfYWZ0ZXJfbXM6IDEwMEwsCiAgICBzZXZlcml0eTogQG1vdC5TZXZlcml0eTo6V2FybiwKICAgIHBheWxvYWQ6IEBtb3QuRmVlZGJhY2tQYXlsb2FkOjpPYnN0YWNsZSgKICAgICAgMS4wLAogICAgICB7IHg6IDAuMCwgeTogMC4wLCB6OiAwLjAsIH0sCiAgICAgIDAuNSwKICAgICAgTm9uZSwKICAgICksCiAgICBzYWNfcmVmOiBOb25lLAogICAgYWN0aW9uX3JlZjogTm9uZSwKICB9CiAgbWF0Y2ggQG1vdC5hdXRoZW50aWNhdGVfZmVlZGJhY2socmVnLCBmYikgewogICAgT2soXykgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIEVycihfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAiZmVlZGJhY2sgYXV0aDogc3RhbGUgZmVlZGJhY2sgKHN0YWxlX2FmdGVyX21zPD0wKSAtPiBFcnIgKEk2KSIgewogIGxldCByZWcgPSBAbW90Lm5ld19zZW5zb3JfcmVnaXN0cnkoKQogIEBtb3QucmVnaXN0ZXJfc2Vuc29yKHJlZywgInVybjptb3Q6c2Vuc29yOmxpZGFyOjEuMCIpCiAgbGV0IGZiIDogQG1vdC5FbnZGZWVkYmFjayA9IHsKICAgIHNvdXJjZTogInVybjptb3Q6c2Vuc29yOmxpZGFyOjEuMCIsCiAgICBraW5kOiBAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGUsCiAgICB0aW1lc3RhbXA6IDBMLAogICAgc3RhbGVfYWZ0ZXJfbXM6IDBMLAogICAgc2V2ZXJpdHk6IEBtb3QuU2V2ZXJpdHk6Oldhcm4sCiAgICBwYXlsb2FkOiBAbW90LkZlZWRiYWNrUGF5bG9hZDo6T2JzdGFjbGUoCiAgICAgIDEuMCwKICAgICAgeyB4OiAwLjAsIHk6IDAuMCwgejogMC4wLCB9LAogICAgICAwLjUsCiAgICAgIE5vbmUsCiAgICApLAogICAgc2FjX3JlZjogTm9uZSwKICAgIGFjdGlvbl9yZWY6IE5vbmUsCiAgfQogIG1hdGNoIEBtb3QuYXV0aGVudGljYXRlX2ZlZWRiYWNrKHJlZywgZmIpIHsKICAgIE9rKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogICAgRXJyKGUpID0+IGFzc2VydF9lcShlLmNvZGUsIDE3MzEpCiAgfQp9CgovLy98CnRlc3QgIm91dHB1dCBnYXRlOiBub24tRXhlY3V0aW5nIC0+IGRvX2V4ZWMgZmFsc2UgKEk1KSIgewogIGxldCBzbSA9IEBtb3QubmV3X3N0YXRlbWFjaGluZSgpCiAgbGV0IGdhdGUgPSBAbW90Lm5ld19nYXRlKHNtKQogIGFzc2VydF9mYWxzZShAbW90LmRvX2V4ZWMoZ2F0ZSwgIndhbGsiKSkKICBhc3NlcnRfdHJ1ZShAbW90LmdhdGVfaXNfY2xvc2VkKGdhdGUpKQp9CgovLy98CnRlc3QgIm91dHB1dCBnYXRlOiBFeGVjdXRpbmcgLT4gZG9fZXhlYyB0cnVlIChJNSkiIHsKICBsZXQgc20gPSBAbW90Lm5ld19zdGF0ZW1hY2hpbmUoKQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlJlc2V0KQogIGxldCBfID0gQG1vdC50cmFuc2l0aW9uKHNtLCBAbW90LlN0YXRlRXZlbnQ6OlRhc2tTdGFydCkKICBsZXQgZ2F0ZSA9IEBtb3QubmV3X2dhdGUoc20pCiAgYXNzZXJ0X3RydWUoQG1vdC5kb19leGVjKGdhdGUsICJ3YWxrIikpCiAgYXNzZXJ0X2ZhbHNlKEBtb3QuZ2F0ZV9pc19jbG9zZWQoZ2F0ZSkpCn0KCi8vL3wKdGVzdCAiYmluZGluZyBlbmdpbmU6IGVtcHR5IHNlcSAtPiBPayIgewogIGxldCByZWcgPSBAbW90Lm5ld19yZWdpc3RyeSgpCiAgbGV0IHNlcSA6IEBtb3QuVGFyZ2V0QWN0aW9uU2VxID0gewogICAgYWN0aW9uczogW10sCiAgICBib2R5bWFwOiAidXJuOm1vdDpib2R5bWFwOmh1bWFuOjEuMCIsCiAgICBtZXRhZGF0YTogTWFwKFtdKSwKICB9CiAgbGV0IGdyYXBoIDogQG1vdC5NYXBwaW5nR3JhcGggPSB7IGVkZ2VzOiBbXSwgfQogIG1hdGNoIEBtb3QuYmluZChzZXEsIGdyYXBoLCByZWcpIHsKICAgIEBtb3QuQmluZFJlc3VsdDo6T2soXykgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIEBtb3QuQmluZFJlc3VsdDo6RXJyb3IoXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgImJpbmRpbmcgZW5naW5lOiB1bnJlZ2lzdGVyZWQgcHJpbWl0aXZlIC0+IEVyciAoU3RhZ2UgMSkiIHsKICBsZXQgcmVnID0gQG1vdC5uZXdfcmVnaXN0cnkoKQogIGxldCBzZXEgOiBAbW90LlRhcmdldEFjdGlvblNlcSA9IHsKICAgIGFjdGlvbnM6IFsKICAgICAgewogICAgICAgIHByaW1pdGl2ZTogInVybjptb3Q6cHJpbTpnaG9zdDoxLjAiLAogICAgICAgIHBhcmFtczogTWFwKFtdKSwKICAgICAgICBzYWNfb3ZlcnJpZGU6IE5vbmUsCiAgICAgICAgcmVhY3Rpb25fcG9saWNpZXM6IFtdLAogICAgICB9LAogICAgXSwKICAgIGJvZHltYXA6ICJ1cm46bW90OmJvZHltYXA6aHVtYW46MS4wIiwKICAgIG1ldGFkYXRhOiBNYXAoW10pLAogIH0KICBsZXQgZ3JhcGggOiBAbW90Lk1hcHBpbmdHcmFwaCA9IHsgZWRnZXM6IFtdLCB9CiAgbWF0Y2ggQG1vdC5iaW5kKHNlcSwgZ3JhcGgsIHJlZykgewogICAgQG1vdC5CaW5kUmVzdWx0OjpPayhfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICAgIEBtb3QuQmluZFJlc3VsdDo6RXJyb3IoZHMpID0+IGFzc2VydF9lcShkcy5sZW5ndGgoKSwgMSkKICB9Cn0KCi8vL3wKdGVzdCAiYmluZGluZyBlbmdpbmU6IHJlZ2lzdGVyZWQgcHJpbWl0aXZlIC0+IE9rIChTdGFnZSAxKSIgewogIGxldCByZWcgPSBAbW90Lm5ld19yZWdpc3RyeSgpCiAgbGV0IHAgOiBAbW90LlByaW1pdGl2ZSA9IHsKICAgIHVybjogInVybjptb3Q6cHJpbTp3YWxrOjEuMCIsCiAgICBuYW1lOiAid2FsayIsCiAgICBjYXRlZ29yeTogQG1vdC5QcmltQ2F0ZWdvcnk6OkxvYywKICAgIHBhcmFtczogW10sCiAgICBvY2N1cGFuY3k6IHsgcGFydGljaXBhbnRzOiBbXSwgZXhjbHVzaXZlOiBmYWxzZSwgfSwKICAgIHNhYzogeyBwcmVkaWNhdGVzOiBbXSwgY29tcGxldGVuZXNzOiBAbW90LkNvbXBsZXRlbmVzc0xldmVsOjpTdHJ1Y3R1cmFsLCB9LAogICAgbWV0YWRhdGE6IE1hcChbXSksCiAgfQogIEBtb3QucmVnaXN0ZXJfcHJpbWl0aXZlKHJlZywgcCkKICBsZXQgc2VxIDogQG1vdC5UYXJnZXRBY3Rpb25TZXEgPSB7CiAgICBhY3Rpb25zOiBbCiAgICAgIHsKICAgICAgICBwcmltaXRpdmU6ICJ1cm46bW90OnByaW06d2FsazoxLjAiLAogICAgICAgIHBhcmFtczogTWFwKFtdKSwKICAgICAgICBzYWNfb3ZlcnJpZGU6IE5vbmUsCiAgICAgICAgcmVhY3Rpb25fcG9saWNpZXM6IFtdLAogICAgICB9LAogICAgXSwKICAgIGJvZHltYXA6ICJ1cm46bW90OmJvZHltYXA6aHVtYW46MS4wIiwKICAgIG1ldGFkYXRhOiBNYXAoW10pLAogIH0KICBsZXQgZ3JhcGggOiBAbW90Lk1hcHBpbmdHcmFwaCA9IHsgZWRnZXM6IFtdLCB9CiAgbWF0Y2ggQG1vdC5iaW5kKHNlcSwgZ3JhcGgsIHJlZykgewogICAgQG1vdC5CaW5kUmVzdWx0OjpPayhiKSA9PiBhc3NlcnRfZXEoYi5hY3Rpb25zLmxlbmd0aCgpLCAxKQogICAgQG1vdC5CaW5kUmVzdWx0OjpFcnJvcihfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAicmVhY3Rpb24gZW5naW5lOiBubyBtYXRjaGluZyBwb2xpY3kgLT4gQ29udGludWUiIHsKICBsZXQgZmIgOiBAbW90LkVudkZlZWRiYWNrID0gewogICAgc291cmNlOiAidXJuOm1vdDpzZW5zb3I6bGlkYXI6MS4wIiwKICAgIGtpbmQ6IEBtb3QuRmVlZGJhY2tLaW5kOjpPYnN0YWNsZSwKICAgIHRpbWVzdGFtcDogMEwsCiAgICBzdGFsZV9hZnRlcl9tczogMTAwTCwKICAgIHNldmVyaXR5OiBAbW90LlNldmVyaXR5OjpXYXJuLAogICAgcGF5bG9hZDogQG1vdC5GZWVkYmFja1BheWxvYWQ6Ok9ic3RhY2xlKAogICAgICAxLjAsCiAgICAgIHsgeDogMC4wLCB5OiAwLjAsIHo6IDAuMCwgfSwKICAgICAgMC41LAogICAgICBOb25lLAogICAgKSwKICAgIHNhY19yZWY6IE5vbmUsCiAgICBhY3Rpb25fcmVmOiBOb25lLAogIH0KICBtYXRjaCBAbW90LnJlYWN0KFtdLCBmYikgewogICAgQG1vdC5SZWFjdGlvbkRlY2lzaW9uOjpDb250aW51ZSA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgXyA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAicmVhY3Rpb24gZW5naW5lOiBtYXRjaGluZyBvYnN0YWNsZSBwb2xpY3kgLT4gQXZvaWQiIHsKICBsZXQgZmIgOiBAbW90LkVudkZlZWRiYWNrID0gewogICAgc291cmNlOiAidXJuOm1vdDpzZW5zb3I6bGlkYXI6MS4wIiwKICAgIGtpbmQ6IEBtb3QuRmVlZGJhY2tLaW5kOjpPYnN0YWNsZSwKICAgIHRpbWVzdGFtcDogMEwsCiAgICBzdGFsZV9hZnRlcl9tczogMTAwTCwKICAgIHNldmVyaXR5OiBAbW90LlNldmVyaXR5OjpEYW5nZXIsCiAgICBwYXlsb2FkOiBAbW90LkZlZWRiYWNrUGF5bG9hZDo6T2JzdGFjbGUoCiAgICAgIDEuMCwKICAgICAgeyB4OiAwLjAsIHk6IDAuMCwgejogMC4wLCB9LAogICAgICAwLjUsCiAgICAgIE5vbmUsCiAgICApLAogICAgc2FjX3JlZjogTm9uZSwKICAgIGFjdGlvbl9yZWY6IE5vbmUsCiAgfQogIGxldCBwb2xpY3kgOiBAbW90LlJlYWN0aW9uUG9saWN5ID0gewogICAgaWQ6ICJwMSIsCiAgICBzY29wZTogQG1vdC5SZWFjdGlvblNjb3BlOjpQcmltaXRpdmUsCiAgICB0cmlnZ2VyOiB7CiAgICAgIGtpbmRzOiBbQG1vdC5GZWVkYmFja0tpbmQ6Ok9ic3RhY2xlXSwKICAgICAgc2V2ZXJpdHlfbWluOiBAbW90LlNldmVyaXR5OjpXYXJuLAogICAgICBzb3VyY2VfZmlsdGVyOiBOb25lLAogICAgfSwKICAgIGd1YXJkX2V4cHI6IE5vbmUsCiAgICBhY3Rpb246IEBtb3QuUmVhY3Rpb25BY3Rpb246OkF2b2lkKEBtb3QuQXZvaWRTdHJhdGVneTo6U3RvcEFuZFdhaXQoMTAwTCkpLAogICAgZXNjYWxhdGlvbjogTm9uZSwKICB9CiAgbWF0Y2ggQG1vdC5yZWFjdChbcG9saWN5XSwgZmIpIHsKICAgIEBtb3QuUmVhY3Rpb25EZWNpc2lvbjo6QXZvaWQoXykgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIF8gPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgInJlYWN0aW9uIGVuZ2luZTogZXNjYWxhdGlvbiBjaGFpbiBib3VuZGVkIC0+IEZhdWx0TG9ja2VkIChJMykiIHsKICBsZXQgZmIgOiBAbW90LkVudkZlZWRiYWNrID0gewogICAgc291cmNlOiAicyIsCiAgICBraW5kOiBAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGUsCiAgICB0aW1lc3RhbXA6IDBMLAogICAgc3RhbGVfYWZ0ZXJfbXM6IDEwMEwsCiAgICBzZXZlcml0eTogQG1vdC5TZXZlcml0eTo6RGFuZ2VyLAogICAgcGF5bG9hZDogQG1vdC5GZWVkYmFja1BheWxvYWQ6Ok9ic3RhY2xlKAogICAgICAxLjAsCiAgICAgIHsgeDogMC4wLCB5OiAwLjAsIHo6IDAuMCwgfSwKICAgICAgMC41LAogICAgICBOb25lLAogICAgKSwKICAgIHNhY19yZWY6IE5vbmUsCiAgICBhY3Rpb25fcmVmOiBOb25lLAogIH0KICBsZXQgZXNjNiA6IEBtb3QuUmVhY3Rpb25Qb2xpY3kgPSB7CiAgICBpZDogImVzYzYiLAogICAgc2NvcGU6IEBtb3QuUmVhY3Rpb25TY29wZTo6UHJpbWl0aXZlLAogICAgdHJpZ2dlcjogewogICAgICBraW5kczogW0Btb3QuRmVlZGJhY2tLaW5kOjpPYnN0YWNsZV0sCiAgICAgIHNldmVyaXR5X21pbjogQG1vdC5TZXZlcml0eTo6V2FybiwKICAgICAgc291cmNlX2ZpbHRlcjogTm9uZSwKICAgIH0sCiAgICBndWFyZF9leHByOiBOb25lLAogICAgYWN0aW9uOiBAbW90LlJlYWN0aW9uQWN0aW9uOjpDb250aW51ZSwKICAgIGVzY2FsYXRpb246IE5vbmUsCiAgfQogIGxldCBlc2M1IDogQG1vdC5SZWFjdGlvblBvbGljeSA9IHsKICAgIGlkOiAiZXNjNSIsCiAgICBzY29wZTogQG1vdC5SZWFjdGlvblNjb3BlOjpQcmltaXRpdmUsCiAgICB0cmlnZ2VyOiB7CiAgICAgIGtpbmRzOiBbQG1vdC5GZWVkYmFja0tpbmQ6Ok9ic3RhY2xlXSwKICAgICAgc2V2ZXJpdHlfbWluOiBAbW90LlNldmVyaXR5OjpXYXJuLAogICAgICBzb3VyY2VfZmlsdGVyOiBOb25lLAogICAgfSwKICAgIGd1YXJkX2V4cHI6IE5vbmUsCiAgICBhY3Rpb246IEBtb3QuUmVhY3Rpb25BY3Rpb246OkNvbnRpbnVlLAogICAgZXNjYWxhdGlvbjogU29tZShlc2M2KSwKICB9CiAgbGV0IGVzYzQgOiBAbW90LlJlYWN0aW9uUG9saWN5ID0gewogICAgaWQ6ICJlc2M0IiwKICAgIHNjb3BlOiBAbW90LlJlYWN0aW9uU2NvcGU6OlByaW1pdGl2ZSwKICAgIHRyaWdnZXI6IHsKICAgICAga2luZHM6IFtAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGVdLAogICAgICBzZXZlcml0eV9taW46IEBtb3QuU2V2ZXJpdHk6Oldhcm4sCiAgICAgIHNvdXJjZV9maWx0ZXI6IE5vbmUsCiAgICB9LAogICAgZ3VhcmRfZXhwcjogTm9uZSwKICAgIGFjdGlvbjogQG1vdC5SZWFjdGlvbkFjdGlvbjo6Q29udGludWUsCiAgICBlc2NhbGF0aW9uOiBTb21lKGVzYzUpLAogIH0KICBsZXQgZXNjMyA6IEBtb3QuUmVhY3Rpb25Qb2xpY3kgPSB7CiAgICBpZDogImVzYzMiLAogICAgc2NvcGU6IEBtb3QuUmVhY3Rpb25TY29wZTo6UHJpbWl0aXZlLAogICAgdHJpZ2dlcjogewogICAgICBraW5kczogW0Btb3QuRmVlZGJhY2tLaW5kOjpPYnN0YWNsZV0sCiAgICAgIHNldmVyaXR5X21pbjogQG1vdC5TZXZlcml0eTo6V2FybiwKICAgICAgc291cmNlX2ZpbHRlcjogTm9uZSwKICAgIH0sCiAgICBndWFyZF9leHByOiBOb25lLAogICAgYWN0aW9uOiBAbW90LlJlYWN0aW9uQWN0aW9uOjpDb250aW51ZSwKICAgIGVzY2FsYXRpb246IFNvbWUoZXNjNCksCiAgfQogIGxldCBlc2MyIDogQG1vdC5SZWFjdGlvblBvbGljeSA9IHsKICAgIGlkOiAiZXNjMiIsCiAgICBzY29wZTogQG1vdC5SZWFjdGlvblNjb3BlOjpQcmltaXRpdmUsCiAgICB0cmlnZ2VyOiB7CiAgICAgIGtpbmRzOiBbQG1vdC5GZWVkYmFja0tpbmQ6Ok9ic3RhY2xlXSwKICAgICAgc2V2ZXJpdHlfbWluOiBAbW90LlNldmVyaXR5OjpXYXJuLAogICAgICBzb3VyY2VfZmlsdGVyOiBOb25lLAogICAgfSwKICAgIGd1YXJkX2V4cHI6IE5vbmUsCiAgICBhY3Rpb246IEBtb3QuUmVhY3Rpb25BY3Rpb246OkNvbnRpbnVlLAogICAgZXNjYWxhdGlvbjogU29tZShlc2MzKSwKICB9CiAgbGV0IGVzYzEgOiBAbW90LlJlYWN0aW9uUG9saWN5ID0gewogICAgaWQ6ICJlc2MxIiwKICAgIHNjb3BlOiBAbW90LlJlYWN0aW9uU2NvcGU6OlByaW1pdGl2ZSwKICAgIHRyaWdnZXI6IHsKICAgICAga2luZHM6IFtAbW90LkZlZWRiYWNrS2luZDo6T2JzdGFjbGVdLAogICAgICBzZXZlcml0eV9taW46IEBtb3QuU2V2ZXJpdHk6Oldhcm4sCiAgICAgIHNvdXJjZV9maWx0ZXI6IE5vbmUsCiAgICB9LAogICAgZ3VhcmRfZXhwcjogTm9uZSwKICAgIGFjdGlvbjogQG1vdC5SZWFjdGlvbkFjdGlvbjo6Q29udGludWUsCiAgICBlc2NhbGF0aW9uOiBTb21lKGVzYzIpLAogIH0KICBsZXQgcm9vdCA6IEBtb3QuUmVhY3Rpb25Qb2xpY3kgPSB7CiAgICBpZDogInJvb3QiLAogICAgc2NvcGU6IEBtb3QuUmVhY3Rpb25TY29wZTo6UHJpbWl0aXZlLAogICAgdHJpZ2dlcjogewogICAgICBraW5kczogW0Btb3QuRmVlZGJhY2tLaW5kOjpPYnN0YWNsZV0sCiAgICAgIHNldmVyaXR5X21pbjogQG1vdC5TZXZlcml0eTo6V2FybiwKICAgICAgc291cmNlX2ZpbHRlcjogTm9uZSwKICAgIH0sCiAgICBndWFyZF9leHByOiBOb25lLAogICAgYWN0aW9uOiBAbW90LlJlYWN0aW9uQWN0aW9uOjpDb250aW51ZSwKICAgIGVzY2FsYXRpb246IFNvbWUoZXNjMSksCiAgfQogIG1hdGNoIEBtb3QucmVhY3QoW3Jvb3RdLCBmYikgewogICAgQG1vdC5SZWFjdGlvbkRlY2lzaW9uOjpGYXVsdExvY2tlZChfKSA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgXyA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAiZ2J6MTg1IGludGVncmF0aW9uOiBNb3RFcnJvciBpbXBsZW1lbnRzIFByb3RvY29sRXJyb3IiIHsKICBsZXQgZSA9IEBtb3QuTW90RXJyb3I6OlNlY3VyaXR5X2Vycm9yKCJ0ZXN0IikKICBhc3NlcnRfZXEoQHdpcmUuUHJvdG9jb2xFcnJvcjo6cGFydChlKSwgImdiejE4NS42IikKICBhc3NlcnRfZXEoQHdpcmUuUHJvdG9jb2xFcnJvcjo6Y29kZShlKSwgIk1PVC0xNzAwIikKICBhc3NlcnRfZXEoQHdpcmUuUHJvdG9jb2xFcnJvcjo6bWVzc2FnZShlKSwgInRlc3QiKQp9CgovLy98CnRlc3QgImdiejE4NSBpbnRlZ3JhdGlvbjogbW90X2VudmVsb3BlIGJ1aWxkcyBBaXBFbnZlbG9wZSIgewogIGxldCBlbnYgPSBAbW90Lm1vdF9lbnZlbG9wZSgKICAgICJ1cm46bW90OmE6MS4wIiwKICAgICJ1cm46bW90OmI6MS4wIiwKICAgIDVMLAogICAgQGFpcC5NZXNzYWdlS2luZDo6RXZlbnQsCiAgICBKc29uOjpudWxsKCksCiAgKQogIGFzc2VydF9lcShlbnYuc2VuZGVyX3VybiwgInVybjptb3Q6YToxLjAiKQogIGFzc2VydF9lcShlbnYuc2VxLCA1TCkKICBtYXRjaCBlbnYua2luZCB7CiAgICBAYWlwLk1lc3NhZ2VLaW5kOjpFdmVudCA9PiBhc3NlcnRfdHJ1ZSh0cnVlKQogICAgXyA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAiZ2J6MTg1IGludGVncmF0aW9uOiBtb3RfdG9vbF9kZXNjcmlwdG9yIGJ1aWxkcyBUb29sRGVzY3JpcHRvciIgewogIGxldCBkZXNjID0gQG1vdC5tb3RfdG9vbF9kZXNjcmlwdG9yKAogICAgImV4ZWN1dG9yLndhbGsiLAogICAgIndhbGsgZXhlY3V0b3IiLAogICAgSnNvbjo6bnVsbCgpLAogICAgQHRvb2xpbmcuVG9vbEJpbmRpbmc6Ok5hdGl2ZUJpbmRpbmcsCiAgKQogIGFzc2VydF9lcShkZXNjLm5hbWUsICJleGVjdXRvci53YWxrIikKfQoKLy8vfAp0ZXN0ICJiaW5kaW5nIGVuZ2luZTogY3ljbGljIG1hcHBpbmcgZ3JhcGggLT4gRXJyIChTdGFnZSAyKSIgewogIGxldCByZWcgPSBAbW90Lm5ld19yZWdpc3RyeSgpCiAgbGV0IHNlcSA6IEBtb3QuVGFyZ2V0QWN0aW9uU2VxID0gewogICAgYWN0aW9uczogW10sCiAgICBib2R5bWFwOiAidXJuOm1vdDpib2R5bWFwOmh1bWFuOjEuMCIsCiAgICBtZXRhZGF0YTogTWFwKFtdKSwKICB9CiAgbGV0IGdyYXBoIDogQG1vdC5NYXBwaW5nR3JhcGggPSB7CiAgICBlZGdlczogWwogICAgICB7CiAgICAgICAgc291cmNlOiAidXJuOm1vdDpwcmltOmE6MS4wIiwKICAgICAgICB0YXJnZXQ6ICJ1cm46bW90OnByaW06YjoxLjAiLAogICAgICAgIHRyYW5zZm9ybTogQG1vdC5NYXBwaW5nVHJhbnNmb3JtOjpEaXJlY3QsCiAgICAgICAgZmlkZWxpdHk6IEBtb3QuRmlkZWxpdHlMZXZlbDo6RXhhY3QsCiAgICAgICAgZmFsbGJhY2tfY2hhaW46IFtdLAogICAgICB9LAogICAgICB7CiAgICAgICAgc291cmNlOiAidXJuOm1vdDpwcmltOmI6MS4wIiwKICAgICAgICB0YXJnZXQ6ICJ1cm46bW90OnByaW06YToxLjAiLAogICAgICAgIHRyYW5zZm9ybTogQG1vdC5NYXBwaW5nVHJhbnNmb3JtOjpEaXJlY3QsCiAgICAgICAgZmlkZWxpdHk6IEBtb3QuRmlkZWxpdHlMZXZlbDo6RXhhY3QsCiAgICAgICAgZmFsbGJhY2tfY2hhaW46IFtdLAogICAgICB9LAogICAgXSwKICB9CiAgbWF0Y2ggQG1vdC5iaW5kKHNlcSwgZ3JhcGgsIHJlZykgewogICAgQG1vdC5CaW5kUmVzdWx0OjpFcnJvcihkcykgPT4gYXNzZXJ0X3RydWUoZHMubGVuZ3RoKCkgPiAwKQogICAgQG1vdC5CaW5kUmVzdWx0OjpPayhfKSA9PiBhc3NlcnRfdHJ1ZShmYWxzZSkKICB9Cn0KCi8vL3wKdGVzdCAiYmluZGluZyBlbmdpbmU6IGFjeWNsaWMgbWFwcGluZyBncmFwaCAtPiBPayAoU3RhZ2UgMikiIHsKICBsZXQgcmVnID0gQG1vdC5uZXdfcmVnaXN0cnkoKQogIGxldCBzZXEgOiBAbW90LlRhcmdldEFjdGlvblNlcSA9IHsKICAgIGFjdGlvbnM6IFtdLAogICAgYm9keW1hcDogInVybjptb3Q6Ym9keW1hcDpodW1hbjoxLjAiLAogICAgbWV0YWRhdGE6IE1hcChbXSksCiAgfQogIGxldCBncmFwaCA6IEBtb3QuTWFwcGluZ0dyYXBoID0gewogICAgZWRnZXM6IFsKICAgICAgewogICAgICAgIHNvdXJjZTogInVybjptb3Q6cHJpbTphOjEuMCIsCiAgICAgICAgdGFyZ2V0OiAidXJuOm1vdDpwcmltOmI6MS4wIiwKICAgICAgICB0cmFuc2Zvcm06IEBtb3QuTWFwcGluZ1RyYW5zZm9ybTo6RGlyZWN0LAogICAgICAgIGZpZGVsaXR5OiBAbW90LkZpZGVsaXR5TGV2ZWw6OkV4YWN0LAogICAgICAgIGZhbGxiYWNrX2NoYWluOiBbXSwKICAgICAgfSwKICAgICAgewogICAgICAgIHNvdXJjZTogInVybjptb3Q6cHJpbTpiOjEuMCIsCiAgICAgICAgdGFyZ2V0OiAidXJuOm1vdDpwcmltOmM6MS4wIiwKICAgICAgICB0cmFuc2Zvcm06IEBtb3QuTWFwcGluZ1RyYW5zZm9ybTo6RGlyZWN0LAogICAgICAgIGZpZGVsaXR5OiBAbW90LkZpZGVsaXR5TGV2ZWw6OkFwcHJveGltYXRlLAogICAgICAgIGZhbGxiYWNrX2NoYWluOiBbXSwKICAgICAgfSwKICAgIF0sCiAgfQogIG1hdGNoIEBtb3QuYmluZChzZXEsIGdyYXBoLCByZWcpIHsKICAgIEBtb3QuQmluZFJlc3VsdDo6T2soXykgPT4gYXNzZXJ0X3RydWUodHJ1ZSkKICAgIEBtb3QuQmluZFJlc3VsdDo6RXJyb3IoXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgImJpbmRpbmcgZW5naW5lOiBzZWxmLWxvb3AgbWFwcGluZyBlZGdlIC0+IEVyciAoU3RhZ2UgMikiIHsKICBsZXQgcmVnID0gQG1vdC5uZXdfcmVnaXN0cnkoKQogIGxldCBzZXEgOiBAbW90LlRhcmdldEFjdGlvblNlcSA9IHsKICAgIGFjdGlvbnM6IFtdLAogICAgYm9keW1hcDogInVybjptb3Q6Ym9keW1hcDpodW1hbjoxLjAiLAogICAgbWV0YWRhdGE6IE1hcChbXSksCiAgfQogIGxldCBncmFwaCA6IEBtb3QuTWFwcGluZ0dyYXBoID0gewogICAgZWRnZXM6IFsKICAgICAgewogICAgICAgIHNvdXJjZTogInVybjptb3Q6cHJpbTphOjEuMCIsCiAgICAgICAgdGFyZ2V0OiAidXJuOm1vdDpwcmltOmE6MS4wIiwKICAgICAgICB0cmFuc2Zvcm06IEBtb3QuTWFwcGluZ1RyYW5zZm9ybTo6RGlyZWN0LAogICAgICAgIGZpZGVsaXR5OiBAbW90LkZpZGVsaXR5TGV2ZWw6OkV4YWN0LAogICAgICAgIGZhbGxiYWNrX2NoYWluOiBbXSwKICAgICAgfSwKICAgIF0sCiAgfQogIG1hdGNoIEBtb3QuYmluZChzZXEsIGdyYXBoLCByZWcpIHsKICAgIEBtb3QuQmluZFJlc3VsdDo6RXJyb3IoZHMpID0+IGFzc2VydF9lcShkcy5sZW5ndGgoKSwgMSkKICAgIEBtb3QuQmluZFJlc3VsdDo6T2soXykgPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9CgovLy98CnRlc3QgInN1cHBseTogdmVyaWZ5X3BhY2thZ2Vfc2lnbmF0dXJlIG1pc3Npbmcgc2hhMjU2IC0+IEVyciAoQVMxKSIgewogIGxldCBwa2cgPSBAbW90LlBhY2thZ2VSZWY6OnsKICAgIHVybjogInVybjptb3Q6cDp4OjEuMCIsCiAgICB2ZXJzaW9uOiAiMS4wIiwKICAgIHNoYTI1NjogIiIsCiAgfQogIGxldCBzaWcgPSBAbW90LlBhY2thZ2VTaWc6OnsKICAgIGFsZ29yaXRobTogInRydXN0ZWQtcmVnaXN0cnkiLAogICAgc2lnbmF0dXJlOiBbXSwKICAgIHB1YmxpY19rZXk6ICJrIiwKICB9CiAgbWF0Y2ggQG1vdC52ZXJpZnlfcGFja2FnZV9zaWduYXR1cmUocGtnLCBzaWcpIHsKICAgIE9rKF8pID0+IGFzc2VydF90cnVlKGZhbHNlKQogICAgRXJyKGUpID0+IGFzc2VydF9lcShlLmNvZGUsIDE3MDMpCiAgfQp9CgovLy98CnRlc3QgInNhZmV0eTogZW1wdHkgYWN0aW9uIGNvbW1hbmQgcmVqZWN0ZWQgZXZlbiB3aGVuIEV4ZWN1dGluZyAoSTUpIiB7CiAgbGV0IHNtID0gQG1vdC5uZXdfc3RhdGVtYWNoaW5lKCkKICBsZXQgXyA9IEBtb3QudHJhbnNpdGlvbihzbSwgQG1vdC5TdGF0ZUV2ZW50OjpSZXNldCkKICBsZXQgXyA9IEBtb3QudHJhbnNpdGlvbihzbSwgQG1vdC5TdGF0ZUV2ZW50OjpUYXNrU3RhcnQpCiAgYXNzZXJ0X2ZhbHNlKEBtb3QuaXNfYWN0aW9uX2FsbG93ZWQoc20sICIiKSkKfQoKLy8vfAp0ZXN0ICJkaWFnOiBpbnRlcm5hbF9lcnJvcl9jb2RlIC0+IDMiIHsKICBhc3NlcnRfZXEoQG1vdC5pbnRlcm5hbF9lcnJvcl9jb2RlKCksIDMpCn0KCi8vL3wKdGVzdCAidGhyZWF0OiBzZWN1cml0eV9lcnJvcl90b19tb3QgbWVzc2FnZSBpbmNsdWRlcyBzdXJmYWNlIHRhZyIgewogIGxldCBlID0gQG1vdC5zZWNfZXJyb3IoQG1vdC5BdHRhY2tTdXJmYWNlOjpBUzFfU3VwcGx5Q2hhaW4sIDE3MDEsICJiYWQiKQogIG1hdGNoIEBtb3Quc2VjdXJpdHlfZXJyb3JfdG9fbW90KGUpIHsKICAgIEBtb3QuTW90RXJyb3I6OlNlY3VyaXR5X2Vycm9yKG1zZykgPT4KICAgICAgYXNzZXJ0X3RydWUobXNnLmNvbnRhaW5zKCJBUzFfU3VwcGx5Q2hhaW4iKSkKICAgIF8gPT4gYXNzZXJ0X3RydWUoZmFsc2UpCiAgfQp9Cg==
+// MOT test suite —— covers core modules: safety state machine, binding engine,
+// reaction engine, security layer, diagnostic system, gbz185 integration.
+// Run with: moon test
+//
+// In black-box test files, package symbols are referenced via the @mot prefix.
+
+///|
+test "safety state machine: initial state is Selftest" {
+  let sm = @mot.new_statemachine()
+  match @mot.sm_current(sm) {
+    @mot.SafetyState::Selftest => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "safety state machine: Reset from Selftest -> Idle (I2)" {
+  let sm = @mot.new_statemachine()
+  let r = @mot.transition(sm, @mot.StateEvent::Reset)
+  assert_true(r.allowed)
+  match r.to {
+    @mot.SafetyState::Idle => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "safety state machine: TaskStart from Idle -> Executing" {
+  let sm = @mot.new_statemachine()
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  let r = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  assert_true(r.allowed)
+  match r.to {
+    @mot.SafetyState::Executing => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "safety state machine: is_action_allowed true only in Executing (I5)" {
+  let sm = @mot.new_statemachine()
+  assert_false(@mot.is_action_allowed(sm, "walk"))
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  assert_false(@mot.is_action_allowed(sm, "walk"))
+  let _ = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  assert_true(@mot.is_action_allowed(sm, "walk"))
+}
+
+///|
+test "safety state machine: gate_closed true when non-Executing (I4)" {
+  let sm = @mot.new_statemachine()
+  assert_true(@mot.gate_closed(sm))
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  assert_true(@mot.gate_closed(sm))
+  let _ = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  assert_false(@mot.gate_closed(sm))
+}
+
+///|
+test "safety state machine: SafetyEvent preempts to SafeHold (I1)" {
+  let sm = @mot.new_statemachine()
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  let _ = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  let r = @mot.transition(
+    sm,
+    @mot.StateEvent::Safety(@mot.SafetyEvent::EStopPressed),
+  )
+  assert_true(r.allowed)
+  match r.to {
+    @mot.SafetyState::SafeHold => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "diagnostic: exit_code_of empty -> 0 (Success)" {
+  assert_eq(@mot.exit_code_of([]), 0)
+}
+
+///|
+test "diagnostic: exit_code_of with error -> 1" {
+  let d = @mot.make_error(@mot.DiagnosticCategory::Syntax, 1000, ["x"], "err")
+  assert_eq(@mot.exit_code_of([d]), 1)
+}
+
+///|
+test "diagnostic: exit_code_of with warning only -> 2" {
+  let d = @mot.make_warning(
+    @mot.DiagnosticCategory::Syntax,
+    1000,
+    ["x"],
+    "warn",
+  )
+  assert_eq(@mot.exit_code_of([d]), 2)
+}
+
+///|
+test "supply: verify_lock_hash matching -> Ok" {
+  match @mot.verify_lock_hash("abc", "abc") {
+    Ok(_) => assert_true(true)
+    Err(_) => assert_true(false)
+  }
+}
+
+///|
+test "supply: verify_lock_hash mismatch -> Err (AS1)" {
+  match @mot.verify_lock_hash("abc", "xyz") {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1702)
+  }
+}
+
+///|
+test "supply: verify_package_signature unsupported algo -> Err" {
+  let pkg = @mot.PackageRef::{
+    urn: "urn:mot:p:x:1.0",
+    version: "1.0",
+    sha256: "aa",
+  }
+  let sig = @mot.PackageSig::{
+    algorithm: "bogus",
+    signature: [],
+    public_key: "k",
+  }
+  match @mot.verify_package_signature(pkg, sig) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1701)
+  }
+}
+
+///|
+test "supply: verify_package_signature trusted-registry -> Ok" {
+  let pkg = @mot.PackageRef::{
+    urn: "urn:mot:p:x:1.0",
+    version: "1.0",
+    sha256: "aa",
+  }
+  let sig = @mot.PackageSig::{
+    algorithm: "trusted-registry",
+    signature: [],
+    public_key: "k",
+  }
+  match @mot.verify_package_signature(pkg, sig) {
+    Ok(_) => assert_true(true)
+    Err(_) => assert_true(false)
+  }
+}
+
+///|
+test "nli guard: uninterpretable -> Err (AS2)" {
+  match @mot.guard_nli_result(@mot.NLI_Result::Uninterpretable("garbage")) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1710)
+  }
+}
+
+///|
+test "nli guard: ambiguous -> Err (AS2)" {
+  match @mot.guard_nli_result(@mot.NLI_Result::Ambiguous([], [])) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1711)
+  }
+}
+
+///|
+test "nli guard: dangerous primitive -> Err (AS2)" {
+  let seq : @mot.TargetActionSeq = {
+    actions: [
+      {
+        primitive: "urn:mot:prim:abort:1.0",
+        params: Map([]),
+        sac_override: None,
+        reaction_policies: [],
+      },
+    ],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  match @mot.guard_nli_result(@mot.NLI_Result::Success(seq)) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1712)
+  }
+}
+
+///|
+test "nli guard: safe primitive -> Ok (AS2)" {
+  let seq : @mot.TargetActionSeq = {
+    actions: [
+      {
+        primitive: "urn:mot:prim:walk:1.0",
+        params: Map([]),
+        sac_override: None,
+        reaction_policies: [],
+      },
+    ],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  match @mot.guard_nli_result(@mot.NLI_Result::Success(seq)) {
+    Ok(s) => assert_eq(s.actions.length(), 1)
+    Err(_) => assert_true(false)
+  }
+}
+
+///|
+test "feedback auth: unregistered source -> Err (I6)" {
+  let reg = @mot.new_sensor_registry()
+  let fb : @mot.EnvFeedback = {
+    source: "urn:mot:sensor:ghost:1.0",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: @mot.Severity::Warn,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  match @mot.authenticate_feedback(reg, fb) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1730)
+  }
+}
+
+///|
+test "feedback auth: registered source -> Ok (I6)" {
+  let reg = @mot.new_sensor_registry()
+  @mot.register_sensor(reg, "urn:mot:sensor:lidar:1.0")
+  let fb : @mot.EnvFeedback = {
+    source: "urn:mot:sensor:lidar:1.0",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: @mot.Severity::Warn,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  match @mot.authenticate_feedback(reg, fb) {
+    Ok(_) => assert_true(true)
+    Err(_) => assert_true(false)
+  }
+}
+
+///|
+test "feedback auth: stale feedback (stale_after_ms<=0) -> Err (I6)" {
+  let reg = @mot.new_sensor_registry()
+  @mot.register_sensor(reg, "urn:mot:sensor:lidar:1.0")
+  let fb : @mot.EnvFeedback = {
+    source: "urn:mot:sensor:lidar:1.0",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 0L,
+    severity: @mot.Severity::Warn,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  match @mot.authenticate_feedback(reg, fb) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1731)
+  }
+}
+
+///|
+test "output gate: non-Executing -> do_exec false (I5)" {
+  let sm = @mot.new_statemachine()
+  let gate = @mot.new_gate(sm)
+  assert_false(@mot.do_exec(gate, "walk"))
+  assert_true(@mot.gate_is_closed(gate))
+}
+
+///|
+test "output gate: Executing -> do_exec true (I5)" {
+  let sm = @mot.new_statemachine()
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  let _ = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  let gate = @mot.new_gate(sm)
+  assert_true(@mot.do_exec(gate, "walk"))
+  assert_false(@mot.gate_is_closed(gate))
+}
+
+///|
+test "binding engine: empty seq -> Ok" {
+  let reg = @mot.new_registry()
+  let seq : @mot.TargetActionSeq = {
+    actions: [],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = { edges: [], }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Ok(_) => assert_true(true)
+    @mot.BindResult::Error(_) => assert_true(false)
+  }
+}
+
+///|
+test "binding engine: unregistered primitive -> Err (Stage 1)" {
+  let reg = @mot.new_registry()
+  let seq : @mot.TargetActionSeq = {
+    actions: [
+      {
+        primitive: "urn:mot:prim:ghost:1.0",
+        params: Map([]),
+        sac_override: None,
+        reaction_policies: [],
+      },
+    ],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = { edges: [], }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Ok(_) => assert_true(false)
+    @mot.BindResult::Error(ds) => assert_eq(ds.length(), 1)
+  }
+}
+
+///|
+test "binding engine: registered primitive -> Ok (Stage 1)" {
+  let reg = @mot.new_registry()
+  let p : @mot.Primitive = {
+    urn: "urn:mot:prim:walk:1.0",
+    name: "walk",
+    category: @mot.PrimCategory::Loc,
+    params: [],
+    occupancy: { participants: [], exclusive: false, },
+    sac: { predicates: [], completeness: @mot.CompletenessLevel::Structural, },
+    metadata: Map([]),
+  }
+  @mot.register_primitive(reg, p)
+  let seq : @mot.TargetActionSeq = {
+    actions: [
+      {
+        primitive: "urn:mot:prim:walk:1.0",
+        params: Map([]),
+        sac_override: None,
+        reaction_policies: [],
+      },
+    ],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = { edges: [], }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Ok(b) => assert_eq(b.actions.length(), 1)
+    @mot.BindResult::Error(_) => assert_true(false)
+  }
+}
+
+///|
+test "reaction engine: no matching policy -> Continue" {
+  let fb : @mot.EnvFeedback = {
+    source: "urn:mot:sensor:lidar:1.0",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: @mot.Severity::Warn,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  match @mot.react([], fb) {
+    @mot.ReactionDecision::Continue => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "reaction engine: matching obstacle policy -> Avoid" {
+  let fb : @mot.EnvFeedback = {
+    source: "urn:mot:sensor:lidar:1.0",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: @mot.Severity::Danger,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  let policy : @mot.ReactionPolicy = {
+    id: "p1",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Avoid(@mot.AvoidStrategy::StopAndWait(100L)),
+    escalation: None,
+  }
+  match @mot.react([policy], fb) {
+    @mot.ReactionDecision::Avoid(_) => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "reaction engine: escalation chain bounded -> FaultLocked (I3)" {
+  let fb : @mot.EnvFeedback = {
+    source: "s",
+    kind: @mot.FeedbackKind::Obstacle,
+    timestamp: 0L,
+    stale_after_ms: 100L,
+    severity: @mot.Severity::Danger,
+    payload: @mot.FeedbackPayload::Obstacle(
+      1.0,
+      { x: 0.0, y: 0.0, z: 0.0, },
+      0.5,
+      None,
+    ),
+    sac_ref: None,
+    action_ref: None,
+  }
+  let esc6 : @mot.ReactionPolicy = {
+    id: "esc6",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: None,
+  }
+  let esc5 : @mot.ReactionPolicy = {
+    id: "esc5",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc6),
+  }
+  let esc4 : @mot.ReactionPolicy = {
+    id: "esc4",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc5),
+  }
+  let esc3 : @mot.ReactionPolicy = {
+    id: "esc3",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc4),
+  }
+  let esc2 : @mot.ReactionPolicy = {
+    id: "esc2",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc3),
+  }
+  let esc1 : @mot.ReactionPolicy = {
+    id: "esc1",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc2),
+  }
+  let root : @mot.ReactionPolicy = {
+    id: "root",
+    scope: @mot.ReactionScope::Primitive,
+    trigger: {
+      kinds: [@mot.FeedbackKind::Obstacle],
+      severity_min: @mot.Severity::Warn,
+      source_filter: None,
+    },
+    guard_expr: None,
+    action: @mot.ReactionAction::Continue,
+    escalation: Some(esc1),
+  }
+  match @mot.react([root], fb) {
+    @mot.ReactionDecision::FaultLocked(_) => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "gbz185 integration: MotError implements ProtocolError" {
+  let e = @mot.MotError::Security_error("test")
+  assert_eq(@wire.ProtocolError::part(e), "gbz185.6")
+  assert_eq(@wire.ProtocolError::code(e), "MOT-1700")
+  assert_eq(@wire.ProtocolError::message(e), "test")
+}
+
+///|
+test "gbz185 integration: mot_envelope builds AipEnvelope" {
+  let env = @mot.mot_envelope(
+    "urn:mot:a:1.0",
+    "urn:mot:b:1.0",
+    5L,
+    @aip.MessageKind::Event,
+    Json::null(),
+  )
+  assert_eq(env.sender_urn, "urn:mot:a:1.0")
+  assert_eq(env.seq, 5L)
+  match env.kind {
+    @aip.MessageKind::Event => assert_true(true)
+    _ => assert_true(false)
+  }
+}
+
+///|
+test "gbz185 integration: mot_tool_descriptor builds ToolDescriptor" {
+  let desc = @mot.mot_tool_descriptor(
+    "executor.walk",
+    "walk executor",
+    Json::null(),
+    @tooling.ToolBinding::NativeBinding,
+  )
+  assert_eq(desc.name, "executor.walk")
+}
+
+///|
+test "binding engine: cyclic mapping graph -> Err (Stage 2)" {
+  let reg = @mot.new_registry()
+  let seq : @mot.TargetActionSeq = {
+    actions: [],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = {
+    edges: [
+      {
+        source: "urn:mot:prim:a:1.0",
+        target: "urn:mot:prim:b:1.0",
+        transform: @mot.MappingTransform::Direct,
+        fidelity: @mot.FidelityLevel::Exact,
+        fallback_chain: [],
+      },
+      {
+        source: "urn:mot:prim:b:1.0",
+        target: "urn:mot:prim:a:1.0",
+        transform: @mot.MappingTransform::Direct,
+        fidelity: @mot.FidelityLevel::Exact,
+        fallback_chain: [],
+      },
+    ],
+  }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Error(ds) => assert_true(ds.length() > 0)
+    @mot.BindResult::Ok(_) => assert_true(false)
+  }
+}
+
+///|
+test "binding engine: acyclic mapping graph -> Ok (Stage 2)" {
+  let reg = @mot.new_registry()
+  let seq : @mot.TargetActionSeq = {
+    actions: [],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = {
+    edges: [
+      {
+        source: "urn:mot:prim:a:1.0",
+        target: "urn:mot:prim:b:1.0",
+        transform: @mot.MappingTransform::Direct,
+        fidelity: @mot.FidelityLevel::Exact,
+        fallback_chain: [],
+      },
+      {
+        source: "urn:mot:prim:b:1.0",
+        target: "urn:mot:prim:c:1.0",
+        transform: @mot.MappingTransform::Direct,
+        fidelity: @mot.FidelityLevel::Approximate,
+        fallback_chain: [],
+      },
+    ],
+  }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Ok(_) => assert_true(true)
+    @mot.BindResult::Error(_) => assert_true(false)
+  }
+}
+
+///|
+test "binding engine: self-loop mapping edge -> Err (Stage 2)" {
+  let reg = @mot.new_registry()
+  let seq : @mot.TargetActionSeq = {
+    actions: [],
+    bodymap: "urn:mot:bodymap:human:1.0",
+    metadata: Map([]),
+  }
+  let graph : @mot.MappingGraph = {
+    edges: [
+      {
+        source: "urn:mot:prim:a:1.0",
+        target: "urn:mot:prim:a:1.0",
+        transform: @mot.MappingTransform::Direct,
+        fidelity: @mot.FidelityLevel::Exact,
+        fallback_chain: [],
+      },
+    ],
+  }
+  match @mot.bind(seq, graph, reg) {
+    @mot.BindResult::Error(ds) => assert_eq(ds.length(), 1)
+    @mot.BindResult::Ok(_) => assert_true(false)
+  }
+}
+
+///|
+test "supply: verify_package_signature missing sha256 -> Err (AS1)" {
+  let pkg = @mot.PackageRef::{
+    urn: "urn:mot:p:x:1.0",
+    version: "1.0",
+    sha256: "",
+  }
+  let sig = @mot.PackageSig::{
+    algorithm: "trusted-registry",
+    signature: [],
+    public_key: "k",
+  }
+  match @mot.verify_package_signature(pkg, sig) {
+    Ok(_) => assert_true(false)
+    Err(e) => assert_eq(e.code, 1703)
+  }
+}
+
+///|
+test "safety: empty action command rejected even when Executing (I5)" {
+  let sm = @mot.new_statemachine()
+  let _ = @mot.transition(sm, @mot.StateEvent::Reset)
+  let _ = @mot.transition(sm, @mot.StateEvent::TaskStart)
+  assert_false(@mot.is_action_allowed(sm, ""))
+}
+
+///|
+test "diag: internal_error_code -> 3" {
+  assert_eq(@mot.internal_error_code(), 3)
+}
+
+///|
+test "threat: security_error_to_mot message includes surface tag" {
+  let e = @mot.sec_error(@mot.AttackSurface::AS1_SupplyChain, 1701, "bad")
+  match @mot.security_error_to_mot(e) {
+    @mot.MotError::Security_error(msg) =>
+      assert_true(msg.contains("AS1_SupplyChain"))
+    _ => assert_true(false)
+  }
+}

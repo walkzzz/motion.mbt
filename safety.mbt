@@ -1,1 +1,177 @@
-Ly8gU2FmZXR5U3RhdGVNYWNoaW5lIOKAlOKAlCBydW50aW1lIHNhZmV0eSBzdGF0ZSBtYW5hZ2VtZW50IChzaXgtc3RhdGUgbW9kZWwpCi8vIFNhZmV0eSBldmVudHMgYXJlIHByZWVtcHRpdmU6IHRoZXkgYnlwYXNzIHRoZSBub3JtYWwgcmVhY3Rpb24gY2hhaW4uCi8vIEZBVUxUX0xPQ0tFRCBpcyByZWxlYXNlZCBPTkxZIGJ5IFJlc2V0IChpbnZhcmlhbnQgSTIpLgovLyBPdXRwdXQgZ2F0ZTogbm9uLUVYRUNVVElORyBzdGF0ZXMgcmVqZWN0IGFsbCBleGVjdXRpb24gY29tbWFuZHMgKGludmFyaWFudCBJNSkuCi8vCi8vIEludmFyaWFudHMgYXNzZXJ0ZWQgYXQgcnVudGltZSAoZm9ybWFsIHByb29mIHZpYSBaMyBpcyB0aGUgUDErIGVuaGFuY2VtZW50KToKLy8gSTEgRVhFQ1VUSU5HICsgU2FmZXR5RXZlbnQgLT4gYm91bmRlZCBzdGVwcyBvdXQgb2YgRVhFQ1VUSU5HCi8vIEkyIEZBVUxUX0xPQ0tFRCBvbmx5IGxlYXZlcyB2aWEgUmVzZXQKLy8gSTMgZXNjYWxhdGlvbiBpbmRleCBtb25vdG9uaWMsIG5vIHJlZ3Jlc3Npb24KLy8gSTQgU0FGRV9IT0xEOiBvdXRwdXQgZ2F0ZSBjbG9zZWQgKHRvcnF1ZS92ZWxvY2l0eSB6ZXJvZWQpCi8vIEk1IG91dHB1dCBnYXRlIGludGVncml0eTogYW55IG5vbi1FWEVDVVRJTkcgc3RhdGUgPT4gZG9fZXhlYyA9PSBmYWxzZQovLyBJNiBmZWVkYmFjayBzb3VyY2UgYXV0aGVudGljYXRpb24gKGhhbmRsZWQgaW4gZmVlZGJhY2tfYXV0aC5tYnQpCgovLy98CnB1YihhbGwpIGVudW0gU2FmZXR5U3RhdGUgewogIFNlbGZ0ZXN0CiAgSWRsZQogIEV4ZWN1dGluZwogIFJlY292ZXJpbmcKICBTYWZlSG9sZAogIEZhdWx0TG9ja2VkCn0KCi8vL3wKcHViKGFsbCkgZW51bSBTYWZldHlFdmVudCB7CiAgRVN0b3BQcmVzc2VkCiAgQ2xpZmZEZXRlY3RlZChWZWMzKQogIFdoZWVsRHJvcChTdHJpbmcpCiAgUGlja2VkVXAKICBIZWFydGJlYXRUaW1lb3V0KEludDY0LCBJbnQ2NCkKICBTZW5zb3JTdGFsZShTdHJpbmcsIEludDY0KQogIExvY2FsaXphdGlvbkRpdmVyZ2VkKERvdWJsZSkKICBKb2ludEFub21hbHkoU3RyaW5nLCBEb3VibGUpCiAgU29mdExpbWl0RXhjZWVkZWQoU3RyaW5nLCBEb3VibGUpCiAgTG93QmF0dGVyeShEb3VibGUpCn0KCi8vL3wKcHViKGFsbCkgZW51bSBTdGF0ZUV2ZW50IHsKICBTYWZldHkoU2FmZXR5RXZlbnQpCiAgUmVzZXQKICBUYXNrU3RhcnQKICBUYXNrQ29tcGxldGUKfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgVHJhbnNpdGlvblJlc3VsdCB7CiAgZnJvbSA6IFNhZmV0eVN0YXRlCiAgdG8gOiBTYWZldHlTdGF0ZQogIGFsbG93ZWQgOiBCb29sCiAgcmVhc29uIDogU3RyaW5nPwp9CgovLy98CnB1YiBzdHJ1Y3QgU2FmZXR5U3RhdGVNYWNoaW5lIHsKICBtdXQgY3VycmVudCA6IFNhZmV0eVN0YXRlCiAgbXV0IGVzY2FsYXRpb25faW5kZXggOiBJbnQzMgp9CgovLy98CnB1YiBmbiBuZXdfc3RhdGVtYWNoaW5lKCkgLT4gU2FmZXR5U3RhdGVNYWNoaW5lIHsKICB7IGN1cnJlbnQ6IFNlbGZ0ZXN0LCBlc2NhbGF0aW9uX2luZGV4OiAwLCB9Cn0KCi8vL3wKcHViIGZuIHNtX2N1cnJlbnQoc20gOiBTYWZldHlTdGF0ZU1hY2hpbmUpIC0+IFNhZmV0eVN0YXRlIHsKICBzbS5jdXJyZW50Cn0KCi8vIE91dHB1dCBnYXRlIHF1ZXJ5IChJNSkuIEV4ZWN1dG9yIE1VU1QgY2FsbCB0aGlzIGJlZm9yZSBhbnkgY29tbWFuZC4KLy8gUmV0dXJucyB0cnVlIG9ubHkgaW4gRVhFQ1VUSU5HIHN0YXRlLiBFbXB0eSBhY3Rpb24gY29tbWFuZHMgYXJlIGFsd2F5cwovLyByZWplY3RlZDogYSBnYXRlIG11c3QgbmV2ZXIgcGFzcyBhIG1hbGZvcm1lZCAoZW1wdHkpIGluc3RydWN0aW9uLgoKLy8vfApwdWIgZm4gaXNfYWN0aW9uX2FsbG93ZWQoc20gOiBTYWZldHlTdGF0ZU1hY2hpbmUsIGFjdGlvbiA6IFN0cmluZykgLT4gQm9vbCB7CiAgaWYgYWN0aW9uID09ICIiIHsKICAgIGZhbHNlCiAgfSBlbHNlIHsKICAgIG1hdGNoIHNtLmN1cnJlbnQgewogICAgICBFeGVjdXRpbmcgPT4gdHJ1ZQogICAgICBfID0+IGZhbHNlCiAgICB9CiAgfQp9CgovLyBUaGUgc2luZ2xlIHRyYW5zaXRpb24gZW50cnkgcG9pbnQgKG5vIGJhY2sgZG9vcikuIFByZWVtcHRpdmUgc2FmZXR5IGV2ZW50cwovLyBieXBhc3MgdGhlIG5vcm1hbCByZWFjdGlvbiBjaGFpbiBhbmQgZm9yY2UgYSB0cmFuc2l0aW9uIG91dCBvZiBFWEVDVVRJTkcgKEkxKS4KCi8vL3wKcHViIGZuIHRyYW5zaXRpb24oCiAgc20gOiBTYWZldHlTdGF0ZU1hY2hpbmUsCiAgZXZlbnQgOiBTdGF0ZUV2ZW50LAopIC0+IFRyYW5zaXRpb25SZXN1bHQgewogIGxldCBmcm9tID0gc20uY3VycmVudAogIGxldCB0byA9IG5leHRfc3RhdGUoZnJvbSwgZXZlbnQpCiAgbGV0IGFsbG93ZWQgPSBpc192YWxpZF90cmFuc2l0aW9uKGZyb20sIHRvLCBldmVudCkKICBpZiBhbGxvd2VkIHsKICAgIHNtLmN1cnJlbnQgPSB0bwogICAgbWF0Y2ggKGZyb20sIHRvKSB7CiAgICAgIChSZWNvdmVyaW5nLCBfKSA9PiAoKQogICAgICAoXywgUmVjb3ZlcmluZykgPT4gc20uZXNjYWxhdGlvbl9pbmRleCA9IHNtLmVzY2FsYXRpb25faW5kZXggKyAxCiAgICAgIF8gPT4gKCkKICAgIH0KICB9CiAgbGV0IHJlYXNvbiA9IGlmIGFsbG93ZWQgeyBOb25lIH0gZWxzZSB7IFNvbWUoInRyYW5zaXRpb24gbm90IGFsbG93ZWQiKSB9CiAgeyBmcm9tLCB0bywgYWxsb3dlZCwgcmVhc29uLCB9Cn0KCi8vIEk0L0k1OiBvdXRwdXQgZ2F0ZSBjbG9zZWQgY2hlY2suIFRydWUgd2hlbiBnYXRlIGlzIGNsb3NlZCAobm9uLUVYRUNVVElORykuCgovLy98CnB1YiBmbiBnYXRlX2Nsb3NlZChzbSA6IFNhZmV0eVN0YXRlTWFjaGluZSkgLT4gQm9vbCB7CiAgbWF0Y2ggc20uY3VycmVudCB7CiAgICBFeGVjdXRpbmcgPT4gZmFsc2UKICAgIF8gPT4gdHJ1ZQogIH0KfQoKLy8vfApmbiBpc192YWxpZF90cmFuc2l0aW9uKAogIGZyb20gOiBTYWZldHlTdGF0ZSwKICB0byA6IFNhZmV0eVN0YXRlLAogIGV2ZW50IDogU3RhdGVFdmVudCwKKSAtPiBCb29sIHsKICBtYXRjaCBmcm9tIHsKICAgIEZhdWx0TG9ja2VkID0+CiAgICAgIG1hdGNoIGV2ZW50IHsKICAgICAgICBSZXNldCA9PiB0cnVlCiAgICAgICAgXyA9PiBmYWxzZQogICAgICB9CiAgICBfID0+CiAgICAgIG1hdGNoIChmcm9tLCB0bykgewogICAgICAgIChTZWxmdGVzdCwgSWRsZSkgPT4gdHJ1ZQogICAgICAgIChTZWxmdGVzdCwgRmF1bHRMb2NrZWQpID0+IHRydWUKICAgICAgICAoSWRsZSwgRXhlY3V0aW5nKSA9PiB0cnVlCiAgICAgICAgKElkbGUsIEZhdWx0TG9ja2VkKSA9PiB0cnVlCiAgICAgICAgKEV4ZWN1dGluZywgUmVjb3ZlcmluZykgPT4gdHJ1ZQogICAgICAgIChFeGVjdXRpbmcsIFNhZmVIb2xkKSA9PiB0cnVlCiAgICAgICAgKEV4ZWN1dGluZywgRmF1bHRMb2NrZWQpID0+IHRydWUKICAgICAgICAoUmVjb3ZlcmluZywgRXhlY3V0aW5nKSA9PiB0cnVlCiAgICAgICAgKFJlY292ZXJpbmcsIFNhZmVIb2xkKSA9PiB0cnVlCiAgICAgICAgKFJlY292ZXJpbmcsIEZhdWx0TG9ja2VkKSA9PiB0cnVlCiAgICAgICAgKFNhZmVIb2xkLCBSZWNvdmVyaW5nKSA9PiB0cnVlCiAgICAgICAgKFNhZmVIb2xkLCBJZGxlKSA9PiB0cnVlCiAgICAgICAgKFNhZmVIb2xkLCBGYXVsdExvY2tlZCkgPT4gdHJ1ZQogICAgICAgIF8gPT4gZmFsc2UKICAgICAgfQogIH0KfQoKLy8vfApmbiBuZXh0X3N0YXRlKGZyb20gOiBTYWZldHlTdGF0ZSwgZXZlbnQgOiBTdGF0ZUV2ZW50KSAtPiBTYWZldHlTdGF0ZSB7CiAgbWF0Y2ggZXZlbnQgewogICAgU2FmZXR5KF8pID0+CiAgICAgIG1hdGNoIGZyb20gewogICAgICAgIEV4ZWN1dGluZyA9PiBTYWZlSG9sZAogICAgICAgIF8gPT4gZnJvbQogICAgICB9CiAgICBSZXNldCA9PgogICAgICBtYXRjaCBmcm9tIHsKICAgICAgICBGYXVsdExvY2tlZCA9PiBJZGxlCiAgICAgICAgU2VsZnRlc3QgPT4gSWRsZQogICAgICAgIF8gPT4gZnJvbQogICAgICB9CiAgICBUYXNrU3RhcnQgPT4KICAgICAgbWF0Y2ggZnJvbSB7CiAgICAgICAgSWRsZSA9PiBFeGVjdXRpbmcKICAgICAgICBfID0+IGZyb20KICAgICAgfQogICAgVGFza0NvbXBsZXRlID0+CiAgICAgIG1hdGNoIGZyb20gewogICAgICAgIEV4ZWN1dGluZyA9PiBJZGxlCiAgICAgICAgUmVjb3ZlcmluZyA9PiBJZGxlCiAgICAgICAgXyA9PiBmcm9tCiAgICAgIH0KICB9Cn0K
+// SafetyStateMachine —— runtime safety state management (six-state model)
+// Safety events are preemptive: they bypass the normal reaction chain.
+// FAULT_LOCKED is released ONLY by Reset (invariant I2).
+// Output gate: non-EXECUTING states reject all execution commands (invariant I5).
+//
+// Invariants asserted at runtime (formal proof via Z3 is the P1+ enhancement):
+// I1 EXECUTING + SafetyEvent -> bounded steps out of EXECUTING
+// I2 FAULT_LOCKED only leaves via Reset
+// I3 escalation index monotonic, no regression
+// I4 SAFE_HOLD: output gate closed (torque/velocity zeroed)
+// I5 output gate integrity: any non-EXECUTING state => do_exec == false
+// I6 feedback source authentication (handled in feedback_auth.mbt)
+
+///|
+pub(all) enum SafetyState {
+  Selftest
+  Idle
+  Executing
+  Recovering
+  SafeHold
+  FaultLocked
+}
+
+///|
+pub(all) enum SafetyEvent {
+  EStopPressed
+  CliffDetected(Vec3)
+  WheelDrop(String)
+  PickedUp
+  HeartbeatTimeout(Int64, Int64)
+  SensorStale(String, Int64)
+  LocalizationDiverged(Double)
+  JointAnomaly(String, Double)
+  SoftLimitExceeded(String, Double)
+  LowBattery(Double)
+}
+
+///|
+pub(all) enum StateEvent {
+  Safety(SafetyEvent)
+  Reset
+  TaskStart
+  TaskComplete
+}
+
+///|
+pub(all) struct TransitionResult {
+  from : SafetyState
+  to : SafetyState
+  allowed : Bool
+  reason : String?
+}
+
+///|
+pub struct SafetyStateMachine {
+  mut current : SafetyState
+  mut escalation_index : Int32
+}
+
+///|
+pub fn new_statemachine() -> SafetyStateMachine {
+  { current: Selftest, escalation_index: 0, }
+}
+
+///|
+pub fn sm_current(sm : SafetyStateMachine) -> SafetyState {
+  sm.current
+}
+
+// Output gate query (I5). Executor MUST call this before any command.
+// Returns true only in EXECUTING state. Empty action commands are always
+// rejected: a gate must never pass a malformed (empty) instruction.
+
+///|
+pub fn is_action_allowed(sm : SafetyStateMachine, action : String) -> Bool {
+  if action == "" {
+    false
+  } else {
+    match sm.current {
+      Executing => true
+      _ => false
+    }
+  }
+}
+
+// The single transition entry point (no back door). Preemptive safety events
+// bypass the normal reaction chain and force a transition out of EXECUTING (I1).
+
+///|
+pub fn transition(
+  sm : SafetyStateMachine,
+  event : StateEvent,
+) -> TransitionResult {
+  let from = sm.current
+  let to = next_state(from, event)
+  let allowed = is_valid_transition(from, to, event)
+  if allowed {
+    sm.current = to
+    match (from, to) {
+      (Recovering, _) => ()
+      (_, Recovering) => sm.escalation_index = sm.escalation_index + 1
+      _ => ()
+    }
+  }
+  let reason = if allowed { None } else { Some("transition not allowed") }
+  { from, to, allowed, reason, }
+}
+
+// I4/I5: output gate closed check. True when gate is closed (non-EXECUTING).
+
+///|
+pub fn gate_closed(sm : SafetyStateMachine) -> Bool {
+  match sm.current {
+    Executing => false
+    _ => true
+  }
+}
+
+///|
+fn is_valid_transition(
+  from : SafetyState,
+  to : SafetyState,
+  event : StateEvent,
+) -> Bool {
+  match from {
+    FaultLocked =>
+      match event {
+        Reset => true
+        _ => false
+      }
+    _ =>
+      match (from, to) {
+        (Selftest, Idle) => true
+        (Selftest, FaultLocked) => true
+        (Idle, Executing) => true
+        (Idle, FaultLocked) => true
+        (Executing, Recovering) => true
+        (Executing, SafeHold) => true
+        (Executing, FaultLocked) => true
+        (Recovering, Executing) => true
+        (Recovering, SafeHold) => true
+        (Recovering, FaultLocked) => true
+        (SafeHold, Recovering) => true
+        (SafeHold, Idle) => true
+        (SafeHold, FaultLocked) => true
+        _ => false
+      }
+  }
+}
+
+///|
+fn next_state(from : SafetyState, event : StateEvent) -> SafetyState {
+  match event {
+    Safety(_) =>
+      match from {
+        Executing => SafeHold
+        _ => from
+      }
+    Reset =>
+      match from {
+        FaultLocked => Idle
+        Selftest => Idle
+        _ => from
+      }
+    TaskStart =>
+      match from {
+        Idle => Executing
+        _ => from
+      }
+    TaskComplete =>
+      match from {
+        Executing => Idle
+        Recovering => Idle
+        _ => from
+      }
+  }
+}

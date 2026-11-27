@@ -1,1 +1,586 @@
-Ly8gR2VuZXJhdGVkIHVzaW5nIGBtb29uIGluZm9gLCBET04nVCBFRElUIElUCnBhY2thZ2UgIm1vdC9tb3QiCgppbXBvcnQgewogICJtb29uYml0bGFuZy9jb3JlL2RlYnVnIiwKICAibW9vbmJpdGxhbmcvY29yZS9qc29uIiwKICAid2Fsa3p6ei9nYnoxODUubWJ0L2FpcCIsCiAgIndhbGt6enovZ2J6MTg1Lm1idC90b29saW5nIiwKICAid2Fsa3p6ei9nYnoxODUubWJ0L3dpcmUiLAp9CgovLyBWYWx1ZXMKcHViIGZuIGF1dGhlbnRpY2F0ZV9mZWVkYmFjayhTZW5zb3JSZWdpc3RyeSwgRW52RmVlZGJhY2spIC0+IFJlc3VsdFtFbnZGZWVkYmFjaywgU2VjdXJpdHlFcnJvcl0KCnB1YiBmbiBiaW5kKFRhcmdldEFjdGlvblNlcSwgTWFwcGluZ0dyYXBoLCBQcmltaXRpdmVSZWdpc3RyeSkgLT4gQmluZFJlc3VsdAoKcHViIGZuIGNoZWNrX2NvbmZsaWN0cyhBcnJheVtCb3VuZEFjdGlvbl0sIFByaW1pdGl2ZVJlZ2lzdHJ5KSAtPiBDb25mbGljdFJlcG9ydAoKcHViIGZuIGRvX2V4ZWMoT3V0cHV0R2F0ZSwgU3RyaW5nKSAtPiBCb29sCgpwdWIgZm4gZXhpdF9jb2RlX29mKEFycmF5W0RpYWdub3N0aWNdKSAtPiBJbnQzMgoKcHViIGZuIGV4aXRfY29kZV90b19pbnQoRXhpdENvZGUpIC0+IEludDMyCgpwdWIgZm4gZ2F0ZV9jbG9zZWQoU2FmZXR5U3RhdGVNYWNoaW5lKSAtPiBCb29sCgpwdWIgZm4gZ2F0ZV9pc19jbG9zZWQoT3V0cHV0R2F0ZSkgLT4gQm9vbAoKcHViIGZuIGd1YXJkX25saV9yZXN1bHQoTkxJX1Jlc3VsdCkgLT4gUmVzdWx0W1RhcmdldEFjdGlvblNlcSwgU2VjdXJpdHlFcnJvcl0KCnB1YiBmbiBpbnRlcm5hbF9lcnJvcl9jb2RlKCkgLT4gSW50MzIKCnB1YiBmbiBpc19hY3Rpb25fYWxsb3dlZChTYWZldHlTdGF0ZU1hY2hpbmUsIFN0cmluZykgLT4gQm9vbAoKcHViIGZuIG1ha2VfZXJyb3IoRGlhZ25vc3RpY0NhdGVnb3J5LCBJbnQzMiwgQXJyYXlbU3RyaW5nXSwgU3RyaW5nKSAtPiBEaWFnbm9zdGljCgpwdWIgZm4gbWFrZV93YXJuaW5nKERpYWdub3N0aWNDYXRlZ29yeSwgSW50MzIsIEFycmF5W1N0cmluZ10sIFN0cmluZykgLT4gRGlhZ25vc3RpYwoKcHViIGZuIG1vdF9lbnZlbG9wZShTdHJpbmcsIFN0cmluZywgSW50NjQsIEBhaXAuTWVzc2FnZUtpbmQsIEBqc29uLkpzb24pIC0+IEBhaXAuQWlwRW52ZWxvcGUKCnB1YiBmbiBtb3RfdG9vbF9kZXNjcmlwdG9yKFN0cmluZywgU3RyaW5nLCBAanNvbi5Kc29uLCBAdG9vbGluZy5Ub29sQmluZGluZykgLT4gQHRvb2xpbmcuVG9vbERlc2NyaXB0b3IKCnB1YiBmbiBuZXdfZ2F0ZShTYWZldHlTdGF0ZU1hY2hpbmUpIC0+IE91dHB1dEdhdGUKCnB1YiBmbiBuZXdfcmVnaXN0cnkoKSAtPiBQcmltaXRpdmVSZWdpc3RyeQoKcHViIGZuIG5ld19zZW5zb3JfcmVnaXN0cnkoKSAtPiBTZW5zb3JSZWdpc3RyeQoKcHViIGZuIG5ld19zdGF0ZW1hY2hpbmUoKSAtPiBTYWZldHlTdGF0ZU1hY2hpbmUKCnB1YiBmbiByZWFjdChBcnJheVtSZWFjdGlvblBvbGljeV0sIEVudkZlZWRiYWNrKSAtPiBSZWFjdGlvbkRlY2lzaW9uCgpwdWIgZm4gcmVnaXN0ZXJfcHJpbWl0aXZlKFByaW1pdGl2ZVJlZ2lzdHJ5LCBQcmltaXRpdmUpIC0+IFVuaXQKCnB1YiBmbiByZWdpc3Rlcl9zZW5zb3IoU2Vuc29yUmVnaXN0cnksIFN0cmluZykgLT4gVW5pdAoKcHViIGZuIHNlY19lcnJvcihBdHRhY2tTdXJmYWNlLCBJbnQzMiwgU3RyaW5nKSAtPiBTZWN1cml0eUVycm9yCgpwdWIgZm4gc2VjdXJpdHlfZXJyb3JfdG9fbW90KFNlY3VyaXR5RXJyb3IpIC0+IE1vdEVycm9yCgpwdWIgZm4gc21fY3VycmVudChTYWZldHlTdGF0ZU1hY2hpbmUpIC0+IFNhZmV0eVN0YXRlCgpwdWIgZm4gdHJhbnNpdGlvbihTYWZldHlTdGF0ZU1hY2hpbmUsIFN0YXRlRXZlbnQpIC0+IFRyYW5zaXRpb25SZXN1bHQKCnB1YiBmbiB2ZXJpZnlfbG9ja19oYXNoKFN0cmluZywgU3RyaW5nKSAtPiBSZXN1bHRbVW5pdCwgU2VjdXJpdHlFcnJvcl0KCnB1YiBmbiB2ZXJpZnlfcGFja2FnZV9zaWduYXR1cmUoUGFja2FnZVJlZiwgUGFja2FnZVNpZykgLT4gUmVzdWx0W1VuaXQsIFNlY3VyaXR5RXJyb3JdCgpwdWIgZm4gdmVyaWZ5X3NhY19hbGwoQXJyYXlbQm91bmRBY3Rpb25dKSAtPiBTYWNWZXJpZmljYXRpb25SZXBvcnQKCi8vIEVycm9ycwpwdWIoYWxsKSBzdWJlcnJvciBNb3RFcnJvciB7CiAgU3ludGF4X2Vycm9yKFN0cmluZykKICBSZXNvbHZlX2Vycm9yKFN0cmluZykKICBNYXBwaW5nX2Vycm9yKFN0cmluZykKICBDb25mbGljdF9lcnJvcihTdHJpbmcpCiAgU2FjX2Vycm9yKFN0cmluZykKICBSZWFjdGlvbl9lcnJvcihTdHJpbmcpCiAgU2FmZXR5X2Vycm9yKFN0cmluZykKICBObGlfZXJyb3IoU3RyaW5nKQogIFNlY3VyaXR5X2Vycm9yKFN0cmluZykKfQpwdWIgaW1wbCBTaG93IGZvciBNb3RFcnJvcgpwdWIgaW1wbCBAd2lyZS5Qcm90b2NvbEVycm9yIGZvciBNb3RFcnJvcgoKLy8gVHlwZXMgYW5kIG1ldGhvZHMKcHViKGFsbCkgZW51bSBBc3BlY3RUeXBlIHsKICBUcmFqZWN0b3J5CiAgQ29udGFjdAogIFBvc3R1cmUKICBTcGF0aWFsCiAgQ291bnQKfQoKI2Rlcml2ZShAZGVidWcuRGVidWcpCnB1YihhbGwpIGVudW0gQXR0YWNrU3VyZmFjZSB7CiAgQVMxX1N1cHBseUNoYWluCiAgQVMyX05MSUluamVjdGlvbgogIEFTM19BSVBNZXNzYWdlCiAgQVM0X0ZlZWRiYWNrSW5qZWN0aW9uCiAgQVM1X1NhZmV0eUJ5cGFzcwogIEFTNl9Ub29sUmVnaXN0cmF0aW9uCiAgQVM3X1R5cGVJbmplY3Rpb24KICBBUzhfRm9ybWFsQ292ZXJhZ2UKfQpwdWIgaW1wbCBTaG93IGZvciBBdHRhY2tTdXJmYWNlCgpwdWIoYWxsKSBzdHJ1Y3QgQXVkaW9EYXRhIHsKICBieXRlcyA6IEFycmF5W0J5dGVdCn0KCnB1YihhbGwpIGVudW0gQXZvaWRTdHJhdGVneSB7CiAgTGF0ZXJhbE9mZnNldChEb3VibGUpCiAgU3BlZWRSZWR1Y2UoRG91YmxlKQogIFN0b3BBbmRXYWl0KEludDY0KQogIEN1c3RvbShTdHJpbmcpCn0KCnB1YiBlbnVtIEJpbmRSZXN1bHQgewogIE9rKFRhcmdldEFjdGlvblNlcSkKICBFcnJvcihBcnJheVtEaWFnbm9zdGljXSkKfQoKcHViKGFsbCkgc3RydWN0IEJvZHlNYXAgewogIHVybiA6IFN0cmluZwogIG5hbWUgOiBTdHJpbmcKICB2ZXJzaW9uIDogU3RyaW5nCiAgbm9kZXMgOiBBcnJheVtCb2R5Tm9kZV0KICByb290IDogU3RyaW5nCiAgbWV0YWRhdGEgOiBNYXBbU3RyaW5nLCBTdHJpbmddCn0KCnB1YihhbGwpIHN0cnVjdCBCb2R5Tm9kZSB7CiAgaWQgOiBTdHJpbmcKICBraW5kIDogQm9keU5vZGVLaW5kCiAgcGFyZW50IDogU3RyaW5nPwogIGNoaWxkcmVuIDogQXJyYXlbU3RyaW5nXQogIGRvZiA6IEludDMyCiAgcm9sZSA6IEJvZHlSb2xlPwogIGFuY2hvcnMgOiBBcnJheVtTZW1hbnRpY0FuY2hvcl0KfQoKcHViKGFsbCkgZW51bSBCb2R5Tm9kZUtpbmQgewogIEpvaW50CiAgTGluawogIFNlbnNvcgogIEVmZmVjdG9yCiAgVmlydHVhbAp9CgpwdWIoYWxsKSBlbnVtIEJvZHlSb2xlIHsKICBMb2NvbW90aW9uQmFzZQogIE1hbmlwdWxhdGlvbkVuZAogIFN1cHBvcnRQb2x5Z29uCiAgU2Vuc29yTW91bnQKICBBY3R1YXRvcgogIFBhc3NpdmUKfQoKcHViKGFsbCkgc3RydWN0IEJvdW5kQWN0aW9uIHsKICBwcmltaXRpdmUgOiBTdHJpbmcKICBwYXJhbXMgOiBNYXBbU3RyaW5nLCBQYXJhbVZhbHVlXQogIHNhY19vdmVycmlkZSA6IFNhY1NwZWM/CiAgcmVhY3Rpb25fcG9saWNpZXMgOiBBcnJheVtSZWFjdGlvblBvbGljeV0KfQoKcHViKGFsbCkgc3RydWN0IEJ1aWx0aW5QcmVkaWNhdGUgewogIGFzcGVjdCA6IEFzcGVjdFR5cGUKICBleHByIDogU3RyaW5nCiAgcGFyYW1zIDogTWFwW1N0cmluZywgUGFyYW1WYWx1ZV0KfQoKcHViKGFsbCkgZW51bSBDb21wbGV0ZW5lc3NMZXZlbCB7CiAgU3RydWN0dXJhbAogIEluZmVyYWJsZQogIEZ1bGwKfQoKcHViKGFsbCkgc3RydWN0IENvbmZsaWN0IHsKICBib2R5X3BhcnQgOiBTdHJpbmcKICBhY3Rpb25fYSA6IEludDMyCiAgYWN0aW9uX2IgOiBJbnQzMgp9CgpwdWIoYWxsKSBzdHJ1Y3QgQ29uZmxpY3RSZXBvcnQgewogIGNvbmZsaWN0cyA6IEFycmF5W0NvbmZsaWN0XQogIG9rIDogQm9vbAp9CgpwdWIoYWxsKSBzdHJ1Y3QgQ3VzdG9tUHJlZGljYXRlIHsKICBiYWNrZW5kIDogU3RyaW5nCiAgY29uZmlnIDogQGpzb24uSnNvbgp9CgpwdWIoYWxsKSBzdHJ1Y3QgRGFuZ2Vyb3VzUHJpbWl0aXZlIHsKICB1cm4gOiBTdHJpbmcKICByZWFzb24gOiBTdHJpbmcKfQoKcHViKGFsbCkgc3RydWN0IERpYWdub3N0aWMgewogIGxldmVsIDogRGlhZ25vc3RpY0xldmVsCiAgY2F0ZWdvcnkgOiBEaWFnbm9zdGljQ2F0ZWdvcnkKICBjb2RlIDogSW50MzIKICBwYXRoIDogQXJyYXlbU3RyaW5nXQogIG1lc3NhZ2UgOiBTdHJpbmcKICBoaW50IDogU3RyaW5nPwogIHJlbGF0ZWQgOiBBcnJheVtEaWFnbm9zdGljXQp9CgpwdWIoYWxsKSBlbnVtIERpYWdub3N0aWNDYXRlZ29yeSB7CiAgU3ludGF4CiAgUmVzb2x2ZQogIE1hcHBpbmcKICBDb25mbGljdAogIFNhYwogIFJlYWN0aW9uCiAgU2FmZXR5CiAgTmxpCiAgU2VjdXJpdHkKfQoKcHViKGFsbCkgZW51bSBEaWFnbm9zdGljTGV2ZWwgewogIEVycm9yCiAgV2FybmluZwogIEluZm8KICBIaW50Cn0KCnB1YihhbGwpIHN0cnVjdCBFbnZFdmVudFBhdHRlcm4gewogIGtpbmRzIDogQXJyYXlbRmVlZGJhY2tLaW5kXQogIHNldmVyaXR5X21pbiA6IFNldmVyaXR5CiAgc291cmNlX2ZpbHRlciA6IFN0cmluZz8KfQoKcHViKGFsbCkgc3RydWN0IEVudkZlZWRiYWNrIHsKICBzb3VyY2UgOiBTdHJpbmcKICBraW5kIDogRmVlZGJhY2tLaW5kCiAgdGltZXN0YW1wIDogSW50NjQKICBzdGFsZV9hZnRlcl9tcyA6IEludDY0CiAgc2V2ZXJpdHkgOiBTZXZlcml0eQogIHBheWxvYWQgOiBGZWVkYmFja1BheWxvYWQKICBzYWNfcmVmIDogU3RyaW5nPwogIGFjdGlvbl9yZWYgOiBTdHJpbmc/Cn0KCnB1YihhbGwpIHN0cnVjdCBFeGVjdXRpb25Db250ZXh0IHsKICBib2R5bWFwIDogU3RyaW5nCiAgZW52X3N0YXRlIDogTWFwW1N0cmluZywgQGpzb24uSnNvbl0KICBjb25zdHJhaW50cyA6IEFycmF5W1N0cmluZ10KfQoKcHViIGVudW0gRXhpdENvZGUgewogIFN1Y2Nlc3MKICBFcnJvcgogIFdhcm5pbmcKICBJbnRlcm5hbEVycm9yCn0KCiNkZXJpdmUoRXEpCnB1YihhbGwpIGVudW0gRmVlZGJhY2tLaW5kIHsKICBPYnN0YWNsZQogIENvbnRhY3RMb3NzCiAgQ29sbGlzaW9uCiAgVmlzdWFsRHJpZnQKICBMb2NhbFF1YWxpdHkKICBKb2ludEFub21hbHkKICBIdW1hblByb3hpbWl0eQogIERvb3JTdGF0ZQogIEJhdHRlcnkKICBIZWFydGJlYXQKICBTdGFsZQp9CgpwdWIoYWxsKSBlbnVtIEZlZWRiYWNrUGF5bG9hZCB7CiAgT2JzdGFjbGUoRG91YmxlLCBWZWMzLCBEb3VibGUsIFN0cmluZz8pCiAgQ29udGFjdExvc3MoRG91YmxlLCBEb3VibGUpCiAgQ29sbGlzaW9uKFN0cmluZywgVmVjMykKICBWaXN1YWxEcmlmdChTcGF0aWFsRGlzcGxhY2VtZW50KQogIExvY2FsUXVhbGl0eShEb3VibGUpCiAgSm9pbnRBbm9tYWx5KFN0cmluZywgRG91YmxlKQogIEh1bWFuUHJveGltaXR5KERvdWJsZSwgQXJyYXlbVmVjM10pCiAgRG9vclN0YXRlKERvdWJsZSkKICBCYXR0ZXJ5KERvdWJsZSkKICBIZWFydGJlYXQoSW50NjQsIEludDY0KQogIFN0YWxlKEludDY0KQp9CgpwdWIoYWxsKSBlbnVtIEZpZGVsaXR5TGV2ZWwgewogIEV4YWN0CiAgQXBwcm94aW1hdGUKICBEZWdyYWRlZAp9CgpwdWIoYWxsKSBzdHJ1Y3QgSW1hZ2VEYXRhIHsKICBieXRlcyA6IEFycmF5W0J5dGVdCiAgZm9ybWF0IDogU3RyaW5nCn0KCnB1YihhbGwpIHN0cnVjdCBNT1RfRnVuY3Rpb25TY2hlbWEgewogIG5hbWUgOiBTdHJpbmcKICBkZXNjcmlwdGlvbiA6IFN0cmluZwogIHBhcmFtZXRlcnMgOiBAanNvbi5Kc29uCiAgcmV0dXJucyA6IEBqc29uLkpzb24KfQoKcHViKGFsbCkgc3RydWN0IE1hcHBpbmdFZGdlIHsKICBzb3VyY2UgOiBTdHJpbmcKICB0YXJnZXQgOiBTdHJpbmcKICB0cmFuc2Zvcm0gOiBNYXBwaW5nVHJhbnNmb3JtCiAgZmlkZWxpdHkgOiBGaWRlbGl0eUxldmVsCiAgZmFsbGJhY2tfY2hhaW4gOiBBcnJheVtTdHJpbmddCn0KCnB1YihhbGwpIHN0cnVjdCBNYXBwaW5nR3JhcGggewogIGVkZ2VzIDogQXJyYXlbTWFwcGluZ0VkZ2VdCn0KCnB1YihhbGwpIHN0cnVjdCBNYXBwaW5nUGF0aCB7CiAgc3RlcHMgOiBBcnJheVtNYXBwaW5nRWRnZV0KICB0b3RhbF9maWRlbGl0eSA6IEZpZGVsaXR5TGV2ZWwKICBlc3RpbWF0ZWRfbG9zcyA6IERvdWJsZQp9CgpwdWIoYWxsKSBlbnVtIE1hcHBpbmdUcmFuc2Zvcm0gewogIERpcmVjdAogIFBhcmFtTWFwKEFycmF5W1BhcmFtTWFwUnVsZV0pCiAgU2VxdWVuY2UoQXJyYXlbU3RyaW5nXSkKICBDdXN0b20oU3RyaW5nLCBAanNvbi5Kc29uKQp9CgpwdWIoYWxsKSBlbnVtIE5MSV9SZXN1bHQgewogIFN1Y2Nlc3MoVGFyZ2V0QWN0aW9uU2VxKQogIEFtYmlndW91cyhBcnJheVtUYXJnZXRBY3Rpb25TZXFdLCBBcnJheVtEb3VibGVdKQogIFVuaW50ZXJwcmV0YWJsZShTdHJpbmcpCn0KCnB1YihhbGwpIHN0cnVjdCBOTFJlcXVlc3QgewogIHRleHQgOiBTdHJpbmc/CiAgYXVkaW8gOiBBdWRpb0RhdGE/CiAgaW1hZ2UgOiBJbWFnZURhdGE/CiAgY29udGV4dCA6IEV4ZWN1dGlvbkNvbnRleHQKfQoKcHViKGFsbCkgc3RydWN0IE9jY3VwYW5jeURlY2wgewogIHBhcnRpY2lwYW50cyA6IEFycmF5W1N0cmluZ10KICBleGNsdXNpdmUgOiBCb29sCn0KCnB1YiBzdHJ1Y3QgT3V0cHV0R2F0ZSB7CiAgc20gOiBTYWZldHlTdGF0ZU1hY2hpbmUKfQoKcHViKGFsbCkgc3RydWN0IFBhY2thZ2VSZWYgewogIHVybiA6IFN0cmluZwogIHZlcnNpb24gOiBTdHJpbmcKICBzaGEyNTYgOiBTdHJpbmcKfQoKcHViKGFsbCkgc3RydWN0IFBhY2thZ2VTaWcgewogIGFsZ29yaXRobSA6IFN0cmluZwogIHNpZ25hdHVyZSA6IEFycmF5W0J5dGVdCiAgcHVibGljX2tleSA6IFN0cmluZwp9CgpwdWIoYWxsKSBzdHJ1Y3QgUGFyYW1NYXBSdWxlIHsKICBmcm9tX3BhcmFtIDogU3RyaW5nCiAgdG9fcGFyYW0gOiBTdHJpbmcKICBjb252ZXJ0ZXIgOiBTdHJpbmc/Cn0KCnB1YihhbGwpIHN0cnVjdCBQYXJhbVNwZWMgewogIG5hbWUgOiBTdHJpbmcKICBwdHlwZSA6IFBhcmFtVHlwZQogIHJlcXVpcmVkIDogQm9vbAogIGRlZmF1bHQgOiBQYXJhbVZhbHVlPwogIGNvbnN0cmFpbnRzIDogU3RyaW5nCn0KCiNkZXJpdmUoRXEpCnB1YihhbGwpIGVudW0gUGFyYW1UeXBlIHsKICBQSW50VHlwZQogIFBGbG9hdFR5cGUKICBQQm9vbFR5cGUKICBQU3RyaW5nVHlwZQogIFBEaXJlY3Rpb25UeXBlCiAgUEVudW1UeXBlCiAgUFJhbmdlVHlwZQp9CgpwdWIoYWxsKSBlbnVtIFBhcmFtVmFsdWUgewogIFBJbnQoSW50MzIpCiAgUEZsb2F0KERvdWJsZSkKICBQQm9vbChCb29sKQogIFBTdHJpbmcoU3RyaW5nKQogIFBEaXJlY3Rpb24oVmVjMykKICBQRW51bShTdHJpbmcsIEFycmF5W1N0cmluZ10pCiAgUFJhbmdlKERvdWJsZSwgRG91YmxlLCBTdHJpbmcpCn0KCnB1YihhbGwpIGVudW0gUHJlZGljYXRlRXhwciB7CiAgQnVpbHRpbihCdWlsdGluUHJlZGljYXRlKQogIEN1c3RvbShDdXN0b21QcmVkaWNhdGUpCn0KCnB1YihhbGwpIGVudW0gUHJpbUNhdGVnb3J5IHsKICBMb2MKICBNYW4KICBFeHAKICBQb3MKICBDb24KfQoKcHViKGFsbCkgc3RydWN0IFByaW1pdGl2ZSB7CiAgdXJuIDogU3RyaW5nCiAgbmFtZSA6IFN0cmluZwogIGNhdGVnb3J5IDogUHJpbUNhdGVnb3J5CiAgcGFyYW1zIDogQXJyYXlbUGFyYW1TcGVjXQogIG9jY3VwYW5jeSA6IE9jY3VwYW5jeURlY2wKICBzYWMgOiBTYWNTcGVjCiAgbWV0YWRhdGEgOiBNYXBbU3RyaW5nLCBTdHJpbmddCn0KCnB1YiBzdHJ1Y3QgUHJpbWl0aXZlUmVnaXN0cnkgewogIHByaW1pdGl2ZXMgOiBNYXBbU3RyaW5nLCBQcmltaXRpdmVdCn0KCnB1YihhbGwpIGVudW0gUmVhY3Rpb25BY3Rpb24gewogIENvbnRpbnVlCiAgQWRqdXN0KE1hcFtTdHJpbmcsIFBhcmFtVmFsdWVdKQogIEF2b2lkKEF2b2lkU3RyYXRlZ3kpCiAgV2FpdChTdHJpbmcsIEludDY0LCBSZWFjdGlvbkFjdGlvbikKICBTYWZlSG9sZAogIEFib3J0KFN0cmluZykKICBSZXBsYW4KfQoKcHViKGFsbCkgZW51bSBSZWFjdGlvbkRlY2lzaW9uIHsKICBDb250aW51ZQogIEFkanVzdChNYXBbU3RyaW5nLCBQYXJhbVZhbHVlXSkKICBBdm9pZChBdm9pZFN0cmF0ZWd5KQogIFdhaXQoU3RyaW5nLCBJbnQ2NCwgUmVhY3Rpb25BY3Rpb24pCiAgU2FmZUhvbGQKICBBYm9ydChTdHJpbmcpCiAgUmVwbGFuCiAgRmF1bHRMb2NrZWQoU3RyaW5nKQp9CgpwdWIoYWxsKSBzdHJ1Y3QgUmVhY3Rpb25Qb2xpY3kgewogIGlkIDogU3RyaW5nCiAgc2NvcGUgOiBSZWFjdGlvblNjb3BlCiAgdHJpZ2dlciA6IEVudkV2ZW50UGF0dGVybgogIGd1YXJkX2V4cHIgOiBTdHJpbmc/CiAgYWN0aW9uIDogUmVhY3Rpb25BY3Rpb24KICBlc2NhbGF0aW9uIDogUmVhY3Rpb25Qb2xpY3k/Cn0KCnB1YihhbGwpIGVudW0gUmVhY3Rpb25TY29wZSB7CiAgUHJpbWl0aXZlCiAgU2VxdWVuY2UKICBHbG9iYWwKfQoKcHViKGFsbCkgc3RydWN0IFJvdXRlQ29uc3RyYWludHMgewogIG1heF9maWRlbGl0eV9sb3NzIDogRG91YmxlPwogIG1heF9ob3BzIDogSW50MzI/CiAgcHJlZmVycmVkX2ludGVybWVkaWF0ZXMgOiBBcnJheVtTdHJpbmddCn0KCnB1YihhbGwpIHN0cnVjdCBTYWNSZXN1bHQgewogIGFjdGlvbl9pbmRleCA6IEludDMyCiAgcGFzc2VkIDogQm9vbAogIG1lc3NhZ2UgOiBTdHJpbmcKfQoKcHViKGFsbCkgc3RydWN0IFNhY1NwZWMgewogIHByZWRpY2F0ZXMgOiBBcnJheVtQcmVkaWNhdGVFeHByXQogIGNvbXBsZXRlbmVzcyA6IENvbXBsZXRlbmVzc0xldmVsCn0KCnB1YihhbGwpIHN0cnVjdCBTYWNWZXJpZmljYXRpb25SZXBvcnQgewogIHJlc3VsdHMgOiBBcnJheVtTYWNSZXN1bHRdCiAgb2sgOiBCb29sCn0KCnB1YihhbGwpIGVudW0gU2FmZXR5RXZlbnQgewogIEVTdG9wUHJlc3NlZAogIENsaWZmRGV0ZWN0ZWQoVmVjMykKICBXaGVlbERyb3AoU3RyaW5nKQogIFBpY2tlZFVwCiAgSGVhcnRiZWF0VGltZW91dChJbnQ2NCwgSW50NjQpCiAgU2Vuc29yU3RhbGUoU3RyaW5nLCBJbnQ2NCkKICBMb2NhbGl6YXRpb25EaXZlcmdlZChEb3VibGUpCiAgSm9pbnRBbm9tYWx5KFN0cmluZywgRG91YmxlKQogIFNvZnRMaW1pdEV4Y2VlZGVkKFN0cmluZywgRG91YmxlKQogIExvd0JhdHRlcnkoRG91YmxlKQp9CgpwdWIoYWxsKSBlbnVtIFNhZmV0eVN0YXRlIHsKICBTZWxmdGVzdAogIElkbGUKICBFeGVjdXRpbmcKICBSZWNvdmVyaW5nCiAgU2FmZUhvbGQKICBGYXVsdExvY2tlZAp9CgpwdWIgc3RydWN0IFNhZmV0eVN0YXRlTWFjaGluZSB7CiAgbXV0IGN1cnJlbnQgOiBTYWZldHlTdGF0ZQogIG11dCBlc2NhbGF0aW9uX2luZGV4IDogSW50MzIKfQoKcHViKGFsbCkgc3RydWN0IFNlY3VyaXR5RXJyb3IgewogIHN1cmZhY2UgOiBBdHRhY2tTdXJmYWNlCiAgY29kZSA6IEludDMyCiAgbWVzc2FnZSA6IFN0cmluZwogIGRldGFpbCA6IFN0cmluZz8KfQoKcHViKGFsbCkgc3RydWN0IFNlbWFudGljQW5jaG9yIHsKICBpZCA6IFN0cmluZwogIHRhcmdldF9ub2RlcyA6IEFycmF5W1N0cmluZ10KICBkZXNjcmlwdGlvbiA6IFN0cmluZwp9CgpwdWIgc3RydWN0IFNlbnNvclJlZ2lzdHJ5IHsKICBzZW5zb3JzIDogTWFwW1N0cmluZywgQm9vbF0KfQoKI2Rlcml2ZShFcSkKcHViKGFsbCkgZW51bSBTZXZlcml0eSB7CiAgSW5mbwogIFdhcm4KICBEYW5nZXIKICBDcml0aWNhbAp9CgpwdWIoYWxsKSBzdHJ1Y3QgU3BhdGlhbERpc3BsYWNlbWVudCB7CiAgdHJhbnNsYXRpb24gOiBWZWMzCiAgcm90YXRpb24gOiBWZWMzCn0KCnB1YihhbGwpIGVudW0gU3RhdGVFdmVudCB7CiAgU2FmZXR5KFNhZmV0eUV2ZW50KQogIFJlc2V0CiAgVGFza1N0YXJ0CiAgVGFza0NvbXBsZXRlCn0KCiNhbGlhcyhCb3VuZEFjdGlvblNlcSkKcHViKGFsbCkgc3RydWN0IFRhcmdldEFjdGlvblNlcSB7CiAgYWN0aW9ucyA6IEFycmF5W0JvdW5kQWN0aW9uXQogIGJvZHltYXAgOiBTdHJpbmcKICBtZXRhZGF0YSA6IE1hcFtTdHJpbmcsIFN0cmluZ10KfQoKcHViKGFsbCkgc3RydWN0IFRyYW5zaXRpb25SZXN1bHQgewogIGZyb20gOiBTYWZldHlTdGF0ZQogIHRvIDogU2FmZXR5U3RhdGUKICBhbGxvd2VkIDogQm9vbAogIHJlYXNvbiA6IFN0cmluZz8KfQoKcHViKGFsbCkgc3RydWN0IFZlYzMgewogIHggOiBEb3VibGUKICB5IDogRG91YmxlCiAgeiA6IERvdWJsZQp9CgovLyBUeXBlIGFsaWFzZXMKcHViIHR5cGUgQm9keU1hcFJlZiA9IFN0cmluZwoKcHViIHR5cGUgQm9keVBhcnRSZWYgPSBTdHJpbmcKCnB1YiB0eXBlIENvbmRpdGlvbkV4cHIgPSBTdHJpbmcKCnB1YiB0eXBlIE1hcHBpbmdSZWYgPSBTdHJpbmcKCnB1YiB0eXBlIFBhcmFtTWFwID0gTWFwW1N0cmluZywgUGFyYW1WYWx1ZV0KCnB1YiB0eXBlIFByaW1SZWYgPSBTdHJpbmcKCnB1YiB0eXBlIFN1cHBvcnRQYXR0ZXJuID0gQXJyYXlbU3RyaW5nXQoKcHViIHR5cGUgVVJOID0gU3RyaW5nCgovLyBUcmFpdHMK
+// Generated using `moon info`, DON'T EDIT IT
+package "mot/mot"
+
+import {
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+  "walkzzz/gbz185.mbt/aip",
+  "walkzzz/gbz185.mbt/tooling",
+  "walkzzz/gbz185.mbt/wire",
+}
+
+// Values
+pub fn authenticate_feedback(SensorRegistry, EnvFeedback) -> Result[EnvFeedback, SecurityError]
+
+pub fn bind(TargetActionSeq, MappingGraph, PrimitiveRegistry) -> BindResult
+
+pub fn check_conflicts(Array[BoundAction], PrimitiveRegistry) -> ConflictReport
+
+pub fn do_exec(OutputGate, String) -> Bool
+
+pub fn exit_code_of(Array[Diagnostic]) -> Int32
+
+pub fn exit_code_to_int(ExitCode) -> Int32
+
+pub fn gate_closed(SafetyStateMachine) -> Bool
+
+pub fn gate_is_closed(OutputGate) -> Bool
+
+pub fn guard_nli_result(NLI_Result) -> Result[TargetActionSeq, SecurityError]
+
+pub fn internal_error_code() -> Int32
+
+pub fn is_action_allowed(SafetyStateMachine, String) -> Bool
+
+pub fn make_error(DiagnosticCategory, Int32, Array[String], String) -> Diagnostic
+
+pub fn make_warning(DiagnosticCategory, Int32, Array[String], String) -> Diagnostic
+
+pub fn mot_envelope(String, String, Int64, @aip.MessageKind, @json.Json) -> @aip.AipEnvelope
+
+pub fn mot_tool_descriptor(String, String, @json.Json, @tooling.ToolBinding) -> @tooling.ToolDescriptor
+
+pub fn new_gate(SafetyStateMachine) -> OutputGate
+
+pub fn new_registry() -> PrimitiveRegistry
+
+pub fn new_sensor_registry() -> SensorRegistry
+
+pub fn new_statemachine() -> SafetyStateMachine
+
+pub fn react(Array[ReactionPolicy], EnvFeedback) -> ReactionDecision
+
+pub fn register_primitive(PrimitiveRegistry, Primitive) -> Unit
+
+pub fn register_sensor(SensorRegistry, String) -> Unit
+
+pub fn sec_error(AttackSurface, Int32, String) -> SecurityError
+
+pub fn security_error_to_mot(SecurityError) -> MotError
+
+pub fn sm_current(SafetyStateMachine) -> SafetyState
+
+pub fn transition(SafetyStateMachine, StateEvent) -> TransitionResult
+
+pub fn verify_lock_hash(String, String) -> Result[Unit, SecurityError]
+
+pub fn verify_package_signature(PackageRef, PackageSig) -> Result[Unit, SecurityError]
+
+pub fn verify_sac_all(Array[BoundAction]) -> SacVerificationReport
+
+// Errors
+pub(all) suberror MotError {
+  Syntax_error(String)
+  Resolve_error(String)
+  Mapping_error(String)
+  Conflict_error(String)
+  Sac_error(String)
+  Reaction_error(String)
+  Safety_error(String)
+  Nli_error(String)
+  Security_error(String)
+}
+pub impl Show for MotError
+pub impl @wire.ProtocolError for MotError
+
+// Types and methods
+pub(all) enum AspectType {
+  Trajectory
+  Contact
+  Posture
+  Spatial
+  Count
+}
+
+#derive(@debug.Debug)
+pub(all) enum AttackSurface {
+  AS1_SupplyChain
+  AS2_NLIInjection
+  AS3_AIPMessage
+  AS4_FeedbackInjection
+  AS5_SafetyBypass
+  AS6_ToolRegistration
+  AS7_TypeInjection
+  AS8_FormalCoverage
+}
+pub impl Show for AttackSurface
+
+pub(all) struct AudioData {
+  bytes : Array[Byte]
+}
+
+pub(all) enum AvoidStrategy {
+  LateralOffset(Double)
+  SpeedReduce(Double)
+  StopAndWait(Int64)
+  Custom(String)
+}
+
+pub enum BindResult {
+  Ok(TargetActionSeq)
+  Error(Array[Diagnostic])
+}
+
+pub(all) struct BodyMap {
+  urn : String
+  name : String
+  version : String
+  nodes : Array[BodyNode]
+  root : String
+  metadata : Map[String, String]
+}
+
+pub(all) struct BodyNode {
+  id : String
+  kind : BodyNodeKind
+  parent : String?
+  children : Array[String]
+  dof : Int32
+  role : BodyRole?
+  anchors : Array[SemanticAnchor]
+}
+
+pub(all) enum BodyNodeKind {
+  Joint
+  Link
+  Sensor
+  Effector
+  Virtual
+}
+
+pub(all) enum BodyRole {
+  LocomotionBase
+  ManipulationEnd
+  SupportPolygon
+  SensorMount
+  Actuator
+  Passive
+}
+
+pub(all) struct BoundAction {
+  primitive : String
+  params : Map[String, ParamValue]
+  sac_override : SacSpec?
+  reaction_policies : Array[ReactionPolicy]
+}
+
+pub(all) struct BuiltinPredicate {
+  aspect : AspectType
+  expr : String
+  params : Map[String, ParamValue]
+}
+
+pub(all) enum CompletenessLevel {
+  Structural
+  Inferable
+  Full
+}
+
+pub(all) struct Conflict {
+  body_part : String
+  action_a : Int32
+  action_b : Int32
+}
+
+pub(all) struct ConflictReport {
+  conflicts : Array[Conflict]
+  ok : Bool
+}
+
+pub(all) struct CustomPredicate {
+  backend : String
+  config : @json.Json
+}
+
+pub(all) struct DangerousPrimitive {
+  urn : String
+  reason : String
+}
+
+pub(all) struct Diagnostic {
+  level : DiagnosticLevel
+  category : DiagnosticCategory
+  code : Int32
+  path : Array[String]
+  message : String
+  hint : String?
+  related : Array[Diagnostic]
+}
+
+pub(all) enum DiagnosticCategory {
+  Syntax
+  Resolve
+  Mapping
+  Conflict
+  Sac
+  Reaction
+  Safety
+  Nli
+  Security
+}
+
+pub(all) enum DiagnosticLevel {
+  Error
+  Warning
+  Info
+  Hint
+}
+
+pub(all) struct EnvEventPattern {
+  kinds : Array[FeedbackKind]
+  severity_min : Severity
+  source_filter : String?
+}
+
+pub(all) struct EnvFeedback {
+  source : String
+  kind : FeedbackKind
+  timestamp : Int64
+  stale_after_ms : Int64
+  severity : Severity
+  payload : FeedbackPayload
+  sac_ref : String?
+  action_ref : String?
+}
+
+pub(all) struct ExecutionContext {
+  bodymap : String
+  env_state : Map[String, @json.Json]
+  constraints : Array[String]
+}
+
+pub enum ExitCode {
+  Success
+  Error
+  Warning
+  InternalError
+}
+
+#derive(Eq)
+pub(all) enum FeedbackKind {
+  Obstacle
+  ContactLoss
+  Collision
+  VisualDrift
+  LocalQuality
+  JointAnomaly
+  HumanProximity
+  DoorState
+  Battery
+  Heartbeat
+  Stale
+}
+
+pub(all) enum FeedbackPayload {
+  Obstacle(Double, Vec3, Double, String?)
+  ContactLoss(Double, Double)
+  Collision(String, Vec3)
+  VisualDrift(SpatialDisplacement)
+  LocalQuality(Double)
+  JointAnomaly(String, Double)
+  HumanProximity(Double, Array[Vec3])
+  DoorState(Double)
+  Battery(Double)
+  Heartbeat(Int64, Int64)
+  Stale(Int64)
+}
+
+pub(all) enum FidelityLevel {
+  Exact
+  Approximate
+  Degraded
+}
+
+pub(all) struct ImageData {
+  bytes : Array[Byte]
+  format : String
+}
+
+pub(all) struct MOT_FunctionSchema {
+  name : String
+  description : String
+  parameters : @json.Json
+  returns : @json.Json
+}
+
+pub(all) struct MappingEdge {
+  source : String
+  target : String
+  transform : MappingTransform
+  fidelity : FidelityLevel
+  fallback_chain : Array[String]
+}
+
+pub(all) struct MappingGraph {
+  edges : Array[MappingEdge]
+}
+
+pub(all) struct MappingPath {
+  steps : Array[MappingEdge]
+  total_fidelity : FidelityLevel
+  estimated_loss : Double
+}
+
+pub(all) enum MappingTransform {
+  Direct
+  ParamMap(Array[ParamMapRule])
+  Sequence(Array[String])
+  Custom(String, @json.Json)
+}
+
+pub(all) enum NLI_Result {
+  Success(TargetActionSeq)
+  Ambiguous(Array[TargetActionSeq], Array[Double])
+  Uninterpretable(String)
+}
+
+pub(all) struct NLRequest {
+  text : String?
+  audio : AudioData?
+  image : ImageData?
+  context : ExecutionContext
+}
+
+pub(all) struct OccupancyDecl {
+  participants : Array[String]
+  exclusive : Bool
+}
+
+pub struct OutputGate {
+  sm : SafetyStateMachine
+}
+
+pub(all) struct PackageRef {
+  urn : String
+  version : String
+  sha256 : String
+}
+
+pub(all) struct PackageSig {
+  algorithm : String
+  signature : Array[Byte]
+  public_key : String
+}
+
+pub(all) struct ParamMapRule {
+  from_param : String
+  to_param : String
+  converter : String?
+}
+
+pub(all) struct ParamSpec {
+  name : String
+  ptype : ParamType
+  required : Bool
+  default : ParamValue?
+  constraints : String
+}
+
+#derive(Eq)
+pub(all) enum ParamType {
+  PIntType
+  PFloatType
+  PBoolType
+  PStringType
+  PDirectionType
+  PEnumType
+  PRangeType
+}
+
+pub(all) enum ParamValue {
+  PInt(Int32)
+  PFloat(Double)
+  PBool(Bool)
+  PString(String)
+  PDirection(Vec3)
+  PEnum(String, Array[String])
+  PRange(Double, Double, String)
+}
+
+pub(all) enum PredicateExpr {
+  Builtin(BuiltinPredicate)
+  Custom(CustomPredicate)
+}
+
+pub(all) enum PrimCategory {
+  Loc
+  Man
+  Exp
+  Pos
+  Con
+}
+
+pub(all) struct Primitive {
+  urn : String
+  name : String
+  category : PrimCategory
+  params : Array[ParamSpec]
+  occupancy : OccupancyDecl
+  sac : SacSpec
+  metadata : Map[String, String]
+}
+
+pub struct PrimitiveRegistry {
+  primitives : Map[String, Primitive]
+}
+
+pub(all) enum ReactionAction {
+  Continue
+  Adjust(Map[String, ParamValue])
+  Avoid(AvoidStrategy)
+  Wait(String, Int64, ReactionAction)
+  SafeHold
+  Abort(String)
+  Replan
+}
+
+pub(all) enum ReactionDecision {
+  Continue
+  Adjust(Map[String, ParamValue])
+  Avoid(AvoidStrategy)
+  Wait(String, Int64, ReactionAction)
+  SafeHold
+  Abort(String)
+  Replan
+  FaultLocked(String)
+}
+
+pub(all) struct ReactionPolicy {
+  id : String
+  scope : ReactionScope
+  trigger : EnvEventPattern
+  guard_expr : String?
+  action : ReactionAction
+  escalation : ReactionPolicy?
+}
+
+pub(all) enum ReactionScope {
+  Primitive
+  Sequence
+  Global
+}
+
+pub(all) struct RouteConstraints {
+  max_fidelity_loss : Double?
+  max_hops : Int32?
+  preferred_intermediates : Array[String]
+}
+
+pub(all) struct SacResult {
+  action_index : Int32
+  passed : Bool
+  message : String
+}
+
+pub(all) struct SacSpec {
+  predicates : Array[PredicateExpr]
+  completeness : CompletenessLevel
+}
+
+pub(all) struct SacVerificationReport {
+  results : Array[SacResult]
+  ok : Bool
+}
+
+pub(all) enum SafetyEvent {
+  EStopPressed
+  CliffDetected(Vec3)
+  WheelDrop(String)
+  PickedUp
+  HeartbeatTimeout(Int64, Int64)
+  SensorStale(String, Int64)
+  LocalizationDiverged(Double)
+  JointAnomaly(String, Double)
+  SoftLimitExceeded(String, Double)
+  LowBattery(Double)
+}
+
+pub(all) enum SafetyState {
+  Selftest
+  Idle
+  Executing
+  Recovering
+  SafeHold
+  FaultLocked
+}
+
+pub struct SafetyStateMachine {
+  mut current : SafetyState
+  mut escalation_index : Int32
+}
+
+pub(all) struct SecurityError {
+  surface : AttackSurface
+  code : Int32
+  message : String
+  detail : String?
+}
+
+pub(all) struct SemanticAnchor {
+  id : String
+  target_nodes : Array[String]
+  description : String
+}
+
+pub struct SensorRegistry {
+  sensors : Map[String, Bool]
+}
+
+#derive(Eq)
+pub(all) enum Severity {
+  Info
+  Warn
+  Danger
+  Critical
+}
+
+pub(all) struct SpatialDisplacement {
+  translation : Vec3
+  rotation : Vec3
+}
+
+pub(all) enum StateEvent {
+  Safety(SafetyEvent)
+  Reset
+  TaskStart
+  TaskComplete
+}
+
+#alias(BoundActionSeq)
+pub(all) struct TargetActionSeq {
+  actions : Array[BoundAction]
+  bodymap : String
+  metadata : Map[String, String]
+}
+
+pub(all) struct TransitionResult {
+  from : SafetyState
+  to : SafetyState
+  allowed : Bool
+  reason : String?
+}
+
+pub(all) struct Vec3 {
+  x : Double
+  y : Double
+  z : Double
+}
+
+// Type aliases
+pub type BodyMapRef = String
+
+pub type BodyPartRef = String
+
+pub type ConditionExpr = String
+
+pub type MappingRef = String
+
+pub type ParamMap = Map[String, ParamValue]
+
+pub type PrimRef = String
+
+pub type SupportPattern = Array[String]
+
+pub type URN = String
+
+// Traits

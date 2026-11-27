@@ -1,1 +1,50 @@
-Ly8gUmVhY3Rpb25Qb2xpY3kg4oCU4oCUIGVudmlyb25tZW50IGZlZWRiYWNrIC0+IGNvbnRyb2wgZGVjaXNpb24KLy8gRGVjbGFyYXRpdmUgcnVsZTogb24gYSBnaXZlbiBlbnYgZmVlZGJhY2sgZHVyaW5nIHByaW1pdGl2ZSBleGVjdXRpb24sIHRha2UgYSBjb250cm9sIGRlY2lzaW9uLgoKLy8vfApwdWIoYWxsKSBlbnVtIFJlYWN0aW9uU2NvcGUgewogIFByaW1pdGl2ZQogIFNlcXVlbmNlCiAgR2xvYmFsCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IEVudkV2ZW50UGF0dGVybiB7CiAga2luZHMgOiBBcnJheVtGZWVkYmFja0tpbmRdCiAgc2V2ZXJpdHlfbWluIDogU2V2ZXJpdHkKICBzb3VyY2VfZmlsdGVyIDogU3RyaW5nPwp9CgovLy98CnB1YiB0eXBlIENvbmRpdGlvbkV4cHIgPSBTdHJpbmcKCi8vIFNldmVuIHJlYWN0aW9uIGFjdGlvbnMuIFdhaXQgaXMgcmVjdXJzaXZlIChvbl90aW1lb3V0KS4gZXNjYWxhdGlvbiBpcyByZWN1cnNpdmUgKFJlYWN0aW9uUG9saWN5KS4KCi8vL3wKcHViKGFsbCkgZW51bSBSZWFjdGlvbkFjdGlvbiB7CiAgQ29udGludWUKICBBZGp1c3QoUGFyYW1NYXApCiAgQXZvaWQoQXZvaWRTdHJhdGVneSkKICBXYWl0KENvbmRpdGlvbkV4cHIsIEludDY0LCBSZWFjdGlvbkFjdGlvbikKICBTYWZlSG9sZAogIEFib3J0KFN0cmluZykKICBSZXBsYW4KfQoKLy8vfApwdWIoYWxsKSBlbnVtIEF2b2lkU3RyYXRlZ3kgewogIExhdGVyYWxPZmZzZXQoRG91YmxlKQogIFNwZWVkUmVkdWNlKERvdWJsZSkKICBTdG9wQW5kV2FpdChJbnQ2NCkKICBDdXN0b20oU3RyaW5nKQp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBSZWFjdGlvblBvbGljeSB7CiAgaWQgOiBTdHJpbmcKICBzY29wZSA6IFJlYWN0aW9uU2NvcGUKICB0cmlnZ2VyIDogRW52RXZlbnRQYXR0ZXJuCiAgZ3VhcmRfZXhwciA6IENvbmRpdGlvbkV4cHI/CiAgYWN0aW9uIDogUmVhY3Rpb25BY3Rpb24KICBlc2NhbGF0aW9uIDogUmVhY3Rpb25Qb2xpY3k/Cn0K
+// ReactionPolicy —— environment feedback -> control decision
+// Declarative rule: on a given env feedback during primitive execution, take a control decision.
+
+///|
+pub(all) enum ReactionScope {
+  Primitive
+  Sequence
+  Global
+}
+
+///|
+pub(all) struct EnvEventPattern {
+  kinds : Array[FeedbackKind]
+  severity_min : Severity
+  source_filter : String?
+}
+
+///|
+pub type ConditionExpr = String
+
+// Seven reaction actions. Wait is recursive (on_timeout). escalation is recursive (ReactionPolicy).
+
+///|
+pub(all) enum ReactionAction {
+  Continue
+  Adjust(ParamMap)
+  Avoid(AvoidStrategy)
+  Wait(ConditionExpr, Int64, ReactionAction)
+  SafeHold
+  Abort(String)
+  Replan
+}
+
+///|
+pub(all) enum AvoidStrategy {
+  LateralOffset(Double)
+  SpeedReduce(Double)
+  StopAndWait(Int64)
+  Custom(String)
+}
+
+///|
+pub(all) struct ReactionPolicy {
+  id : String
+  scope : ReactionScope
+  trigger : EnvEventPattern
+  guard_expr : ConditionExpr?
+  action : ReactionAction
+  escalation : ReactionPolicy?
+}

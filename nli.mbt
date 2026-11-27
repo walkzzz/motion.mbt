@@ -1,1 +1,44 @@
-Ly8gTkxJIOKAlOKAlCBuYXR1cmFsIGxhbmd1YWdlIGludGVyZmFjZQovLyBOTEkgZnJvbnRlbmQgbXVzdCBwcm9kdWNlIE1PVCBhY3Rpb24gc2VxdWVuY2VzIG9yIGFtYmlndWl0eSBjYW5kaWRhdGVzLgovLyBNT1QgaXMgdGhlIHN0cnVjdHVyZWQgb3V0cHV0IHNjaGVtYSBmb3IgTExNIEZ1bmN0aW9uIENhbGxpbmcuCgovLy98CnB1YihhbGwpIHN0cnVjdCBBdWRpb0RhdGEgewogIGJ5dGVzIDogQXJyYXlbQnl0ZV0KfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgSW1hZ2VEYXRhIHsKICBieXRlcyA6IEFycmF5W0J5dGVdCiAgZm9ybWF0IDogU3RyaW5nCn0KCi8vL3wKcHViKGFsbCkgc3RydWN0IEV4ZWN1dGlvbkNvbnRleHQgewogIGJvZHltYXAgOiBCb2R5TWFwUmVmCiAgZW52X3N0YXRlIDogTWFwW1N0cmluZywgSnNvbl0KICBjb25zdHJhaW50cyA6IEFycmF5W1N0cmluZ10KfQoKLy8vfApwdWIoYWxsKSBzdHJ1Y3QgTkxSZXF1ZXN0IHsKICB0ZXh0IDogU3RyaW5nPwogIGF1ZGlvIDogQXVkaW9EYXRhPwogIGltYWdlIDogSW1hZ2VEYXRhPwogIGNvbnRleHQgOiBFeGVjdXRpb25Db250ZXh0Cn0KCi8vL3wKcHViKGFsbCkgZW51bSBOTElfUmVzdWx0IHsKICBTdWNjZXNzKFRhcmdldEFjdGlvblNlcSkKICBBbWJpZ3VvdXMoQXJyYXlbVGFyZ2V0QWN0aW9uU2VxXSwgQXJyYXlbRG91YmxlXSkKICBVbmludGVycHJldGFibGUoU3RyaW5nKQp9CgovLy98CnB1YihhbGwpIHN0cnVjdCBNT1RfRnVuY3Rpb25TY2hlbWEgewogIG5hbWUgOiBTdHJpbmcKICBkZXNjcmlwdGlvbiA6IFN0cmluZwogIHBhcmFtZXRlcnMgOiBKc29uCiAgcmV0dXJucyA6IEpzb24KfQo=
+// NLI —— natural language interface
+// NLI frontend must produce MOT action sequences or ambiguity candidates.
+// MOT is the structured output schema for LLM Function Calling.
+
+///|
+pub(all) struct AudioData {
+  bytes : Array[Byte]
+}
+
+///|
+pub(all) struct ImageData {
+  bytes : Array[Byte]
+  format : String
+}
+
+///|
+pub(all) struct ExecutionContext {
+  bodymap : BodyMapRef
+  env_state : Map[String, Json]
+  constraints : Array[String]
+}
+
+///|
+pub(all) struct NLRequest {
+  text : String?
+  audio : AudioData?
+  image : ImageData?
+  context : ExecutionContext
+}
+
+///|
+pub(all) enum NLI_Result {
+  Success(TargetActionSeq)
+  Ambiguous(Array[TargetActionSeq], Array[Double])
+  Uninterpretable(String)
+}
+
+///|
+pub(all) struct MOT_FunctionSchema {
+  name : String
+  description : String
+  parameters : Json
+  returns : Json
+}
