@@ -1,0 +1,8 @@
+members = [
+  ".",
+  "motion.core",
+  "motion.gbz185",
+  "motion.bind",
+  "motion.reaction",
+  "motion.security",
+]

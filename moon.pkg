@@ -1,5 +1,4 @@
-import {
-  "walkzzz/gbz185.mbt/wire",
-  "walkzzz/gbz185.mbt/aip",
-  "walkzzz/gbz185.mbt/tooling",
-}
+// Root package of `looyiabc/motion` — facade only (rule R12, image.mbt pattern).
+// No imports, no reexports: users import sub-module packages directly, e.g.
+//   import "looyiabc/motion.core/types"
+// The `all/` package provides a curated reexport facade for high-frequency APIs.

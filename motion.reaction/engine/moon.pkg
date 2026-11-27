@@ -1,0 +1,4 @@
+// Reaction engine (L2): depends on core types.
+import {
+  "looyiabc/motion.core/types",
+}

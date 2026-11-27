@@ -1,0 +1,7 @@
+// GB/Z 185 bridge package (L1): depends on core types + gbz185 wire/aip/tooling.
+import {
+  "looyiabc/motion.core/types",
+  "walkzzz/gbz185.mbt/wire",
+  "walkzzz/gbz185.mbt/aip",
+  "walkzzz/gbz185.mbt/tooling",
+}

@@ -1,0 +1,27 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.reaction/engine"
+
+import {
+  "looyiabc/motion.core/types",
+}
+
+// Values
+pub fn react(Array[@types.ReactionPolicy], @types.EnvFeedback) -> ReactionDecision
+
+// Errors
+
+// Types and methods
+pub(all) enum ReactionDecision {
+  Continue
+  Adjust(Map[String, @types.ParamValue])
+  Avoid(@types.AvoidStrategy)
+  Wait(String, Int64, @types.ReactionAction)
+  SafeHold
+  Abort(String)
+  Replan
+  FaultLocked(String)
+}
+
+// Type aliases
+
+// Traits

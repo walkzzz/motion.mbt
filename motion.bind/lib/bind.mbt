@@ -14,7 +14,7 @@
 
 ///|
 pub struct PrimitiveRegistry {
-  primitives : Map[PrimRef, Primitive]
+  primitives : Map[@types.PrimRef, @types.Primitive]
 }
 
 ///|
@@ -23,20 +23,25 @@ pub fn new_registry() -> PrimitiveRegistry {
 }
 
 ///|
-pub fn register_primitive(reg : PrimitiveRegistry, p : Primitive) -> Unit {
+pub fn register_primitive(
+  reg : PrimitiveRegistry,
+  p : @types.Primitive,
+) -> Unit {
   reg.primitives[p.urn] = p
 }
 
 ///|
-fn type_matches(value : ParamValue, expected : ParamType) -> Bool {
+fn type_matches(value : @types.ParamValue, expected : @types.ParamType) -> Bool {
   match value {
-    PInt(_) => expected == PIntType
-    PFloat(_) => expected == PFloatType
-    PBool(_) => expected == PBoolType
-    PString(_) => expected == PStringType
-    PDirection(_) => expected == PDirectionType
-    PEnum(_, _) => expected == PEnumType
-    PRange(_, _, _) => expected == PRangeType
+    @types.ParamValue::PInt(_) => expected == @types.ParamType::PIntType
+    @types.ParamValue::PFloat(_) => expected == @types.ParamType::PFloatType
+    @types.ParamValue::PBool(_) => expected == @types.ParamType::PBoolType
+    @types.ParamValue::PString(_) => expected == @types.ParamType::PStringType
+    @types.ParamValue::PDirection(_) =>
+      expected == @types.ParamType::PDirectionType
+    @types.ParamValue::PEnum(_, _) => expected == @types.ParamType::PEnumType
+    @types.ParamValue::PRange(_, _, _) =>
+      expected == @types.ParamType::PRangeType
   }
 }
 
@@ -44,9 +49,9 @@ fn type_matches(value : ParamValue, expected : ParamType) -> Bool {
 
 ///|
 fn validate_params(
-  specs : Array[ParamSpec],
-  params : ParamMap,
-) -> Result[Unit, Diagnostic] {
+  specs : Array[@types.ParamSpec],
+  params : @types.ParamMap,
+) -> Result[Unit, @types.Diagnostic] {
   let mut i = 0
   while i < specs.length() {
     let spec = specs[i]
@@ -54,8 +59,8 @@ fn validate_params(
       None =>
         if spec.required {
           return Err(
-            make_error(
-              Resolve,
+            @types.make_error(
+              @types.DiagnosticCategory::Resolve,
               1001,
               [spec.name],
               "missing required param: \{spec.name}",
@@ -65,8 +70,8 @@ fn validate_params(
       Some(value) =>
         if !type_matches(value, spec.ptype) {
           return Err(
-            make_error(
-              Resolve,
+            @types.make_error(
+              @types.DiagnosticCategory::Resolve,
               1002,
               [spec.name],
               "param type mismatch for: \{spec.name}",
@@ -82,13 +87,13 @@ fn validate_params(
 ///|
 fn resolve_action(
   reg : PrimitiveRegistry,
-  action : BoundAction,
-) -> Result[BoundAction, Diagnostic] {
+  action : @types.BoundAction,
+) -> Result[@types.BoundAction, @types.Diagnostic] {
   match reg.primitives.get(action.primitive) {
     None =>
       Err(
-        make_error(
-          Resolve,
+        @types.make_error(
+          @types.DiagnosticCategory::Resolve,
           1000,
           [action.primitive],
           "primitive not found: \{action.primitive}",
@@ -105,7 +110,10 @@ fn resolve_action(
 // ---- Stage 2: mapping expansion ----
 
 ///|
-fn visited_contains(visited : Array[PrimRef], id : PrimRef) -> Bool {
+fn visited_contains(
+  visited : Array[@types.PrimRef],
+  id : @types.PrimRef,
+) -> Bool {
   let mut i = 0
   while i < visited.length() {
     if visited[i] == id {
@@ -120,17 +128,17 @@ fn visited_contains(visited : Array[PrimRef], id : PrimRef) -> Bool {
 
 ///|
 fn find_path_rec(
-  graph : MappingGraph,
-  source : PrimRef,
-  target : PrimRef,
-  visited : Array[PrimRef],
+  graph : @types.MappingGraph,
+  source : @types.PrimRef,
+  target : @types.PrimRef,
+  visited : Array[@types.PrimRef],
   depth : Int32,
-) -> MappingPath? {
+) -> @types.MappingPath? {
   if depth > 5 {
     None
   } else {
     let mut i = 0
-    let mut result : MappingPath? = None
+    let mut result : @types.MappingPath? = None
     let mut done = false
     while i < graph.edges.length() && !done {
       let e = graph.edges[i]
@@ -174,16 +182,16 @@ fn find_path_rec(
 // A cycle exists iff some edge (u,v) has a depth-limited path v -> u.
 
 ///|
-fn mapping_diags(graph : MappingGraph) -> Array[Diagnostic] {
-  let mut ds : Array[Diagnostic] = []
+fn mapping_diags(graph : @types.MappingGraph) -> Array[@types.Diagnostic] {
+  let mut ds : Array[@types.Diagnostic] = []
   let mut i = 0
   while i < graph.edges.length() {
     let e = graph.edges[i]
     if e.source == e.target {
       ds = ds +
         [
-          make_error(
-            Mapping,
+          @types.make_error(
+            @types.DiagnosticCategory::Mapping,
             1051,
             [e.source],
             "self-loop mapping edge: \{e.source}",
@@ -194,8 +202,8 @@ fn mapping_diags(graph : MappingGraph) -> Array[Diagnostic] {
         Some(_) =>
           ds = ds +
             [
-              make_error(
-                Mapping,
+              @types.make_error(
+                @types.DiagnosticCategory::Mapping,
                 1050,
                 [e.source],
                 "mapping cycle detected at \{e.source}",
@@ -213,7 +221,7 @@ fn mapping_diags(graph : MappingGraph) -> Array[Diagnostic] {
 
 ///|
 pub(all) struct Conflict {
-  body_part : BodyPartRef
+  body_part : @types.BodyPartRef
   action_a : Int32
   action_b : Int32
 }
@@ -225,7 +233,7 @@ pub(all) struct ConflictReport {
 }
 
 ///|
-fn list_contains(a : Array[BodyPartRef], x : BodyPartRef) -> Bool {
+fn list_contains(a : Array[@types.BodyPartRef], x : @types.BodyPartRef) -> Bool {
   let mut i = 0
   while i < a.length() {
     if a[i] == x {
@@ -238,8 +246,8 @@ fn list_contains(a : Array[BodyPartRef], x : BodyPartRef) -> Bool {
 
 ///|
 fn shared_parts(
-  a : Array[BodyPartRef],
-  b : Array[BodyPartRef],
+  a : Array[@types.BodyPartRef],
+  b : Array[@types.BodyPartRef],
   ia : Int32,
   ib : Int32,
 ) -> Array[Conflict] {
@@ -256,8 +264,8 @@ fn shared_parts(
 
 ///|
 fn conflicts(
-  a : BoundAction,
-  b : BoundAction,
+  a : @types.BoundAction,
+  b : @types.BoundAction,
   ia : Int32,
   ib : Int32,
   reg : PrimitiveRegistry,
@@ -280,7 +288,7 @@ fn conflicts(
 
 ///|
 pub fn check_conflicts(
-  actions : Array[BoundAction],
+  actions : Array[@types.BoundAction],
   reg : PrimitiveRegistry,
 ) -> ConflictReport {
   let mut cs : Array[Conflict] = []
@@ -315,12 +323,12 @@ pub(all) struct SacVerificationReport {
 // Structural completeness: every predicate's expr is non-empty and aspect is known.
 
 ///|
-fn sac_structural(spec : SacSpec) -> Bool {
+fn sac_structural(spec : @types.SacSpec) -> Bool {
   let mut i = 0
   while i < spec.predicates.length() {
     match spec.predicates[i] {
-      Builtin(bp) => if bp.expr == "" { return false }
-      Custom(cp) => if cp.backend == "" { return false }
+      @types.PredicateExpr::Builtin(bp) => if bp.expr == "" { return false }
+      @types.PredicateExpr::Custom(cp) => if cp.backend == "" { return false }
     }
     i = i + 1
   }
@@ -328,12 +336,15 @@ fn sac_structural(spec : SacSpec) -> Bool {
 }
 
 ///|
-pub fn verify_sac_all(actions : Array[BoundAction]) -> SacVerificationReport {
+pub fn verify_sac_all(
+  actions : Array[@types.BoundAction],
+) -> SacVerificationReport {
   let mut results : Array[SacResult] = []
   let mut i = 0
   while i < actions.length() {
-    let sac = match actions[i].sac_override {
-      None => { predicates: [], completeness: Structural, }
+    let sac : @types.SacSpec = match actions[i].sac_override {
+      None =>
+        { predicates: [], completeness: @types.CompletenessLevel::Structural, }
       Some(s) => s
     }
     let passed = sac_structural(sac)
@@ -366,16 +377,16 @@ pub fn verify_sac_all(actions : Array[BoundAction]) -> SacVerificationReport {
 
 ///|
 pub enum BindResult {
-  Ok(BoundActionSeq)
-  Error(Array[Diagnostic])
+  Ok(@types.BoundActionSeq)
+  Error(Array[@types.Diagnostic])
 }
 
 // The four-stage pipeline. Returns the bound sequence or all diagnostics.
 
 ///|
 pub fn bind(
-  seq : TargetActionSeq,
-  graph : MappingGraph,
+  seq : @types.TargetActionSeq,
+  graph : @types.MappingGraph,
   reg : PrimitiveRegistry,
 ) -> BindResult {
   match resolve_all(seq.actions, reg) {
@@ -403,10 +414,10 @@ pub fn bind(
 
 ///|
 fn resolve_all(
-  actions : Array[BoundAction],
+  actions : Array[@types.BoundAction],
   reg : PrimitiveRegistry,
-) -> Result[Array[BoundAction], Diagnostic] {
-  let mut result : Array[BoundAction] = []
+) -> Result[Array[@types.BoundAction], @types.Diagnostic] {
+  let mut result : Array[@types.BoundAction] = []
   let mut i = 0
   while i < actions.length() {
     match resolve_action(reg, actions[i]) {
@@ -419,15 +430,15 @@ fn resolve_all(
 }
 
 ///|
-fn conflict_diags(report : ConflictReport) -> Array[Diagnostic] {
-  let mut ds : Array[Diagnostic] = []
+fn conflict_diags(report : ConflictReport) -> Array[@types.Diagnostic] {
+  let mut ds : Array[@types.Diagnostic] = []
   let mut i = 0
   while i < report.conflicts.length() {
     let c = report.conflicts[i]
     ds = ds +
       [
-        make_error(
-          Conflict,
+        @types.make_error(
+          @types.DiagnosticCategory::Conflict,
           1100,
           [c.body_part],
           "conflict on \{c.body_part} between actions \{c.action_a} and \{c.action_b}",
@@ -439,12 +450,20 @@ fn conflict_diags(report : ConflictReport) -> Array[Diagnostic] {
 }
 
 ///|
-fn sac_diags(report : SacVerificationReport) -> Array[Diagnostic] {
-  let mut ds : Array[Diagnostic] = []
+fn sac_diags(report : SacVerificationReport) -> Array[@types.Diagnostic] {
+  let mut ds : Array[@types.Diagnostic] = []
   let mut i = 0
   while i < report.results.length() {
     let r = report.results[i]
-    ds = ds + [make_error(Sac, 1200, ["\{r.action_index}"], r.message)]
+    ds = ds +
+      [
+        @types.make_error(
+          @types.DiagnosticCategory::Sac,
+          1200,
+          ["\{r.action_index}"],
+          r.message,
+        ),
+      ]
     i = i + 1
   }
   ds

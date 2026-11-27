@@ -10,7 +10,7 @@
 ## 一、项目规则 / Project Rules
 
 ### R1 — 源码目录
-源代码放在子模块中：core/ bind/ reaction/ safety/ security/ gbz185/ diag/。根包仅门面。
+源代码放在 5 个子模块中（moon.work 工作区）：motion.core/ motion.gbz185/ motion.bind/ motion.reaction/ motion.security/。根包仅门面（motion.mbt：仅 version）。CLI 在 cmd/main/（根模块包）。各子模块实际代码放子包目录：core/types、gbz185/bridge、bind/lib、reaction/engine、security/guard（包别名 @types/@bridge/@lib/@engine/@guard，全局唯一）。
 
 ### R2 — 多手段测试
 MoonBit 形式化证明 + 多手段测试，确保无 bug。每个 Sprint 交付前 `moon check` 0 error、`moon test` 全通过。

@@ -1,0 +1,95 @@
+# GitCode 流水线 —— motion CI（主仓库）
+# GitCode 兼容 GitHub Actions 语法，配置位于 .workflow/ 目录。
+# 质量门禁与 .github/workflows/ci.yml 保持一致（deny-warn 四目标 + 测试矩阵）。
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: 质量门禁（fmt / check deny-warn / mbti）
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 安装 MoonBit 工具链
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> $GITHUB_PATH
+
+      - name: 更新注册表索引
+        run: moon update
+
+      - name: Moon 版本
+        run: moon version
+
+      - name: 格式检查
+        run: moon fmt --check
+
+      - name: 编译检查（四目标，deny-warn 零警告门禁）
+        run: |
+          moon check --deny-warn --target native
+          moon check --deny-warn --target wasm-gc
+          moon check --deny-warn --target js
+          moon check --deny-warn --target wasm
+
+      - name: API 契约（mbti 漂移拦截）
+        run: |
+          moon info
+          git diff --exit-code -- '*.mbti'
+
+  test:
+    name: 测试（${{ matrix.target }}）
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [native, wasm-gc, js, wasm]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 安装 MoonBit 工具链
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> $GITHUB_PATH
+
+      - name: 更新注册表索引
+        run: moon update
+
+      - name: 运行测试（${{ matrix.target }}）
+        run: moon test --target ${{ matrix.target }}
+
+  pages:
+    name: Pages 站点构建（文档门户）
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 组装站点产物
+        run: |
+          mkdir -p site
+          cp README.md site/index.md
+          cp -r docs site/docs
+          cp rules.md SECURITY.md site/docs/
+          echo "motion documentation portal" > site/CNAME.txt
+          du -sh site
+      - name: 上传站点产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: motion-pages
+          path: site

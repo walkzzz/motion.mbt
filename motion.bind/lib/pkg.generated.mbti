@@ -1,0 +1,55 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.bind/lib"
+
+import {
+  "looyiabc/motion.core/types",
+}
+
+// Values
+pub fn bind(@types.TargetActionSeq, @types.MappingGraph, PrimitiveRegistry) -> BindResult
+
+pub fn check_conflicts(Array[@types.BoundAction], PrimitiveRegistry) -> ConflictReport
+
+pub fn new_registry() -> PrimitiveRegistry
+
+pub fn register_primitive(PrimitiveRegistry, @types.Primitive) -> Unit
+
+pub fn verify_sac_all(Array[@types.BoundAction]) -> SacVerificationReport
+
+// Errors
+
+// Types and methods
+pub enum BindResult {
+  Ok(@types.TargetActionSeq)
+  Error(Array[@types.Diagnostic])
+}
+
+pub(all) struct Conflict {
+  body_part : String
+  action_a : Int32
+  action_b : Int32
+}
+
+pub(all) struct ConflictReport {
+  conflicts : Array[Conflict]
+  ok : Bool
+}
+
+pub struct PrimitiveRegistry {
+  primitives : Map[String, @types.Primitive]
+}
+
+pub(all) struct SacResult {
+  action_index : Int32
+  passed : Bool
+  message : String
+}
+
+pub(all) struct SacVerificationReport {
+  results : Array[SacResult]
+  ok : Bool
+}
+
+// Type aliases
+
+// Traits

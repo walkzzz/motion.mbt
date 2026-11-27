@@ -1,0 +1,3 @@
+// Core types package (L0): zero cross-module imports.
+import {
+}

@@ -1,0 +1,57 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.security/guard"
+
+import {
+  "looyiabc/motion.core/types",
+}
+
+// Values
+pub fn authenticate_feedback(SensorRegistry, @types.EnvFeedback) -> Result[@types.EnvFeedback, @types.SecurityError]
+
+pub fn do_exec(OutputGate, String) -> Bool
+
+pub fn gate_is_closed(OutputGate) -> Bool
+
+pub fn guard_nli_result(@types.NLI_Result) -> Result[@types.TargetActionSeq, @types.SecurityError]
+
+pub fn new_gate(@types.SafetyStateMachine) -> OutputGate
+
+pub fn new_sensor_registry() -> SensorRegistry
+
+pub fn register_sensor(SensorRegistry, String) -> Unit
+
+pub fn verify_lock_hash(String, String) -> Result[Unit, @types.SecurityError]
+
+pub fn verify_package_signature(PackageRef, PackageSig) -> Result[Unit, @types.SecurityError]
+
+// Errors
+
+// Types and methods
+pub(all) struct DangerousPrimitive {
+  urn : String
+  reason : String
+}
+
+pub struct OutputGate {
+  sm : @types.SafetyStateMachine
+}
+
+pub(all) struct PackageRef {
+  urn : String
+  version : String
+  sha256 : String
+}
+
+pub(all) struct PackageSig {
+  algorithm : String
+  signature : Array[Byte]
+  public_key : String
+}
+
+pub struct SensorRegistry {
+  sensors : Map[String, Bool]
+}
+
+// Type aliases
+
+// Traits

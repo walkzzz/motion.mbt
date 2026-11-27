@@ -22,20 +22,26 @@ pub fn register_sensor(reg : SensorRegistry, urn : String) -> Unit {
 ///|
 pub fn authenticate_feedback(
   reg : SensorRegistry,
-  feedback : EnvFeedback,
-) -> Result[EnvFeedback, SecurityError] {
+  feedback : @types.EnvFeedback,
+) -> Result[@types.EnvFeedback, @types.SecurityError] {
   match reg.sensors.get(feedback.source) {
     None =>
       Err(
-        sec_error(
-          AS4_FeedbackInjection,
+        @types.sec_error(
+          @types.AttackSurface::AS4_FeedbackInjection,
           1730,
           "unregistered feedback source: \{feedback.source}",
         ),
       )
     Some(_) =>
       if feedback.stale_after_ms <= 0 {
-        Err(sec_error(AS4_FeedbackInjection, 1731, "invalid stale_after_ms"))
+        Err(
+          @types.sec_error(
+            @types.AttackSurface::AS4_FeedbackInjection,
+            1731,
+            "invalid stale_after_ms",
+          ),
+        )
       } else {
         Ok(feedback)
       }

@@ -1,0 +1,38 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion.gbz185/bridge"
+
+import {
+  "looyiabc/motion.core/types",
+  "moonbitlang/core/json",
+  "walkzzz/gbz185.mbt/aip",
+  "walkzzz/gbz185.mbt/tooling",
+  "walkzzz/gbz185.mbt/wire",
+}
+
+// Values
+pub fn mot_envelope(String, String, Int64, @aip.MessageKind, @json.Json) -> @aip.AipEnvelope
+
+pub fn mot_tool_descriptor(String, String, @json.Json, @tooling.ToolBinding) -> @tooling.ToolDescriptor
+
+pub fn security_error_to_mot(@types.SecurityError) -> MotError
+
+// Errors
+pub(all) suberror MotError {
+  Syntax_error(String)
+  Resolve_error(String)
+  Mapping_error(String)
+  Conflict_error(String)
+  Sac_error(String)
+  Reaction_error(String)
+  Safety_error(String)
+  Nli_error(String)
+  Security_error(String)
+}
+pub impl Show for MotError
+pub impl @wire.ProtocolError for MotError
+
+// Types and methods
+
+// Type aliases
+
+// Traits

@@ -4,7 +4,7 @@
 
 ///|
 pub(all) struct DangerousPrimitive {
-  urn : PrimRef
+  urn : @types.PrimRef
   reason : String
 }
 
@@ -27,7 +27,7 @@ fn dangerous_primitives() -> Array[DangerousPrimitive] {
 ///|
 fn list_contains_primitive(
   l : Array[DangerousPrimitive],
-  urn : PrimRef,
+  urn : @types.PrimRef,
 ) -> Bool {
   let mut i = 0
   while i < l.length() {
@@ -43,20 +43,26 @@ fn list_contains_primitive(
 
 ///|
 pub fn guard_nli_result(
-  result : NLI_Result,
-) -> Result[TargetActionSeq, SecurityError] {
+  result : @types.NLI_Result,
+) -> Result[@types.TargetActionSeq, @types.SecurityError] {
   match result {
-    Uninterpretable(r) =>
-      Err(sec_error(AS2_NLIInjection, 1710, "uninterpretable: \{r}"))
-    Ambiguous(_, _) =>
+    @types.NLI_Result::Uninterpretable(r) =>
       Err(
-        sec_error(
-          AS2_NLIInjection,
+        @types.sec_error(
+          @types.AttackSurface::AS2_NLIInjection,
+          1710,
+          "uninterpretable: \{r}",
+        ),
+      )
+    @types.NLI_Result::Ambiguous(_, _) =>
+      Err(
+        @types.sec_error(
+          @types.AttackSurface::AS2_NLIInjection,
           1711,
           "ambiguous NLI result requires disambiguation",
         ),
       )
-    Success(seq) => {
+    @types.NLI_Result::Success(seq) => {
       let mut i = 0
       while i < seq.actions.length() {
         if list_contains_primitive(
@@ -64,8 +70,8 @@ pub fn guard_nli_result(
             seq.actions[i].primitive,
           ) {
           return Err(
-            sec_error(
-              AS2_NLIInjection,
+            @types.sec_error(
+              @types.AttackSurface::AS2_NLIInjection,
               1712,
               "dangerous primitive at index \{i}: \{seq.actions[i].primitive}",
             ),

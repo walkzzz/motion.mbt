@@ -129,6 +129,6 @@ pub fn mot_tool_descriptor(
 // Map a MOT SecurityError to a MotError so it flows through the gbz185 wire error contract.
 
 ///|
-pub fn security_error_to_mot(err : SecurityError) -> MotError {
+pub fn security_error_to_mot(err : @types.SecurityError) -> MotError {
   Security_error("\{err.surface} code=\{err.code}: \{err.message}")
 }
