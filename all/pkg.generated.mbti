@@ -1,0 +1,231 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "looyiabc/motion/all"
+
+import {
+  "looyiabc/motion.bind/lib",
+  "looyiabc/motion.core/types",
+  "looyiabc/motion.gbz185/bridge",
+  "looyiabc/motion.reaction/engine",
+  "looyiabc/motion.security/guard",
+  "moonbitlang/core/json",
+  "walkzzz/gbz185.mbt/aip",
+  "walkzzz/gbz185.mbt/tooling",
+}
+
+// Values
+pub fn authenticate_feedback(@guard.SensorRegistry, @types.EnvFeedback) -> Result[@types.EnvFeedback, @types.SecurityError]
+
+pub fn bind(@types.TargetActionSeq, @types.MappingGraph, @lib.PrimitiveRegistry) -> @lib.BindResult
+
+pub fn check_conflicts(Array[@types.BoundAction], @lib.PrimitiveRegistry) -> @lib.ConflictReport
+
+pub fn do_exec(@guard.OutputGate, String) -> Bool
+
+pub fn exit_code_of(Array[@types.Diagnostic]) -> Int32
+
+pub fn exit_code_to_int(@types.ExitCode) -> Int32
+
+pub fn gate_closed(@types.SafetyStateMachine) -> Bool
+
+pub fn gate_is_closed(@guard.OutputGate) -> Bool
+
+pub fn guard_nli_result(@types.NLI_Result) -> Result[@types.TargetActionSeq, @types.SecurityError]
+
+pub fn internal_error_code() -> Int32
+
+pub fn is_action_allowed(@types.SafetyStateMachine, String) -> Bool
+
+pub fn make_error(@types.DiagnosticCategory, Int32, Array[String], String) -> @types.Diagnostic
+
+pub fn make_warning(@types.DiagnosticCategory, Int32, Array[String], String) -> @types.Diagnostic
+
+pub fn mot_envelope(String, String, Int64, @aip.MessageKind, @json.Json) -> @aip.AipEnvelope
+
+pub fn mot_tool_descriptor(String, String, @json.Json, @tooling.ToolBinding) -> @tooling.ToolDescriptor
+
+pub fn new_gate(@types.SafetyStateMachine) -> @guard.OutputGate
+
+pub fn new_registry() -> @lib.PrimitiveRegistry
+
+pub fn new_sensor_registry() -> @guard.SensorRegistry
+
+pub fn new_statemachine() -> @types.SafetyStateMachine
+
+pub fn react(Array[@types.ReactionPolicy], @types.EnvFeedback) -> @engine.ReactionDecision
+
+pub fn register_primitive(@lib.PrimitiveRegistry, @types.Primitive) -> Unit
+
+pub fn register_sensor(@guard.SensorRegistry, String) -> Unit
+
+pub fn sec_error(@types.AttackSurface, Int32, String) -> @types.SecurityError
+
+pub fn security_error_to_mot(@types.SecurityError) -> @bridge.MotError
+
+pub fn sm_current(@types.SafetyStateMachine) -> @types.SafetyState
+
+pub fn transition(@types.SafetyStateMachine, @types.StateEvent) -> @types.TransitionResult
+
+pub fn verify_lock_hash(String, String) -> Result[Unit, @types.SecurityError]
+
+pub fn verify_package_signature(@guard.PackageRef, @guard.PackageSig) -> Result[Unit, @types.SecurityError]
+
+pub fn verify_sac_all(Array[@types.BoundAction]) -> @lib.SacVerificationReport
+
+pub let version : String
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+pub using @types {type AspectType}
+
+pub using @types {type AttackSurface}
+
+pub using @types {type AudioData}
+
+pub using @types {type AvoidStrategy}
+
+pub using @lib {type BindResult}
+
+pub using @types {type BodyMap}
+
+pub type BodyMapRef = String
+
+pub using @types {type BodyNode}
+
+pub using @types {type BodyNodeKind}
+
+pub type BodyPartRef = String
+
+pub using @types {type BodyRole}
+
+pub using @types {type BoundAction}
+
+pub using @types {type BuiltinPredicate}
+
+pub using @types {type CompletenessLevel}
+
+pub type ConditionExpr = String
+
+pub using @lib {type Conflict}
+
+pub using @lib {type ConflictReport}
+
+pub using @types {type CustomPredicate}
+
+pub using @guard {type DangerousPrimitive}
+
+pub using @types {type Diagnostic}
+
+pub using @types {type DiagnosticCategory}
+
+pub using @types {type DiagnosticLevel}
+
+pub using @types {type EnvEventPattern}
+
+pub using @types {type EnvFeedback}
+
+pub using @types {type ExecutionContext}
+
+pub using @types {type ExitCode}
+
+pub using @types {type FeedbackKind}
+
+pub using @types {type FeedbackPayload}
+
+pub using @types {type FidelityLevel}
+
+pub using @types {type ImageData}
+
+pub using @types {type MOT_FunctionSchema}
+
+pub using @types {type MappingEdge}
+
+pub using @types {type MappingGraph}
+
+pub using @types {type MappingPath}
+
+pub type MappingRef = String
+
+pub using @types {type MappingTransform}
+
+pub using @bridge {type MotError}
+
+pub using @types {type NLI_Result}
+
+pub using @types {type NLRequest}
+
+pub using @types {type OccupancyDecl}
+
+pub using @guard {type OutputGate}
+
+pub using @guard {type PackageRef}
+
+pub using @guard {type PackageSig}
+
+pub type ParamMap = Map[String, @types.ParamValue]
+
+pub using @types {type ParamMapRule}
+
+pub using @types {type ParamSpec}
+
+pub using @types {type ParamType}
+
+pub using @types {type ParamValue}
+
+pub using @types {type PredicateExpr}
+
+pub using @types {type PrimCategory}
+
+pub type PrimRef = String
+
+pub using @types {type Primitive}
+
+pub using @lib {type PrimitiveRegistry}
+
+pub using @types {type ReactionAction}
+
+pub using @engine {type ReactionDecision}
+
+pub using @types {type ReactionPolicy}
+
+pub using @types {type ReactionScope}
+
+pub using @types {type RouteConstraints}
+
+pub using @lib {type SacResult}
+
+pub using @types {type SacSpec}
+
+pub using @lib {type SacVerificationReport}
+
+pub using @types {type SafetyEvent}
+
+pub using @types {type SafetyState}
+
+pub using @types {type SafetyStateMachine}
+
+pub using @types {type SecurityError}
+
+pub using @types {type SemanticAnchor}
+
+pub using @guard {type SensorRegistry}
+
+pub using @types {type Severity}
+
+pub using @types {type SpatialDisplacement}
+
+pub using @types {type StateEvent}
+
+pub type SupportPattern = Array[String]
+
+pub using @types {type TargetActionSeq}
+
+pub using @types {type TransitionResult}
+
+pub type URN = String
+
+pub using @types {type Vec3}
+
+// Traits

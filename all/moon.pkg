@@ -1,0 +1,13 @@
+// Curated facade package of `looyiabc/motion` (image.mbt `all/` pattern).
+// One import gives users every high-frequency API:
+//   import "looyiabc/motion/all"
+// NOTE: import permission does NOT propagate through dependencies — this
+// package only reexports; deep packages still require their own moon add.
+import {
+  "looyiabc/motion",
+  "looyiabc/motion.core/types",
+  "looyiabc/motion.bind/lib",
+  "looyiabc/motion.reaction/engine",
+  "looyiabc/motion.security/guard",
+  "looyiabc/motion.gbz185/bridge",
+}
